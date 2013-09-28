@@ -1,0 +1,19 @@
+--- 
+:info: 
+  :name: MIT
+  :region: massachusetts
+  :country: united states
+  :city: cambridge
+  :semesters: 
+  - - Fall
+    - 9/1
+    - 12/20
+  - - Spring
+    - 1/10
+    - 5/25
+  - - Summer
+    - 6/9
+    - 8/20
+  :nid: "16777224"
+:courses: []
+

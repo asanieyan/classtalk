@@ -1,0 +1,18 @@
+
+<%=fb_media_header do |e|
+        e[:title] << @course.full_title        
+        e[:actions].add "Back to Library",{:controller=>"library",:action=>"index"}
+    end
+ %>
+<div id='server_message'>
+    
+</div>
+<div id='all_of_documents'>
+    <%=render_p 'documents_page',
+        :search=>[@course.stitle_no_credit,{:s=>"c#{@course.id}"}],
+        :documents=>@documents,
+        :showpic=>true,
+        :paginator=>@paginator,
+        :page_option=>{:c=>@course.id}
+        %>
+</div>

@@ -1,0 +1,29 @@
+--- 
+:courses: []
+
+:info: 
+  :city: kalamazoo
+  :nid: "16777338"
+  :name: Western Michigan
+  :paths: 
+  - - Fall
+    - Spring
+    - Summer I
+  - - Fall
+    - Spring
+    - Summer II
+  :semesters: 
+  - - Fall
+    - 9/1
+    - 12/25
+  - - Spring
+    - 1/1
+    - 5/1
+  - - Summer I
+    - 5/4
+    - 6/30
+  - - Summer II
+    - 6/25
+    - 8/20
+  :region: michigan
+  :country: united states

@@ -1,0 +1,86 @@
+#rooster_container {	
+	position:relative;
+	z-index:1;
+}
+#rooster_container .inputcheckbox {
+    margin:0pt 4px 0pt 2px;
+}
+    #rooster_container form {
+    margin:0pt 10px;
+}
+#rooster_container .contact_email_pending {
+    background:#F7F7F7 none repeat scroll 0%;
+    border:1px solid #CCCCCC;
+    padding:8px;
+    text-align:center;
+}
+.rooster_story {
+    margin-bottom:5px;
+    padding:10px 0px;
+    text-align:left;
+}
+.rooster_error {
+    background:#F2F4F7 none repeat scroll 0%;
+    border-bottom:1px solid #D8DFEA;
+    padding:10px;
+}
+.rooster_info {
+    background:#F2F4F7 none repeat scroll 0%;
+    border-bottom:1px solid #D8DFEA;
+    margin-bottom:0px;
+}
+.rooster_info h4 {
+    border-bottom:medium none;
+    float:left;
+    font-size:14px;
+}
+.rooster_info p {
+    margin:10px;
+}
+.rooster_error h4 {
+    border-bottom:medium none;
+    color:#D85D01;
+    font-size:14px;
+    padding-top:3px;
+}
+.rooster_error p {
+    margin:10px;
+}
+.rooster_button {
+    padding-top:10px;
+}
+.rooster_title {
+    margin:5px 10px 0pt;
+}
+.actually_important {
+	background-color:#FEFFCF;
+	font-size:13px;
+	font-weight:bold;
+}
+.actually_important .read_this {
+    color:#D85D01;
+    padding:8px 10px 0pt;
+}
+.actually_important .important_text {
+    color:#391800;
+    padding:0pt 10px 8px;
+}
+.actually_important .important_text a {
+    color:#391800;
+    text-decoration:none;
+}
+.actually_important .important_cap {
+	background:#F2F4F7 url(/images/actually_important_cap.gif) no-repeat scroll 0%;
+	height:18px;
+}
+#rooster_container .rooster_info .editor .inputtext {
+    margin:0px 2px 0px 0px;
+    width:180px;
+}
+#rooster_container .rooster_info .editor .select {
+    margin:0px 0px 0px 2px;
+    width:102px;
+}
+#rooster_container .rooster_info .editor .inputpassword {
+    width:180px;
+}

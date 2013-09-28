@@ -1,0 +1,35 @@
+<% content_for("imports") do %>
+		<%=javascript_include_tag 'timetable','/facebook_lib/js/dialogpro.js'%>			
+		<%=stylesheet_link_tag(Facebook::AssetHelper::FBAssetServer + "/css/" +  "dialogpro.css")%>
+<% end %>
+<style>
+    h5 {padding-bottom:5px}    
+    #courses h2,#courses {width:100%}
+    #courses {margin:0;padding:0;}
+</style>
+<%=javascript_include_tag 'effects','controls','coursecompleter'%>
+<%subject rescue subject = nil %>
+<%if schools.size > 1%>
+<%=select_tag 'nid',options_for_select(schools.map{|s| [s.name,s.id]},(subject.school.id rescue nil)),
+    :style=>"width:200px",
+    :onchange=>remote_function(:url =>  app_url(:action=>"list_subjects",
+                                        :caller=>controller.action_name),
+                                        :with=>"'nid=' + $('nid').value",                                       
+                                        :update => "subject_select_div")
+%><br><br>
+
+<%end%>
+<%if schools.size > 0%>
+    <div id='subject_select_div'>
+        <%=render_p 'course_display/course_selection',{:subject=>subject,:school=>(subject.school rescue schools.first),:caller=>controller.action_name}%>
+    </div>
+<%else%>
+    <div class='standard_message'>
+        <div class='status'>
+                <h3>You are not member of any supported colleges by classtalk.</h3>
+        </div>
+    </div>
+
+<%end%>
+
+

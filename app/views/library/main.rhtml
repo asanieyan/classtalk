@@ -1,0 +1,60 @@
+
+<%=fb_plugin_dashboad do |elements| 
+	elements[:actions].add "Back to Profile",:controller=>"profile"
+	elements[:actions].add "My Documents",:uid=>logged_in_user.id
+	elements[:actions].add "Browse Documents",:action=>"browse"
+	elements[:help].add "help",url_for_help
+	elements[:title].add "Document Library"
+	elements[:button].add "Post a New Document",:action=>"create"
+   end
+%>
+<%@showing_docs = @all_docs %>
+<%unless @all_docs.empty?%>
+<div class='bar action_bar clearfix'>   
+    <%
+        options = []
+        unless @friend_documents.empty?
+            options.push ["My Friends (#{@friend_documents.size})","friends"] 
+            @showing_docs = @friend_documents if params[:poster] == "friends"
+        end
+        unless @classmates_documents.empty?
+            options.push ["People to My Classes (#{@classmates_documents.size})","classmates"] 
+            @showing_docs = @classmates_documents if params[:poster] == "classmates"            
+        end
+        if options.size > 1 
+            options.unshift ["Everybody","all"]
+        end
+    %>
+
+    <%fb_form_tag({},{:method=>'GET',:id=>"form_doc"})do%>
+         <label> Show Recently posted documents by </label>
+        <%=select_tag "poster",options_for_select(options,params[:poster])%><%=inline_progress_bar%>
+    <%end%>
+    <%=javascript_tag <<-eof          
+
+        $('poster').addEventListener('change',function(){           
+           document.setLocation('#{fb_url_for :action=>"main"}?poster=' + $('poster').getValue() )
+        })
+    eof
+    %>  
+    <% if false%>
+    <%=javascript_tag <<-eof          
+
+        $('poster').addEventListener('change',function(){           
+            $('progress_bar').show()
+            x = new Ajax();
+            x.ondone = function(response) {                    
+                $('documents').setInnerFBML(response.fbml_docs)
+                $('summary').setTextValue(response.summary)
+                $('progress_bar').hide()
+            }
+            x.responseType = Ajax.JSON
+            x.post('#{ajax_url(:action=>"show_docs")}',{ 'poster' : $('poster').getValue() })
+        })
+    eof
+    %>      
+   <%end%>
+</div>
+<%end%>    
+<%=render_p 'documents_page',:search=>["",{:s=>@user_supported_schools.empty? ? "all0" : "nid#{@user_supported_schools.default.id}"}],:showpic=>true,:summary=>"Displaying #{@all_docs.size} recent documents",:documents=>@showing_docs%>
+

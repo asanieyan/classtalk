@@ -1,0 +1,77 @@
+<%sems = school.curr_next_semesters%>
+<%sems.each do |sem|%>
+    <%classes = logged_in_user.classes.at(sem)%>
+    <%next if classes.empty?%>
+    <%fb_box "#{sem.name} #{school.name} Courses", (sem.is_current? ? "Current"  : "Begins in #{distance_of_time_in_words(Time.now.utc,sem.start_date)}") do |actions,id|
+
+            if logged_in_user.join_course_at?(school)
+                actions.add "Register",:controller=>"registerar"
+            end    
+    %>
+       
+            <%if  classes.empty?%>
+                <%fb_box_fallback id do %>                            
+                        <%if school.status_changed%>
+                           <h2 style='font-size:9pt;'> You have been dropped out of your courses because you have changed your school status 
+                            at <%=school.name%>. <%=fb_link_to 'click here'%> to see why you are seeing this message.</h2><br><br>
+                        <%end%>
+                        <%if logged_in_user.join_course_at?(school)%>
+                            <%="You are not taking any courses for #{sem.name}"%>.
+                            Select a Subject<br><br>
+                           <%fb_form_tag(:controller=>"registerar",:action=>"register") do%>                        
+                                <%=select_tag "s",
+                                options_for_select(school.subjects.map{|s| [s.name,s.id]}),:style=>"width:160px",:onchange=>"this.getForm().submit()"%>
+                           <%end%>
+                       <%else%>
+                            <div style='text-align:left'>
+                                You can't register in courses in <%=school.name%> as <%=school.record_of(logged_in_user).fb_status.capitalize rescue ""%>.
+                                You must be either a student (undergrad/grad) or faulty to be able to register.
+                            </div>
+                       <%end%>                              
+                <%end%>
+            <%else%>
+        		    
+        		    <%classes.each do |klass|%>
+        		            <div>
+        		                <%  rid = "r#{rand(10000)}"
+        		                %>
+        		                <div style='float:left'>
+        		                <%=fb_link_to '',"",:class=>'x_to_hide',:id=>rid,
+        		                    :style=>"background:transparent url(http://www.facebook.com/images/x_to_hide.gif) no-repeat scroll center;"
+        		                    %>&nbsp;&nbsp;
+        		                </div>
+        		                <div style='float:left;width:160px'>    
+        		                <%=link_to_class(klass)%>
+        		                <%=javascript_tag <<-eof
+        		                    document.getElementById('#{rid}').addEventListener('click',function(){
+        		                        x = new Dialog(Dialog.DIALOG_CONTEXTUAL).setContext(document.getElementById('#{rid}'));
+        		                        x.onconfirm = function() {
+        		                            a = new Ajax();
+        		                            a.responseType = Ajax.FBML;
+        		                            a.ondone = function(response) {
+        		                              document.getElementById('s#{school.id}').setInnerFBML(response)
+        		                            };
+        		                            a.post('#{ajax_url(:controller=>'registerar',:action=>'register_in_course')}',{profile:true,sem:#{klass.semester_id},remove:true,c: #{klass.course_id}, k : #{klass.id} })
+        		                        };
+        		                        x.showChoice('Are you sure?','By pressing okay you will leave this class.')
+        		                        return false;
+        		                    })    				                
+        		                eof
+        		                %>
+        		                </div>    
+        		            </div>
+        		            <div style='clear:left;padding-left:20px'>
+        			            <%= "<div class='dark_gray' 	style='padding-left:10px'>" + klass.formated_schedule.join("<br>") + "</div>"%>
+        		            </div>
+        		    <%end%>
+        		             
+           <br><div style='border-top:1px solid #C0C0C0'><br></div>
+           Select a subject from <%=school.name%> calendar<br><br>
+           <%fb_form_tag(:controller=>"registerar",:action=>"register") do%>                        
+                <%=select_tag "s",
+                options_for_select(school.subjects.map{|s| [s.name,s.id]}),:style=>"width:160px",:onchange=>"this.getForm().submit()"%>
+           <%end%>  
+         <%end%>
+      
+    <%end%>      
+<%end%>   

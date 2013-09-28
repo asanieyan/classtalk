@@ -1,0 +1,8 @@
+application_id: 2550000973
+application_api_key: ae349a600dc304d2b864c8f3b85013a8
+application_secret_key: 949dfad16b9c3945b2c1ca85ae3f568d
+application_server: http://216.187.103.55 #http://70.68.128.37:3000
+application_asset_server: http://216.187.103.55 #http://70.68.128.37:3000
+application_name: classtalk
+facebook_application_host: http://apps.facebook.com
+application_url:  /classtalk

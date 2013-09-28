@@ -1,0 +1,202 @@
+#!/bin/bash
+
+#Constants and such
+FULL_BACKUP_DAY=0
+
+CURRENT_WEEK_NUMBER=`date +%U`
+TOTAL_OLD_BACKUPS_TO_KEEP=1
+
+ADIR=/application_backup
+BDIR=$ADIR/$CURRENT_WEEK_NUMBER
+
+DIFF_FILENAME_OFFSET=`date +%w`
+SQL_DIFF_FILENAME=database_backup_$DIFF_FILENAME_OFFSET
+SQL_FULL_FILENAME=database_backup_0
+DAR_DIFF_FILENAME=file_backup_$DIFF_FILENAME_OFFSET
+DAR_FULL_FILENAME=file_backup_0
+REV_INFO_DIFF_FILENAME=revision_info_$DIFF_FILENAME_OFFSET
+REV_INFO_FULL_FILENAME=revision_info_0
+
+SCP_SRC_PATH=$BDIR/*
+SCP_DEST_BASE_PATH=/mnt/usbhd1$ADIR
+SCP_DEST_PATH=/mnt/usbhd1$BDIR
+SCP_DEST_ADDRESS=24.86.0.167
+SCP_PORT_NUMBER=3920
+SCP_USER=root
+SCP_ID_FILE=/root/.ssh/scpuser
+
+
+SSH_COMMAND="mkdir $SCP_DEST_BASE_PATH; mkdir $SCP_DEST_PATH"
+
+
+
+#removes all older-than-two-weeks backups from ADIR
+remove_old_backup_directories ()
+{
+  backup_age=`expr $CURRENT_WEEK_NUMBER - $TOTAL_OLD_BACKUPS_TO_KEEP`
+
+  for dir in $ADIR/*
+  do
+    dir_age=${dir/$ADIR\//}
+        if [ $dir_age -lt $backup_age ]; then
+          rm -rf $dir
+    fi
+  done
+}
+
+#prints whatever to the logfile with a timestamp
+log_backup ()
+{
+  echo `date +%m-%d-%Y_%H:%M:%S`__$1 >> backup_logfile
+}
+
+
+#Returns error message from database backup
+return_db_backup_error ()
+{
+  if [ $1 -ne 0 ]; then
+    log_backup "Error in database backup ($2). Error code $1. Exited."
+        log_backup "------------------- BACKUP FAILED -------------------"
+        exit
+  fi
+}
+
+
+#Backs up the database, and takes care of making sure the slave shuts down correctly
+back_up_database ()
+{
+  printf "Stopping Slave... "
+  /usr/local/mysql/bin/mysqladmin --user=root --password=123 --socket=/tmp/mysql-slave.sock stop-slave
+  return_db_backup_error $? "stopping slave"
+  log_backup "Slave successfully stopped"
+
+  if [ $1 = "full" ]; then
+    FILEPATH=$BDIR/$SQL_FULL_FILENAME
+  elif [ $1 = "diff" ]; then
+    FILEPATH=$BDIR/$SQL_DIFF_FILENAME
+  fi
+
+  echo "performing backup of database to $FILEPATH..."
+  /usr/local/mysql/bin/mysqldump --user=root --password=123 --socket=/tmp/mysql-slave.sock --lock-all-tables classtalk_production > $FILEPATH
+
+    return_db_backup_error $? "dumping database"
+  log_backup "Data successfully dumped"
+
+  printf "Starting Slave... "
+  /usr/local/mysql/bin/mysqladmin --user=root --password=123 --socket=/tmp/mysql-slave.sock start-slave
+  return_db_backup_error $? "starting slave"
+  log_backup "Slave successfully started"
+}
+
+
+#allows for secure copy to remote server
+secure_copy ()
+{
+  #make sure the directory exists
+  log_backup "Attempting Secure Copy of files"
+  /usr/bin/ssh -i $SCP_ID_FILE -p $SCP_PORT_NUMBER root@$SCP_DEST_ADDRESS $SSH_COMMAND
+  /usr/bin/scp -i $SCP_ID_FILE -P $SCP_PORT_NUMBER $SCP_SRC_PATH $SCP_USER@$SCP_DEST_ADDRESS:$SCP_DEST_PATH
+}
+
+#prints out error message from DAR backup functions
+return_file_backup_error ()
+{
+  if [ $1 -ne 0 ]; then
+    log_backup "Error in file backup. Error code $1"
+        log_backup "------------------- BACKUP FAILED -------------------"
+    exit
+  fi
+}
+
+#performs a full DAR backup
+full_backup_files ()
+{
+  log_backup "Attmpting full file backup"
+  /usr/local/bin/dar -w -m 256 -y -Q -D -R /var/www/classtalk/current/user_data -c $BDIR/$DAR_FULL_FILENAME
+  return_file_backup_error $?
+  log_backup "Full file backup successfully completed"
+}
+
+#performs a differential DAR backup
+differential_backup_files ()
+{
+  log_backup "Attmpting differential file backup"
+  /usr/local/bin/dar -w -m 256 -y -Q -D -R /var/www/classtalk/current/user_data -c $BDIR/$DAR_DIFF_FILENAME -A $BDIR/$DAR_FULL_FILENAME
+  return_file_backup_error $?
+  log_backup "Differential file backup successfully completed"
+}
+
+create_full_revision_file ()
+  {
+  /usr/local/bin/svn info `readlink /var/www/classtalk/current` > $BDIR/$REV_INFO_FULL_FILENAME
+}
+
+create_diff_revision_file ()
+{
+  /usr/local/bin/svn info `readlink /var/www/classtalk/current` > $BDIR/$REV_INFO_DIFF_FILENAME
+}
+
+#batch function for full backup
+full_backup ()
+{
+  back_up_database full
+  create_full_revision_file
+  full_backup_files
+  secure_copy
+}
+
+#batch function for differential backup
+differential_backup ()
+{
+  back_up_database diff
+  create_diff_revision_file
+  differential_backup_files
+  secure_copy
+}
+
+
+
+
+log_backup "------------------- BEGINNING BACKUP -------------------"
+
+#check for directory, create if necessary
+if [ -d $BDIR ]; then
+  log_backup "Dated archive directory found."
+else
+  log_backup "Dated archive directory not found. Creating..."
+  mkdir $BDIR
+fi
+
+#perform full or differential backup, based on varied criteria
+if [ `date +%w` -eq $FULL_BACKUP_DAY ]; then
+  log_backup "Performing full backup."
+  full_backup
+
+elif [ "$1" = "--force-full" ]; then
+  log_backup "Performing forced full backup."
+  full_backup
+  else
+
+  if [ -f $BDIR/$DAR_FULL_FILENAME.1.dar ]; then
+    log_backup "Full backup files found. Proceeding with differential backup."
+    differential_backup
+
+  else
+    log_backup "Full backup files not found. Proceeding with full backup."
+    full_backup
+
+  fi
+
+fi
+
+log_backup "------------------- BACKUP COMPLETED -------------------"
+
+
+#at this point everything should have been successful... so we can clean up the old shite...
+remove_old_backup_directories
+
+
+exit
+
+
+  

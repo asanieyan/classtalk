@@ -1,0 +1,343 @@
+# NOTE: YOU NEED TO USE &#58; for colons becuase bare colons will fuck up the file
+title: Help_Home_Page
+description: Welcome to Oycas' help system!
+  <br><br>
+  Here you can find answers to questions you may have about the site. To navigate this section, click on one of the links below to visit help topic. In each topic, you can either come back to this page by clicking "home" or to the last page you visited by clicking "back".
+  <br><br>
+  If you have a question that cannot be solved by the help system, please email us at <%= link_to 'info@oycas.com', 'mailto:info@oycas.com', {:style=>"font-size:8pt!important;"} %>.
+  <div class='bold-link-div'> 
+    if you have a problem with your browser check out the <%=link_to_topic 'Supported Browsers'%> section.
+  </div>
+---
+title: Supported Browsers
+description: At the moments we only support followings browsers. 
+   
+    <ul class='liststyle1'>
+      <li > <span class='dark-bold-gray'>Internet Explorer 6.0 or greater </span> </li>
+      <li > <span class='dark-bold-gray'>Mozila Firefox 2.0 or greater </span></li>
+    </ul>
+    <p>
+      if your browser is not listed above, you can still use oycas however you might encounter some problems.
+      If you encouter any bugs you can report the them by using the 'report bug' link at the bottom of the page 
+    </p>    
+
+---
+title: Discussions
+description: This section discusses some of the features associated with the Discussions areas around the site.
+subsections:
+  -
+    stitle: Navigating the discussions area
+    sdescription: When you first enter the discussions area, you will see a list of discussion topics, and a button to "Start New Discussion". The topics are listed, by default, in order of the most recently changed. Each row in the table represents one topic and provides the user with the number of views and replies, as well as when it was initially created, and when the last post was posted. To view a given topic, click on the link in the "Discussion Topic" column.
+    qa:
+      -
+        question: How do I start a new discussion topic?
+        answer: By clicking on the button "Start New Discussion" you will be taken to a page which includes a place for you to put a title for your topic, and an editor box that allows you to type in your text for the topic. To save what you have entered, click on "Create Discussion".
+      -
+        question: What formatting features are available to me when writing my topic?
+        answer: You can edit the following formatting features of text in your topic&#58;
+          <li>Font Face
+          <ul>
+          <li>Font Size
+          <li>Bold
+          <li>Italic
+          <li>Underline
+          <li>Superscript and Subscript
+          <li>Left, Center and Right Paragraph alignment
+          <li>Ordered and Unordered lists
+          <li>Indenting (and Outdenting)
+          <li>Background and Text (Foreground) color
+          <li>Insert Image, Table and Link
+          </ul>
+          You can also Undo and Redo actions, Cut, Copy and Paste, and see the HTML source of your topic.
+      -
+        question: What if I want to go back to the Discussion area without saving a topic?
+        answer: You can click either "Back to discussion board" at the top of the page, or "Cancel" at the bottom of the page.
+  -
+    stitle: Topics at a glance
+    sdescription: Clicking on a topic allows you to see the posts associated with it. The posts are ordered by "oldest first". Each post indicates when it was posted, and allows you to reply to and edit it. If you are the owner of a post, you also have the option of deleting it. If you are the owner of this thread, you also have the option of deleting the whole thread.
+    qa:
+      -
+        question: How do I reply to a post?
+        answer: Click on the link that says "Reply to". You will be presented with a page that allows you to enter a new subject line, and an editor box to type in your reply. The same formatting options that are in the Topic editor box are available in this one.
+---
+title: The_Desk
+description: The Desk is a place for you to write short notes to other students, as well as to a group of students (a school's desk, for example). Each note displays the time it was posted and the poster's identity.
+subsections:
+  -
+    stitle: Using the desk
+    sdescription: To write a note on the selected desk, click on the link that says "write something". A textbox will
+      appear and allow you to type in your note. To submit your text, press 
+      the "Post" button, or press "Cancel" to close the interface.
+      <br><br>
+      You can reply to any post on the Desk, and if you are the owner of a post, you have the option of deleting it.
+---
+title: Courses
+description: 
+      Oycas supports all the courses of your school. That means you can register in the courses you are currently taking in the current semester 
+      and interact with your classmates.
+subsections:
+  -
+    qa:
+      -
+        question: If I am not registered in any courses, how do I register?
+        answer: It's very easy to register in your class.
+          <ol>
+              <li style='margin-bottom:5px'> Go to your school course catalouge by going to your school home page and selecting course catalouge on the top menu</li>
+              <li style='margin-bottom:5px'> On the left hand side, select a subject from your school course calendar. Now you see the list of all courses for the subject you selected earlier</li>              
+              <li style='margin-bottom:5px'> Click on the course you are currently taking</li>
+              <li style='margin-bottom:5px'> Enter your class time and click register</li>
+          </ol>
+      -
+        question: I put the wrong time when I was registering in class. What should I do?
+        answer: Just drop the course by clicking on the link 'drop class' and then create a new class
+      -
+        question: How come I can't register more than <%=School::MaxReg %> courses?
+        answer: In order to make our service more effecient, we have decided to limit the number of courses a student can register in. So if really have more than <%=School::MaxReg %> courses in a semester then you need to take a vacation.  
+---
+title: Classes
+description: This page provides information on a specific class.
+subsections:
+  -
+    stitle: What's on the page
+    sdescription: On this page you are able to immediately see the Class Info (Timetable, Instructor and Room), Class News, current Classmates, the Class <%= link_to_topic 'Desk', 'The_Desk' %> and the Class Chat. In the "Next Step" 
+      section of this page you are able to register in the class, go to the class' shared binder, and go to the class <%= link_to_topic 'discussion', 'Discussions' %> area.
+    qa:
+      -
+        question: How do I register in this class?
+        answer:  You can register in this class by clicking the "Register in this class" link
+---
+title: Binders
+description: Binders contain notes, documents and files that you can upload to Oycas. In your home area you have "My Binder" which contains all the notes you have uploaded, and also "Shared Binders" in courses you are registered in which contain notes uploaded by students registered in that course.
+subsections:
+  -
+    stitle: About the page
+    sdescription: The main area of the screen shows you what documents have been uploaded, or gives you a link to create a new note. On the right
+      hand side, you can select to "Search Class Notes", and change the notes you are able to view ("Filter Note By Type" and "Show") and how you view them 
+      ("Sort" and "View"). Notes that are listest indicate the title of, comments for, and creation time of the note. When viewing notes, you can download it by clicking the note's "Download Note" link.  
+    qa:
+      -
+        question: How do I create a new note?
+        answer:  You can upload a note by clicking the "Create New Note" tab or by clicking the "New Note For.." link located above the tabs.
+          <br><br>
+          If clicking on "Create New Note", A list of courses will appear if you are registered in some. 
+          If you are not registered in any courses you need to do so before you can create a new note. 
+          <br><br>
+          A popup box will appear if you click on one of the listed courses in the "Create New Note" tab, or if you click
+          on the "New Note For.." link.
+          <br><br>You will be asked to enter the title (mandatory) and type of note you are uploading, and any 
+          comments you may have about it. You then can select up to eight (8) files to upload by clicking the "browse" 
+          buttons on the right side. If you want this note to be created anonymously, check the "This is an Anonymous Note" box.
+          <br><br>
+          Finish uploading the note by clicking "Upload" or exit by clicking "Cancel".
+      -
+        question: How do I delete a note?
+        answer: If you are the owner of a note, you can delete it by clicking on the "x" on the right hand side of the note you wish to delete.
+---
+title: Messages
+description: You can send and recieve messages in this section.
+subsections:
+  -
+    stitle: What's on the page
+    sdescription: This page is divided up into three tabs&#58; Inbox, Saved Messages and Sent Messages. Messages are either read or unread and can be saved if so desired. A record
+      of sent messages is also available under the Sent Messages tab.
+    qa:
+      -
+        question: How do I send a message?
+        answer:  First, click on "Compose New Message". In the page that comes up, select a friend to send a message to from the list and click the ">>" button to transfer
+          the selected entries to the "To" box. Any people added to the "To" box can be removed by clicking the "x" associated with their name.
+          <br><br>
+          You then may type in the subject of your message, and then type the message itself in the edit box. To send the message, click "Send Message".
+      -
+        question: What formatting features are available to me when writing my message?
+        answer: You can edit the following formatting features of text in your message&#58;
+          <ul>
+          <li>Font Face
+          <li>Font Size
+          <li>Bold
+          <li>Italic
+          <li>Underline
+          <li>Superscript and Subscript
+          <li>Left, Center and Right Paragraph alignment
+          <li>Ordered and Unordered lists
+          <li>Indenting (and Outdenting)
+          <li>Background and Text (Foreground) color
+          <li>Insert Image, Table and Link
+          </ul>
+          You can also Undo and Redo actions, Cut, Copy and Paste, and see the HTML source of your message.
+      -
+        question: How do I save messages?
+        answer: When you are in your inbox, you can save messages by selecting the ones you want to save by either checking individual checkboxes, or using the "All" option in the drop down box. You then click "save", located to the right of the drop down box.
+      -
+        question: How do I mark messages as read/unread?
+        answer: You can do this by clicking on messages' individual checkboxes or selecting "All" option in the drop down box. You then click "read" or "unread", located to the right of the drop down box.
+      -
+        question: How do I delete messages?
+        answer: The first method of deleting messages is by either clicking individual messages' checkboxes or selecting the "All" option in the drop down box and clicking "delete" to the right of the drop down box. The second method is to click the "x" on the right side of the message you want to delete. You will be asked to confirm this action before it will be performed.
+      -
+        question: How do I reply to a message?
+        answer: Click on "reply" on the right side of the message you wish to reply to.
+---
+title: Photos
+description: Here you can upload photos and organize them into albums.
+subsections:
+  -
+    stitle: The page.
+    sdescription: When you come to this page the first time, there will be no albums or photos. You will have to create a new album by clicking "Create a New Album".
+      You will be presented wth a popup box asking you to input an Album Title (mandatory), Location, Description and who can see this album - Click "Create Album"
+      to make your first album. You are then taken to an edit page for that album, where you can upload photos, change the album information you entered, or view the album's contents.
+    qa:
+      -
+        question: How do I upload photos to an album?
+        answer: You can upload photos to your album by clicking "Edit Album", and then clicking on "Upload Photos to Album".
+                <br><br>
+                A popup box will be displayed and will load a java applet that allows you to select a number of photos to 
+                upload to the album. Select all the files you want by clicking "browse" and selecting files using the file window. With
+                the other buttons, you can select to "Remove All" or "Remove Selected" photos, and perform "Rotate Left"/"Rotate Right" on photos.
+                To upload your files to the server, click "Upload" in the lower left hand corner of the popup box.
+                <br><br>
+                If you cannot load the Java applet, then click on the "Try the simple upload form" link. This will allow you to select photos to upload 
+                using file fields. If you want to upload more than five (5) files, you can add more file fields by clicking "Add more file fields". Once
+                you have selected all your photos, upload them to the server by clicking "Upload Photos", or exit this popup box by clicking "Cancel".
+      -
+        question: How do I edit my album information?
+        answer:  You can edit your album information by clicking "Edit Album" and then clicking on the "Edit Album Info" tab. You can edit the title,
+          Location and Description, as well as change who can view that particular album.
+      -
+        question: How do I delete an album?
+        answer:  You can delete an album by clicking "Delete Album" in the "My Photos" section of your home page.
+---
+title: Classifieds
+description: The Classifieds section allows you to browse a marketplace of items and services for sale, and also allows you to post your own. 
+subsections:
+  -
+    stitle: Browsing the postings
+    sdescription: Initially you will be in the "Browse" section where you can select a specific category or sub-category of posts to look through. From a category
+      you will be able to limit which school's postings you want to view, search for postings and go into the various sub-categories. In the sub-categories, the same
+      features are available with the addition of the "Fast Finder" which allows you to further specify exactly what you want to look at.
+    qa:
+      -
+        question: I'm a big nerd. How do I ask a girl out? *snort*
+        answer:  Pull down your pants, make overexaggurated thrusting motions and make the <%= link_to 'mating call of the Mawakatarapada bird', 'http://userpages.itis.com/jphibbs/monkey.wav',:target=>'_blank' %>. Trust us. It works <u>every</u> time.
+  -
+    stitle: Posting your own items
+    sdescription: Clicking on "Post an Item" will bring up a page which has a list of main sections to post to. After you select this, you will also be
+      asked to pick further subsections to make your posting appear in a specific group. When you have selected enough category identifiers, you will be
+      told "You have finished selecting a category" at which point you can click "Continue to Post". You are then taken to a page where you may enter a
+      title, a detailed description and any specific locations that apply to your posting. You can also add pictures to your post by clicking "Add
+      pictures to your post", which will open up a popup box, allowing you to select up to 10 pictures to add to your posting, and uploading them by clicking
+      "Add Pictures". You can delete any pictures by dragging and dropping them over the trashcan icon.
+    qa:
+      -
+        question: How do I edit a post?
+        answer:  You can edit a post by clicking "Edit your Post" either in the category view, or while viewing the post.
+---
+title: Editing_Your_Profile
+description: You can edit the various features of your online persona here. You can select the section you want to edit by clicking on the tabs. At the top of the page, above the tabs, a "Show" button will allow you to see what the various privacy levels look like based on your current settings.
+subsections:
+  -
+    stitle: General Information
+    sdescription: This section contains the basics of who you are&#58;
+      <ul>
+      <li>gender
+      <li>sexual orientation
+      <li>relationship status
+      <li>birth date
+      </ul>
+      You can also change or upload your primary photo here.<br>
+    qa:
+      -
+        question: How do I upload or change my profile picture?
+        answer: In the "My Profile Picture" section, click the "browse" button and select a valid picture to upload. Check the checkbox that indicates that the picture is yours and does not violate the Terms of Use, and click the "Upload" button to upload your picture.
+      -
+        question: What visibility options do I have in this section?
+        answer: You have the options to set who can see your sexual orientation, and whether you display your full birth date or just the month and day.
+      -
+        question: How do I save any changes i've made?
+        answer: Make all the changes you wish and then click "Save Changes" to save them.
+  -
+    stitle: Personal Information
+    sdescription: This section lets you describe more about yourself&#58;
+      <ul>
+      <li>Religious Views
+      <li>Political Views
+      <li>Activities
+      <li>Interests
+      <li>Favorite Music
+      <li>Favorite TV Shows
+      <li>Favorite Movies
+      <li>Favorite Books
+      <li>Favorite Quotes
+      <li>About me
+      </ul>
+    qa:
+      -
+        question: How do I save any changes i've made?
+        answer: Make all the changes you wish and then click "Save Changes" to save them.
+  -
+    stitle: Contact Information
+    sdescription: This section contains details about where and how people can locate or communicate with you. Here, you can
+      enter and set the visibility level of your current address, your residence and room designation. You can also enter an address
+      for your personal website. Various methods of communication (and their visibility levels) listed are&#58;
+      <ul>
+      <li>Contact Emails
+      <li>IM (Instant Messenger)
+      <li>Land Phone
+      <li>Mobile Phone
+      </ul>
+    qa:
+      -
+        question: What visibility options do I have? What do they mean?
+        answer: You have the following visibility options available to you&#58;
+          <ul>
+          <li>Only me (don't show)
+          <li>Only my friends
+          <li>My friends and my classmates
+          <li>Everybody in my school
+          </ul>
+          These options represent the groups of people who are able to view various elements of your profile relative to the overall 
+          level of privacy for your profile.
+      -
+        question: How do I save any changes i've made?
+        answer: Make all the changes you wish and then click "Save Changes" to save them.
+  -
+    stitle: Profile Features
+    sdescription: This section allows you to set the visibility of the following features associated with your profile.
+      <ul>
+      <li>Desk Messages
+      <li>Courses
+      <li>Friends
+      <li>Photo Albums
+      </ul>
+    qa:
+      -
+        question: What visibility options do I have? What do they mean?
+        answer: You have the following visibility options available to you&#58;
+          <ul>
+          <li>Only me (don't show)
+          <li>Only my friends
+          <li>My friends and my classmates
+          <li>Everybody in my school
+          </ul>
+          These options represent the groups of people who are able to view various elements of your profile relative to the overall 
+          level of privacy for your profile.
+      -
+        question: How do I save any changes i've made?
+        answer: Make all the changes you wish and then click "Save Changes" to save them.
+  -
+    stitle: Profile Privacy
+    sdescription: This sections allows you to set the overall privacy level of your profile.
+    qa:
+      -
+        question: What visibility options do I have? What do they mean?
+        answer: You have the following visibility options available to you&#58;
+          <ul>
+          <li>Only me (don't show)
+          <li>Only my friends
+          <li>My friends and my classmates
+          <li>Everybody in my school
+          </ul>
+          These options represent the groups of people who are able to view various elements of your profile relative to the overall 
+          level of privacy for your profile.
+      -
+        question: How do I save any changes i've made?
+        answer: Make all the changes you wish and then click "Save Changes" to save them.

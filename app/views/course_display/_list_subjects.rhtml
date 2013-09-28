@@ -1,0 +1,38 @@
+<%selected_subject ||= nil rescue false%>
+<%course ||= nil rescue false%>
+<%subject ||=nil rescue false%>
+<%
+if subject
+    selected_subject = subject.id    
+    courses = subject.courses
+elsif course 
+    subjects = course.school.subjects
+    selected_subject =  course.subject.id    
+    courses = course.subject.courses
+    selected_course = course
+end%>
+<div  style='float:left' >
+	
+	  <%=select_tag "s",
+	    options_for_select(subjects.map{|s| [s.name,s.id]},selected_subject),
+	    :size=>"10",:style=>"width:240px",:onchange=>"$('course_select_div').innerHTML='';$('course_description_div').innerHTML='';" + 
+					"$('pg2').show();" + remote_function(:url  => app_url({:action=>"list_courses",:caller=>caller}), 
+									:with => "'s='+$('s').value",
+									:success => "$('pg2').hide();$('course_select_div').innerHTML = request.responseText"
+									),:id=>"s" %>
+	  <span style="display:none;"><input type="submit" id="select_subject_submit" value="select"></span>	
+	
+</div>
+<div id='course_select_div' >	
+    <%if subject%>
+        <%=render_p 'course_display/list_courses',{'caller'=>caller,'courses'=>courses}%>
+    <%elsif course%>
+        <%=render_p 'course_display/list_courses',{'caller'=>caller,'courses'=>courses,'selected_course'=>course.id}%>
+    <%end%>
+
+</div>
+<div id='course_description_div' style='clear:left'>
+
+    <%=render_p 'course_display/describe_course',{'course'=>course,'caller'=>caller} if course%>
+
+</div>

@@ -1,0 +1,10 @@
+<div  style='padding:40px;width:500px'>      
+      <h1>
+      Classtalk is down for <%= reason ? reason : "maintenance" %>
+               as of <%= Time.now.strftime("%H:%M %Z") %>.                                                                             
+      </h1>                    
+      <p>
+            Sorry for the inconvenience. 
+            We will resume our service <%= deadline ? "by #{deadline}" : "shortly" %>.<br>            
+      </p>
+</div>     

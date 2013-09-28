@@ -1,0 +1,82 @@
+<%=fb_css "ubersearch"%>
+        <div style='text-align:right;padding:5px;'>
+            <%if @app_user%>
+                <%=fb_link_to "Back to My Classes",:action=>"main"%>
+            <%end%>
+        </div>
+<div class="bar clearfix uber_bar" style='border-top:1px solid #C0C0C0'>
+    <div class="summary">
+
+        <span style='color:gray' class='bold'>Show people in class</span>
+        <%if  @registered%>
+            <%=select_tag("k",options_for_select(logged_in_user.classes.at(@selected_semester).map{|k|        	                               	                            	                    
+            	                       [k.name,k.id]
+            	                    },@selected_class.id),
+            	                    :onchange=>"document.setLocation('#{fb_url({:action=>'browse'})}' + '?k=' + $('k').getValue())")%>            
+            <span style='color:gray'> from </span>
+            <%=select_tag("sem",options_for_select(@all_semesters.map{|s|        	                               	                            	                    
+            	                       [s.school.name + " " + s.name,s.id]
+            	                    },@selected_semester.id),
+            	                    :onchange=>"document.setLocation('#{fb_url({:action=>'browse'})}' + '?sem=' + $('sem').getValue())")%>            
+        <%else%>
+            <%=link_to_class @selected_class%>
+        <%end%>    
+    </div>    
+</div>
+
+<div class='ubersearch'>
+    <div class='bar clearfix summary_bar'>
+        
+        <div class="summary">    
+
+            <%if @random_order%>
+                 <%if @paginator.item_count <= 10%>
+                     <%=paginator_summary :person,@paginator%> from <%=link_to_class(@selected_class)%>.
+                 <%else%>
+                     Displaying 10 people randomly from <%=link_to_class(@selected_class)%>.
+                 <%end%>                
+            <%else%>
+                 <%=paginator_summary :person,@paginator%> from  <%=link_to_class(@selected_class)%>..
+                 
+            <%end%>
+        </div>
+        <%if not @random_order%>
+            <%=fb_paginator @paginator, carryover = %w(o sx rl ii if).inject({}) {|h,e|
+                    h[e] = params[e]                    
+                    h
+                }%>
+        <%end%>
+         <ul class='pagerpro' style='visibility:<%= @random_order && @paginator.item_count > 10 ? 'visible' : 'hidden'%>' >
+            <li><%=fb_link_to "Show More",{:k=>@selected_class.id},:onclick=>@app_user ? "$('people_filters').submit();return false;" : "return true;"%></li>
+         </ul>        
+
+    </div>
+</div>
+<div>   
+    <%fb_users_table :search do |filter|%>
+        <%if @class_users.empty?%>
+            <div class="fallback">
+                <strong>
+                    No one matches your criteria.  Try another <%=fb_link_to 'browse',{:k=>@selected_class.id}%>.
+                </strong>
+            </div>        
+        <%else%>            
+            <%(@class_users).each do |user| %>
+                <%= fb_result_table(user,:default_links=>true) do |e|
+
+                            e[:labels].unshift ["Courses",
+                            user.classes.at(@selected_class.school.curr_next_semesters).map{|k| link_to_class(k,:full_name=>false)
+                            }.join(", ")   ] 
+                end
+                %>    
+            <%end%>
+            <%filter << capture do %>            
+                <%=render_p('filters') if @app_user%>            
+            <%end%>
+        <%end%>
+    <%end%> 
+    
+
+</div>
+
+            

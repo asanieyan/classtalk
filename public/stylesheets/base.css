@@ -1,0 +1,263 @@
+/*****************************************************************************************************
+    This File contains the css used in canvas and iframe
+    must be uploaded both in canvas and iframe
+******************************************************************************************************/
+/*****************************************************************************************************/
+/*Title: General Style Helpers
+  Used: Can be used both in canvas and iframe
+  */
+.light_gray,.bold_light_gray {
+	color:#A0A0A0 !important;
+}
+.dark_gray, .bold_dark_gray {
+	color:#606060 !important;
+}
+.light_weight,.bold_light_gray {
+	font-weight:normal !important;
+}
+.bold_weight,.bold,.bold_dark_gray  {
+	font-weight:bold !important;
+}
+.left {
+	float:left !important;
+}
+.right {
+	float:right !important;
+}
+table.top_v_align td{
+	vertical-align:top !important;
+}
+.no_padding {
+  padding:0 !important;
+}
+.no_margin {
+	margin:0 !important;
+}
+/****************************************
+Titles: footer 
+*/
+.page_footer {
+    background:#F7F7F7 none repeat scroll 0%;
+    border-top:1px solid #DDDDDD;
+    height:30px;
+}
+/****************************************/
+/*Tiles: Facebook Original Dialog
+  Used: Variaty of places
+  */
+
+.org_dialog {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #d8dfea;
+    border-right-color: #d8dfea;
+    border-bottom-color: #d8dfea;
+    border-left-color: #d8dfea;
+    
+}
+.org_dialog .inside {
+    padding: 5px;
+    background-color: #ffffff;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #3b5998;
+    border-right-color: #3b5998;
+    border-bottom-color: #3b5998;
+    border-left-color: #3b5998;
+}
+/****************************************/
+/*Tiles: Title Header
+  Used: Create New Document Title,
+  		Discussion Section
+  */
+.title_header 
+{
+	background-color: white;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 17px;
+	padding-left: 20px;
+
+}
+.title_header.add_border 
+{   
+    
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+}
+.title_header h2 
+{
+	background-image:none !important;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-size: 14px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 24px;
+}
+.title_header h4 
+{
+	color: #666666;
+	font-size: 11px;
+	padding-top: 3px;
+	padding-right: 0pt;
+	padding-bottom: 0pt;
+	padding-left: 24px;
+	font-weight:normal !important;
+}
+.shorten 
+{
+	padding-bottom: 0px;
+}
+/************************************************************************************/
+#friendtables  {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    background-color: #f7f7f7;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+   
+    }
+
+/*****************************************************************************************************/
+/*Title: Summary Bar
+  Used: Used in variety of places suches as where we put a pagination
+        or want to show some information about the page being showed
+        or want to show search results
+  */
+.summary_bar {
+  border-bottom: 1px solid #D8DFEA;
+  clear: both;
+  padding: 11px 20px 0px;
+  color: black;
+  font-weight: normal;
+  line-height: normal; }
+  
+.summary_bar h1, .summary_bar h2, .summary_bar h3, .summary_bar h4, .summary_bar h5 {
+    font-weight: normal; }
+
+.summary_bar .summary {
+  color: #333;
+  float: left;
+  padding-top: 3px;
+  padding-bottom: 4px; }
+
+.summary_bar .summary a {
+  font-weight: normal; }
+
+/*****************************************************************************************************/
+
+.inputtext,
+.inputpassword {
+  border: 1px solid #bdc7d8;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-size: 11px;
+  padding: 3px; }
+
+textarea {
+  border: 1px solid #bdc7d8;
+  padding: 3px;
+  font-size: 11px;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif; }
+     
+.inputbutton,.inputsubmit {
+  border-style: solid !important;
+  border-top-width: 1px !important;
+  border-left-width: 1px !important;
+  border-bottom-width: 1px !important;
+  border-right-width: 1px !important;
+  border-top-color: #D9DFEA;
+  border-left-color: #D9DFEA;
+  border-bottom-color: #0e1f5b;
+  border-right-color: #0e1f5b;
+  background-color: #3b5998;  
+  width:auto;
+  padding:3px;
+  color: #FFFFFF;
+  font-size: 11px !important;
+  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; 
+  text-align: center; 
+}
+
+.inputcheckbox {
+  border: 0px; }
+
+.inputsearch {  
+  padding-left: 17px; }
+  
+.section h2 {
+  margin: 5px 0px;
+  padding: 0px 0px 2px;
+  font-size: 13px;
+  color: #3B5998;
+  border-bottom: solid 1px #D8DFEA; 
+
+} 
+/*****************************************************************************************************/
+/*Title: Course Registration Styles
+  Used: Used in iframe course registration
+        and in set privacy page
+        must change the name       
+  */
+#courses h2 {
+  width: 550px;
+  margin: 5px 0px;
+  padding: 0px 0px 2px;
+  font-size: 13px;
+  color: #3B5998;
+  border-bottom: solid 1px #D8DFEA; 
+}
+#courses {
+  margin: 20px auto 10px auto;
+  width: 550px; }
+
+#courses p {
+  margin: 10px 10px 0px; }
+
+#courseshs {
+  margin: 0 auto 20px auto;
+  width: 600px; }
+
+#courses h4 {
+  width: 550px;
+  margin: 5px 0px;
+  padding: 0px 0px 2px;
+  font-size: 13px;
+  border-bottom: solid 1px #D8DFEA; }
+
+#currentcourses {
+  margin: 0px;
+  padding: 10px 0px 2px 10px; }
+
+#currentcourses td {
+  padding: 0px 10px 10px 0px; }

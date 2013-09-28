@@ -1,0 +1,19 @@
+--- 
+:courses: []
+
+:info: 
+  :city: normal
+  :nid: "16777446"
+  :name: Illinois State
+  :semesters: 
+  - - Fall
+    - 8/20
+    - 12/20
+  - - Spring
+    - 1/10
+    - 5/10
+  - - Summer
+    - 5/12
+    - 8/10
+  :region: illinois
+  :country: united states

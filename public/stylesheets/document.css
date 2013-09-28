@@ -1,0 +1,105 @@
+/*  ------------------------------------------------------------------------
+                           Facebook | Note Permalink
+    ------------------------------------------------------------------------  */
+
+
+.note_permalink .summary_bar .summary {
+  font-weight: normal; }
+
+.note_permalink .summary_bar .pipe {
+  padding: 0px 1px; }
+
+.note_permalink .summary_bar .pagerpro li {
+  margin-left: 6px; }
+
+.note_permalink .notes_error {
+  padding: 0px 10px; }
+
+
+/*  NOTE PREVIEW DIALOG  */
+
+.note_preview_dialog {
+  color: black;
+  border: solid 1px #ffe222;
+  background: #fffbe2;
+  font-weight: bold;
+  margin: 0px 10px;
+  padding: 10px; }
+
+.notes_preview form {
+  display: inline;
+  font-weight: normal; }
+
+.notes_preview input {
+  margin: 0px; }
+
+
+/*  ---------------------------|  MAIN COLUMN  |----------------------------  */
+
+.note_permalink .note {
+  color: #333; 
+  padding: 10px 0px 0px 20px;
+  margin: 0px; }
+
+.note_permalink .note .profile_thumb {
+  display: none; 
+  float: left;
+  padding-right: 15px;
+  width: 50px; }
+
+.note_permalink .note .note_body {
+  width: 425px; 
+  float: left; }
+
+.note_permalink .note_content {}
+
+/*  NOTE COMMENTS  */
+
+.note_permalink #comments {
+  padding: 10px 25px 0px 20px; }
+
+.note_permalink #comments_header {
+  border-top: 1px solid #ddd;
+  padding: 5px 0px 30px 1px; }
+
+.note_permalink #comments_header .comments_count,
+.note_permalink #comments_header .comments_off {
+  color: #666;
+  float: left; }
+
+.note_permalink #comments_header .note_footer_right {
+  color: gray;
+  float: right; }
+
+
+/*  ADD A COMMENT  */
+
+.note_permalink #add_comment {
+  padding: 10px 20px 20px 20px; }
+
+.note_permalink #add_comment label {
+  color: #3b5998;
+  display: block;
+  padding-bottom: 4px; }
+
+.note_permalink #add_comment textarea {
+  height: 100px;
+  margin: 0px 0px 0px 0px;
+  width: 393px; }
+
+.note_permalink #add_comment input {
+  margin-top: 15px;
+}
+
+.note_permalink #add_comment small {
+  color: #666666;
+}
+
+/*  -------------------|  SIDE COLUMN - EDIT THIS NOTE  |-------------------  */
+
+.note_permalink #viewer {
+  border-bottom: 1px solid #ccc; }
+
+
+
+/*  Wrote you this. I hope you got it safe.  ---------------------------------  */

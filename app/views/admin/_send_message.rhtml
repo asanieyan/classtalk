@@ -1,0 +1,30 @@
+    <div id='links'>
+    
+    
+    </div>
+    <%fb_editor({},{:id=>"form1"})do %>
+
+        <%=fb_editor_text_area "uids","",:label=>"User Ids",:size=>"30x5",:required=>"seperated by space"%>
+        <%=fb_editor_text_field "c_num","",:label=>"# Classes"%>        
+        <%fb_editor_costum_tag "Req Schools" do%>
+            <%=select_tag "req_nid",
+                    options_for_select([[" ",nil]] + RequestedSchool.find(:all,:group=>"nid").map{|r| [r.name,r.nid]})%>
+        <%end%>
+        <%=fb_editor_text_field "subject","",:label=>"Subject"%>        
+        <%=fb_editor_text_area "body","",:label=>"Message",:size=>"30x10"%>        
+        <%=fb_editor_buttons do |buttons,cancel|                    
+                    buttons.add "Send Message",:id=>"submit_msg",:onclick=><<-eof
+                        try{
+                          new Ajax.Updater('links','#{ajax_url(:action=>"get_msg_links")}',Ajax.FBML,{
+                                parameters : Form.serialize($('form1'),true)
+                          });
+                        }catch(e){alert(e.message)}
+                        return false;
+                        
+                    eof
+           end
+        %>        
+    <%end%>
+
+
+    

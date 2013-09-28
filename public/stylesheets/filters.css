@@ -1,0 +1,172 @@
+/*  ------------------------------------------------------------------------
+                         Facebook | Ubersearch Filters
+    ------------------------------------------------------------------------  */
+
+.filters {
+	width: 160px; }
+
+.filters select {
+  width: 158px;
+  margin: 2px 0px 4px 0px; }
+
+.filters .age_1 {
+  width: 50px; 
+  margin-left: 0px;
+  margin-right: 4px; }
+
+.filters .age_2 {
+  width: 50px;
+  margin-left: 4px;
+  margin-right: 0px; }  
+
+.filters label {
+  color: #666; 
+  margin: 0px; }
+
+.filters .inputtext { width: 142px }
+
+.filter_search { padding: 0px 0px 10px 0px; }
+
+.filter_buttons {
+  margin: 0px;
+  padding: 10px 0px 5px 5px; }
+
+.filter_buttons input {
+  margin: 0px 0px 5px 0px;
+  width: 140px; }
+  
+.filter_superset {
+  border-top: 1px solid #ddd;
+  width: 160px; }
+
+.filter_set .radio label {
+  color: black;
+  display: inline;
+  font-weight: normal; }
+
+.filters fieldset {
+  border: 0px;
+  border-bottom: 1px solid #ddd;
+  clear: both;
+  margin: 0px;
+  padding: 5px 0px;
+  width: 160px; }
+
+.filters fieldset .filter_controls {
+  display: block;
+  padding-left: 1px }
+
+.filters legend {
+  border-top: 1px solid white;
+  color: #666;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  margin: 0px;
+  padding: 4px 0px 0px 17px;
+  width: 133px; }
+
+/*.filters fieldset legend { background: url(/images/filterset_on.gif) 2px 8px no-repeat }*/
+
+.filters fieldset label {
+  color: black;
+  font-size: 11px;
+  font-weight: normal;
+  padding-left: 4px; }
+
+.filters fieldset input { margin: 0px; }
+
+.filters fieldset.collapsed { padding-bottom: 0px }
+.filters fieldset.collapsed div.filter_controls { display: none !important; }
+/*.filters fieldset.collapsed legend { background: url(/images/filterset_off.gif) 4px 6px no-repeat }*/
+
+
+.filters .checkbox { padding-bottom: 4px }
+
+fieldset#filters_sx label { padding-right: 2px }
+fieldset#filters_sx .filter_controls { padding-bottom: 4px }
+
+fieldset#filters_groups label,
+fieldset#filters_events label,
+fieldset#filters_dropmenus label {
+  clear: both;
+  color: #666;
+  display: block;
+  padding-left: 0px; }
+
+fieldset#filters_groups legend,
+fieldset#filters_events legend {
+  cursor: auto; }
+
+/*  ---------------------------|  SORT METHOD  |----------------------------  */
+
+.sort_method {
+  padding-bottom: 5px;
+  width: 160px; }
+
+.sort_method h2 {
+  color: #666;
+  font-weight: bold;
+  padding-bottom: 4px;
+  padding-top: 4px; }
+
+#o_sel { width: 150px }
+
+/*  --------------------------|  GROUP FILTERS  |---------------------------  */
+
+#object_filters {
+  padding-bottom: 10px; 
+  width: 160px; }
+
+#object_filters h2 {
+  color: #333;
+  font-size: 11px;
+  font-weight: bold;
+  padding-bottom: 5px; }
+
+.browse #filters_c1 {
+  border-top: 1px solid #ddd;
+  margin-top: 6px; }
+
+.browse #filters_c1 label {
+  border-top: 1px solid white;
+  display: block;
+  padding-top: 4px; }
+
+/*
+#object_filters #type_filters {
+  border-top: 1px solid #ddd;
+  margin-top: 6px; }
+
+#object_filters #type_filters #label_c1 {
+  display: block;
+  border-top: 1px solid white;
+  padding-top: 6px; }
+*/
+
+.hyperfilters .subtype_label {
+  color: #666;
+  font-weight: bold; 
+  padding: 4px 0px 1px 0px; }
+
+.hyperfilters .subtype {
+  padding: 1px 0px; }
+
+.hyperfilters .current {
+  color: #222;
+  font-weight: bold; }
+
+.hyperfilters .current:hover {
+  text-decoration: none; }
+  
+/*  --------------------------|  EVENT FILTERS  |---------------------------  */
+  
+#filters_network optgroup {
+  font-style: normal;
+  color: gray;
+}
+
+
+
+
+/*  You know I can see your card.  -----------------------------------------  */

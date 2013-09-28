@@ -1,0 +1,194 @@
+<%=fb_css 'profile'%>
+
+<div class='userprofile'>
+    <div class='profilenarrowcolumn'>
+        <%=image_tag app_asset('/images/ct_logo.gif'),:style=>"margin-bottom:10px"%><br>
+        <%=fbml_profile_pic logged_in_user.id,:size=>"n"%>
+        <br><br>
+        
+        <%=fb_actions do |actions|                
+                ##actions.add "Edit Settings",{:action=>"settings"}                
+                actions.add "My Documents",{:controller=>"library",:action=>"main",:uid=>logged_in_user.id}
+                actions.add "My Classes",{:controller=>"classes",:action=>"main"}
+                actions.add "Registerar",{:controller=>"registerar",:action=>"register"}
+                if logged_in_user.is_admin?
+                    actions.add "Adminstrator",{:controller=>"admin"}                
+                end
+            end
+        %>
+        <br>
+        <%fb_box "My Friends at Classtalk" do |label,actions,id| 
+			actions.add "View All",{:controller=>"profile",:action=>"friends",:t=>"friends"} if logged_in_user.friends_here.size > 0
+			actions.add "Invite",{:controller=>"profile",:action=>"friends",:t=>"invite"}
+		%>	
+          <%if !logged_in_user.friends_here.empty?%>
+        	   <%=table_tag :cols=>3,:table=>{:class=>"friendTable",:height=>"100%"} do |cols|
+            	       logged_in_user.friends_here[0..5].in_groups_of(3,false) do |friends|
+            	               friends.each do |friend|
+            	                   cols.push(table_tag(:cols=>1){|user_cols| 
+            	                           user_cols.add fbml_profile_pic(friend.id),{:style=>"height:100%;vertical-align: middle;"}
+            	                           user_cols.add fbml_name(friend.id)            	                   
+            	                   })
+            	               end
+            	       end
+        	       end        	           	   
+        	   %>
+        	
+           <%else%>	 
+                <%fb_box_fallback id do%>
+                    You don't have any friends here. <br> <%=fb_link_to 'invite some'%>
+                <%end%>
+        	<%end%>
+        <%end%>  
+        <%if @closed_schools.size > 0%>
+            <%fb_box "Down for Maintenance","" do |a,id|%>
+                <%fb_box_fallback id do%>
+                    We are sorry but currently                 
+                    <%=@closed_schools.map{|s| link_to_school(s)}.join(", ")%> <%=@closed_schools.size > 1 ? "are" : "is"%> 
+                    down for maintenance. We are trying our best to resolve the issues.
+                <%end%>
+
+            <%end%>                    
+        <%end%>
+        <%@user_supported_schools.each do |school|%>		     
+                <div id='s<%=school.id%>' >
+                    <%=render_p 'school_classes',:school=>school%>
+                </div>    
+        <%end%>
+        <%if @user_unsupported_schools.size > 0%>
+            <%fb_box "Requested Schools","" do |a,id|%>
+                <%fb_box_fallback id do%>
+                    We are sorry but currently we are not supporting                     
+                    <%=@user_unsupported_schools.map{|s| link_to_school(s)}.join(", ")%> . But you will be notified by our admins when we support your school. 
+                <%end%>
+
+            <%end%>
+        <%end%>
+
+  
+    </div>    
+    <div class='profilepagewidecolumn' style='padding-top:20px'>
+            <%style_tag do%> 
+                .standard_message {
+                    padding:0 !important;
+                    margin:0 !important;                
+                }
+    
+            <%end%>
+            <%w = logged_in_user.friend_invites.size == 0 ? 1 : 0.70 %>
+            <%randomly w do%>
+                <%=render_p 'invite_msg',:toggable=>(w == 1)%>
+            <%end%>
+            <%schools = []%>
+            <%@user_supported_schools.each do |school| %>
+                <%if logged_in_user.join_course_at?(school) &&
+                     school.next_sem_reg? && 
+                     logged_in_user.classes.at(school.next_semesters).empty?
+                     schools << school                                                    
+                  end    
+                %>        
+            <%end%>
+            <%if schools.size > 0%>
+                <%school = schools.random%>
+                <%fbml_success :title=>"Have you registered in your courses for #{school.next_semesters.random.name} at #{school.name}?" do %>   
+                           <%fb_form_tag(:controller=>"registerar",:action=>"register") do%>                        
+                             <p>
+                                Select a Subject: <%=select_tag "s",
+                                options_for_select(school.subjects.map{|s| [s.name,s.id]}),:style=>"font-weight:normal !important;",:onchange=>"this.getForm().submit()"%>
+                              </p>
+                           <%end%>                                                                 
+                <%end%>
+            <%end%>    
+        <div class='home_main_item clearfix'>
+            <div class="newsfeed_header clearfix"><h2>Classtalk Feed</h2></div>
+            <%if not logged_in_user.feeds.empty?%>
+			<%one_liner_cluster = []%>
+			<%@feeds_empty = true%>
+
+            <%logged_in_user.feeds.group_by{|f| f.created_on.to_date}.sort{|a,b| b[0] <=> a[0]}.each do |news_date,feeds_for_a_day|%>           
+                <%
+                                     today = Time.now.utc.to_date
+                                      yesterday = Time.now.yesterday.utc.to_date                
+                                      if news_date != today
+                                        if news_date == yesterday
+                                            date_header = "Yesterday"
+                                        else
+                                            date_header = news_date.strftime("%B %d")
+                                        end
+                                        date_header = content_tag(:div,date_header,:class=>"feed_date_header")
+                                     else
+                                        date_header = nil
+                                     end
+                
+                
+                %>                
+                <%@daily_feeds = capture do %>                
+                    <%feeds_for_a_day.each do |feed|%>
+                        <%  begin                                							
+    							story = publish(feed);    							
+    							@feeds_empty = false
+                            rescue Exception=>e
+                                #p e.message
+                                next
+                            end
+                         %>					 
+                        <%unless story.body%>
+                            <%one_liner_cluster << capture do%>
+                                <div class='feed_item clearfix one_liner' >
+                                    <div class='feed_story_wrapper clearfix'>
+                                       <div class='header_container clearfix'>
+                                            <%=story.headline%>
+                                        </div>              
+                                    </div>
+                                </div>
+                            <%end%>
+                        <%else%>                  
+                            <%if not one_liner_cluster.empty?%>             
+                                <%=content_tag(:div,one_liner_cluster.join(""),:class=>"one_liner_cluster clearfix")%>
+                                <div class='bumper'></div>
+                            <%end%>
+     
+                            <div class='feed_item clearfix '>
+                                <div class='feed_story_wrapper clearfix'>
+                                   <div class='header_container clearfix'>
+                                        <h2>
+                                            <%=story.headline%>
+                                        </h2>
+                                       
+                                    </div>                              
+                                    <div class='feed_story_body'>
+                                        <%=story.body%>
+                                    </div>  
+                                </div>                          
+                            </div>
+                            <div class='bumper'></div>
+                        <%end%>                                           
+                    <%end%>
+                    <%if not one_liner_cluster.empty?%>             
+                        <%=content_tag(:div,one_liner_cluster.join(""),:class=>"one_liner_cluster clearfix")%>
+                        <%one_liner_cluster = []%>
+                    <%end%>
+                <%end%> 
+                <%unless @daily_feeds.gsub(/\s/,'').to_s.size == 0%>
+                    <%=date_header%> 
+                    <%=@daily_feeds%>           
+                <%end%>                   
+            <%end%>
+			<%end%>
+			<%if logged_in_user.feeds.empty? or @feeds_empty%>
+				<div class='no_stories'>
+					Classtalk Feed highlights what's happening in your social/academic circles on Facebook. 
+					Whenever you log in, you'll get the latest headlines generated by the activity of your friends and classmates in the courses you are registered in.<br><br>
+					We don't currently have any news feed stories for you.
+				</div>
+			<%end%>
+         
+        </div>
+
+    </div>
+    
+</div>
+<div class='page_footer' style='clear:left'>
+    
+</div>	
+	

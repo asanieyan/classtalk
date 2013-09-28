@@ -1,0 +1,49 @@
+<style>
+
+    .account_note {
+                color:#444444;
+                font-size:11px;
+        }
+    h4 {
+      font-size: 13px;
+      padding-bottom: 2px;
+      border-bottom: solid 1px #d8dfea;
+      
+    }  
+    .account_note h4 {
+            border-bottom:1px solid #CCCCCC;
+            color:#444444 !important;
+            font-size:12px;
+            margin-bottom:5px;
+            padding-bottom:2px;
+    }
+    table.networkds td {
+        width:220px;
+        
+    }
+      
+</style>
+
+<div class="account_note clearfix">
+
+
+    <div style="width: 310px; float: left; margin-right: 50px;">
+        <h4>Browse All Colleges</h4>
+        Here is the list of all college networks supported by classtalk. If your college is not listed here don't worry as 
+        we are adding new colleges everyday so just check back with us regulary.
+    </div>
+    <%=image_tag app_asset('/images/ct_logo.gif'),:style=>"margin-left:20px;margin-top:20px;margin-bottom:10px"%>
+    
+</div>
+    <br>
+    <%School.find(:all,:order=>"country ASC").group_by{|s| s.country.gsub(/_/,' ').titlecase}.sort{|a,b| b[0]<=>a[0] }.each do |country,schools|%>
+            <h4> <%=country.titlecase%></h4>
+            <div style='padding-top:20px;padding-bottom:20px;'>                
+                <%=table_tag :table=>{:class=>"networkds"},:cols=>3 do |col|
+                        schools.each do |school|
+                            col << link_to_school(school)                
+                        end
+                  end
+                %>
+            </div>
+    <%end%>

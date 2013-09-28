@@ -1,0 +1,72 @@
+<div style='padding:20px;' >
+   <style>
+        .server_message div {
+            padding:0 !important; 
+        }   
+        .server_message div * {
+           
+            font-weight:normal;        
+        }
+   </style>
+
+   <div id='server_message' class='server_message' style='position:absolute;margin-left:400px;height:40px'>
+
+   </div>
+ 
+<fb:editor action="?commit=yes" labelwidth="100" enctype="multipart/form-data">
+</fb:editor>   
+   <div id='courses'>    
+        <h2>Set your document privacy</h2>
+   </div>
+  
+    <%fb_editor({},{:id=>"privacy_form"})do%>
+
+        <%fb_editor_costum_tag "Document Privacy" do %>
+            <%=hidden_field_tag "d",@document.id%>
+            <%=select_tag "p",options_for_select(@document.privacy_objects.map{|p| [p.select_name,p.db_tag]},@document.privacy.db_tag)
+                %>
+            <%=javascript_tag <<-eof
+                $('p').observe('change',function(){                       
+                        $('server_message').setTextValue('')                        
+                        new Ajax.Request('#{ajax_url(:action=>"privacy_changed",:d=>@document.id)}',Ajax.JSON,{ 
+                            parameters : {p : $('p').getValue()},
+                            ondone : function(response) {
+                               $('gauge').setSrc(response['image_src'])
+    
+                                if (response.showAnon)
+                                    $('anon').setStyle('visibility','visible')
+                                else
+                                    $('anon').setStyle('visibility','hidden')                            
+                            }
+                        })
+                })            
+            eof
+            %>    
+            &nbsp;&nbsp;<%=image_tag "http://sfu.facebook.com/images/privacy/sparkline_#{@document.privacy.openness}.jpg",:id=>'gauge'%>
+            <br><br><br>
+            <div id='anon' style='<%=%w(me friends).include?(@document.privacy.db_tag) ? "visibility:hidden" : "visibility:visible" %>'>
+                <div style='float:left;'>
+                        <%=check_box_tag "anonymous","on",@document.anonymous,:style=>"width:20px;border:none"%>
+                </div>
+                <div class='dark_gray' style='float:left;padding-left:5px'> Do you want your document to be anonymous.                         
+                            By selecting this option no one will know you posted this document.
+                </div>
+            </div>
+
+        <%end%>
+        <%=fb_editor_buttons do |buttons,cancel|
+                    buttons.add "Save Docoment Privacy",:id=>"save_button"
+           end
+        %>
+                
+    <%end%>
+    <%=javascript_tag <<-eof
+        $('save_button').observe('click',function(){
+            new Ajax.Updater('server_message','#{ajax_url(:action=>"privacy_changed",:save=>true,:d=>@document.id)}',Ajax.FBML,{
+                parameters : {anonymous : $('anonymous').getChecked(),p : $('p').getValue()}
+             });
+            return false;
+        })
+    eof
+    %>
+</div>

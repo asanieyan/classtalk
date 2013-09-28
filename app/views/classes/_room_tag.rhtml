@@ -1,0 +1,32 @@
+<%if klass.room %>
+    <%link_label = 'change'%>
+    <%= klass.room %>
+<%else%>
+    <%link_label = 'set room'%>
+<%end%>
+<%if changable %>
+    <%fbml_js_string "room_setter" do %>
+    
+     <%=
+             content_tag(:div,text_field_tag("room_typeahead","Enter the room number",
+                                            :onfocus=>"this.setValue('')",
+                                            :class=>"inputtext") + "<br />") 
+        %>
+    <%end%>
+    <%= link_to link_label,"",:id=>'roomchange_link'
+    %>
+    <%=javascript_tag     <<-eof
+          $('roomchange_link').observe('click',function(){
+              new Dialog(Dialog.DIALOG_CONTEXTUAL).setContext(document.getElementById('room')).showChoice("Set #{klass.name} Room",room_setter).onconfirm = function() {
+                        x = new Ajax();
+                        x.responseType = Ajax.FBML;
+                        x.ondone = function(response) {
+                            document.getElementById('room').setInnerFBML(response)
+                        }
+                        x.post('#{ajax_url(:action=>"change_room",:k=>klass.id)}',{'r' : document.getElementById('room_typeahead').getValue()})                
+                      } 
+              return false;   
+        })
+      eof
+    %>
+<%end%>

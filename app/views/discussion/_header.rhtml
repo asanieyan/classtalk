@@ -1,0 +1,10 @@
+<%=fb_css "discussions.css"%>
+<%=fb_css "components.css"%>
+<div class="title_header shorten">
+    <h2 style="background-image: url(<%=app_asset('/images/discussion.gif') %>)  !important;"> 
+        Discussions
+    </h2>
+    <h4>
+         <%= fb_link_to "Back to #{@owner.readable_context_name}", @owner.back_url %>
+    </h4>
+</div>

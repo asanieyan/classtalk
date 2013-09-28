@@ -1,0 +1,53 @@
+--- 
+:courses: []
+
+:info: 
+  :city: new york
+  :nid: "16777218"
+  :name: Columbia
+  :paths: 
+  - - Fall
+    - Spring
+    - Summer D
+  - - Fall
+    - Spring
+    - Summer E
+  - - Fall
+    - Spring
+    - Summer H
+  - - Fall
+    - Spring
+    - Summer Q
+  - - Fall
+    - Spring
+    - Summer R
+  - - Fall
+    - Spring
+    - Summer X
+  :semesters: 
+  - - Fall
+    - 9/1
+    - 12/25
+  - - Spring
+    - 1/1
+    - 5/17
+  - - Summer D
+    - 5/21
+    - 6/29
+  - - Summer E
+    - 5/21
+    - 7/20
+  - - Summer H
+    - 6/4
+    - 6/29
+  - - Summer Q
+    - 7/2
+    - 8/10
+  - - Summer R
+    - 7/2
+    - 7/27
+  - - Summer X
+    - 5/21
+    - 8/10
+  :region: new york
+  :country: united states

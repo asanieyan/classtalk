@@ -1,0 +1,25 @@
+<%=fb_css '/stylesheets/activity.css'%>
+<div class='pulseheader'>
+   <h2> Popular in <%=@selected_class.full_title%></h2>
+   <p> <%=fb_link_to "Back to #{@selected_class.name}",:action=>"main",:k=>@selected_class.id%> </p>
+</div>
+
+<%=fb_tabs do |tabs|
+        tabs.add "Posted Documents","",:partial=>'class_docs'
+    end%>
+<div class='sidebar clearfix'>    
+    <div class='content_frame'>
+        <div class='inner_content_frame'>
+            <div class='notes_content'>
+                <%=yield :main%>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar_frame" id="sidebar_frame">
+        <div class="sidecontent">
+                <%=yield :side%>                      
+        </div>
+    </div>
+</div>
+
+<br>    

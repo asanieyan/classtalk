@@ -1,0 +1,57 @@
+<div id="comments_header">
+    <div class="comments_count">
+          <%if doc.comments.size == 0 %>
+            <span class="no_comment">No comments</span>
+          <%else%>
+            <%= pluralize(doc.comments.size,"comment")%>
+          <%end%>
+    </div>
+    <%if  doc.user_id != logged_in_user.id%>
+    <div class="note_footer_right">
+        <%=link_to_report doc%>
+    </div>
+    <%end%>
+</div>
+<%if doc.comments.size > 0%>
+    <fb:wall>
+      <%doc.comments.each do |comment|%>
+          <div id='comment<%=comment.id%>'>
+          <fb:wallpost uid="<%=(doc.anonymous && comment.user_id == doc.user_id && logged_in_user.id != doc.user_id && !logged_in_user.is_admin?) ? nil : comment.user_id%>" t="<%=comment.created_on.to_i%>">            
+              <div id='<%=randID = rand(1000)%>'>
+              
+              </div>
+              <%=comment.body%>
+              <div class="wallkit_actionset">
+                <%if false%>      
+                     <%remote_fbml_dialog_form "{Delete}","Delete Comment",
+                                    {:submit=>"Yes",
+                                     :url=>{:d=>doc.id,:id=>comment.id,:action=>"remove_comment"},
+                                     :update=>'comments'
+                                     
+                                    } do %>
+                           
+                                                                    
+                     <%end%>                
+                <%end%>
+                <%if logged_in_user.id == doc.user_id or comment.user_id == logged_in_user.id or logged_in_user.is_admin?%>
+                <%=link_to_function 'Delete',<<-eof              
+                      d = new Dialog(Dialog.DIALOG_CONTEXTUAL);                           
+                      d.setContext(document.getElementById('#{randID}'));
+                      d.showChoice('Delete Comment',"Are you sure you want to delete this comment?","Yes","No");
+                      d.onconfirm = function(){
+                          x = new Ajax()
+                          x.responseType = Ajax.FBML
+                          x.ondone = function(response) {
+                            document.getElementById('comments').setInnerFBML(response)
+                          }
+                          x.post('#{ajax_url(:d=>doc.id,:id=>comment.id,:action=>"remove_comment")}')
+                      }
+                eof
+                %>
+                <%end%>
+              </div>
+          </fb:wallpost>
+          </div>
+      <%end%>
+    </fb:wall>
+<%end%>

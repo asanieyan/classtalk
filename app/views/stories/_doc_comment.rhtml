@@ -1,0 +1,11 @@
+<%headline do %>
+   <%=actioner(feed)%> wrote a comment for your document titled <br>
+    <%=fb_link_to context.title,:controller=>"library",:action=>"main",:d=>context.id%>   
+    
+<%end%>
+<%body do%>    
+    <%=feed_quote(comment.body) do |actions|
+
+       end
+    %>
+<%end%>

@@ -1,0 +1,49 @@
+        <%@user_frozen_schools.each do |school|%>        
+            <%fb_box "My #{school.name} Courses" do |l,a,id|%>
+                <%
+                    notice = logged_in_user.change_notices_at(school).first
+                %>                
+                <%fbml_error do%>                 
+                    <%style_tag do%> 
+                        .standard_message {
+                            padding:0 !important;
+                            margin:0 !important;
+                        }
+                        #saved .standard_message h1,.standard_message p {                          
+                            margin:0 !important;
+                            padding:3px !important;
+                        }
+                    <%end%>
+                    Your status in this school has changed from <%=notice.old_role.name%> to <%=notice.new_role.name%>.
+                    This transition is not allowed without our official review. <%=fb_link_to 'click here',""%> to read why you are seeing this message.
+                    <br>
+                    if your status at <%=school.name%> has really changed leave a comment and we will review it until then you can't use classtalk for <%=school.name%>. 
+                    you can, however, switch your status back to <strong><%=RoleMapper.ct_to_fb(notice.old_role.name)%> </strong> and this message will disapear.
+                    <br><br>
+                    <%form_tag({:action=>"notice_comment"},{:id=>'notice'}) do%>
+                        <div id='saved' style='display:none;position:relative;margin-left:40px;margin-top:10px;width:220px;position:absolute;'>
+                            <%=fbml_success :text=>"your comment is saved and will be processed. Meanwhile if you have something else to add you can still edit your comment."%>
+                        </div>
+                        <%=text_area_tag "comment",notice.user_comment,:rows=>"5",:cols=>"60"%>
+                        
+                        
+                        <%=hidden_field_tag("notice_id",notice.id)%><br><br>
+                        <%=fb_submit_tag "Submit Comment",:onclick=><<-eof
+                                                                $('saved').show();
+                                                                new Ajax.Request('#{ajax_url(:action=>"notice_comment")}',Ajax.RAW,{
+                                                                    parameters : Form.serialize($('notice'),true),
+                                                                    ondone : function(response){                                                                                
+                                                                                $('comment').setValue(response);
+                                                                                setTimeout(function(){
+                                                                                    $('saved').hide();
+                                                                                },4000)
+                                                                             } 
+                                                                });
+                                                                return false;
+                                                          eof
+                        %>
+                    <%end%>
+                    
+                <%end%>
+            <%end%>
+        <%end%>

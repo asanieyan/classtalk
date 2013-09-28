@@ -1,0 +1,35 @@
+1: 
+  id: 1
+  guid: 768596287599512747
+  school_id: 1
+  first_name: john
+  last_name: cash
+  index_name: john cash
+  email_address: johncash@sfu.ca
+  
+2: 
+  id: 2
+  guid: 768596287599512748
+  school_id: 1
+  first_name: mike
+  last_name: hamper
+  index_name: mike hamper
+  email_address: mike@sfu.ca
+
+3: 
+  id: 3
+  guid: 768596287599512749
+  school_id: 1
+  first_name: milk
+  last_name: tv
+  index_name: milk tv
+  email_address: milk@sfu.ca   
+
+4: 
+  id: 4
+  guid: 768596287599512750
+  school_id: 1
+  first_name: john
+  last_name: hasho
+  index_name: john hasho
+  email_address: johnhasho@sfu.ca          

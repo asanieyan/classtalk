@@ -1,0 +1,50 @@
+<%
+    viewing_doc_detail = false    
+    viewing_anonymous_doc_detail  = false
+    searchable = [fbml_name(@user.id,:linked=>false,:firstnameonly=>true,:possessive=>true),{:s=>"uid#{@user.id}"}]
+    if params[:d]          
+          viewing_doc_detail = true
+          @documents.first.viewed!
+    end
+    if viewing_doc_detail and !params[:uid]
+        searchable = false
+        viewing_anonymous_doc_detail = true
+    end
+
+
+
+%>
+<%=fb_media_header do |e|
+        e[:actions].add "Back to Library",{:controller=>"library",:action=>"main"}
+        unless viewing_anonymous_doc_detail
+            e[:title] << (@user != logged_in_user ? fbml_name(@user.id,:possessive=>true,:linked=>false) : "My") + 
+                          " Documents"
+            e[:image] << fbml_profile_pic(@user.id)            
+            if @user != logged_in_user
+                e[:actions].add "#{fbml_name(@user.id,:firstnameonly=>true)}'s Profile",fb_profile_url(@user.id)
+                e[:actions].add "Poke", fb_poke_url(@user.id)
+            else
+                if viewing_doc_detail
+                    e[:actions].add 'My Documents',"/library/main?uid=#{logged_in_user.id}"
+                end
+                e[:actions].add 'Post a new document',"/library/create"
+            end  
+        else
+            e[:image] <<  fb_default_pic      
+            e[:actions].add 'Post a new document',"/library/create"      
+        end 
+    end
+ %>
+<div id='server_message'>
+    
+</div>
+<div id='all_of_documents'>
+    <%=render_p 'documents_page',:editable=>(@user == logged_in_user or logged_in_user.is_admin?),
+                                 :search=>searchable,
+                                 :documents=>@documents,
+                                 :commentable=>viewing_doc_detail,
+                                 :showpic=>false,
+                                 :paginator=>viewing_doc_detail ? nil : @paginator,
+                                 :page_option=>{:uid=>@user.id}
+                                 %>
+</div>

@@ -1,0 +1,78 @@
+                                     
+<%=javascript_tag <<-eof
+    function reject(pid,ptype,pt) {
+             new Dialog(Dialog.DIALOG_POP).showChoice("Are you sure", "Are you sure you want to reject this " + pt + " ?", 'Okay', 'Cancel').onconfirm = function() {    
+                x2 = new Ajax();
+                x2.responseType = Ajax.FBML;
+                x2.post('#{ajax_url :action=>:confirm_subject}',{type : ptype,id : pid, t : pt}); 
+                x2.ondone = function(response) {
+                    document.getElementById('added_courses').setInnerFBML(response)
+                }                          
+             }    
+    }
+    function confirm(pid,ptype,pt) {
+        x = new Ajax();
+        x.responseType = Ajax.FBML
+        x.ondone = function(response){
+           new Dialog(Dialog.DIALOG_POP).showChoice("Edit", response, 'Okay', 'Cancel').onconfirm = function() {
+                x2 = new Ajax();
+                x2.responseType = Ajax.FBML;
+                x2.post('#{ajax_url :commit=>:yes,:action=>:confirm_subject}',document.getElementById('sform').serialize());
+                x2.ondone = function(response) {
+                    document.getElementById('added_courses').setInnerFBML(response)
+                }
+           }; 
+        };
+        x.post('#{ajax_url :action=>:confirm_subject}',{type : ptype,id : pid, t : pt});            
+    }        
+eof
+%>
+<%courses = Course.find(:all,:select=>"courses.*",
+                        :order=>"created_on ASC",
+                        :conditions=>"courses.status LIKE 'pending'")%>
+<%=table_tag :cols=>3,:col1=>{:style=>"height:30px"},:table=>{:cellspacing=>5,:class=>"top_v_align",:style=>"width:100%"} do |cols|
+        courses.group_by(&:school_id).each do |nid,courses1|
+            school = School.find(nid)
+            school_shown = false;
+            courses1.group_by(&:subject_id).each do |s,courses2|                        
+                subject = Subject.find(s)
+                subject_shown = false        
+                courses2.each_with_index do |course,i|
+                    unless school_shown
+                        school_shown = true
+                        school_name = link_to_school(school);
+                      else
+                         school_name = ""
+                      end                    
+                    cols.push school_name
+                    if !subject_shown 
+                        subject_shown = true
+                        subject_name = subject.name
+                        if subject.status != :approved
+                            subject_name += "<br>" + 
+                                           fb_link_to("[Approve]","",:onclick=>"confirm('#{subject.id}','Confirm','Subject');return false;")  + " " +
+                                           
+                                           fb_link_to("[Reject]","",:onclick=>"reject('#{subject.id}','Reject','Subject');return false;")                      
+                        else
+                            subject_name += "<br>" + 
+                                           fb_link_to("[Edit]","",:onclick=>"confirm('#{subject.id}','Confirm','Subject');return false;") 
+                            
+                        end
+                    else
+                        subject_name = ""
+                    end
+                    cols.push subject_name
+
+                    if subject.status == :pending
+                        course_title = content_tag(:div,course.full_title,:class=>"light_gray")   
+                    else
+                        course_title = course.full_title + "<br>" + 
+                                       fb_link_to("[Approve]","",:onclick=>"confirm('#{course.id}','Confirm','Course');return false;")  + " " +
+                                       fb_link_to("[Reject]","",:onclick=>"reject('#{course.id}','Reject','Course');return false;")                            
+                    end
+                    cols <<  course_title                    
+                end                                   
+            end                            
+        end
+   end
+%>

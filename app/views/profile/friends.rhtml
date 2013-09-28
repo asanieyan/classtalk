@@ -1,0 +1,14 @@
+<div class="title_header shorten">
+    <h2>My Friends</h2>
+    <h4><%=fb_link_to "Back to classtalk",{:action=>"index"}%></h4>
+</div>
+<br>
+<%=fb_css "friends.css"%>
+<%=fb_tabs do |tabs|
+     unless @friends.to_a.empty?
+         tabs.add "Friend List",{:t=>"f"},:check=>'params[:t] == "f"',:partial=>"friends_list"   
+     end
+     tabs.add "Invite Friends",{:t=>"i"},:check=>'params[:t] == "i"',:partial=>"invite_template"   
+  end  
+%>
+<%=@selected_tab_content%>

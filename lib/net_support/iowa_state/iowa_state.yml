@@ -1,0 +1,29 @@
+--- 
+:courses: []
+
+:info: 
+  :city: ames
+  :nid: "16777386"
+  :name: Iowa State
+  :paths: 
+  - - Fall
+    - Spring
+    - Summer I
+  - - Fall
+    - Spring
+    - Summer II
+  :semesters: 
+  - - Fall
+    - 8/20
+    - 12/25
+  - - Spring
+    - 1/1
+    - 5/12
+  - - Summer I
+    - 5/15
+    - 7/12
+  - - Summer II
+    - 6/14
+    - 8/10
+  :region: iowa
+  :country: united states

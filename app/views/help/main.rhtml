@@ -1,0 +1,11 @@
+<br>
+<%=fbml_tabs do |tab|
+        tab.add "Help",{:t=>'h'},:check=>"params[:t]=='h'",:partial=>"help"
+        tab.add "Networks",{:t=>'n'},:check=>"params[:t]=='n'",:partial=>"networks"
+        params[:backurl] ||= "/profile"
+        tab.add "Back",params[:backurl],:align=>"right",:check=>"false"
+   end
+%>
+<div style='padding:20px'>
+<%=@selected_tab_content%>
+</div>

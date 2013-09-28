@@ -1,0 +1,40 @@
+--- 
+:courses: []
+
+:info: 
+  :city: auburn university
+  :nid: "16777287"
+  :name: Auburn
+  :paths: 
+  - - Fall
+    - Spring
+    - Summer Full
+  - - Fall
+    - Spring
+    - Summer I
+    - Summer II
+  - - Fall
+    - Spring
+    - Summer I Ext
+    - Summer II
+  :semesters: 
+  - - Fall
+    - 8/16
+    - 12/25
+  - - Spring
+    - 1/1
+    - 5/10
+  - - Summer Full
+    - 5/20
+    - 8/10
+  - - Summer I
+    - 5/20
+    - 6/29
+  - - Summer I Ext
+    - 5/16
+    - 6/27
+  - - Summer II
+    - 6/30
+    - 8/10
+  :region: alabama
+  :country: united states

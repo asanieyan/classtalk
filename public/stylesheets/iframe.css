@@ -1,0 +1,58 @@
+/*****************************************************************************************************/
+/*Title: to show a contextual popup only used in iframe 
+  Used: Currently used in course registration iframe
+  */
+.fb_contextual_dialog {
+	
+	z-index: 2;
+	font-size: 11px;
+	font-weight: normal;
+	width: 360px;
+	margin-left: 20px;	
+	position:absolute;
+
+}
+.fb_contextual_dialog h2 {
+	color: black;
+	font-size: 11px;
+	padding-bottom: 2px;
+	border:none !important;
+}
+.fb_contextual_dialog form {
+	padding-top: 10px;
+}
+.fb_contextual_arrow {
+	background-image: url(/images/dialog_triangle.gif);
+	background-repeat: no-repeat;
+	height: 12px;
+	position: relative;
+	top: 1px;
+}
+.fb_contextual_arrow span {
+	display: none;
+}
+.fb_contextual_dialog_content {
+	background-color: #f0f0f0;
+	border: 1px solid #b9b9b9;
+	border-bottom: 1px solid #3b5998;	
+	line-height: 15px;
+	padding: 8px 10px 10px 10px;
+	color: #333;
+	font-size: 11px;
+}
+.contextual_dialog [type="button"] {
+  padding-top: 10px;
+}
+.contextual_dialog .dialog_buttons input {
+  margin-right: 10px;
+}
+/***********************************************SECTION SPECIFIC CONTEXTUAL DIALOG****************/
+#current_courses .fb_contextual_dialog {
+	left:23px;
+	margin-top:7px;
+}
+.remove_file .fb_contextual_dialog {  
+    margin-top:-10px;
+    margin-left:-10px;
+        
+}

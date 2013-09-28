@@ -1,0 +1,89 @@
+<br>
+
+    <div class="standard_message no_paddding" style="padding:0 !important">
+    	<h1 class="explanation_note no_margin" style="margin:0 !important">
+    		<%=course.full_title%>
+    		<p>
+    			<%= course.description %>
+    		</p>
+    	</h1>
+    </div>
+
+<%
+    #this part is customized only for registration that shows the 
+    #current classes of a course 
+    #doen't need it in other controller
+%>
+
+<%if controller.controller_name == "registerar"%>
+    <%if logged_in_user.join_course_at?(course.school) && !course.school.curr_next_semesters.empty?%>
+        <%sems = course.school.curr_next_semesters%> 
+        <%if sems.size > 1%>
+            <%options = options_for_select(sems.map{|s| [s.name(true) + " (#{s.period(false)})",s.id]})%>
+            <br>
+            <div class='bold_dark_gray'>Now you can register in your courses for the next semester.
+            <%=select_tag "sem",options,
+                                                    :onchange=>remote_function(
+                                                    :success=>"$('classes_of_course').innerHTML = request.responseText",                           
+													:url=>app_url({:c=>course.id,:action=>'update_classes'}),
+                                                                               :with=>"'sem='+$('sem').value" )%>
+        <%end%>
+        <%sem = sems.first%> 
+        <div id='classes_of_course'> 
+        	<%=render_p 'classes_of_course','course'=>course,'semester'=>sem%>
+        </div>	
+    <%elsif course.school.curr_next_semesters.empty?%>
+        <div style='border:1px solid #C0C0C0;padding:5px'>
+           No semester found to register.
+        </div>            
+    <%else%>
+        <%school=course.school%>
+        <br><br>
+        <div style='border:1px solid #C0C0C0;padding:5px'>
+            You can't register in courses in <%=school.name%> as <%=school.record_of(logged_in_user).fb_status.capitalize%>.
+            You must be either a student (undergrad/grad) or faulty to be able to register.        
+        </div>
+
+    <%end%>
+<%elsif caller == "step1"%>
+    <%if course.status == :approved%>
+        <div  style='text-align:right;'>
+            <br>
+            
+            <%=fb_submit_tag "Create Document",:onclick=><<-eof
+                    window.parent.location  = '#{fb_url_for :action=>"create"}' + '?c=' + $('c').value;
+            eof
+            %>
+        </div>
+    <%elsif course.status == :pending%>        
+        <br>
+        <div class="standard_message no_paddding" style="padding:0 !important">
+            <div class="status no_margin" style="margin:0 !important">
+                <b>This course is pending approval of the classtalk admins. </b>            
+                <div> 
+                    Until this  course is approved by the classtalk admins you won't be able to post any document to it.
+                </div>
+            </div>
+        </div>
+             
+    <%end%>
+<%elsif caller == "documents_by_subject"%>
+    <%if course.documents.size > 0%>            
+    <div  style='text-align:right;'>
+        <br>
+        <%=fb_submit_tag "View Documents (#{course.documents.size})",:onclick=><<-eof
+                window.parent.location  = '#{fb_url_for :action=>"main"}' + '?c=' + $('c').value;
+        eof
+        %>
+    </div>
+    <%else%>
+    <div  class='bold_dark_gray' style='text-align:right;'>
+        <br>
+        No documents have been posted to <%=course.stitle_no_credit%> yet.<br><br>
+        <%=fb_submit_tag "Create New Document",:onclick=><<-eof
+                window.parent.location  = '#{fb_url_for :action=>"create"}' + '?c=' + $('c').value;
+        eof
+        %>
+    </div>
+    <%end%>
+<%end%>

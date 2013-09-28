@@ -1,0 +1,50 @@
+<%
+    paginator ||= nil
+    show_ctrl_links = true
+    search ||= false
+    no_side ||= false
+    summary ||= "" 
+    editable ||= false
+    commentable ||= false
+%>
+<%if documents.size > 0%>
+    <div class='summary_bar' style='padding-bottom:6px' id='summary' >
+        <%if paginator%>
+            <%=fb_paginator paginator,page_option rescue {}%>   
+            Displaying <%= if paginator.item_count == 0 
+                             "0 documents"
+                           elsif  paginator.item_count == 1
+                             "the only document"
+                           elsif  paginator.page_count == 1 
+                            "all #{paginator.item_count} documents"
+                           else
+                            "documents #{paginator.current_page.first_item}-#{paginator.current_page.last_item} of #{paginator.item_count}"
+                           end
+                            
+                       %>
+        <%else%>
+            <%=summary%>
+        <%end%>
+        
+    </div>
+<%end%>
+
+<div class='plugin_content' class="clearfix" style='background:#F7F7F7 url(<%=url_for_app_asset("/images/main_side_background.gif")%>) repeat-y scroll 0px'>
+    <div class='column main_column' id='documents'>
+      <%=render_p 'documents',:documents=>documents,
+                        :commentable=>commentable,
+                        :showpic=>showpic,
+                        :editable=>editable%>
+    </div>
+    <%unless no_side %>
+    <div class='column side_column' style='height:300px;background-color: #f7f7f7; '>
+                <%if search%>
+                <div id="search_docs" class="module">
+                        <h2> Search <%=search.shift%> Documents </h2>                            
+                        <%=fb_search_form "/library/search",search.shift%>
+   
+                </div>
+                <%end%>
+    </div>
+    <%end%>
+</div>

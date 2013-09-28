@@ -1,0 +1,108 @@
+<div >    
+    <div id='server_message'>
+        <%=flash[:server_message]%>    
+    </div>
+
+    <%fbml_explain do %>
+        <div style='font-weight:normal'>
+                You are about to post a document to the course <strong><%=@course.full_title%></strong>
+        </div>    
+    <%end%>
+    
+    <%fb_editor app_url(:action=>'edit_document',:commit=>'yes'),:id=>"uform",:multipart=>true do %>
+        <%=fb_editor_text_field "title",@document.title,:id=>"title",:label=>"Title",:required=>true%>
+        <%=fb_editor_text_area  "comment",@document.comment,:size=>"10x10",:label=>"Comment"%>
+        <%=fb_editor_divider%>
+        <%fb_editor_costum_tag "Attach some files",:required=>"max size per upload #{Document::MaxSizePerUpload} megabytes" do %>
+             <%= hidden_field_tag "d",@document.id%>
+             <%= hidden_field_tag "c",@course.id%>
+                          
+             <%total = 10
+                             
+             %>
+
+             <%@document.files.each do |file|%>
+                 <div id='<%="f#{file.id}"%>' class='clearfix remove_file'>
+                     <div   style='float:left;margin-bottom:8px'><%=file.file_name%>                         
+                         <%form_tag(app_url_for(:action=>'remove'),{:id=>"f#{file.id}"}) do %>
+                            <%=hidden_field_tag 'd',@document.id%>
+                            <%=hidden_field_tag 'f',file.id%>                         
+                         <%end%>
+                     </div>
+                     <div style='float:right'>
+                        <%link_to 'remove',"#",:clicktoshow=>"#{@dialog_id}"%>
+                        <%=link_to_function 'remove',<<-eof
+                            new Dialog(Dialog.DIALOG_CONTEXTUAL).setContext($('f#{file.id}')).showChoice('Are you sure you want to delete this file from this document?','').onconfirm = function() {
+                                 $('f#{file.id}').hide(); 
+                                 new Ajax.Request('#{ajax_url(:action=>"remove",:d=>@document.id,:f=>file.id)}')                               
+                            };
+                        eof
+                        %>
+                     </div>
+                     
+                 </div>
+             <%end%>
+            
+             <%5.times do |i| %>
+                <%=file_field_tag "files[]",:class=>"inputtext",:style=>"margin-bottom:8px",:size=>"30"%>            
+             <%end%>        
+             <%=link_to "Upload more files","",:id=>"morefiles_link",:clicktohide=>"morefiles_link",:clicktoshow=>"morefiles"%>
+             <div id='morefiles' style='display:none'>
+                 <%5.times do |i| %>
+                    <%=file_field_tag "files[]",:class=>"inputtext",:style=>"margin-bottom:8px",:size=>"30"%>            
+                 <%end%>               
+             </div>             
+        <%end%>
+        <%=fb_editor_divider%>
+        <%fb_editor_costum_tag "Attach some links" do %>
+             <%5.times do |i| %>
+                    <%=text_field_tag "links[]",@document.links[i]%><br><br>
+             <%end%>        
+        <%end%>
+        <%fb_editor_costum_tag do %>           
+		    <div style='float:left'>
+                 <%=check_box_tag "ok","",false,:style=>"width:20px;border:none"%>				 
+            </div>
+            <div style='width:250px;padding-left:10px'>
+               I certify that I have the right to distribute these contents and that it does not violate the <%=link_to_tos%>.
+            </div>     
+            <br><br>       
+            <%=inline_progress_bar :text=>"Don't close the browser until the upload is done."%>
+        <%end%>
+        <%=fb_editor_buttons do |buttons,cancel|                    
+                    buttons.add @document.new_record? ? "Post Document" : "Save Document",:id=>"submit_doc"
+                    cancel.add "select another course","create"
+           end
+        %>
+    
+    <%end%>
+    <fb:editor action="?commit=yes" labelwidth="100" enctype="multipart/form-data">
+    </fb:editor>
+  
+	<%=javascript_tag <<-eof
+        $('submit_doc').observe('click',function(){
+           if(!$('ok').getChecked()){
+                alert('You must certify that you have permission to upload this picture and that it does not violate our Terms of Use.','Please click the checkbox to certify');
+                return false;
+           }else if ($('title').getValue().length < 3){
+                 alert('#{Document::TitleError}','Enter Title')
+                 return false;
+           }else {
+    	       $('buttons').hide();
+               $('progress_bar').show();
+               $('uform').submit(); 
+           }
+           
+
+        });
+        $('title').observe('blur',function(){
+             if ($('title').getValue().length < 3) {
+                showErrorMessage('#{Document::TitleError}')   
+             }     
+        
+        })
+    eof
+    %>
+
+    
+</div>

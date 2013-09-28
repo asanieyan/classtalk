@@ -1,0 +1,43 @@
+<%error rescue error = nil%>
+<div style='clear:right'>  
+   <div style='float:right'>
+       <%=link_to_school(school,:name=>"View Network")%>
+       <%=fb_pipe%>
+       <%=link_to_edit(school)
+       %>
+       <%=fb_pipe%>
+       <%=
+            if (session['fake_schools'] || []).include?(school.id)
+               
+            else
+                (fb_link_to "Register",{:controller=>"registerar",:action=>"register",:anid=>school.id,:t=>"n"},:target=>"_blank") + fb_pipe                               
+            end                                    
+                                    %> 
+      <%if school.closed%>
+          <%=link_to 'Unsuspend',app_url(:action=>"toggle_school",:nid=>school.id),:style=>"font-weight:bold;color:red"%>             
+      <%else%>
+          <%=link_to 'Suspend',app_url(:action=>"toggle_school",:nid=>school.id)%>             
+      <%end%>
+  </div>
+  <div>           
+        <h1><%=school.name%></h1>
+  </div> 
+  <div style='margin-top:10px;border:1px solid #D8DFEA;padding:5px;'>
+        <dl>
+        <%school.seasons.sort{|a,b| a.start_date <=> b.start_date}.each do |season|%>
+            <dt>    <%=season.name%>    
+                    <%if season.is_current?%>
+                        <span  style='color:red'> Current </span>
+                    <%end%>                          
+            </dt>
+            <dd>    <%=season.period(true)%>
+                  
+            </dd>
+        <%end%>
+        </dl>
+        <h4><%=school.klasses.size %> total classes.</h4>
+        <%if !school.current_semesters.empty?%>
+            <h4> <%=school.klasses.find(:all,:conditions=>"semester_id IN (#{ids_of school.current_semesters})").size %> active classes with <%=KlassesUsers.find(:all,:conditions=>"semester_id IN (#{ids_of school.current_semesters})").size%> number of enrollments.                
+        <%end%>
+  </div>
+</div>

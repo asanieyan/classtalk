@@ -1,0 +1,16 @@
+<div style='padding:30px;width:500px;margin:0 auto;'>
+    <div class='org_dialog' >        
+        <div class='inside' style='padding:10px'>
+                <h1>Did you receive a code ? </h1>
+                <p> If you received a referral code please enter it now! if not just skip this step. </p>
+                <%fb_editor(fb_url :action=>"code") do%>
+                    <%=fb_editor_text_field "code","",:label=>"Code"%>
+                    <%=fb_editor_buttons do |buttons,cancel|                    
+                       buttons.add "Submit"
+                       buttons.add "Skip this step"
+                      end%>                            
+                <%end%>
+        
+        </div>
+    </div>
+</div>

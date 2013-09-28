@@ -1,0 +1,89 @@
+<%=fb_css "wall.css"%>
+<%=fb_css "dialog.css"%>
+
+
+
+
+<div class="media_header clearfix">
+    <div class="media_gray_bg clearfix" style="width:100%;">
+       <br><br>
+      <h2><%= owner.readable_context_name %>'s Wall</h2>
+    </div>
+    <div class="media_actions">
+    <%= fb_link_to "Back to #{@owner.readable_context_name}", @owner.back_url %>
+    </div>
+</div>
+
+
+ 
+  <div class="bar clearfix summary_bar">
+   <% if total_comments > 0 then %>
+    <div class="summary">
+    Displaying posts <%=paginator.current_page.first_item%> - <%=paginator.current_page.last_item%> of <%=total_comments%>.</div>
+    <%= fb_paginator paginator, {:action => 'see_all', :cn => owner.class, :cid => owner.id} %>
+
+   <% end %>
+  </div>  
+
+
+
+
+<div style="background-color:#f9f9f9;padding:10px;">
+
+<% if total_comments > 0 then %>
+
+    <% if logged_in_user.can_post?(owner) then %>
+    <form action="<%= fb_url_for :controller => 'wall', :action => 'post_comment_see_all' %>" method="post">
+       <textarea name="text" id="text" cols="98" rows="2" class="textarea"></textarea><br>
+       <input type="hidden" name="cn" value="<%=owner.class%>">
+       <input type="hidden" name="cid" value="<%=owner.id%>">
+       <input type="submit" style="border-style: solid;  border-top-width: 1px;  border-left-width: 1px;  border-bottom-width: 1px;  border-right-width: 1px;  border-top-color: #D9DFEA;  border-left-color: #D9DFEA;  border-bottom-color: #0e1f5b;  border-right-color: #0e1f5b;  background-color: #3b5998;  color: #FFFFFF;  font-size: 11px;  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;   text-align: center;" value="Post Comment">
+    </form><br>
+    <% end %>
+    <form id="thx1138"></form>
+
+    <% if comments != [] then %>
+    
+        <div style="overflow:hidden;padding:10px;border:#dddddd 1px solid;background-color:#ffffff;">
+            <fb:wall>
+            <% comments.each do |comment| %>
+              <fb:wallpost uid="<%= comment.user_id %>" t="<%= comment.created_on.to_i %>">
+              <%= auto_link(comment.body,:all,:target => '_blank') %>
+              <% if logged_in_user.id == comment.user_id || logged_in_user.is_admin? then %>
+             
+              <div class="wallkit_actionset">
+                <%=fb_link_to 'delete',{:controller => 'wall', :action => 'delete_comment_see_all', :id => comment.id, :cn => owner.class, :cid => owner.id},:confirm=>["Delete Post?","Are you sure you want to delete it?"]%>
+              </div>
+            
+              <% end %>
+              </fb:wallpost>
+            <% end %>
+            </fb:wall>
+        </div>
+    
+    
+    <% end %>
+
+
+<% else %>
+    <%=fb_css "discussions.css"%>
+    
+    <div id="page_body" class="pagebody discussions board">
+    <div id="content_shadow">
+    
+        <div class="fallback">
+          No one has said anything...yet. 
+          <% if logged_in_user.can_post?(@owner) then %>
+            <%=fb_link_to "Write something", :controller => 'wall', :action => 'wallpost', :cn => @owner.class, :cid => @owner.id %>.
+          <% else %>
+            Join this class to write something!
+          <% end %>
+        </div>
+    
+    </div>
+    </div>
+<% end %>
+
+
+
+</div>

@@ -1,0 +1,243 @@
+
+.nettop {
+  padding: 11px 20px 10px 20px;
+  background: #f7f7f7;
+  border-bottom: 1px solid #ccc;
+}
+
+.nettop h3 {
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 21px;
+}
+
+.nettop .topleft {
+  float: left;
+  width: 390px;
+}
+
+.nettop .topright {
+  float: right;
+  width: 210px;
+}
+
+.nettop .topright input {
+  float: right;
+  width: 180px;
+  margin: 0;
+}
+
+.networkport {
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+
+
+
+.geninfo {
+  width: 405px;
+  float: right;  
+}
+
+
+/* Network Info */
+
+#netmembers {
+  margin-bottom: 10px;
+}
+
+#netmembers .displaying {
+  color: #444;
+  font-size: 9px;
+  margin-bottom: 10px;
+  padding: 0 5px 0 5px;
+}
+
+.networkport h4 {
+  border-bottom: 1px solid #d8dfea;
+  color: #333;
+  padding: 0 0 3px 0;
+  margin-bottom: 3px;
+}
+
+.netinfo_top {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+#netsearch {
+ margin: 0;
+ padding: 0;
+ }
+
+.netinfo_top p {
+  margin: 0;
+  padding: 0 0 1px 0;
+}
+
+.map {
+  width: 190px;
+  float: left;
+}
+
+.map .box {
+  padding: 10px 10px 10px 5px;
+}
+
+.profileTable {
+  margin: 0px;
+  padding: 0 0 0 3px;
+  margin-bottom: 8px;
+}
+
+.profileTable td {
+  vertical-align: top;
+  font-size: 11px;
+  line-height: 14px;
+  margin: 0px;
+  padding: 1px 0px 1px 0px; 
+}            
+
+.profileTable .label {
+  width: 70px;
+  color: gray; 
+}
+
+.two_column .left {
+  width: 410px;
+  float: left;
+}
+
+.two_column .right {
+  width: 185px;
+  float: right;
+}
+
+.two_column {
+  background: url(/images/narrowrightbg186.gif) repeat-y right;
+}
+
+.left .discussions {
+  padding: 0 0 10px 0;
+}
+
+.left .discussions .board_topic {
+  border-color: #eee;
+  padding: 7px 8px; 
+}
+
+.left .discussions .board_topic h3 { 
+  font-weight: bold; 
+}
+
+.left .discussions .board_topic .topic_info { 
+  width: 100%;
+}
+
+/* Members Box */
+
+.people_table td {
+  text-align: center;
+}
+
+
+/* Network Info */
+
+
+.stats_section h4 {
+  border-bottom: 1px solid #d8dfea;
+  font-size: 10px;
+  color: #333;
+  padding: 0 0 3px 0;
+  margin-bottom: 3px;
+}
+
+.stats_section dl {
+  padding: 0 5px 10px 5px;
+  margin: 0;
+}
+
+dl.stats_percent dt {
+  padding: 0 10px 0 0;
+  width: 22px;
+  float: left;
+  clear: left;
+  color: gray;
+  text-align: right;
+  line-height: 15px;
+}
+
+dl.stats_percent dd {
+  margin: 0;
+  color: #333;
+  float: left;
+  width: 120px;
+  line-height: 15px;
+}
+
+dl.stats_numbered dt {
+  padding: 0 10px 0 0;
+  width: 14px;
+  float: left;
+  clear: left;
+  color: gray;
+  text-align: right;
+  line-height: 15px;
+}
+
+dl.stats_numbered dd {
+  margin: 0;
+  color: #333;
+  float: left;
+  width: 125px;
+  line-height: 15px;
+}
+
+.stats_seeall {
+  padding: 0 0 10px 5px;
+  text-align: right;
+}
+
+.portal_stats .stats_row {
+  margin: 10px 35px;
+}
+
+.portal_stats .stats_section {
+  width: 167px;
+  display: block;
+  float: left;
+  margin: 5px 10px;
+}
+  
+/* Tabs */
+
+.bottom {
+  border-top: 1px solid #ccc;
+  background: #f7f7f7;
+  color: #333;
+  padding: 10px 20px 10px 20px;
+}
+
+.bottom ul {
+  margin: 0;
+  padding: 0;
+}
+
+.bottom li {
+  list-style: none;
+  float: left;
+}
+.privatenetwork {
+    background:#F7F7F7 none repeat scroll 0%;
+    border-top:1px solid #CCCCCC;
+    margin:0pt -20px;
+    padding:40px;
+    text-align:center;
+}            
+.privatenetwork p 
+{
+    color: gray;
+    text-align: center;
+    font-size: 13px;
+}

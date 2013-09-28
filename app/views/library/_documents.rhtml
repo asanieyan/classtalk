@@ -1,0 +1,181 @@
+<%=fb_css 'documents'%>
+
+<style>    
+    .doc_attachable {margin-top:10px;}
+    .doc_attachable .title {color:#606060;font-weight:bold;padding-bottom:2px;border-bottom:1px solid #ccc;margin-bottom:5px;}
+    .doc_attachable .title,.doc_attachable .attaches  {margin-left:20px;}
+</style>
+<%=flash[:server_message]%>
+<%if (documents || []).size > 0 %>
+ <%documents.each do |doc|%>    
+    <div id='process<%=doc.id%>' style='padding-top:20px;display:none;text-align:center;height:40px;'>
+        <%=image_tag(url_for_app_asset '/images/progress.gif')%>
+    </div>
+    <div id='doc<%=doc.id%>' class="note clearfix">
+        <%if showpic%>
+            <div class="profile_thumb">
+                <%if !doc.anonymous or logged_in_user.is_admin? %>
+                    <%fbml_if_can_see doc.user_id do%>
+                        <%=fbml_profile_pic doc.user_id%>
+                      <%fbml_else do%>
+                        <%=fb_default_pic "t"%>
+                      <%end%>  
+                    <%end%>  
+                <%else%>
+                        <%=fb_default_pic "t"%>
+                <%end%>          
+            </div>
+        <%else%>
+           <style>
+                .note_body {width:425px !important}
+           </style>
+        <%end%>        
+        <div class="note_body">
+            <div class="note_header">
+                <div class="note_title_share clearfix">
+                    <div class="note_title" style="overflow:hidden">   
+                            <%title = break_down(doc.title,40)%>
+                            <%if doc.anonymous and !logged_in_user.is_admin?%>
+                                <%=fb_link_to title,:controller=>"library",:action=>"main",:d=>doc.id%>
+                            <%else%>
+                                <%=fb_link_to title,:controller=>"library",:action=>"main",:uid=>doc.user_id,:d=>doc.id%>
+                            <%end%>
+                    </div>
+
+                </div>
+                <div class="byline">
+                    <div>  
+                            
+                            <%if @user_supported_schools.include_schools?(doc.school) or logged_in_user.is_admin?%>
+                              <%=fb_link_to doc.course.full_title,:controller=>"library",:action=>"main",:c=>doc.course.id %> at <%=fb_link_to(doc.school.name,"/library/browse") %>
+                            <%else%>
+                                <%=doc.course.full_title%> at <%=doc.school.name%>
+                            <%end%>
+                    </div>
+                    <%if !doc.anonymous or logged_in_user.is_admin?%>
+                            
+                        <%  #if there is an id parameter that means we are looking at 
+                            #someone else's documents so we don't have to say their name on each post
+                            unless params[:uid]%>
+                            <%fbml_if_can_see doc.user_id do %>
+                                <span> by <%=fbml_name doc.user_id%> (<%=fb_link_to 'view all documents',:controller=>"library",:action=>"main",:uid=>doc.user_id%>)</span>                                   
+                                 <%fbml_else do %>
+                                     <span> by someone anonymously</span>
+                                 <%end%>
+                            <%end%>
+                        <%end%>   
+                    <%else%>
+                            <span> by someone anonymously</span>
+                    <%end%>
+                    <%=fbml_time doc.created_on%>
+                    <%if editable  %>  
+                        <%=fb_pipe%><%=fb_link_to 'Edit',:controller=>"library",:action=>"edit_document",:d=>doc.id,:c=>doc.course_id%>                        
+                        <%=fb_pipe%><%=link_to 'Delete',"#",:id=>"delete#{doc.id}"%><br>
+                        <%=doc.privacy.human_title%>&nbsp;&nbsp;<%=fb_link_to 'Change',{:controller=>"library",:action=>"edit_document",:set_permission=>true,:d=>doc.id,:c=>doc.course_id},:id=>"change#{doc.id}"%>                        
+                        <%=javascript_tag <<-eof                                                                        
+                                    $('delete#{doc.id}').observe('click',function() {
+                                         dialoge#{doc.id} = new Dialog(Dialog.DIALOG_POP)                                         
+                                         dialoge#{doc.id}.showChoice("Delete Document","Are you sure you want to delete document? Deleting this document will also delete all its comments and files.")
+                                         dialoge#{doc.id}.onconfirm = function() {
+                                         $('doc#{doc.id}').hide();
+                                         $('process#{doc.id}').show();
+                                         (ajax#{doc.id} = new Ajax).responseType = Ajax.FBML
+                                             ajax#{doc.id}.ondone = function(response) {                                         
+                                                    $('all_of_documents').setInnerFBML(response)
+                                             }
+                                             ajax#{doc.id}.post('#{ajax_url(:controller=>"library",:xhr=>true,:d=>doc.id,:action=>"remove")}')
+                                       }
+                                       return false;
+                                    })
+                                eof
+                            %>
+                    <%end%>
+                </div>
+           </div>
+           <div class="note_content clearfix" style="overflow:hidden">
+                 <div><%=break_down(doc.comment,60)%></div>
+            </div>       
+            <%if doc.files.size > 0 %>
+                <div class="doc_attachable">                    
+                    <div class='doc_attached_files' style='background-repeat: no-repeat;background-image: url(<%=url_for_app_asset("/images/icon_paperclip.gif")%>)'>
+                        <div style='float:right'> <%=link_to_app 'Download all',{:controller=>"library",:action=>"get",:d=>doc.id}%> </div>
+                        <div class='title' >
+                            File Attachments 
+                        </div>
+                    </div>
+                    <div class='attaches'>
+                        <%doc.files.each do |file|%>
+                            <div> <%=link_to_app file.file_name,:controller=>"library",:action=>"get",:f=>file.id,:d=>doc.id%></div>
+                        <%end%>
+                    </div>                
+               </div>
+           <%end%>
+
+           <%if doc.links.size > 0 %>
+           <div class="doc_attachable">
+                <div class='doc_attached_links' style='background-color: #f7f7f7;background-image: url(<%=url_for_app_asset("/images/link.gif")%>);background-repeat: no-repeat;background-attachment: scroll;'>
+                    <div class='title' >
+                        Link Attachments 
+                    </div> 
+                    <div class='attaches'>
+                        <%doc.links.each_with_index do |link,i|%>
+                            <%=link_to_app link,{:controller=>"library",:action=>"get",:d=>doc.id,:l=>i},:target=>"_blank"%><br>
+                        <%end%>
+                    </div>                       
+                </div>
+            </div>
+            <%end%>
+            <%if not commentable%>
+            <div class="note_footer clearfix">
+                <div class="note_footer_left">
+                      <%if doc.comments.size == 0 %>
+                        <span class="no_comment">No comments</span>
+                      <%else%>
+                        <%= fb_link_to pluralize(doc.comments.size,"comment"),{:controller=>"library",:action=>"main",:d=>doc.id}%>
+                      <%end%>
+                    <span class="pipe">|</span> 
+                    <%=fb_link_to 'Add a comment',{:controller=>"library",:action=>"main",:d=>doc.id}%>    
+                </div>
+                <div class="note_footer_right">
+                    <%if doc.user_id != logged_in_user.id%>
+                        <%=link_to_report doc%>                
+                    <%end%>
+                </div>
+            </div>
+            <%else%>
+                <%= fb_css 'document.css'%>
+                <div class='note_permalink'>
+                    <div class="clearfix" id="comments">
+                        <%=render_p 'doc_comments',:doc=>doc%>
+                    </div>                      
+                    <div id="add_comment">
+                         <%form_tag app_url(:action=>"submit_comment") do%>                            
+                            <%=hidden_field_tag "d",doc.id%>
+                            <label id="label_comment" for="comment" style="cursor: default;">
+                                <%if doc.user_id == logged_in_user.id%>
+                                    Post your reply
+                                    <%if doc.anonymous %>
+                                        <span class='dark_gray'>
+                                            (Since this document is anonymous your name and picture will not show beside your reply post when viewed by others.)
+                                        </span>
+                                    <%end%>
+                                <%else%>
+                                    Add a comment
+                                <%end%>
+                            </label>
+                            <div>
+                                <textarea class="textarea" name="comment" id="comment" onkeydown="fitText(this,300)"/><br/>
+                            </div>
+                            <div>
+                                <input type="submit" class="inputsubmit"  name="submit_comment" value="Add your comment" />
+                            </div>
+                        <%end%>
+                    </div>
+                </div>     
+            <%end%>
+        </div>     
+   </div>
+  <%end%>   
+ <%else%>
+     <%=render_p 'library/no_documents',:no_doc=>(no_doc rescue nil)%> 
+ <%end%>

@@ -1,0 +1,237 @@
+<h2>	
+	<span>Adding a new course to <%=@school.name%></span>
+</h2>
+<div class="dialog_content" >
+    <%if logged_in_user.can_add_more_course(@school,@msg="")%>
+        <%=javascript_tag <<-eof
+                F = {
+                    error : false,
+                    submit : function() {
+                         F.findCourse(false);                         
+                         if (!F.error) {
+                             if ($('cname').value.length > 5){
+                                new Ajax.Request('#{app_url :action=>:submit_new_course}',{
+                                    parameters : Form.serialize($('new_subject_form'),true),
+                                    onSuccess  : function(request) {
+                                        $('typeahead_select').update(request.responseText);                                        
+                                    }
+                                })
+                                generic_dialog.get_dialog($('remote_submit')).show_message('Course Added Successfully', ''); 
+                                return true
+                             }
+                             else {                               
+                                showErrorMessage('message',"Your course name must be real. Check out the current #{@school.name} calendar for the correct course name.")                             
+                            }    
+                         }
+                         return false;                    
+                    },
+                    findSubject : function() {
+                     
+                       if ( $('s1').selectedIndex ==  0) {                      
+    		              code = $('s_code').value;
+    		              name = $('s_name').value;
+    		              $('s_code').value = code.gsub(/\s+/,' ').strip()
+    		              $('s_name').value = name.gsub(/\s+/,' ').strip();
+    		              subject = code.toUpperCase() + " - " + name.capitalize();		              
+    		              if (code.length == 0) {
+                            showErrorMessageAndHide('message',"A subject must have a unique code")		              
+                            $('add').hide();
+                            return
+    		              }else if (name.length < 3) {
+                            showErrorMessageAndHide('message',"A subject must have a descriptive name")
+                            $('add').hide();
+                            return
+    		              }
+                          new Ajax.Request('#{app_url :action=>"find_a_subject"}',{
+                              asynchronous : false,
+                              parameters : {nid : #{@school.id},
+                                            s : $('s1').value,
+                                            s_code  : $('s_code').value,
+                                            s_name  : $('s_name').value
+                                            },    
+                              onSuccess : function(request) { 
+                                                       
+                                  result = request.responseText.evalJSON();                                  
+                                  if (result.index) {                              
+                                    $('s_code').value = result.code
+                                    $('s_name').value = result.name
+                                    $('s1').setOptionByValue(result.index)
+                                    $('s1').onchange()
+                                  }else {                                
+                                    
+                                    $('message').update('');
+                                    $('s_code').value = result.code
+                                    $('s_name').value = result.name
+                                    $('subject_holder').down("h3").update(result.code + " - " + result.name);
+                		            $('new_subject').hide();
+                		            $('subject_holder').show();
+                                   }
+    
+                              }
+                            }
+                          )                      
+                       } 
+                    },
+                    findCourse : function(asynchronous)  {
+                      if ($('cnum').value.length > 0 && $('s1').selectedIndex > 0) {
+                          if (asynchronous == null) {
+                            asynchronous = true
+                          }
+                          $('cnum').value = $('cnum').value.gsub(/ /,'').strip();
+                          new Ajax.Request('#{app_url :action=>"find_a_course"}',{
+                              asynchronous : asynchronous,
+                              parameters : {nid : #{@school.id},
+                                            s : $('s1').value,
+                                            cname : $('cname').value,
+                                            cnum  : $('cnum').value
+                                            },
+                              onSuccess : function(request) {                              
+                                  result = request.responseText.evalJSON();                                                                   
+                                  $('cname').value = result.name
+                                  $('cnum').value = result.num
+                                  if (result.err) {                              
+                                    F.error = true
+                                    showErrorMessage('message',result.err)
+                                    $('add').hide();
+                                  }else {                                
+                                    F.error = false
+                                    $('message').update('');
+                                    if ($('cname').value.length > 0) {
+                                       $('add').show();
+                                    }else {
+                                       $('add').hide();
+                                    }
+                                    
+                                  }
+                              }
+                          
+                          })
+                      }else if ($('s1').selectedIndex == 0 && $('cnum').value.length > 0 && $('cname').value.length > 0)                     
+                           $('add').show();                  
+                       else 
+                           $('add').hide();                                      
+                    }
+                }
+            eof
+        %>
+        <%=form_remote_tag :url=>{:action=>'submit_new_course'},
+                           :html=>{:id=>"new_subject_form"},
+                           :success=>"$('typeahead_select').update(request.responseText);"
+                            
+                            %>    
+    	<div class='dialog_body'>
+            <div class="standard_message no_paddding" style="padding:0 !important">
+            	<h1 class="explanation_note no_margin" style="margin:0 !important">	
+            		<p>
+                        All the courses added here will be checked by our admins to ensure accuracy and quality.
+                        If a course added here is not real it will be rejected and all the class networks belonging to 
+                        that course will be closed. If you have more than <%=User::MaxRejectedCourses%> rejected courses you can no longer add any courses.
+            		</p>
+            	</h1>
+            </div><br><br>
+    		<div id='message'></div>    		
+    		<div>
+    		      <%=hidden_field_tag(:caller,params[:caller])%>
+    		      <%=hidden_field_tag(:nid,@school.id)%>
+    		      <%=select_tag "s1", options_for_select([["Select a subject from #{@school.name}",0]] + @school.subjects.map{|s| [s.name,s.id]}),
+    		          :style=>"width:300px",:onchange=><<-eof
+    		              F.findCourse();		             
+    		              $('new_subject').hide();
+    		              if (this.selectedIndex > 0) {
+        		              subject_name = $(this).options[this.selectedIndex].innerHTML    		              
+        		              $('subject_holder').show();		              
+        		              $('subject_holder').down("h3").update(subject_name)
+    		              }else {
+                              $('subject_holder').hide();		              		              
+    		              }
+    		              
+    		              
+    		          eof
+    		          %>
+    		      or <%=link_to_function "Add a new Subject","$('s1').selectedIndex=0;$('subject_holder').hide();$('new_subject').show();$('add').hide();"%>
+    		</div>
+    		<div id='new_subject' style='margin-top:10px;display:none'>
+    
+    		    <br>
+    		    <%=lable_tag "Code:","s_code"%>
+    		    <%=text_field_tag 's_code',"",:size=>"6",:maxlength=>"#{Subject.size_of 'code'}",:style=>"font-variant:small-caps;margin-right:5px;"%>  
+    		    <%=lable_tag "Name:","s_name"%>
+    		    <%=text_field_tag 's_name',"",:size=>"40",:maxlength=>"#{Subject.size_of 'name'}"%>  
+    		    <div style='padding-top:10px' />
+    		    <div style='float:right'>
+    		      <%=link_to_function "Add Subject","F.findSubject()"
+    		      %>
+    		    </div>
+    		    <div class='light_gray' >
+    		      Example Code: CMPT  and Name: Computing Science
+    		    </div>		
+    		</div>
+    		<div id='subject_holder' style='margin-top:10px;display:none'>
+    		       <h3>
+    		        
+    		      </h3>
+    		    <br>
+    		    <table class='top_v_align'>
+        		    <tr>
+        		      <td>
+        		              <%=lable_tag "Number:","cnum",:style=>""%>
+        		              <div class='light_gray'><small>(required)</small></div>
+        		      </td>
+        		      <td><%=text_field_tag 'cnum',"",:size=>"6",:maxlength=>"Course.size_of 'number'",
+        		          :style=>";font-variant:small-caps;margin-right:5px;",    		              
+        		              :onblur=>"F.findCourse();"
+        		          
+        		          %>  </td>
+        		    </tr>
+        		    <tr>
+        		      <td> <%=lable_tag "Name:","cname"%>
+                           <div class='light_gray'><small>(required)</small></div>    		      
+        		          		            
+        		      </td>
+        		      <td><%=text_field_tag 'cname',"",:size=>"40",:maxlength=>"Course.size_of 'name'"
+                		      
+        		      %>
+            		      <input  class="inputsubmit" type="button" name="confirm" onclick="F.submit();" value="Add Course"/>        		      
+        		        </td>
+                    </tr>
+        		    <%if false%>
+        		    <tr>
+        		      <td> <%=lable_tag "Credit:","cc"%></td>
+        		      <td><%=text_field_tag 'cc',"",:size=>"5",:maxlength=>"5",:onblur=><<-eof
+        		          float = parseFloat(this.value);
+        		          if (!float)
+        		              float = 0;
+        		          this.value = float;
+        		          eof
+        		          
+        		      %>  		      </td>
+                    </tr>                
+        		    <tr>
+        		      <td> <%=lable_tag "Description:","cdesc"%></td>
+        		      <td><%=text_area_tag 'cname',"",:size=>"45x6",:onblur=>"fitText(this,#{Course.size_of 'description' })",:maxlength=>"Course.size_of 'name'"%>  		      </td>
+                    </tr>
+                    <%end%>
+                </table>		      
+    		      
+    		</div>
+    	</div>	
+    	<%= submit_tag "remote_submit",:style=>"display:none",:id=>"remote_submit",:onclick=>"generic_dialog.get_dialog(this).show_message('Course Added Successfully', '');"%>		
+    	<div class="dialog_buttons">
+    		<div id='add'></div>
+    		<input id='' style='display:none' class="inputsubmit" type="button" name="confirm" onclick="$('remote_submit').click();generic_dialog.get_dialog(this).show_message('Course Added Successfully', '');" value="Add Course"/>
+    		<input class="inputsubmit" type="button" value="Cancel" onclick="generic_dialog.get_dialog(this).hide();"/><br/>
+    	</div>
+    	</form>
+    <%else%>
+        <div class='dialog_body'>
+            <div id='message'>
+            </div>
+            
+            <%=javascript_tag("showErrorMessage('message','#{@msg}')")%>
+            <div class="dialog_buttons">
+                <input class="inputsubmit" type="button" value="Cancel" onclick="generic_dialog.get_dialog(this).hide();"/><br/>            
+            </div>
+        </div>
+    
+    <%end%>	
+</div>

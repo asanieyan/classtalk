@@ -1,0 +1,19 @@
+--- 
+:courses: []
+
+:info: 
+  :city: stillwater
+  :nid: "16777388"
+  :name: Oklahoma State
+  :semesters: 
+  - - Fall
+    - 8/20
+    - 12/25
+  - - Spring
+    - 1/1
+    - 5/10
+  - - Summer
+    - 6/1
+    - 7/10
+  :region: oklahoma
+  :country: united states

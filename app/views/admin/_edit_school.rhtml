@@ -1,0 +1,53 @@
+<%form_tag({},:id=>"s#{@school.id}") do%>
+    <style>
+        input {font-size:8pt !important;}
+    </style>
+    <h3><%=@school.name%> Info</h3>
+    <%=hidden_field_tag "nid",@school.id%>
+    <%=hidden_field_tag "post",true%>
+    <br>
+    <%=table_tag :col=>2,:table=>{:cellspacing=>2,:style=>"width:500px"} do |cols|
+        cols << "Nid:"
+        cols << @school.id
+        cols << "Name:"
+        cols << text_field_tag("info[name]",@school.name)
+        cols << "City:"
+        cols << text_field_tag("info[city]",@school.city)
+        cols << "Region:"
+        cols << text_field_tag("info[region]",@school.region)    
+        cols << "Country:"
+        cols << select_tag("info[country]",options_for_select(["","United States","Canada"].map{|c| [c,c.downcase]},@school.country.downcase))
+      end
+    %>
+    <br>
+    <div style='float:right'>
+        <%=link_to_function "Add New",<<-eof
+            document.getElementById('new_season_table').setStyle('display','');
+        eof
+        %>
+    </div>
+    <h3><%=@school.name%> Seasons</h3>
+        <%=table_tag :col=>2,:table=>{:id=>"season_table",:class=>"top_v_align",:cellspacing=>2,:style=>"width:300px"} do |cols|
+            @school.seasons.sort{|a,b| a.start_date <=> b.start_date}.each do |season|
+                cols << text_field_tag("seasons[#{season.id}]",season.name,:size=>"15")
+                cols << text_field_tag("#{season.id}_sm",season.start_month,:size=>2,:maxlength=>2) + " / " +
+                        text_field_tag("#{season.id}_sd",season.start_day,:size=>2,:maxlength=>2) + " - " + 
+                        text_field_tag("#{season.id}_em",season.end_month,:size=>2,:maxlength=>2) + " / " +
+                        text_field_tag("#{season.id}_ed",season.end_day,:size=>2,:maxlength=>2)
+        
+            end
+          end
+        %>
+        <%=table_tag :col=>2,:table=>{:id=>"new_season_table",:class=>"top_v_align",:cellspacing=>2,:style=>"display:none;width:300px"} do |cols|
+            10.times do |i|
+                id = "ns#{i}"
+                cols << text_field_tag("seasons[#{id}]","",:size=>"15")
+                cols << text_field_tag("#{id}_sm","",:size=>2,:maxlength=>2) + " / " +
+                        text_field_tag("#{id}_sd","",:size=>2,:maxlength=>2) + " - " + 
+                        text_field_tag("#{id}_em","",:size=>2,:maxlength=>2) + " / " +
+                        text_field_tag("#{id}_ed","",:size=>2,:maxlength=>2)
+        
+            end
+          end
+    %>    
+<%end%>

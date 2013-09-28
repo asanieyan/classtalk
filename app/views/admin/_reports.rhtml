@@ -1,0 +1,35 @@
+<%reports.in_groups_of(2,false) do |_reports|%>
+    <%_reports.each do |report|%>
+       <%
+           report.reportable.class rescue next
+       %>    
+        <div style='float:left;width:300px;overflow:hidden'>
+               <div class='dark_gray' style='text-align:right;float:left'>
+                    Type: <br/>
+                    Reported User:  <br />
+                    Reporting User: <br/>
+                    Comment: <br />
+                    
+               </div>
+               <div style='float:left'>
+                   <%begin%>
+                       <%=fb_link_to report.reportable.class,:action=>"reports",:rid=>report.id%> &nbsp;&nbsp; <%=fb_link_to 'view',report.reportable.url%><br>
+                   <%rescue%>
+                        <%  report.reportable_type + " (removed) <br>"                            
+                        %>
+                   <%end%>    
+                   <%=fb_link_to fbml_name(report.reporter_id,:useyou=>false),:action=>"reports",:uid=>report.reporter_id%> <br>
+                   <%=fb_link_to fbml_name(report.user_id,:useyou=>false),:action=>"reports",:uid=>report.user_id%> <br>
+                   <%=report.subject%> <br>
+                   <%=report.body%><br>
+                   <%=fb_link_to "Resolve It"%>
+               </div>
+        </div>       
+    <%end%>
+    <div style='clear:left'></div>
+    <br>
+    <div style='width:50%;clear:left;height:1px;border-bottom:1px solid #C0C0C0;margin:0 auto;'>
+    </div>
+    <br>
+    
+<%end%>      

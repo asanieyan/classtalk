@@ -1,0 +1,108 @@
+<%=fb_css "wall.css"%>
+<%=fb_css "dialog.css"%>
+
+<% if comments != [] then %>
+
+    <% count = owner.comments.count%>
+    <% fb_box "Class Wall" do |label, actions|
+    
+    if count > 10 then
+    actions.add "See All", {:controller => 'wall', :action => 'see_all', :cn => owner.class, :cid => owner.id}
+    end
+    
+    if count > 10 then
+    label << "Displaying 10 of "+fb_link_to("#{count} posts", {:controller => 'wall', :action => 'see_all', :cn => owner.class, :cid => owner.id})
+    elsif count != 0 then 
+     if count == 1 then
+       label << "Displaying 1 post."
+     else
+       label << "Displaying #{count} posts."
+     end
+    end
+    
+    %>
+    
+    <% if logged_in_user.can_post?(owner) then %>
+    <div class="inline_wall_post clearfix">
+        <form>
+           <textarea placeholder="Write something..." name="text" cols="58" rows="2" class="textarea"></textarea><br>
+           <input type="hidden" name="cn" value="<%=owner.class%>">
+           <input type="hidden" name="cid" value="<%=owner.id%>">
+           <div class='actions'>
+               <div class='buttons'>
+                   <%=fb_submit_tag "Post",:onclick=><<-eof                  
+                        x = new Ajax();
+                        x.responseType = Ajax.FBML;
+                        x.ondone = function(resp) {
+                            document.getElementById('fb_classtalk_wall_div').setInnerFBML(resp);
+                        }
+                        x.post("#{ajax_url :controller => 'wall', :action => 'post_comment'}",this.getForm().serialize());
+                        return false;
+                        
+                   
+                   eof
+                   %>
+               </div>
+           </div>
+        </form>
+    </div>
+    <form id="thx1138"></form>
+    
+    <br>
+    <% end %>
+    
+    <a name="wp1"></a>
+    <div style='overflow:hidden'> 
+        <fb:wall>
+        <% count=1 %>
+     
+        <% comments.each do |comment| %>
+          <fb:wallpost uid="<%= comment.user_id %>" t="<%= comment.created_on.to_i %>">
+          <% if count > 1 then %>
+          <a name="wp<%=count%>"></a>
+          <% end %>
+          <% count += 1 %>
+          
+          <%= auto_link(comment.body,:all,:target => '_blank') %>
+          <% if logged_in_user.id == comment.user_id || logged_in_user.is_admin? then %>
+          <div class="wallkit_actionset">
+    
+    
+            <%=link_to_app 'delete',{:controller => 'wall', :action => 'delete_comment', :id => comment.id, :cn => owner.class, :cid => owner.id, :anchor => "wp#{count-1}"},:confirm=>["Delete Post?","Are you sure you want to delete it?"]%>        
+    
+          </div>
+          <% end %>    
+    
+    
+          </fb:wallpost>
+        <% end %>
+        </fb:wall>
+    </div>
+    <a name="wp<%=count%>"></a>
+    <% end %>
+
+
+<% else %>
+<%=fb_css "group.css"%>
+<div class="header">
+  <h2> The Wall </h2>
+</div>
+    <div class="profile" style="padding-left:0px;padding-right:0px;">
+    <div class="fallback">
+      <a name="wp1"></a>    
+      No one has said anything...yet. 
+      <% if logged_in_user.can_post?(owner) then %>
+        <%=fb_link_to "Write something", :controller => 'wall', :action => 'wallpost', :cn => owner.class, :cid => owner.id %>.
+      <% else %>
+        Join this class to write something!
+      <% end %>
+    </div>
+    </div>
+<% end %>
+
+
+
+
+
+
+

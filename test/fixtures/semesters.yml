@@ -1,0 +1,38 @@
+1:
+  id: 1
+  school_id: 1
+  season_id: 3
+  __year__: 2006
+  
+2:
+  id: 2
+  school_id: 1
+  season_id: 2
+  __year__: 2006
+  
+3:
+  id: 3
+  school_id: 1
+  season_id: 1
+  __year__: 2006
+
+4:
+  id: 4
+  school_id: 1
+  season_id: 3
+  __year__: 2005
+
+5:
+  id: 5
+  school_id: 1
+  season_id: 2
+  __year__: 2005
+
+6:
+  id: 6
+  school_id: 1
+  season_id: 1
+  __year__: 2005
+
+
+  

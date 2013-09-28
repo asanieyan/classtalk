@@ -1,0 +1,39 @@
+--- 
+:courses: []
+
+:info: 
+  :city: syracuse
+  :nid: "16777272"
+  :name: Syracuse
+  :paths: 
+  - - Fall
+    - Spring
+    - Maymester
+  - - Fall
+    - Spring
+    - Summer I
+    - Summer II
+  - - Fall
+    - Spring
+    - Summer Comb
+  :semesters: 
+  - - Fall
+    - 8/25
+    - 12/25
+  - - Spring
+    - 1/5
+    - 5/10
+  - - Maymester
+    - 5/11
+    - 5/23
+  - - Summer I
+    - 5/19
+    - 6/27
+  - - Summer Comb
+    - 5/19
+    - 8/8
+  - - Summer II
+    - 6/30
+    - 8/3
+  :region: new york
+  :country: united states

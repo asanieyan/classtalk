@@ -1,0 +1,40 @@
+<div class='two_column clearfix' style='background: url(http://www.facebook.com/images/narrowrightbg186.gif)  repeat-y right !important;'>
+    <div class='left'>
+       
+           <h2 style='color:#3b5998;border-bottom:1px solid #d8dfea;'> Classtalk Instructor </h2>
+           <p class='dark_gray'>
+            Class intructors are regular facebook users
+            you can search below or click on this link to browse all 
+                <%fb_search_form("/classes/search",{:k=>@selected_class.id},
+                        {:onsubmit=><<-eof                        
+                            $('progress_bar').show();
+                             new Ajax.Updater('search_result','#{ajax_url(:action=>'search')}',Ajax.FBML, 
+                                {   parameters  : {q : $('q').getValue()},
+                                    afterUpdate :  function(){
+                                                    $('progress_bar').hide() 
+                                                 }                               
+                                });return false;
+                        eof
+                        }) do |search_tag|%>
+                       <div class='dark_gray'> Enter the name of the instructor <%=search_tag%><%=inline_progress_bar%></div>
+                     <%end%>              
+            </p>                   
+
+       
+     </div>
+     <div class='right'>
+            <%fb_box "Current Instructors" do |label,actions| 
+                    
+            %>
+            
+                    <%=render_p 'current_teachers'%>
+            <%end%>           
+     </div>
+</div>
+<br>
+
+<div id='search_result'>
+    <%=render_p 'instructors_invite',:users=>@selected_class.school.instructors,:search_result=>false%>
+</div>
+    
+

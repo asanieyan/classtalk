@@ -1,0 +1,19 @@
+<%topic = Topic.find(topic_id)%>
+<%headline do%>
+   <%if context.is_a?(Klass)%>
+        <%=actioner(feed,topic.is_anonymous)%> started a new discussion in your class <br><%=link_to_class(context)%> about
+        <%=fb_link_to topic.name,:controller=>"discussion",:action=>'topic',:cn=>context.class.name,:cid=>context.id,:id=>topic.id%>
+        
+   <%end%>
+<%end%>
+<%body do%>
+    
+     <%if context.is_a?(Klass)%> 
+        <%=feed_quote(truncate(topic.header.body,200)) do |actions|
+                    actions.add 'Continue reading...',:controller=>"discussion",:action=>'topic',:cn=>context.class.name,:cid=>context.id,:id=>topic.id
+           end
+        %>
+
+     <%end%>
+     
+<%end%>

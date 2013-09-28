@@ -1,0 +1,221 @@
+/*
+.sidebar {
+  padding-right:176px; 
+  overflow:hidden;
+  background:#fff url(/images/components/sidebar_rightbg.gif) repeat-y top right;
+}
+
+.sidebar.other_side {
+  padding-left:176px;
+  padding-right:0;
+  background:#fff url(/images/components/sidebar_leftbg.gif) repeat-y top left;
+}
+
+.sidebar .content_frame {
+  float:left;
+  width:100%;
+  margin-right:-176px;
+  padding-right:176px;
+}
+
+.sidebar .content_frame.other_side {
+  float:right;
+  margin-left:-176px;
+  margin-right:0;
+  padding-left:176px;
+  border-right:none;
+}
+
+.sidebar .sidebar_frame {
+  float:left;
+  width:176px;
+  margin-right:-176px;
+}
+
+.sidebar .sidebar_frame.other_side {
+  float:right;
+  margin-left:-176px;
+  margin-right:0;
+}
+
+.sidebar .inner_content_frame {
+}
+
+.sidebar .sidebar_frame .panel {
+  padding:10px 10px 10px 11px;
+}
+
+.sidebar .sidebar_frame .panel_divider {
+  height:0;
+  margin:0;
+  padding:0;
+  border:none;
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #fff;
+  background:#ddd;
+}
+
+
+
+
+#attach {
+  clear: both;
+}
+#dt_attachment label {
+  padding-top: 4px;
+}
+#dd_attachment {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+#attach_dropdown {
+  z-index: 10;
+  position: relative;
+}
+
+.attachment_button {
+  background: #f1f1f1 url(/images/components/attach_bg_default.gif) repeat-x top left;
+  border: solid 1px #999;
+  cursor: pointer; 
+  display: block;
+  float: left;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 14px; line-height: 11px;
+  padding: 0px;
+  margin: 0px 4px 4px 0px;
+  white-space: nowrap;
+}
+
+.attachment_button a {
+  background-repeat: no-repeat;
+  background-position: 4px 2px;
+  color: #444;
+  display: block;
+  padding: 4px 5px 4px 25px;
+}
+
+
+
+
+#attach {
+  clear: both;
+}
+
+#dd_attachment {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+#attach_dropdown {
+  z-index: 10;
+  position: relative; }
+  
+  #attach_dropdown .app_switcher_unselected {
+    position: relative; 
+    float: left; }
+  
+  #attach_dropdown .app_switcher_button {
+    background: #f1f1f1 url(/images/components/attach_bg_default.gif) repeat-x top left;
+    cursor: pointer; 
+    color: #555; color: #444;
+    float: left;
+    display: block;
+    padding: 0px 6px 0px 8px;
+    margin: 0px;
+    font-weight: bold;
+    line-height: 14px; line-height: 11px;
+    text-decoration: none;
+    border: solid 1px #999; }
+    
+  #attach_dropdown .app_switcher_button .arrow,
+  #attach_dropdown .app_switcher_button .name,
+  #attach_dropdown .app_switcher_button .icon {
+    float: left; }
+  
+    #attach_dropdown .app_switcher_unselected .app_switcher_button:hover {
+      border: solid 1px #666;
+      background: #fff url(/images/app_switcher_hover_shadow.gif) repeat-x bottom left; }
+    
+    #attach_dropdown .app_switcher_selected .app_switcher_button {
+      color: white; 
+      background: #6d84b4;
+      border: solid 1px #3B5998; }
+
+  #attach_dropdown .app_switcher_button .arrow {
+    width: 13px;
+    padding: 4px 0px 3px;
+    margin-top: 1px;
+    background: transparent url('/images/app_switcher_down_arrow.gif') no-repeat -11px center; }
+
+    #attach_dropdown .app_switcher_selected .app_switcher_button .arrow {
+      background-position: 2px center; }
+  
+  #attach_dropdown .app_switcher_button .name {
+    padding: 4px 0px 4px 6px; }
+  
+  #attach_dropdown .app_switcher_button .icon {
+    width: 16px;
+    padding: 4px 0px;
+    background-position: -16px center; 
+    background-repeat: no-repeat; }
+    
+    #attach_dropdown .app_switcher_selected .app_switcher_button .icon {
+      background-position: 0px center; }
+    
+#attach_dropdown_menu {
+  position: absolute;
+  background: white;
+  border: solid 1px #3B5998;
+  z-index: 100;
+  padding: 2px 0px 6px;
+  width: 136px; width: 160px; }
+    
+  #attach_dropdown_menu .menu_list_header {
+    color: #555;
+    font-size: 9px;
+    border-bottom: solid 1px #d8dfea;
+    padding: 2px 7px 3px;
+    margin: 0px 0px 6px; }
+
+  #attach_dropdown_menu a {
+    display: block;
+    line-height: 14px;
+    padding: 1px 7px;
+  }
+  
+  #attach_dropdown_menu a:hover {
+    color: white;
+    text-decoration: none;
+    background: #6D84B4; 
+    cursor: pointer;  }
+  
+  #attach_dropdown_menu .side_space,
+  #attach_dropdown_menu .app_icon,
+  #attach_dropdown_menu .name { 
+    float: left; }
+  
+  #attach_dropdown_menu .side_space {
+    width: 7px;
+    padding: 4px 0px;
+    margin: 0px 3px; }
+  
+    #attach_dropdown_menu .selector_arrow {
+      background: url(/images/rightarrow.gif) no-repeat -7px center; }
+  
+    #attach_dropdown_menu a:hover .selector_arrow {
+      background: url(/images/rightarrow.gif) no-repeat 0px center; }    
+
+  #attach_dropdown_menu .app_icon {
+    width: 16px;
+    padding: 4px 0px;
+    margin: 0px 0px 0px 2px;
+    background: url('/images/icons/hidden.gif') no-repeat -16px center; }
+    
+    #attach_dropdown_menu a:hover .app_icon {
+      background-position: 0px center; }
+  
+  #attach_dropdown_menu .name {
+    padding: 4px 0px;
+    margin: 0px 0px 0px 5px; }
+*/

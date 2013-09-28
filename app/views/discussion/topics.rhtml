@@ -1,0 +1,139 @@
+<div id="page_body" class="discussions board">
+<%=render_p 'header'%>
+
+<%=fbml_tabs do |tabs|
+  tabs.add("Discussion Board",{:controller =>'discussion', :action=>'topics', :cn => @owner.class, :cid => @owner.id},{:selected=>true})
+
+  if @logged_in_user.can_post?(@owner) then
+   tabs.add("Start New Topic",{:controller => 'discussion', :action => 'start_new_topic', :cn => @owner.class, :cid => @owner.id},{:align => 'right'})
+  end
+end %>
+
+
+<div id="topics_container_div">
+    <div class="bar clearfix filter_bar">
+        <%fb_form_tag({:action=>"topics"},{:method=>"POST",:id=>"xyz_form"}) do%>      
+            <input type="hidden" name="cn" value="<%=@owner.class%>">
+            <input type="hidden" name="cid" value="<%=@owner.id%>">           
+            <label for="filter">
+                Show: 
+                <select id="filter" name="filter" onchange="$('xyz_form').submit();">
+                    <option value="0" <%if params[:filter]=='0' then%>selected<%end%>>All Topics</option>
+                    <option value="1" <%if params[:filter]=='1' then%>selected<%end%>>My Topics</option>
+                    <option value="2" <%if params[:filter]=='2' then%>selected<%end%>>My Friends' Topics</option>
+                </select>
+            </label>
+            <label for="sorter">
+                    Sort by: 
+                    <select id="sorter" name="sorter"  onchange="$('xyz_form').submit();">
+                    <option value="0" <%if params[:sorter]=='0' then%>selected<%end%>>Latest Replies</option>
+                    <option value="1" <%if params[:sorter]=='1' then%>selected<%end%>>Newest Topics</option>
+                    <option value="2" <%if params[:sorter]=='2' then%>selected<%end%>>Most People</option>
+                    <option value="3" <%if params[:sorter]=='3' then%>selected<%end%>>Most Posts</option>
+                </select>
+            </label>
+        <%end%>
+                   
+    </div>
+<% if @topics.length > 0 then %>
+<div class="bar clearfix summary_bar">
+
+<div class="summary">
+<% if @topics.length > 1 then %>
+Displaying all <%=@topics.length%> topics.
+<% else %>
+Displaying the only topic.
+<% end %>
+</div>
+
+
+</div>
+
+<div class="board_topics">
+
+
+<% @topics.each do |topic| %>
+
+
+<% 
+  if topic.posts.count > 1 then
+    posts_word="posts"
+  else
+    posts_word="post"
+  end
+
+  if topic.people_count > 1 then
+    people_word="people"
+  else
+    people_word="person"
+  end
+
+%>
+
+<div class="board_topic <%='first' if @topics.first == topic%> clearfix" >
+    <div class="topic_info" style='overflow:hidden'>
+            <h2 class="topic_title datawrap"><%= fb_link_to topic.name, :controller => 'discussion', :action => 'topic', :id => topic.id, :cn => @owner.class, :cid => @owner.id %></h2>
+            <div style="color: rgb(51, 51, 51);" class="more_info"><%= "#{topic.posts.count} #{posts_word} by #{topic.people_count} #{people_word}" %><span style="color: gray;" class="timestamp"> <%= fbml_time topic.created_on,:verb=>"Created" %></span></div>
+    </div>
+    <div class="last_post">
+        <div class="post_user">Latest post by
+            <% if topic.latest_post.is_anonymous then %>
+            <fb:name uid="-1" ifcantsee="Someone"/>
+            <% else %>
+            <fb:name uid="<%=topic.latest_post.user_id%>"/>
+            <% end %>
+        </div>
+        <div class="topic_pager"> <%= fbml_time topic.latest_post.created_on,:verb=>'Posted' %></div>
+    </div>
+</div>
+<% end %>
+
+
+</div>
+
+
+
+<% else %>
+
+<div class="fallback">
+<% if params[:filter] == '0' then %>
+    There are no discussions. 
+    <% if logged_in_user.can_post?(@owner) then %>
+      <%= fb_link_to "Start a new one",:controller => 'discussion', :action => 'start_new_topic', :id => @owner.id, :cn => @owner.class, :cid => @owner.id %>!
+    <% else %>
+      Join this class to start a new one!
+    <% end %>
+<% elsif params[:filter] == '1' then %>
+    You haven't participated in any topics. 
+    <% if logged_in_user.can_post?(@owner) then %>
+      <%= fb_link_to "See all topics",:controller => 'discussion', :action => 'topics', :cn => @owner.class, :cid => @owner.id %> or <%= fb_link_to "start a new one",:controller => 'discussion', :action => 'start_new_topic', :id => @owner.id, :cn => @owner.class, :cid => @owner.id %>.
+    <% else %>
+      <%= fb_link_to "See all topics",:controller => 'discussion', :action => 'topics', :cn => @owner.class, :cid => @owner.id %> or join this class to start a new one!
+    <% end %>
+<% elsif params[:filter] == '2' then %>
+    Your friends haven't participated in any topics. <%= fb_link_to "See all topics",:controller => 'discussion', :action => 'topics', :cn => @owner.class, :cid => @owner.id %>.
+<% else %>
+    <% if logged_in_user.can_post?(@owner) then %>
+    There are no discussions. <%= fb_link_to "Start a new one",:controller => 'discussion', :action => 'start_new_topic', :id => @owner.id, :cn => @owner.class, :cid => @owner.id %>!
+    <% else %>
+      Join this class to start a new one!
+    <% end %>
+
+<% end %>
+
+</div>
+
+
+<% end %>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+

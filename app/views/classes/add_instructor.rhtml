@@ -1,0 +1,21 @@
+<div class='title_header'>	
+		<h2>Add Instructor to <%=@selected_class.name%></h2>
+		<h4>
+		      <%=fb_link_to "Back to Class",:action=>"main",:k=>@selected_class.id%>
+		     
+		</h4>	
+</div>
+
+
+    <div>
+        <%if false%>
+             <%=fb_tabs do |tabs|
+                    tabs.add "Browse","/classes/add_instructor?k=#{@selected_class.id}&t=b",:check=>'params[:t] == "b"',:partial=>"browse_teachers"
+                    tabs.add "Invite to facebook","classes/add_instructor?k=#{@selected_class.id}&t=i",:check=>'params[:t] == "i"',:partial=>"fb_invite"      
+               end
+            %>
+        <%end%>    
+    </div>
+<div style='padding:20px'>
+    <%=@selected_tab_content || render_p("browse_teachers")%>
+</div>    

@@ -1,0 +1,7235 @@
+--- 
+:courses: 
+- :name: Accounting Diploma
+  :code: ACCT
+  :courses: 
+  - :name: Financial Accounting
+    :number: "100"
+    :subject: ACCT
+    :credit: ""
+    :description: ""
+  - :name: Management Accounting
+    :number: "101"
+    :subject: ACCT
+    :credit: ""
+    :description: ""
+  - :name: Financial Accounting 1
+    :number: "121"
+    :subject: ACCT
+    :credit: ""
+    :description: ""
+  - :name: Cost and Management Accounting 1
+    :number: "254"
+    :subject: ACCT
+    :credit: ""
+    :description: ""
+  - :name: Financial Accounting 2
+    :number: "122"
+    :subject: ACCT
+    :credit: ""
+    :description: ""
+  - :name: Accounting Systems 1
+    :number: "192"
+    :subject: ACCT
+    :credit: ""
+    :description: ""
+  - :name: Assurance
+    :number: "262"
+    :subject: ACCT
+    :credit: ""
+    :description: ""
+  - :name: Cost and Management Accounting 2
+    :number: "264"
+    :subject: ACCT
+    :credit: ""
+    :description: ""
+- :name: Adventure
+  :code: ADVG
+  :courses: 
+  - :name: The Adventure Tourism Industry
+    :number: "101"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Wilderness Travel Theory
+    :number: "102"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Guiding Leadership 1
+    :number: "105"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Natural History 1
+    :number: "110"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Wilderness Travel Field Trip
+    :number: "150"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Flatwater Instructor
+    :number: "151"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Kayak 1
+    :number: "153"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Skiing 1
+    :number: "155"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Mountaineering 1
+    :number: "158"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Advanced Wilderness First Aid
+    :number: "203"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: The Business of Adventure Tourism
+    :number: "204"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Climbing Gym Instructor Level 1
+    :number: "220"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Guide Training Skiing-Mechanized
+    :number: "223"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Day Hiking Guide
+    :number: "243"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Alpine Ski Instructor 1
+    :number: "245"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Swiftwater Rope Rescue
+    :number: "246"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Kayak 3
+    :number: "253"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Senior River Kayak Instructor
+    :number: "254"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Telemark Instructor
+    :number: "255"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Assistant Rock Guide
+    :number: "261"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Sea Kayaking 1
+    :number: "264"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: "Srt 4: Swiftwater Rescue Specialist"
+    :number: "273"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Rock Climbing 2
+    :number: "280"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Mountaineering 2
+    :number: "281"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Rock Guide
+    :number: "287"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Rock Climbing 3
+    :number: "293"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Mountaineering 3
+    :number: "294"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Business Applications in Eco and Adventure Tourism Management
+    :number: "401"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Legal Liability & Risk Management for Eco & Adventure Tourism Businesses
+    :number: "402"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Adventure Tourism International Community Development
+    :number: "409"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Adventure & Sport Marketing
+    :number: "421"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Top Rope Climbing Instructor
+    :number: "224"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Backpacking Guide
+    :number: "244"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Guide Training - Rock
+    :number: "259"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Guide Training - Alpine
+    :number: "260"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Emergency Situations, Search and Rescue Management
+    :number: "111"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Ski Tour 1
+    :number: "156"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Rock Climbing 1
+    :number: "157"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Avalanche Safety for Ski Operation 1
+    :number: "159"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: "Srt 3: Swiftwater Rescue Technician"
+    :number: "160"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Computer Applications for Adventure Tourism Industry
+    :number: "180"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Expedition 1
+    :number: "190"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: The Wilderness Environment
+    :number: "201"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: The Cultural Environment
+    :number: "202"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Legal Liability and Risk Management
+    :number: "206"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Kayak 2
+    :number: "249"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Moving Water Canoe Instructor
+    :number: "251"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Canoe Trip Leader
+    :number: "252"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Ski Tour 2
+    :number: "257"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Rope Rescue
+    :number: "262"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Rope Rescue Team Leader
+    :number: "263"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Sea Kayaking 2
+    :number: "265"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: River Rafting 1
+    :number: "266"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: River Rafting 2
+    :number: "275"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Ice Climbing
+    :number: "276"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Mountain Photography
+    :number: "277"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Ski Tour 3
+    :number: "279"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Expedition Planning and Leadership
+    :number: "283"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Sail Cruising 1
+    :number: "284"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Instructional Skills Workshop
+    :number: "285"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Expedition 2
+    :number: "290"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Adventure Activities
+    :number: "311"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Adventure Operations
+    :number: "313"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Adventure Tourism International Business Development
+    :number: "405"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: Adventure Tourism Field Trip
+    :number: "410"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+  - :name: The Culture of Adventure
+    :number: "422"
+    :subject: ADVG
+    :credit: ""
+    :description: ""
+- :name: Animal Health
+  :code: ANHT
+  :courses: 
+  - :name: Laboratory Math
+    :number: "101"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Animal Behaviour 1
+    :number: "109"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Veterinary Terminology
+    :number: "151"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Animal Nursing 1
+    :number: "152"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Animal Nursing 1"
+    :number: 152L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Computer Applications for Animal Health Technicians
+    :number: "155"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Domestic Animal Anatomy and Physiology 1
+    :number: "159"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: ANHT Anatomy & Physiology"
+    :number: 159L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Veterinary Clinical Pathology for AHT 1
+    :number: "172"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Vet Clinical Pathology 1"
+    :number: 172L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Parasitology
+    :number: "180"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Parasitology"
+    :number: 180L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Animal Behaviour 3
+    :number: "209"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Anesthesia
+    :number: "251"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Anesthesia"
+    :number: 251L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Clinical Practicum 1
+    :number: "252"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Large & Small Animal Diseases
+    :number: "253"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Large Animal Sciences
+    :number: "254"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Large Animal Clinics 1
+    :number: "255"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Surgical Assistance 1
+    :number: "257"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Surgical Assistance 1"
+    :number: 257L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Radiology 1
+    :number: "258"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Radiology 1"
+    :number: 258L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Animal Nursing and Ward Care 3
+    :number: "259"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Animal Nursing 3"
+    :number: 259L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Laboratory Animals
+    :number: "269"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Introductory Veterinary Immunology
+    :number: "153"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Veterinary Office Management
+    :number: "154"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Pharmacology
+    :number: "156"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Animal Nursing 2
+    :number: "162"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Animal Nursing 2"
+    :number: 162L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Domestic Animal Anatomy & Physiology 2
+    :number: "169"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "LAB: ANHT Anatomy & Physiology"
+    :number: 169L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Veterinary Clinical Pathology for AHT 2
+    :number: "173"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Veterinary Clinical Pathology 2"
+    :number: 173L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Animal Behaviour 2
+    :number: "199"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Clinical Practicum 4 [two 3 Week Periods]
+    :number: "220"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Field Work Experience
+    :number: "260"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Theriogenology
+    :number: "261"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Animal Nursing and Ward Care 4
+    :number: "262"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Animal Nursing 4"
+    :number: 262L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Clinical Practicum 2
+    :number: "263"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Anaesthesia and Intensive Care
+    :number: "264"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Anesthesia&Intensive Care"
+    :number: 264L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Large Animal Clinics 2
+    :number: "265"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Surgical Assistance 2
+    :number: "267"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Surgical Assistance II"
+    :number: 267L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Radiology 2
+    :number: "268"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Radiology II"
+    :number: 268L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Lab Animals"
+    :number: 269L
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Communications for Animal Health Technologists
+    :number: "270"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+  - :name: Animal Behaviour 4
+    :number: "299"
+    :subject: ANHT
+    :credit: ""
+    :description: ""
+- :name: Anthropology
+  :code: ANTH
+  :courses: 
+  - :name: Introduction to Archaeology
+    :number: "119"
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Archaeology"
+    :number: 119S
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Cultural Anthropology
+    :number: "121"
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Cultural Anthropology"
+    :number: 121S
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: Canadian Native Peoples
+    :number: "214"
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Canadian Native Peoples"
+    :number: 214S
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: Minorities in the Modern World
+    :number: "260"
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Minorities in the Modern World"
+    :number: 260S
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: People and Cultures of the North American Arctic
+    :number: "404"
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: Sem:People&CulturesN/A Arctic
+    :number: 404S
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: Cultural Resource Management
+    :number: "406"
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Cultural Resource Management"
+    :number: 406S
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: Field School in East/Central Europe
+    :number: "403"
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: Ancient Civilizations
+    :number: "216"
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Ancient Civilizations"
+    :number: 216S
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: "Ethnography of Special Areas: Central And Eastern Europe"
+    :number: "303"
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: Environmental Archaeology
+    :number: "326"
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Environmental Archaeology"
+    :number: 326S
+    :subject: ANTH
+    :credit: ""
+    :description: ""
+- :name: Applied Science (ENGN)
+  :code: APSC
+  :courses: 
+  - :name: Introduction to Engineering
+    :number: "120"
+    :subject: APSC
+    :credit: ""
+    :description: ""
+- :name: Astronomy
+  :code: ASTR
+  :courses: 
+  - :name: "Astronomy: the Solar System"
+    :number: "114"
+    :subject: ASTR
+    :credit: ""
+    :description: ""
+  - :name: "Astronomy: Stars and Galaxies"
+    :number: "115"
+    :subject: ASTR
+    :credit: ""
+    :description: ""
+- :name: Agricultural Sciences
+  :code: AGSC
+  :courses: 
+  - :name: Food Systems At a Local Level and Beyond
+    :number: "220"
+    :subject: AGSC
+    :credit: ""
+    :description: ""
+- :name: Business Administration
+  :code: BBUS
+  :courses: 
+  - :name: Management Information Systems 1
+    :number: "137"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introduction to Management Information Systems 1"
+    :number: 137L
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Financial Accounting
+    :number: "221"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Management Information Systems 2
+    :number: "238"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Management Information Systems 2"
+    :number: 238L
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Management Accounting
+    :number: "254"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Organizational Behaviour
+    :number: "272"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Business in Society
+    :number: "303"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Financial Management
+    :number: "312"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Investments 1
+    :number: "315"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Financial Accounting 1
+    :number: "320"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Income Taxation 1
+    :number: "322"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Taxation for Decision Making
+    :number: "326"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Operations Management
+    :number: "331"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Marketing
+    :number: "343"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Professional Selling
+    :number: "345"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Consumer Behaviour
+    :number: "347"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Marketing Research
+    :number: "348"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: International Business
+    :number: "351"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Human Resource Management
+    :number: "381"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Industrial Relations
+    :number: "384"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Commercial Law
+    :number: "393"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Personal Financial Management 1
+    :number: "410"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Advanced Financial Management
+    :number: "413"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Investments 2
+    :number: "415"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Risk Management and Financial Engineering
+    :number: "417"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Advanced Financial Accounting
+    :number: "420"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Assurance
+    :number: "423"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Advanced Management Accounting
+    :number: "425"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Services Marketing
+    :number: "441"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: E-Commerce
+    :number: "445"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: International Marketing
+    :number: "447"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Integrated Marketing Communications
+    :number: "448"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Business-To-Business Marketing
+    :number: "449"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Global Management
+    :number: "451"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: International Trade Finance
+    :number: "452"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: New Venture Creation
+    :number: "475"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Strategic Management Issues
+    :number: "478"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Strategic Human Resource Staffing
+    :number: "481"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Learning and Organizational Development
+    :number: "484"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Financial Statement Analysis
+    :number: "314"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Financial Accounting 2
+    :number: "321"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Income Taxation 2
+    :number: "323"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Management Accounting
+    :number: "325"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Teamwork in Organizations
+    :number: "388"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Employment Law
+    :number: "392"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Personal Financial Management 2
+    :number: "411"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Business Valuation and Restructuring
+    :number: "412"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Portfolio Management
+    :number: "416"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: International Financial Management
+    :number: "418"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Financial Institutions Management
+    :number: "419"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Accounting Theory
+    :number: "421"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Management Issues in Information Systems
+    :number: "428"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Retail Management
+    :number: "443"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Marketing Strategy
+    :number: "446"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: International Trade Law and Logistics
+    :number: "453"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Global Entrepreneurship
+    :number: "454"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Small Business Management
+    :number: "476"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Compensation Management
+    :number: "483"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+  - :name: Selected Topics in Human Resources Management
+    :number: "486"
+    :subject: BBUS
+    :credit: ""
+    :description: ""
+- :name: Biology
+  :code: BIOL
+  :courses: 
+  - :name: Human Biology
+    :number: "060"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Human Biology"
+    :number: 060L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Biology of the Environment
+    :number: "104"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Biology of the Environment"
+    :number: 104L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Principles of Biology 1
+    :number: "111"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Principles Of Biology 1"
+    :number: 111L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Human Biology: Anatomy and Physiology 1"
+    :number: "159"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Human Biol-Anat & Phys 1"
+    :number: 159L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Introductory Microbiology 1
+    :number: "210"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introductory Microbiology 1"
+    :number: 210L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Non-Vascular Plants
+    :number: "211"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Non-Vascular Plants"
+    :number: 211L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Cell Biology
+    :number: "213"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Cell Biology"
+    :number: 213S
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Invertebrate Zoology
+    :number: "215"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Invertebrate Zoology"
+    :number: 215L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Biometrics
+    :number: "300"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Biometrics"
+    :number: 300S
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Population Biology
+    :number: "303"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Population Biology"
+    :number: 303S
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Animal Behaviour
+    :number: "310"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Intro to Animal Behaviour"
+    :number: 310L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Biochemistry
+    :number: "313"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Immunology
+    :number: "320"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Immunology"
+    :number: 320S
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Microbial Ecology
+    :number: "321"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Molecular Genetics
+    :number: "335"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Molecular Genetics"
+    :number: 335S
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Cell Physiology
+    :number: "352"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Cell Physiology"
+    :number: 352L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Vertebrate Physiology 1
+    :number: "354"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Vertebrate Physiology"
+    :number: 354L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Limnology
+    :number: "402"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Limnology"
+    :number: 402L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Microbiology Lab
+    :number: "411"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Advanced Microbiology Lab"
+    :number: 411L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Advanced Microbiology Lab"
+    :number: 411S
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Molecular Evolution
+    :number: "413"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Biochemical Techniques 1
+    :number: "415"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Biochemical Techniques 1"
+    :number: 415L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Biochemical Techniques 1"
+    :number: 415S
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Plant Ecology
+    :number: "426"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Plant Ecology"
+    :number: 426L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Terrestrial Vertebrate Zoology
+    :number: "427"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Terrestrial Vertebrate Zoology"
+    :number: 427L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Directed Studies in Biology
+    :number: "448"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Seminar -- Selected Topics in Biology
+    :number: "449"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Honours Seminar in Biological Sciences
+    :number: "498"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Honours Thesis in Biological Sciences
+    :number: "499"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Human Biology: Anatomy and Physiology 2"
+    :number: "169"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Human Biology - Anatomy and Physiology 2"
+    :number: 169L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Life Sciences
+    :number: "062"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introduction To Life Sciences"
+    :number: 062L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Biology of Humans
+    :number: "105"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Biology of Humans"
+    :number: 105L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Principles of Biology 2
+    :number: "121"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Principles Of Biology 2"
+    :number: 121L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Introductory Microbiology 2
+    :number: "220"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Intro Microbiology 2"
+    :number: 220L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Vertebrate Zoology
+    :number: "225"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Vertebrate Zoology"
+    :number: 225L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Genetics
+    :number: "234"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Genetics"
+    :number: 234S
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Community and Ecosystem Ecology
+    :number: "302"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Community & Ecosystem Ecology"
+    :number: 302S
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Biochemistry
+    :number: "323"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Ichthyology
+    :number: "329"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Ichthyology"
+    :number: 329L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Developmental Biology
+    :number: "331"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Developmental Biology"
+    :number: 331L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Vertebrate Physiology 2
+    :number: "355"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Vertebrate Physiology 2"
+    :number: 355L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Research
+    :number: "398"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Field Methods in Terrestrial Ecology
+    :number: "409"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Evolution
+    :number: "414"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Principles of Conservation Biology
+    :number: "416"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Conservation Biology"
+    :number: 416L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Microbial Physiology
+    :number: "421"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Biochemical Techniques 2
+    :number: "425"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Biochemical Techniques 2"
+    :number: 425L
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Biochemical Techniques 2"
+    :number: 425S
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Regulation of Gene Expression
+    :number: "435"
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+  - :name: Sem:Regulation/GeneExpression
+    :number: 435S
+    :subject: BIOL
+    :credit: ""
+    :description: ""
+- :name: Business Economics
+  :code: BUEC
+  :courses: 
+  - :name: Managerial Economics
+    :number: "204"
+    :subject: BUEC
+    :credit: ""
+    :description: ""
+  - :name: Economic and Business Statistics 1
+    :number: "232"
+    :subject: BUEC
+    :credit: ""
+    :description: ""
+  - :name: Economic and Business Statistics 2
+    :number: "233"
+    :subject: BUEC
+    :credit: ""
+    :description: ""
+  - :name: Economic and Business Statistics 2
+    :number: "333"
+    :subject: BUEC
+    :credit: ""
+    :description: ""
+  - :name: Forecasting in Business and Economics
+    :number: "433"
+    :subject: BUEC
+    :credit: ""
+    :description: ""
+- :name: Chemical Biology
+  :code: CHBI
+  :courses: 
+  - :name: Honours Seminar
+    :number: "498"
+    :subject: CHBI
+    :credit: ""
+    :description: ""
+  - :name: Honours Thesis in Chem Biology
+    :number: "499"
+    :subject: CHBI
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Research
+    :number: "398"
+    :subject: CHBI
+    :credit: ""
+    :description: ""
+- :name: Chemistry
+  :code: CHEM
+  :courses: 
+  - :name: Foundations of Chemistry 1
+    :number: "050"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Foundations of Chemistry 1"
+    :number: 050L
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Foundations of Chemistry 2
+    :number: "060"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Foundations of Chemistry 2"
+    :number: 060L
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Chemical Bonding and Organic Chemistry
+    :number: "150"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Chemical Bonding and Organic Chemistry"
+    :number: 150L
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Relativity and Quanta
+    :number: "200"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Introductory Analytical Chemistry
+    :number: "210"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introductory Analytical Chemistry"
+    :number: 210L
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Organic Chemistry 1
+    :number: "212"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Organic Chemistry 1"
+    :number: 212L
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Structure, Bonding and Spectroscopy
+    :number: "216"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Aqueous Environmental Chemistry
+    :number: "301"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Physical Chemistry 1
+    :number: "306"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Instrumental Analysis
+    :number: "310"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Instrumental Analysis Laboratory
+    :number: "312"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Instrumental Analysis Laboratory for Chemical Biology
+    :number: "317"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Advanced Organic Chemistry
+    :number: "322"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Organic Chemistry Laboratory
+    :number: "324"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Inorganic Chemistry 1
+    :number: "331"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Biochemistry
+    :number: "373"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Advanced Analytical Chemistry Laboratory
+    :number: "440"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Advanced Inorganic Chemistry Laboratory
+    :number: "441"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Directed Studies in Chemistry
+    :number: "448"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Fundamentals of Chemistry 1
+    :number: "110"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Fundamentals of Chemistry 1"
+    :number: 110L
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Introductory Physical and Organic Chemistry
+    :number: "125"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Intro Phys & Organic Chem"
+    :number: 125L
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Fundamentals of Chemistry
+    :number: "151"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Fundamentals of Chemistry"
+    :number: 151L
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Principles of Chemistry
+    :number: "152"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Principles of Chemistry"
+    :number: 152L
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Organic Chemistry 2
+    :number: "222"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Organic Chemistry 2"
+    :number: 222L
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Fundamentals of Physical Chemistry
+    :number: "225"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Physical Chemistry"
+    :number: 225L
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Physical Chemistry 2
+    :number: "307"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Physical Chemistry Laboratory
+    :number: "308"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Method Development and Applications in Analytical Chemistry
+    :number: "314"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Organic Spectroscopy
+    :number: "323"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Inorganic Chemistry 2
+    :number: "332"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Inorganic Chemistry Laboratory
+    :number: "333"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Selected Topics in Organic Chemistry
+    :number: "422"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Advanced Organic Chemistry Laboratory
+    :number: "442"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: Advanced Chemical Biology
+    :number: "445"
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Advanced Chemical Biology"
+    :number: 445L
+    :subject: CHEM
+    :credit: ""
+    :description: ""
+- :name: Chinese
+  :code: CHIN
+  :courses: 
+  - :name: Introductory Chinese 1
+    :number: "111"
+    :subject: CHIN
+    :credit: ""
+    :description: ""
+  - :name: Introductory Chinese 2
+    :number: "121"
+    :subject: CHIN
+    :credit: ""
+    :description: ""
+- :name: Canadian Studies
+  :code: CNST
+  :courses: 
+  - :name: Introduction to Canadian Studies
+    :number: "200"
+    :subject: CNST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Canadian Studies"
+    :number: 200S
+    :subject: CNST
+    :credit: ""
+    :description: ""
+- :name: Computing
+  :code: COMP
+  :courses: 
+  - :name: Introduction to Micro Computers
+    :number: "050"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introduction to Micro Computers"
+    :number: 050L
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Programming
+    :number: "060"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introduction to Programming"
+    :number: 060L
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Information Technology
+    :number: "100"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Information Technology"
+    :number: 100S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Computer Programming 1
+    :number: "113"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Computer Programming 1"
+    :number: 113S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Visual Basic Computer Programming 1
+    :number: "114"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Lab:VB Computer Programming 1
+    :number: 114L
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: VB Computer Programming 1"
+    :number: 114S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Discrete Structures 1 for Computing Science
+    :number: "138"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Discrete Structures 1 for Computing Science"
+    :number: 138S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Principles of Software Development
+    :number: "152"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Principles of Software Development"
+    :number: 152S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Data Processing Principles
+    :number: "157"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introduction to Data Processing Principles"
+    :number: 157L
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Data Processing Principles"
+    :number: 157S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Computer Programming Java
+    :number: "212"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Computer Programming Java"
+    :number: 212S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Computer Systems
+    :number: "213"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Computer Systems"
+    :number: 213S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Small Computer Systems: Organization and Architecture"
+    :number: "253"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Small Computer Systems: Organizations and Architecture"
+    :number: 253S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Information Resource Management and Issues
+    :number: "254"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Information Resource Management And Issues"
+    :number: 254S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: E-Commerce Systems Development
+    :number: "262"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Business Applications Systems"
+    :number: 262S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Languages - Advanced Programming
+    :number: "264"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Languages: Advanced Programming"
+    :number: 264S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Object Oriented Programming
+    :number: "266"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Object Oriented Programming"
+    :number: 266S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Systems and Analysis Design 2
+    :number: "267"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: System Analysis and Design 2"
+    :number: 267S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Computer Networks
+    :number: "327"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Computer Networks"
+    :number: 327S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Operating Systems
+    :number: "341"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Operating Systems"
+    :number: 341S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Software Engineering
+    :number: "352"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Software Engineering"
+    :number: 352S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Web Site Design & Programming
+    :number: "354"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Web Site Design & Programming"
+    :number: 354S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Database Systems
+    :number: "361"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Database Systems"
+    :number: 361S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Internet/Intranet
+    :number: "424"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Internet/Intranet"
+    :number: 424S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Fundamentals of Computing
+    :number: "040"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Desktop and Web Publishing
+    :number: "065"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Computer Programing 2
+    :number: "123"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Computer Programming 2"
+    :number: 123S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Visual Basic Computer Programming 2
+    :number: "124"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: VB Computer Programming 2"
+    :number: 124L
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: VB Computer Programming 2"
+    :number: 124S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Discrete Structures 2 for Computing Science
+    :number: "139"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Discrete Structures 2 for Computing Science"
+    :number: 139S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Introduction to File Processing
+    :number: "167"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introduction to File Processing"
+    :number: 167L
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Sem:introduction to File Processing
+    :number: 167S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Data Structures, Algorithm Analysis and Program Design
+    :number: "223"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Data Structures, Algorithm Analysis and Program Design"
+    :number: 223S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Programming in C++
+    :number: "252"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Programming in C++"
+    :number: 252S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Database Processing
+    :number: "256"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Data Base Programming"
+    :number: 256S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Systems Analysis & Design 1
+    :number: "257"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: System Analysis & Design"
+    :number: 257S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Small Computer Systems: Communication and Networks"
+    :number: "263"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Small Systems: Communication and Networks"
+    :number: 263S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Special Topics in Computing
+    :number: "268"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Special Topics In Computing"
+    :number: 268S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Computer Applications in Business
+    :number: "291"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Comp Applications in Bus"
+    :number: 291S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Algorithm Design & Analysis
+    :number: "305"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Sem:Algorithm Design&Analysis
+    :number: 305S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Applied Artificial Intelligence
+    :number: "371"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Applied Artificial Intelligence"
+    :number: 371S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Computer Network Administration
+    :number: "425"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Computer Network Administration"
+    :number: 425L
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Software Engineering 2
+    :number: "452"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Software Engineering 2"
+    :number: 452S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Advanced Database Systems
+    :number: "461"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Advanced Database Systems"
+    :number: 461S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Multimedia
+    :number: "483"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Multimedia"
+    :number: 483S
+    :subject: COMP
+    :credit: ""
+    :description: ""
+  - :name: Computing Science Project
+    :number: "491"
+    :subject: COMP
+    :credit: ""
+    :description: ""
+- :name: Convention Mgmt
+  :code: CONV
+  :courses: 
+  - :name: Introduction to Tourism
+    :number: "101"
+    :subject: CONV
+    :credit: ""
+    :description: ""
+  - :name: Legal Liability and Risk Management
+    :number: "105"
+    :subject: CONV
+    :credit: ""
+    :description: ""
+  - :name: Conference Management 1
+    :number: "210"
+    :subject: CONV
+    :credit: ""
+    :description: ""
+  - :name: Sports Event Management
+    :number: "224"
+    :subject: CONV
+    :credit: ""
+    :description: ""
+  - :name: Managing Festivals and Events
+    :number: "226"
+    :subject: CONV
+    :credit: ""
+    :description: ""
+  - :name: Celebrating Community and Culture
+    :number: "103"
+    :subject: CONV
+    :credit: ""
+    :description: ""
+  - :name: Event Volunteer Management
+    :number: "104"
+    :subject: CONV
+    :credit: ""
+    :description: ""
+  - :name: Sports Event Marketing
+    :number: "125"
+    :subject: CONV
+    :credit: ""
+    :description: ""
+  - :name: Conference Management 2
+    :number: "211"
+    :subject: CONV
+    :credit: ""
+    :description: ""
+  - :name: Fundraising for Non-Profit Organizations
+    :number: "217"
+    :subject: CONV
+    :credit: ""
+    :description: ""
+  - :name: Destination Marketing Organizations
+    :number: "219"
+    :subject: CONV
+    :credit: ""
+    :description: ""
+  - :name: Field Trip Activity Fee - Year 2 Events And Conventions Management Diploma
+    :number: "250"
+    :subject: CONV
+    :credit: ""
+    :description: ""
+- :name: Child and Youth Care
+  :code: CYCA
+  :courses: 
+  - :name: Practicum 1
+    :number: "182"
+    :subject: CYCA
+    :credit: ""
+    :description: ""
+  - :name: Theoretical Foundations in Child And Youth Care
+    :number: "202"
+    :subject: CYCA
+    :credit: ""
+    :description: ""
+  - :name: Self and the Helping Relaionship As a Context for Change
+    :number: "253"
+    :subject: CYCA
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Professional Foundations Of Child and Youth Care
+    :number: "200"
+    :subject: CYCA
+    :credit: ""
+    :description: ""
+  - :name: Special Topics
+    :number: "250"
+    :subject: CYCA
+    :credit: ""
+    :description: ""
+  - :name: Guided Communications
+    :number: "254"
+    :subject: CYCA
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Self in Groups
+    :number: "262"
+    :subject: CYCA
+    :credit: ""
+    :description: ""
+  - :name: Law and Social Services
+    :number: "357"
+    :subject: CYCA
+    :credit: ""
+    :description: ""
+- :name: College ESL
+  :code: CESL
+  :courses: 
+  - :name: Basic Communication Skills
+    :number: "014"
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Basic Reading & Writing Skills
+    :number: "016"
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Integrated Communication Skills
+    :number: "024"
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Reading Skills
+    :number: "027"
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Writing Skills
+    :number: 028
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Application of English Verbs
+    :number: "032"
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Applied Intensive Grammar Study
+    :number: "034"
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Oral Communication
+    :number: "035"
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Reading & Study Skills
+    :number: "037"
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Paragraph Composition
+    :number: 038
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Oral Communication
+    :number: "045"
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Reading & Study Skills
+    :number: "047"
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Writing Skills
+    :number: 048
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Structure and Editing Skills
+    :number: "053"
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Academic Writing
+    :number: "054"
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: College Reading Skills
+    :number: "057"
+    :subject: CESL
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Listening
+    :number: 082
+    :subject: CESL
+    :credit: ""
+    :description: ""
+- :name: Com/Sch Support Wkr
+  :code: CSSW
+  :courses: 
+  - :name: Field Work
+    :number: "165"
+    :subject: CSSW
+    :credit: ""
+    :description: ""
+- :name: Digital Art & Design
+  :code: DAAD
+  :courses: 
+  - :name: Graphic Design
+    :number: "120"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Graphic Design"
+    :number: 120S
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: Typography
+    :number: "130"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Typography"
+    :number: 130S
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: Digital Photography
+    :number: "150"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Digital Photography"
+    :number: 150S
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: Graphic Applications and DAAD Systems 1
+    :number: "175"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Graphic Applications 1"
+    :number: 175L
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Graphic Applications 1"
+    :number: 175S
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: Graphic Applications and DAAD Systems 2
+    :number: "275"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Graphic Applications 2"
+    :number: 275L
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Graphic Applications 2"
+    :number: 275S
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: Project Management and Client Contact
+    :number: "288"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Project Management & Client Contact"
+    :number: 288L
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Project Management & Client Contact"
+    :number: 288S
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: Desktop Publishing & Digital Prepress 2
+    :number: "295"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Desktop Publishing and Digital Prepress 2"
+    :number: 295L
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Desktop Publishing and Digital Prepress 2"
+    :number: 295S
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "New Media 2: Multimedia, Animation and Online Publishing"
+    :number: "296"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Lab: New Media 2"
+    :number: 296L
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Sem: New Media 2"
+    :number: 296S
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: Communications Graphics
+    :number: "110"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Communications Graphics"
+    :number: 110S
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: Desktop Publishing and Digital Prepress 1
+    :number: "195"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Desktop Publishing and Digital Prepress 1"
+    :number: 195L
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Desktop Publishing and Digital Prepress 1"
+    :number: 195S
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "New Media 1: Multimedia, Animation and Online Publishing"
+    :number: "196"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Lab: New Media 1"
+    :number: 196L
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Sem: New Media 1"
+    :number: 196S
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: Production Art
+    :number: "260"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Production Art"
+    :number: 260L
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: Content Creation, Information Design, and Portfolio Development
+    :number: "284"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Content Creation & Information Design"
+    :number: 284L
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Content Creation & Information Design"
+    :number: 284S
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: Digital Art and Design Project
+    :number: "286"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Digital Art & Design Project"
+    :number: 286L
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+  - :name: Digital Art and Design Internship
+    :number: "299"
+    :subject: DAAD
+    :credit: ""
+    :description: ""
+- :name: Drafting
+  :code: DRAF
+  :courses: 
+  - :name: Engineering Graphics
+    :number: "152"
+    :subject: DRAF
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Engineering Graphics"
+    :number: 152L
+    :subject: DRAF
+    :credit: ""
+    :description: ""
+- :name: Early Childhood Ed
+  :code: ECED
+  :courses: 
+  - :name: "Practicum 1: Developing Relationships With Children"
+    :number: "120"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: Child Guidance
+    :number: "132"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: Interpersonal Relations - Communication
+    :number: "134"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Program Planning
+    :number: "135"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: "Practicum 3: Demonstration Practicum"
+    :number: "220"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: Advanced Program Development
+    :number: "235"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: "Interpersonal Relations: Working With Families"
+    :number: "244"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: Administration of Early Childhood Education Programs
+    :number: "249"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: "Practicum 2: Program Planning for Young Children"
+    :number: "130"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: Child Health
+    :number: "133"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: Curriculum Development
+    :number: "136"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: "Interpersonal Relations: Helping Interactions"
+    :number: "144"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: "Practicum 4: Programming for Individual Children"
+    :number: "230"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: "Child Growth and Development: Individual Differences"
+    :number: "231"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+  - :name: Programming for Individual Children
+    :number: "255"
+    :subject: ECED
+    :credit: ""
+    :description: ""
+- :name: Engineering Chem
+  :code: ECHE
+  :courses: 
+  - :name: Chemistry for Engineers
+    :number: "115"
+    :subject: ECHE
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Chemistry for Engineers"
+    :number: 115L
+    :subject: ECHE
+    :credit: ""
+    :description: ""
+- :name: Economics
+  :code: ECON
+  :courses: 
+  - :name: Introduction to Basic Economics
+    :number: "122"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Principles of Microeconomics
+    :number: "190"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Principles of Macroeconomics
+    :number: "195"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Global and Canadian Economic Issues
+    :number: "243"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Microeconomics 1
+    :number: "290"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Managing Personal Economic Wealth
+    :number: "309"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Canadian Financial Markets
+    :number: "310"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: "Public Finance: Policy Topics"
+    :number: "350"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Economics of the Environment
+    :number: "371"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Land Use
+    :number: "374"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: International Trade
+    :number: "455"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Issues in Aboriginal Economics
+    :number: "263"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Intermediate MacRoeconomics 1
+    :number: "295"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Mathematical Economics
+    :number: "320"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Benefit-Cost Analysis and the Economics Of Project Evaluation
+    :number: "370"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Forestry Economics
+    :number: "373"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Economic Analysis of Health Services
+    :number: "384"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Intermediate MacRoeconomics 2
+    :number: "395"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: International Financial Markets
+    :number: "410"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+  - :name: Industrial Organization
+    :number: "466"
+    :subject: ECON
+    :credit: ""
+    :description: ""
+- :name: Education Communications
+  :code: EDCO
+  :courses: 
+  - :name: Communications 1
+    :number: "310"
+    :subject: EDCO
+    :credit: ""
+    :description: ""
+  - :name: Communications 2
+    :number: "420"
+    :subject: EDCO
+    :credit: ""
+    :description: ""
+- :name: Career Preparation
+  :code: EDCP
+  :courses: 
+  - :name: Self Assessment and Self Awareness
+    :number: "103"
+    :subject: EDCP
+    :credit: ""
+    :description: ""
+- :name: Engineering Design&Draft Tech
+  :code: EDDT
+  :courses: 
+  - :name: Graphical Communication
+    :number: "110"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Graphical Communication"
+    :number: 110L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Computer Aided Design and Drafting 1
+    :number: "111"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Comp Aided Design & Draft 1"
+    :number: 111L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Materials and Applications 1 - Specifications
+    :number: "162"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Materials and Applications 1 - Specifications"
+    :number: 162S
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Building Plumbing Design
+    :number: "180"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Building Plumbing Design"
+    :number: 180L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Building Electrical Design
+    :number: "181"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Building Electrical Desi"
+    :number: 181L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Computer Aided Design and Drafting 2
+    :number: "211"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Computer Aided Design and Drafting 2"
+    :number: 211L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Building Design
+    :number: "225"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Building Design"
+    :number: 225L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Structural Analysis
+    :number: "250"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Structural Analysis"
+    :number: 250S
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Fluid Mechanics
+    :number: "252"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Materials and Applications 2 - Estimating
+    :number: "262"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Materials & Applications 2 - Estimating"
+    :number: 262L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Construction Management
+    :number: "263"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Construction Management"
+    :number: 263S
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Building Services Theory
+    :number: "281"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Building Services Theory"
+    :number: 281L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Wood Design
+    :number: "297"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Civil Technology 1
+    :number: "140"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Civil Technology 1"
+    :number: 140L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Statics and Strength of Materials
+    :number: "150"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Building Technology 1
+    :number: "160"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Building Technology 1"
+    :number: 160L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Building Lighting Design
+    :number: "182"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Construction Surveying
+    :number: "199"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Construction Surveying"
+    :number: 199L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Applied Research Project Seminar
+    :number: "231"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Site Planning and Development
+    :number: "240"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Site Planning and Development"
+    :number: 240L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Building Technology 2
+    :number: "260"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Building Technology 2"
+    :number: 260L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Building Regulations
+    :number: "265"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Building Regulations"
+    :number: 265S
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: AutoLISP Programming
+    :number: "271"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: AutoLISP Programming"
+    :number: 271L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Building HVAC Design
+    :number: "280"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Building HVAC Design"
+    :number: 280L
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Steel Design
+    :number: "296"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+  - :name: Reinforced Concrete Design
+    :number: "298"
+    :subject: EDDT
+    :credit: ""
+    :description: ""
+- :name: Education Foundations
+  :code: EDEF
+  :courses: 
+  - :name: Theoretical Frameworks of Education
+    :number: "320"
+    :subject: EDEF
+    :credit: ""
+    :description: ""
+  - :name: "Social Foundations of Educaton: Gender And Education"
+    :number: "415"
+    :subject: EDEF
+    :credit: ""
+    :description: ""
+  - :name: History of Education
+    :number: "310"
+    :subject: EDEF
+    :credit: ""
+    :description: ""
+  - :name: School Organization
+    :number: "420"
+    :subject: EDEF
+    :credit: ""
+    :description: ""
+- :name: Education Language & Literacy
+  :code: EDLL
+  :courses: 
+  - :name: Language and Literacy 1
+    :number: "310"
+    :subject: EDLL
+    :credit: ""
+    :description: ""
+  - :name: Children's Literature
+    :number: "415"
+    :subject: EDLL
+    :credit: ""
+    :description: ""
+  - :name: Language and Literacy 2
+    :number: "320"
+    :subject: EDLL
+    :credit: ""
+    :description: ""
+- :name: Education Math
+  :code: EDMA
+  :courses: 
+  - :name: Mathematics 1
+    :number: "310"
+    :subject: EDMA
+    :credit: ""
+    :description: ""
+  - :name: Mathematics 2
+    :number: "320"
+    :subject: EDMA
+    :credit: ""
+    :description: ""
+- :name: Education Physical Education
+  :code: EDPE
+  :courses: 
+  - :name: Physical Education Methods
+    :number: "310"
+    :subject: EDPE
+    :credit: ""
+    :description: ""
+- :name: Education Personal Planning
+  :code: EDPP
+  :courses: 
+  - :name: Personal Planning
+    :number: "410"
+    :subject: EDPP
+    :credit: ""
+    :description: ""
+- :name: Education Practicum
+  :code: EDPR
+  :courses: 
+  - :name: Practicum 1
+    :number: "310"
+    :subject: EDPR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Practicum 1"
+    :number: 310S
+    :subject: EDPR
+    :credit: ""
+    :description: ""
+  - :name: Practicum 3
+    :number: "410"
+    :subject: EDPR
+    :credit: ""
+    :description: ""
+  - :name: Education Practicum
+    :number: "425"
+    :subject: EDPR
+    :credit: ""
+    :description: ""
+  - :name: Practicum 2
+    :number: "320"
+    :subject: EDPR
+    :credit: ""
+    :description: ""
+  - :name: Practicum 4
+    :number: "420"
+    :subject: EDPR
+    :credit: ""
+    :description: ""
+- :name: Education Psychology
+  :code: EDPY
+  :courses: 
+  - :name: Child Development and Teaching
+    :number: "310"
+    :subject: EDPY
+    :credit: ""
+    :description: ""
+  - :name: Special Education
+    :number: "410"
+    :subject: EDPY
+    :credit: ""
+    :description: ""
+  - :name: Programming for Children With Behaviour Disorders
+    :number: "436"
+    :subject: EDPY
+    :credit: ""
+    :description: ""
+  - :name: Assessment of Learning Difficulties
+    :number: "421"
+    :subject: EDPY
+    :credit: ""
+    :description: ""
+  - :name: Adapting and Modifying Programs
+    :number: "430"
+    :subject: EDPY
+    :credit: ""
+    :description: ""
+  - :name: "Special Education: Specific Learning Disabilities"
+    :number: "415"
+    :subject: EDPY
+    :credit: ""
+    :description: ""
+  - :name: Disabilities in Mathematics
+    :number: "434"
+    :subject: EDPY
+    :credit: ""
+    :description: ""
+- :name: Education Science
+  :code: EDSC
+  :courses: 
+  - :name: Problem Solving in Science and Mathematics
+    :number: "416"
+    :subject: EDSC
+    :credit: ""
+    :description: ""
+  - :name: Science Methods
+    :number: "320"
+    :subject: EDSC
+    :credit: ""
+    :description: ""
+- :name: Education Teach and Learning
+  :code: EDTL
+  :courses: 
+  - :name: Teaching and Learning 1
+    :number: "310"
+    :subject: EDTL
+    :credit: ""
+    :description: ""
+  - :name: Teaching and Learning 3
+    :number: "410"
+    :subject: EDTL
+    :credit: ""
+    :description: ""
+  - :name: Teaching and Learning 2
+    :number: "320"
+    :subject: EDTL
+    :credit: ""
+    :description: ""
+- :name: Education
+  :code: EDUC
+  :courses: 
+  - :name: "Research Project: Design"
+    :number: "507"
+    :subject: EDUC
+    :credit: ""
+    :description: ""
+  - :name: Research Methods
+    :number: "501"
+    :subject: EDUC
+    :credit: ""
+    :description: ""
+  - :name: Philosophy and History of Education
+    :number: "502"
+    :subject: EDUC
+    :credit: ""
+    :description: ""
+  - :name: Curriculum, Teaching and Learning
+    :number: "503"
+    :subject: EDUC
+    :credit: ""
+    :description: ""
+- :name: Education Visual & Perf Arts
+  :code: EDVP
+  :courses: 
+  - :name: Drama
+    :number: "410"
+    :subject: EDVP
+    :credit: ""
+    :description: ""
+  - :name: Music
+    :number: "411"
+    :subject: EDVP
+    :credit: ""
+    :description: ""
+  - :name: Visual Arts
+    :number: "412"
+    :subject: EDVP
+    :credit: ""
+    :description: ""
+- :name: English
+  :code: ENGL
+  :courses: 
+  - :name: Fundamentals of English
+    :number: "030"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Basic Language Skills
+    :number: "040"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Developing Writing Skills
+    :number: "050"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Literature & Composition
+    :number: "060"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Composition
+    :number: "110"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Prose Fiction
+    :number: "111"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Poetry
+    :number: "112"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Communications English 1
+    :number: "130"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Business, Professional and Academic Composition
+    :number: "181"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Composition 1
+    :number: "201"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: "Creative Writing: Fiction"
+    :number: "206"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Survey of English Literature, Beginnings To 17th Century
+    :number: "211"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Biblical & Classical Backgrounds of English Literature 1
+    :number: "214"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Introduction to American Literature 1
+    :number: "216"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Survey of Canadian Literature, Beginnings to 1950s
+    :number: "217"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Studies in Literature 1
+    :number: "220"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Professional Business & Technical Writing
+    :number: "229"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Critical Thinking and Writing for Science and Technology
+    :number: "230"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Technical Writing and Editing for Digita Art and Design
+    :number: "231"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Technical Writing 2
+    :number: "285"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Studies in Rhetoric
+    :number: "307"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Composition 1 - Personal Expression
+    :number: "308"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: The Structure of Modern English 1
+    :number: "327"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Practical Criticism
+    :number: "330"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Special Topics in Creative Writing
+    :number: "333"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Studies in Shakespeare
+    :number: "366"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Restoration and Early Eighteenth Century Literature
+    :number: "385"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Romantic Poetry
+    :number: "391"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Topics in Modern Irish Literature
+    :number: "416"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Studies in Canadian Literature
+    :number: "426"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: American Poetry of the First Half of the Twentieth Century
+    :number: "460"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: The Rhetoric & Professional Writing Capstone Seminar
+    :number: "499"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Children's Literature
+    :number: "318"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Drama
+    :number: "114"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Communications English 2
+    :number: "131"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Occupational Writing for AHT
+    :number: "166"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Technical Writing 1
+    :number: "185"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Report Writing and Business Presentations
+    :number: "191"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Professional Presentation/Communication
+    :number: "192"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Report Writing and Business Presentations for CSOM
+    :number: "193"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Report Writing and Presentation for Respiratory Therapy
+    :number: "197"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: "Creative Writing: Poetry"
+    :number: "208"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Studies in Poetry
+    :number: "218"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Survey of English Literature, 18th and 19th Century
+    :number: "221"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Biblical and Classical Backgrounds of English Literature 2
+    :number: "224"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Introduction to American Literature 2
+    :number: "226"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Survey of Canadian Literature From the 1950s to the Present
+    :number: "227"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Studies in Literature 2
+    :number: "240"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Composition 2 - Writing in the Disciplines
+    :number: "309"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: "Composition Theory 2: Contemporary Theory"
+    :number: "311"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Studies in Literature and the Other Arts
+    :number: "316"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: The Structure of Modern English 2
+    :number: "328"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Milton's Paradise Lost
+    :number: "374"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Mid and Late Eighteenth Century Literature
+    :number: "386"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Early Modern British Literature
+    :number: "400"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Studies in American Literature
+    :number: "436"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Studies in Commonwealth/Postcolonial Literature
+    :number: "446"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+  - :name: Studies in Literary Movements
+    :number: "451"
+    :subject: ENGL
+    :credit: ""
+    :description: ""
+- :name: Environmental Studies
+  :code: ENVS
+  :courses: 
+  - :name: Research Methods, Preparation and Presentation
+    :number: "501"
+    :subject: ENVS
+    :credit: ""
+    :description: ""
+  - :name: Masters of Science Thesis
+    :number: "599"
+    :subject: ENVS
+    :credit: ""
+    :description: ""
+  - :name: "Environmental Sciences: Topics and Case Studies"
+    :number: "500"
+    :subject: ENVS
+    :credit: ""
+    :description: ""
+  - :name: Advanced Topics in Ecology and Evolution
+    :number: "502"
+    :subject: ENVS
+    :credit: ""
+    :description: ""
+- :name: Engineering Physics
+  :code: EPHY
+  :courses: 
+  - :name: Physics for Engineers 1
+    :number: "115"
+    :subject: EPHY
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Physics For Engineers 1"
+    :number: 115S
+    :subject: EPHY
+    :credit: ""
+    :description: ""
+  - :name: Physics for Engineers 2
+    :number: "125"
+    :subject: EPHY
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Physics For Engineers 2"
+    :number: 125L
+    :subject: EPHY
+    :credit: ""
+    :description: ""
+  - :name: Engineering Mechanics 1
+    :number: "170"
+    :subject: EPHY
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Engineering Mechanics 1"
+    :number: 170S
+    :subject: EPHY
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Engineering Measurements
+    :number: "199"
+    :subject: EPHY
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Engineering Measurements"
+    :number: 199S
+    :subject: EPHY
+    :credit: ""
+    :description: ""
+- :name: English As Second Or Add Lang
+  :code: ESAL
+  :courses: 
+  - :name: Basic Grammar
+    :number: "012"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Basic Language Skills
+    :number: "013"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Basic Oral Communication
+    :number: "015"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Basic Reading Skills
+    :number: "017"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Basic Writing Skills
+    :number: 018
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Pre-Intermediate Grammar
+    :number: "022"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Pre-Intermediate Language Skills
+    :number: "023"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Pre-Intermediate Oral Skills
+    :number: "025"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Pre-Intermediate Reading Skills
+    :number: "027"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Pre-Intermediate Writing Skills
+    :number: 028
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Grammar 1
+    :number: "032"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Grammar 2
+    :number: "034"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Oral Communication
+    :number: "035"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Reading and Study Skills
+    :number: "037"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Composition
+    :number: 038
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Grammar
+    :number: "042"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Oral Communication
+    :number: "045"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Reading and Study Skills
+    :number: "047"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Composition
+    :number: 048
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Academic Reading Skills
+    :number: "057"
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Academic Writing
+    :number: 058
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Listening
+    :number: 082
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Pronunciation
+    :number: 088
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Vocabulary for Academic English
+    :number: 096
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Listening Skills
+    :number: 092
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Preparation for the Toefl
+    :number: 094
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Advanced Pronunciation
+    :number: 098
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+  - :name: Special Topics in Language Study
+    :number: 099
+    :subject: ESAL
+    :credit: ""
+    :description: ""
+- :name: Education Info Technology
+  :code: EDIT
+  :courses: 
+  - :name: Information Technology Across the Curriculum
+    :number: "415"
+    :subject: EDIT
+    :credit: ""
+    :description: ""
+- :name: Education First Nations
+  :code: EDFN
+  :courses: 
+  - :name: Teaching First Nations Children
+    :number: "420"
+    :subject: EDFN
+    :credit: ""
+    :description: ""
+- :name: Education Social Studies
+  :code: EDSO
+  :courses: 
+  - :name: Social Studies Methods
+    :number: "320"
+    :subject: EDSO
+    :credit: ""
+    :description: ""
+- :name: Film
+  :code: FILM
+  :courses: 
+  - :name: Introduction to Film Studies 1938 - Present
+    :number: "220"
+    :subject: FILM
+    :credit: ""
+    :description: ""
+  - :name: Film Noir
+    :number: "405"
+    :subject: FILM
+    :credit: ""
+    :description: ""
+  - :name: The American Frontier in Film, Television and Literature
+    :number: "410"
+    :subject: FILM
+    :credit: ""
+    :description: ""
+- :name: French
+  :code: FREN
+  :courses: 
+  - :name: Introductory French 1
+    :number: "100"
+    :subject: FREN
+    :credit: ""
+    :description: ""
+  - :name: Intermediate French 1
+    :number: "110"
+    :subject: FREN
+    :credit: ""
+    :description: ""
+  - :name: 1st Year University French 1 For Students with French 12 or FREN 120
+    :number: "111"
+    :subject: FREN
+    :credit: ""
+    :description: ""
+  - :name: Studies in French Language and Composition 1
+    :number: "211"
+    :subject: FREN
+    :credit: ""
+    :description: ""
+  - :name: Introductory French 2
+    :number: "101"
+    :subject: FREN
+    :credit: ""
+    :description: ""
+  - :name: Intermediate French 2
+    :number: "120"
+    :subject: FREN
+    :credit: ""
+    :description: ""
+  - :name: 1st Year University French 2 For Students with French 12 or FREN 120
+    :number: "121"
+    :subject: FREN
+    :credit: ""
+    :description: ""
+  - :name: Studies in French Language and Composition 2
+    :number: "221"
+    :subject: FREN
+    :credit: ""
+    :description: ""
+- :name: Graduate Business Admin
+  :code: GBUS
+  :courses: 
+  - :name: Financial Reporting & Analysis
+    :number: "500"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+  - :name: Applied Statistics
+    :number: "501"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+  - :name: Management Communications
+    :number: "502"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+  - :name: Organizational Behaviour & Design
+    :number: "504"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+  - :name: Global Economics
+    :number: "505"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+  - :name: Strategic Management
+    :number: "520"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+  - :name: Business Research & Consulting Methods
+    :number: "521"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+  - :name: Applied Management Project
+    :number: "522"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+  - :name: Strategic Management Information Systems
+    :number: "530"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+  - :name: Global Management
+    :number: "570"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+  - :name: International Business
+    :number: "512"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+  - :name: Leadership and Ethics
+    :number: "515"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+  - :name: Advanced Corporate Finance
+    :number: "540"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+  - :name: Advanced Marketing Management
+    :number: "560"
+    :subject: GBUS
+    :credit: ""
+    :description: ""
+- :name: Geography
+  :code: GEOG
+  :courses: 
+  - :name: Earth's Lands & Waters
+    :number: "112"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Earth's Lands and Waters"
+    :number: 112L
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Introduction to Human Geography: Geographical Change in the Modernizing World"
+    :number: "119"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Introduction to Human Geography: Themes In Geographical Change"
+    :number: "120"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Climatology & Biogeography
+    :number: "122"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Climatology & Biogeography"
+    :number: 122L
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Hydrology
+    :number: "205"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introduction to Hydrology"
+    :number: 205L
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Geography in an Urban World
+    :number: "212"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Geography in an Urban World"
+    :number: 212S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: The Regional Geography of Canada
+    :number: "222"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Regional Geography of Canada"
+    :number: 222S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: The Regional Geography of British Columbia and Yukon
+    :number: "223"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Regional Geography of British Columbia and Yukon"
+    :number: 223S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Geographical Analysis
+    :number: "270"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Sem:Intro Geographic Analysis
+    :number: 270S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Environment and Resources
+    :number: "310"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Environment and Resources"
+    :number: 310S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Geomorphology
+    :number: "319"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Geomorphology"
+    :number: 319L
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Cultural Geography
+    :number: "320"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Cultural Geography"
+    :number: 320S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Historical Geography of Canada 1: Canada Before 1850"
+    :number: "327"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Historical Geography of Canada 1: Canada Before 1850"
+    :number: 327S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Urban Geography
+    :number: "350"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Urban Geography"
+    :number: 350S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Field Course in Geography
+    :number: "370"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Geography of Selected Regions
+    :number: "390"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Geography of Selected Regions"
+    :number: 390S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Urban Analysis
+    :number: "450"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Urban Analysis"
+    :number: 450S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Special Topics in Geography
+    :number: "399"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Special Topics in Geography"
+    :number: 399L
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Human Interaction With the Natural Environment
+    :number: "210"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Human Interaction With the Natural Environment"
+    :number: 210S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Physical Hydrology
+    :number: "305"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Physical Hydrology"
+    :number: 305L
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Geographies of Gender
+    :number: "323"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Geographies of Gender"
+    :number: 323S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Historical Geography of Canada 2: Canada After 1850"
+    :number: "328"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Historical Geography of Canada 2: After 1850"
+    :number: 328S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Economic Geography
+    :number: "361"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Intro to Economic Geography"
+    :number: 361S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Attitudes Toward the Environment
+    :number: "423"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Attitudes Toward the Environment"
+    :number: 423S
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+  - :name: Urban Biophysical Environments
+    :number: "482"
+    :subject: GEOG
+    :credit: ""
+    :description: ""
+- :name: Geology
+  :code: GEOL
+  :courses: 
+  - :name: Introduction to Physical Geology
+    :number: "111"
+    :subject: GEOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Intro Physical Geology"
+    :number: 111L
+    :subject: GEOL
+    :credit: ""
+    :description: ""
+  - :name: Geomorphology
+    :number: "319"
+    :subject: GEOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Geomorphology"
+    :number: 319L
+    :subject: GEOL
+    :credit: ""
+    :description: ""
+  - :name: Principles of Palaeontology
+    :number: "301"
+    :subject: GEOL
+    :credit: ""
+    :description: ""
+  - :name: Lab:Principles Palaeontology
+    :number: 301L
+    :subject: GEOL
+    :credit: ""
+    :description: ""
+  - :name: Geological Time
+    :number: "205"
+    :subject: GEOL
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Geological Time"
+    :number: 205L
+    :subject: GEOL
+    :credit: ""
+    :description: ""
+- :name: German
+  :code: GERM
+  :courses: 
+  - :name: Introductory German 1
+    :number: "111"
+    :subject: GERM
+    :credit: ""
+    :description: ""
+  - :name: Introductory German 2
+    :number: "121"
+    :subject: GERM
+    :credit: ""
+    :description: ""
+- :name: Health
+  :code: HEAL
+  :courses: 
+  - :name: Death and Dying, Life and Living
+    :number: "333"
+    :subject: HEAL
+    :credit: ""
+    :description: ""
+- :name: History
+  :code: HIST
+  :courses: 
+  - :name: An Introduction to Canadian History
+    :number: "112"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: an Introduction to Canadian History"
+    :number: 112S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Europe: 1500 - 1789"
+    :number: "116"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Europe 1500 - 1789"
+    :number: 116S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "History of England: Roman Britain to The Glorious Revolution, 1688"
+    :number: "216"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: History of England: Roman Britain To The Glorious Revolution, 1688"
+    :number: 216S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: Major Issues in American History From Colonial Period to the Civil War
+    :number: "217"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Major Issues in American History From the Colonial Period to the Civil War"
+    :number: 217S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Medieval Europe 325 - 1198: From the Fall of Rome to the Crusades"
+    :number: "218"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Medieval Europe 325-1198: From the Fall of Rome to the Crusades"
+    :number: 218S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "History of England: The Glorious Revolution to Victorian Britain"
+    :number: "226"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: The Historian's Craft
+    :number: "300"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: European Expansion and Migration
+    :number: "317"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: The United States, 1812-1865
+    :number: "330"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: Britain 1900 -1930
+    :number: "361"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Britain 1900 - 1930"
+    :number: 361S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: American Foreign Policy, 1945 to Present
+    :number: "446"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: Topics in Early Modern Britain
+    :number: "451"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Topics in Early Modern Britain"
+    :number: 451S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Medieval Europe 1198 - 1500: From the Crusades to the Age of Reconnaissance"
+    :number: "228"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Medieval Europe 1198-1500: From the Crusades to the Age of Reconnaissance"
+    :number: 228S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: Topics in Medieval and Early Modern European History
+    :number: "412"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: An Introduction to Ancient Greece and Rome
+    :number: "103"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: History of Canada, 1867 to the Present
+    :number: "122"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: History Canada From 1867"
+    :number: 122S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Europe: 1789 - 1939"
+    :number: "126"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Europe 1789 - 1939"
+    :number: 126S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: History of England: The Glorious Revolution to Victorian Britain"
+    :number: 226S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: Major Issues in American History From The Civil War to the Present
+    :number: "227"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Major Issues in American History From the Civil War to the Present"
+    :number: 227S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: British Columbia
+    :number: "305"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: Canada in the Cold War Era
+    :number: "312"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Canada in the Cold War Era"
+    :number: 312S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: The United States, 1865-1896
+    :number: "331"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: The Emergence of Victorian Britain
+    :number: "341"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Emergence of Victorian Britain"
+    :number: 341S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: Knowledge and Belief in Medieval to Early Modern Europe
+    :number: "352"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: Topics in Local History
+    :number: "406"
+    :subject: HIST
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Topics in Local History"
+    :number: 406S
+    :subject: HIST
+    :credit: ""
+    :description: ""
+- :name: Health Science
+  :code: HLSC
+  :courses: 
+  - :name: Health Science 3
+    :number: "259"
+    :subject: HLSC
+    :credit: ""
+    :description: ""
+  - :name: "Healing/Health Sciences: Advanced Health Challenges"
+    :number: "359"
+    :subject: HLSC
+    :credit: ""
+    :description: ""
+  - :name: Human Sexuality for Health Professionals
+    :number: "369"
+    :subject: HLSC
+    :credit: ""
+    :description: ""
+  - :name: Health Science 4
+    :number: "269"
+    :subject: HLSC
+    :credit: ""
+    :description: ""
+- :name: Food & Beverage Mgt.
+  :code: HMGT
+  :courses: 
+  - :name: Catering and Service Management
+    :number: "111"
+    :subject: HMGT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Catering and Service Management"
+    :number: 111L
+    :subject: HMGT
+    :credit: ""
+    :description: ""
+  - :name: Resort Management
+    :number: "211"
+    :subject: HMGT
+    :credit: ""
+    :description: ""
+  - :name: Food & Beverage Management
+    :number: "221"
+    :subject: HMGT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Food & Beverage Mngt"
+    :number: 221L
+    :subject: HMGT
+    :credit: ""
+    :description: ""
+  - :name: Hotel Operations 1
+    :number: "241"
+    :subject: HMGT
+    :credit: ""
+    :description: ""
+  - :name: Food and Beverage Preparation
+    :number: "121"
+    :subject: HMGT
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Food and Beverage Preparation"
+    :number: 121L
+    :subject: HMGT
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Food & Beverage Preparation"
+    :number: 121S
+    :subject: HMGT
+    :credit: ""
+    :description: ""
+  - :name: Food & Beverage Cost Control
+    :number: "210"
+    :subject: HMGT
+    :credit: ""
+    :description: ""
+  - :name: Hotel Sales and Service
+    :number: "212"
+    :subject: HMGT
+    :credit: ""
+    :description: ""
+  - :name: Field Trip Activity Fee And Hotel Management Diploma)
+    :number: "250"
+    :subject: HMGT
+    :credit: ""
+    :description: ""
+  - :name: Hotel Operations 2
+    :number: "251"
+    :subject: HMGT
+    :credit: ""
+    :description: ""
+- :name: Human Service Worker
+  :code: HUMS
+  :courses: 
+  - :name: Interpersonal Communications and Helping Relationships
+    :number: "154"
+    :subject: HUMS
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Human Service Professional Practice
+    :number: "158"
+    :subject: HUMS
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Human Service Professional Practice"
+    :number: 158S
+    :subject: HUMS
+    :credit: ""
+    :description: ""
+  - :name: Foundations of Community and School Support Work
+    :number: "164"
+    :subject: HUMS
+    :credit: ""
+    :description: ""
+  - :name: Health Care Principles
+    :number: "166"
+    :subject: HUMS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Health Care Principles"
+    :number: 166L
+    :subject: HUMS
+    :credit: ""
+    :description: ""
+  - :name: Introduction to First Nations and Human Service Practice
+    :number: "177"
+    :subject: HUMS
+    :credit: ""
+    :description: ""
+  - :name: Interviewing Skills for Social Service Practice
+    :number: "161"
+    :subject: HUMS
+    :credit: ""
+    :description: ""
+  - :name: "Understanding Behaviour: Learning for Independence"
+    :number: "165"
+    :subject: HUMS
+    :credit: ""
+    :description: ""
+  - :name: Foundations of Social Service Work
+    :number: "174"
+    :subject: HUMS
+    :credit: ""
+    :description: ""
+  - :name: Alternative & Augmentative Communication
+    :number: "175"
+    :subject: HUMS
+    :credit: ""
+    :description: ""
+- :name: Japanese
+  :code: JAPA
+  :courses: 
+  - :name: Introductory Japanese 1
+    :number: "111"
+    :subject: JAPA
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Japanese 1
+    :number: "211"
+    :subject: JAPA
+    :credit: ""
+    :description: ""
+  - :name: Aspects of Japanese Culture 1
+    :number: "260"
+    :subject: JAPA
+    :credit: ""
+    :description: ""
+  - :name: Introductory Japanese 2
+    :number: "121"
+    :subject: JAPA
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Japanese 2
+    :number: "221"
+    :subject: JAPA
+    :credit: ""
+    :description: ""
+  - :name: Aspects of Japanese Culture 2
+    :number: "261"
+    :subject: JAPA
+    :credit: ""
+    :description: ""
+- :name: Journalism
+  :code: JOUR
+  :courses: 
+  - :name: Introduction to the Media and Journalism In Canada
+    :number: "305"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Intro to Media & Journalism in Canada"
+    :number: 305S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Layout and Pagination
+    :number: "311"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Layout & Pagination"
+    :number: 311S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Skills and Techniques of Journalism
+    :number: "320"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Skills and Techniques of Journalism"
+    :number: 320L
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Writing and Editing
+    :number: "331"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Writing and Editing"
+    :number: 331S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Online Journalism
+    :number: "410"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Online Journalism"
+    :number: 410S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Beat Reporting
+    :number: "420"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Beat Reporting"
+    :number: 420S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Freelance Writing
+    :number: "421"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Freelance Writing"
+    :number: 421S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Advanced Editing
+    :number: "430"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Advanced Writing and Editing"
+    :number: 430S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Media Law and Media Ethics
+    :number: "470"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Media Law & Media Ethics"
+    :number: 470S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: The News and Media Business
+    :number: "350"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: the News and Media Business"
+    :number: 350S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Case Studies in Journalism
+    :number: "411"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Case Studies in Journalism"
+    :number: 411S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Newspaper Production
+    :number: "412"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Newspaper Production"
+    :number: 412L
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Literary Journalism in Canada: Studies In Creative Non-Fiction"
+    :number: "431"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Literary Journalism in Canada: Studies in Non-Fiction"
+    :number: 431S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Photojournalism
+    :number: "451"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Photojournalism"
+    :number: 451S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Research Methods
+    :number: "452"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Research Methods"
+    :number: 452S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Magazine Writing & Production
+    :number: "454"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Mag Writing & Production"
+    :number: 454S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: Media and Public Relations
+    :number: "455"
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Media & Public Relations"
+    :number: 455S
+    :subject: JOUR
+    :credit: ""
+    :description: ""
+- :name: Police and Justice Studies
+  :code: JUST
+  :courses: 
+  - :name: Human Behaviour
+    :number: "114"
+    :subject: JUST
+    :credit: ""
+    :description: ""
+  - :name: Tactical Communication Skills for Criminal Justice
+    :number: "125"
+    :subject: JUST
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Criminal Justice Services in Canada
+    :number: "131"
+    :subject: JUST
+    :credit: ""
+    :description: ""
+- :name: Mathematics
+  :code: MATH
+  :courses: 
+  - :name: Fundamental Math
+    :number: "030"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Basic Math Skills
+    :number: "040"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Algebra
+    :number: "050"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Algebra 2
+    :number: "051"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Pre-Calculus 1
+    :number: "060"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Pre Calculus 2
+    :number: "061"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Pre-Calculus
+    :number: "100"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Fundamentals of Mathematics for Business And Economics
+    :number: "107"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Fundamentals of Mathematics for Business and Economics"
+    :number: 107S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Finite Mathematics With Applications 1
+    :number: "110"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Finite Mathematics With Applications 1"
+    :number: 110S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Enriched Calculus 1
+    :number: "113"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Enriched Calculus 1"
+    :number: 113S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Calculus 1
+    :number: "114"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Calculus 1"
+    :number: 114S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Calculus for the Biological Sciences 1
+    :number: "115"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Calculus for Business and Economics
+    :number: "117"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Calculus for Business and Economics"
+    :number: 117S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Calculus 2
+    :number: "124"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Discrete Structures 1 for Computing Science
+    :number: "138"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Discrete Structures 1 for Computing Science"
+    :number: 138S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Technical Mathematics 1
+    :number: "154"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Technical Mathematics 1"
+    :number: 154S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Principles of Mathematics for Teachers
+    :number: "190"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Mathematics For Teachers"
+    :number: 190S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Calculus 3
+    :number: "211"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Calculus 3"
+    :number: 211S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Linear Algebra 1
+    :number: "212"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Linear Algebra 1"
+    :number: 212S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Linear Algebra 2
+    :number: "307"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Elementary Number Theory
+    :number: "312"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Problem Solving in Applied Mathematics
+    :number: "351"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Graph Theory
+    :number: "443"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Honours Thesis in Mathematics
+    :number: "495"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Enriched Calculus 2
+    :number: "123"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Enriched Calculus 2"
+    :number: 123S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Calculus 2"
+    :number: 124S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Calculus for the Biological Sciences 2
+    :number: "125"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Linear Algebra for Engineers
+    :number: "130"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Linear Algebra for Engineers"
+    :number: 130S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Discrete Structures 2 for Computing Science
+    :number: "139"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Discrete Structures 2"
+    :number: 139S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Mathematics for Visual Arts
+    :number: "142"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Mathematics for Visual Arts"
+    :number: 142S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Technical Mathematics 2
+    :number: "164"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Technical Mathematics 2"
+    :number: 164S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Discrete Mathematics 1
+    :number: "170"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Discrete Mathematics 1"
+    :number: 170S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Analysis
+    :number: "220"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Analysis"
+    :number: 220S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Differential Equations 1
+    :number: "224"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Differential Equations"
+    :number: 224S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Complex Variables
+    :number: "300"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Complex Variables"
+    :number: 300S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Euclidean Geometry
+    :number: "308"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Differential Equations 2
+    :number: "316"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: Calculus 4
+    :number: "317"
+    :subject: MATH
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Calculus 4"
+    :number: 317S
+    :subject: MATH
+    :credit: ""
+    :description: ""
+- :name: Mental Health
+  :code: MENT
+  :courses: 
+  - :name: Assessment & Therapeutic Modalities 1
+    :number: "451"
+    :subject: MENT
+    :credit: ""
+    :description: ""
+- :name: Microbiology
+  :code: MICR
+  :courses: 
+  - :name: Veterinary Microbiology 1
+    :number: "158"
+    :subject: MICR
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Veterinary Microbiology 1"
+    :number: 158L
+    :subject: MICR
+    :credit: ""
+    :description: ""
+  - :name: Veterinary Microbiology 2
+    :number: "168"
+    :subject: MICR
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Veterinary Microbiology 2"
+    :number: 168L
+    :subject: MICR
+    :credit: ""
+    :description: ""
+- :name: Management
+  :code: MNGT
+  :courses: 
+  - :name: Business Mathematics
+    :number: "131"
+    :subject: MNGT
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Marketing
+    :number: "143"
+    :subject: MNGT
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Business
+    :number: "170"
+    :subject: MNGT
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Financial Management
+    :number: "210"
+    :subject: MNGT
+    :credit: ""
+    :description: ""
+  - :name: Business Research and Statistics
+    :number: "230"
+    :subject: MNGT
+    :credit: ""
+    :description: ""
+  - :name: MIS Applications
+    :number: "238"
+    :subject: MNGT
+    :credit: ""
+    :description: ""
+  - :name: Customer Services Marketing
+    :number: "240"
+    :subject: MNGT
+    :credit: ""
+    :description: ""
+  - :name: Professional Selling
+    :number: "245"
+    :subject: MNGT
+    :credit: ""
+    :description: ""
+  - :name: Marketing Communications
+    :number: "248"
+    :subject: MNGT
+    :credit: ""
+    :description: ""
+  - :name: Entrepreneurship
+    :number: "270"
+    :subject: MNGT
+    :credit: ""
+    :description: ""
+  - :name: Business Strategy
+    :number: "271"
+    :subject: MNGT
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Human Resource Management
+    :number: "281"
+    :subject: MNGT
+    :credit: ""
+    :description: ""
+  - :name: Commercial Law
+    :number: "293"
+    :subject: MNGT
+    :credit: ""
+    :description: ""
+- :name: Music
+  :code: MUSI
+  :courses: 
+  - :name: Chorus 1
+    :number: "170"
+    :subject: MUSI
+    :credit: ""
+    :description: ""
+  - :name: Chorus 2
+    :number: "180"
+    :subject: MUSI
+    :credit: ""
+    :description: ""
+- :name: Natural Resource Sciences
+  :code: NRSC
+  :courses: 
+  - :name: The Science and Management of Natural Resources
+    :number: "111"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Science & Mngt of Natural Resources"
+    :number: 111L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Dendrology 1
+    :number: "112"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Dendrology 1"
+    :number: 112L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Introduction to the Study of Soils
+    :number: "200"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introduction to the Study of Soils"
+    :number: 200L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Forest Ecology and Silvics 1
+    :number: "210"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Forest Ecology and Silvics 1"
+    :number: 210L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Geographic Information Systems
+    :number: "223"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Silviculture
+    :number: "320"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Silviculture"
+    :number: 320L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Range Management
+    :number: "321"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Range Management"
+    :number: 321S
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Wildlife Management
+    :number: "322"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Wildlife Management"
+    :number: 322L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Limnology
+    :number: "326"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Limnology"
+    :number: 326L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Natural Resource Entomology
+    :number: "402"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Nat Resource Entomology"
+    :number: 402L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Natural Resource Pathology
+    :number: "403"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Nat Resource Pathology"
+    :number: 403L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Fisheries Management
+    :number: "410"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Fisheries Management"
+    :number: 410S
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Fire Ecology and Management
+    :number: "413"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Fire Ecology & Management"
+    :number: 413S
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Natural Resource Policy and Planning
+    :number: "414"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Natural Resource Policy and Planning"
+    :number: 414S
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Research Design, Analysis & Reporting
+    :number: "424"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Research Design, Analysis & Reporting"
+    :number: 424L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Honours Seminar
+    :number: "498"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Honours Thesis
+    :number: "499"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Dendrology 2
+    :number: "122"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Dendrology 2"
+    :number: 122L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Forest Mensuration and Photogammetry
+    :number: "211"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introduction to Forest Mensuration And Photogammetry"
+    :number: 211L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Forest Ecology and Silvics 2
+    :number: "220"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Forest Ecology/Silvics 2"
+    :number: 220L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Diversity and Ecology of the Vertebrates
+    :number: "300"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Diversity & Ecology of the Vertebrates"
+    :number: 300L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Grassland Ecology
+    :number: "311"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Grassland Ecology"
+    :number: 311L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Ichthyology
+    :number: "317"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Ichthyology"
+    :number: 317L
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Watershed Management
+    :number: "411"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Watershed Management"
+    :number: 411S
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Conflict Resolution in the Natural Resources
+    :number: "421"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: "Sem: NR Conflict Resolution"
+    :number: 421S
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Graduating Essay
+    :number: "423"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+  - :name: Tropical Field Studies in Natural Resources
+    :number: "425"
+    :subject: NRSC
+    :credit: ""
+    :description: ""
+- :name: Nursing
+  :code: NURS
+  :courses: 
+  - :name: "Relational Practice 1: Self and Others"
+    :number: "117"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Professional Practice 1: Introduction to Discipline of Nursing"
+    :number: "170"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Health and Healing 1: Living Health"
+    :number: "173"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Nursing Practice 1: Introduction to Nursing Practice"
+    :number: "174"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Nursing Practice 1"
+    :number: 174S
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: Nursing Practice 3
+    :number: "218"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Nursing Practice 3"
+    :number: 218L
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Nursing Practice 3"
+    :number: 218S
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Healing 1: Episodic Health Challenges"
+    :number: "219"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Self & Others 3: Reflections on Caring Practice"
+    :number: "317"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: Nursing Practice 5
+    :number: "318"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Nursing Practice 5"
+    :number: 318S
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Health 3: Teaching and Learning for Prevention"
+    :number: "319"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Health/Professional Growth: Nurses Influencing Change"
+    :number: "430"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: Nursing Practice 7
+    :number: "431"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Nursing Practice 7"
+    :number: 431S
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: Community Health Nursing
+    :number: "438"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Community Health Nursing"
+    :number: 438S
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Health 2: Facilitating Health and Healing in Families"
+    :number: "125"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Self and Others 2: Creating Health-Promoting Relationships 0,3,0)"
+    :number: "127"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: Nursing Practice 2
+    :number: "128"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Nursing Practice 2"
+    :number: 128S
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: Consolidated Practice Experience 1
+    :number: "138"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Professional Growth 2: The Nursing Profession"
+    :number: "226"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: Nursing Practice 4
+    :number: "228"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Nursing Practice 4"
+    :number: 228L
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Nursing Practice 4"
+    :number: 228S
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Healing 2: Complex Episodic Health Challenges"
+    :number: "229"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: Consolidated Practice Experience 2
+    :number: "238"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Consolidated Practice Experience: Focus on Hospital Based Nursing Practice"
+    :number: "338"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Consolidated Practice Experience: Focus on International Nursing"
+    :number: "339"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Professional Growth: Nursing Inquiry"
+    :number: "341"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Health 4: Health Promotion and Community Development"
+    :number: "350"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: Nursing Practice 6
+    :number: "351"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Nursing Practice 6"
+    :number: 351S
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Professional Growth: Nursing Research"
+    :number: "360"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Health Transition: Complex Health Challenges"
+    :number: "420"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Nursing Practice 8: Transitions - Complex Episodic Nursing Practice"
+    :number: "421"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Nursing Practice 8: Transitions - Complex Episodic Nursing Practice"
+    :number: 421S
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Professional Practice 2: Introduction to The Profession of Nursing"
+    :number: "180"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Health and Healing 2: Health Indicators"
+    :number: "183"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Nursing Practice 2: Coming to Know the Client"
+    :number: "184"
+    :subject: NURS
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Nursing Practice 2: Coming to Know The Client"
+    :number: 184S
+    :subject: NURS
+    :credit: ""
+    :description: ""
+- :name: Physical Education
+  :code: PHED
+  :courses: 
+  - :name: Aquatics
+    :number: "114"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: Soccer
+    :number: "116"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: Conditioning
+    :number: "123"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: Games, Contests & Relays
+    :number: "128"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: The Analysis of Performance in Team Sports
+    :number: "200"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Performance Team Sports"
+    :number: 200S
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: An Introduction to the Study of Sport
+    :number: "211"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: The Dynamics of Motor Skill Acquisition
+    :number: "221"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: Golf
+    :number: "124"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: "Biodynamics: The Analysis of Performance in Individual Sports"
+    :number: "100"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Biodynamics: The Anaylsis of Performance in Individual Sports"
+    :number: 100S
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: Basketball
+    :number: "110"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: Outdoor Activities
+    :number: "112"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: Volleyball
+    :number: "119"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: Sport in Canadian Society
+    :number: "213"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: Psychology of Sport and Physical Activity
+    :number: "214"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: Exercise Physiology
+    :number: "215"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Exercise Physiology"
+    :number: 215L
+    :subject: PHED
+    :credit: ""
+    :description: ""
+  - :name: Physical Growth and Motor Development
+    :number: "284"
+    :subject: PHED
+    :credit: ""
+    :description: ""
+- :name: Philosophy
+  :code: PHIL
+  :courses: 
+  - :name: "Introduction to Philosophy: Pre-Socratics to Hume"
+    :number: "101"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Critical Thinking
+    :number: "111"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Ethics
+    :number: "201"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Ancient Philosophy
+    :number: "210"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: "Foundations of Philosophy: Epistemology"
+    :number: "214"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: Ancient Philosophy
+    :number: "310"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: Feminist Philosophy
+    :number: "321"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Critical Thinking"
+    :number: 111S
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: Elementary Formal Logic
+    :number: "222"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Elementary Formal Logic"
+    :number: 222S
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: Health Care Ethics
+    :number: "231"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: Philosophy of Rock Music
+    :number: "239"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: Moral Theory
+    :number: "301"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: Philosophy of Art
+    :number: "339"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: Epistemology
+    :number: "360"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: Philosophy of Mind
+    :number: "451"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+  - :name: Selected Topics in Ethics
+    :number: "492"
+    :subject: PHIL
+    :credit: ""
+    :description: ""
+- :name: Physics
+  :code: PHYS
+  :courses: 
+  - :name: Introduction to Physics 1
+    :number: "050"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introduction to Physics 1"
+    :number: 050L
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Fundamentals of Physics 1
+    :number: "110"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Fundamentals of Physics 1"
+    :number: 110L
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Introductory Physics 1
+    :number: "113"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introductory Physics 1"
+    :number: 113L
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Mechanics and Waves
+    :number: "115"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Mechanics And Waves"
+    :number: 115L
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Applied Physics 1
+    :number: "151"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Applied Physics 1"
+    :number: 151L
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Physics for Respiratory Therapists
+    :number: "158"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Phisics for Respiratory Therapists"
+    :number: 158L
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Relativity and Quanta
+    :number: "200"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Circuit Analysis
+    :number: "215"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Circuit Analysis"
+    :number: 215L
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Analog Electronics
+    :number: "309"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Fluids
+    :number: "314"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Classical and Statistical Thermodynamics
+    :number: "316"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Directed Studies in Physics
+    :number: "448"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Physics 2
+    :number: "060"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Introduction to Physics 2"
+    :number: 060L
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Fundamentals of Physics 2
+    :number: "120"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Fundamentals of Physics 2"
+    :number: 120L
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Thermodynamics, Electricity and Magnetism
+    :number: "125"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Thermodyn/Elec/Magnetism"
+    :number: 125L
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Applied Physics 2
+    :number: "161"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Applied Physics 2"
+    :number: 161L
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Mechanics
+    :number: "220"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Intermediate Electromagnetism
+    :number: "225"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Inter Electromagnetism"
+    :number: 225L
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Digital Electronics
+    :number: "310"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Physics of Materials
+    :number: "315"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+  - :name: Selected Topics in Physics
+    :number: "350"
+    :subject: PHYS
+    :credit: ""
+    :description: ""
+- :name: Political Science
+  :code: POLI
+  :courses: 
+  - :name: The Government and Politics of Canada
+    :number: "111"
+    :subject: POLI
+    :credit: ""
+    :description: ""
+  - :name: Contemporary Ideologies
+    :number: "121"
+    :subject: POLI
+    :credit: ""
+    :description: ""
+  - :name: Comparative Politics
+    :number: "215"
+    :subject: POLI
+    :credit: ""
+    :description: ""
+  - :name: Political Philosophy
+    :number: "222"
+    :subject: POLI
+    :credit: ""
+    :description: ""
+  - :name: International Politics
+    :number: "260"
+    :subject: POLI
+    :credit: ""
+    :description: ""
+  - :name: Federalism in Canada
+    :number: "303"
+    :subject: POLI
+    :credit: ""
+    :description: ""
+  - :name: Politics of Developing Nations
+    :number: "352"
+    :subject: POLI
+    :credit: ""
+    :description: ""
+  - :name: Canadian Foreign Policy
+    :number: "361"
+    :subject: POLI
+    :credit: ""
+    :description: ""
+  - :name: Law and Politics
+    :number: "225"
+    :subject: POLI
+    :credit: ""
+    :description: ""
+  - :name: "Canadian Government 2: Public Administration and Public Policy"
+    :number: "223"
+    :subject: POLI
+    :credit: ""
+    :description: ""
+  - :name: Local Government in Canada
+    :number: "310"
+    :subject: POLI
+    :credit: ""
+    :description: ""
+  - :name: Topics in Latin American Politics
+    :number: "406"
+    :subject: POLI
+    :credit: ""
+    :description: ""
+  - :name: "Humanitarian Interventation: a Canadian Perspective"
+    :number: "411"
+    :subject: POLI
+    :credit: ""
+    :description: ""
+- :name: Psychology
+  :code: PSYC
+  :courses: 
+  - :name: Psychology
+    :number: "050"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Psychology 1
+    :number: "111"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Psychology 2
+    :number: "121"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Analysis of Psychological Data
+    :number: "210"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Research Methods in Psychology
+    :number: "211"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Research Methods In Psychology"
+    :number: 211S
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: "Introduction to Developmental Psychology: Childhood and Adolescence"
+    :number: "213"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Abnormal Psychology
+    :number: "216"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Social Psychology
+    :number: "222"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Human Sexuality
+    :number: "230"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Behaviour Disorders
+    :number: "300"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Infancy
+    :number: "302"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Experimental Design and Quantitative Methods
+    :number: "319"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Experimental Design and Quantitative Methods"
+    :number: 319S
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Theories of Personality 1
+    :number: "320"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Sensation and Perception 1 - Visual Processes
+    :number: "351"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Physiology of Learning and Memory
+    :number: "358"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Health Psychology
+    :number: "314"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Psychology 1"
+    :number: 111S
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Biological Psychology
+    :number: "204"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Personality
+    :number: "212"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: "Introduction to Developmental Psychology: Adulthood and Aging"
+    :number: "223"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Childhood and Adolescence
+    :number: "315"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Theories of Personality 2
+    :number: "321"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Adulthood and Aging
+    :number: "322"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Forensic Psychology
+    :number: "341"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Sensation and Perception 2
+    :number: "352"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+  - :name: Physiology of Motivation and Emotion
+    :number: "357"
+    :subject: PSYC
+    :credit: ""
+    :description: ""
+- :name: Respiratory Therapy
+  :code: RESP
+  :courses: 
+  - :name: Instrumentation 1
+    :number: "158"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Instrumentation 1"
+    :number: 158L
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Functional Analysis of Mechanical Ventilation
+    :number: "169"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Pathophysiology 1
+    :number: "250"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Pathophysiology"
+    :number: 250S
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Mechanical Ventilation
+    :number: "255"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Mechanical Ventilation"
+    :number: 255L
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Mechanical Ventilation"
+    :number: 255S
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Blood Gas Analysis
+    :number: "257"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Blood Gas Analysis"
+    :number: 257L
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Blood Gas Analysis"
+    :number: 257S
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Patient Assessment
+    :number: "259"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Patient Assessment"
+    :number: 259L
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Patient Assessment"
+    :number: 259S
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Professional Issues in Respiratory Care
+    :number: "272"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Mechanical Ventilation
+    :number: "165"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Instrumentation 2
+    :number: "168"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Instrumentation 2"
+    :number: 168L
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Pharmacology
+    :number: "251"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Pathophysiology 2
+    :number: "260"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Pathophysiology 2"
+    :number: 260S
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Anaesthesia
+    :number: "262"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Anaesthesia"
+    :number: 262L
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Anaesthesia"
+    :number: 262S
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Neonatology
+    :number: "263"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Neonatology"
+    :number: 263L
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Neonatology"
+    :number: 263S
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Pulmonary Function
+    :number: "268"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Pulmonary Function"
+    :number: 268L
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Pulmonary Function"
+    :number: 268S
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: Patient Care Procedures
+    :number: "270"
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Patient Care Procedures"
+    :number: 270L
+    :subject: RESP
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Patient Care Procedures"
+    :number: 270S
+    :subject: RESP
+    :credit: ""
+    :description: ""
+- :name: Science
+  :code: SINC
+  :courses: 
+  - :name: Foundations of Science
+    :number: "050"
+    :subject: SINC
+    :credit: ""
+    :description: ""
+  - :name: "Lab: Foundations Of Science"
+    :number: 050L
+    :subject: SINC
+    :credit: ""
+    :description: ""
+- :name: Sociology
+  :code: SOCI
+  :courses: 
+  - :name: Introduction to Sociology 1
+    :number: "111"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction To Sociology 1"
+    :number: 111S
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Sociology 2
+    :number: "121"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Women in Global Perspective
+    :number: "213"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: The Sociology of Popular Culture
+    :number: "217"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Sociology of Popular Culture"
+    :number: 217S
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Collective Behaviour
+    :number: "223"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Collective Behaviour"
+    :number: 223S
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Deviance and Control
+    :number: "259"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Sociology of the Environment
+    :number: "262"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Introductory Social Research Methods
+    :number: "272"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introductory Social Research Methods"
+    :number: 272S
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Gender Relations
+    :number: "312"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Classical Social Theory
+    :number: "320"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Classical Social Theory"
+    :number: 320S
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Deviance and Social Control
+    :number: "368"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Social Movements
+    :number: "464"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Socialization and Education
+    :number: "466"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction To Sociology 2"
+    :number: 121S
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Race and Ethnic Relations
+    :number: "201"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: The Family in Cross-Cultural Perspectives
+    :number: "216"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Crime and Society
+    :number: "250"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Social Statistics
+    :number: "271"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Contemporary Issues in Social Theory
+    :number: "322"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Contemporary Issues in Social Theory"
+    :number: 322S
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Sociology and Natural Resources
+    :number: "360"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Socio-Ethnographic Research Methods in Sociology
+    :number: "382"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Socio-Ethnographic Research Methods in Sociology"
+    :number: 382S
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: Globalization
+    :number: "460"
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Globalization"
+    :number: 460S
+    :subject: SOCI
+    :credit: ""
+    :description: ""
+- :name: Social Work
+  :code: SOCW
+  :courses: 
+  - :name: An Introduction to Social Work Practice
+    :number: 200A
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Canadian Social Policy
+    :number: "300"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Social Work Research
+    :number: "301"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Theory and Ideology of Social Work
+    :number: "306"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Social Work Practice With Individuals
+    :number: "353"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: An Introduction to First Nations Issues And Human Services
+    :number: "354"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Family and Child Welfare Practice
+    :number: "376"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Social Work Field Practice
+    :number: "402"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Educating for Social Change
+    :number: "452"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Aboriginal Decolonizing Social Work Practice
+    :number: "454"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Older People, Aging and Society
+    :number: "465"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Addictions and Social Work Practice
+    :number: "466"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Family and Child Welfare Policy
+    :number: "476"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Social Work Practice With Families
+    :number: "477"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Disability Studies
+    :number: "478"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Social Work Field Practice
+    :number: "304"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Sexual Diversity and Social Work Practice
+    :number: "430"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Social Work and Mental Health
+    :number: "440"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Social Work Practice With Groups
+    :number: "461"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: An Introduction to Social Welfare in Canada
+    :number: 200B
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: International Field Studies
+    :number: "330"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Human Development
+    :number: "355"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Social Work, Law and Social Policy
+    :number: "357"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Advanced Social Work Practice With Individuals
+    :number: "359"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+  - :name: Family Violence and Social Work Practice
+    :number: "420"
+    :subject: SOCW
+    :credit: ""
+    :description: ""
+- :name: Spanish
+  :code: SPAN
+  :courses: 
+  - :name: Introductory Spanish 1
+    :number: "111"
+    :subject: SPAN
+    :credit: ""
+    :description: ""
+  - :name: Introductory Spanish 2
+    :number: "121"
+    :subject: SPAN
+    :credit: ""
+    :description: ""
+- :name: Statistics
+  :code: STAT
+  :courses: 
+  - :name: Introduction to Statistics
+    :number: "120"
+    :subject: STAT
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Intro to Statistics"
+    :number: 120S
+    :subject: STAT
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Statistics
+    :number: "200"
+    :subject: STAT
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Introduction to Statistics"
+    :number: 200S
+    :subject: STAT
+    :credit: ""
+    :description: ""
+  - :name: Applied Regression Analysis
+    :number: "306"
+    :subject: STAT
+    :credit: ""
+    :description: ""
+  - :name: Analysis of Variance
+    :number: "404"
+    :subject: STAT
+    :credit: ""
+    :description: ""
+- :name: Study Skills
+  :code: STSS
+  :courses: 
+  - :name: An Introduction to Student Success
+    :number: "050"
+    :subject: STSS
+    :credit: ""
+    :description: ""
+  - :name: Student Success and Study Skills
+    :number: "103"
+    :subject: STSS
+    :credit: ""
+    :description: ""
+  - :name: Student Success and Wellness
+    :number: "104"
+    :subject: STSS
+    :credit: ""
+    :description: ""
+  - :name: Student Success and Communication
+    :number: "105"
+    :subject: STSS
+    :credit: ""
+    :description: ""
+- :name: Social Service Workr
+  :code: SOCS
+  :courses: 
+  - :name: Field Work
+    :number: "165"
+    :subject: SOCS
+    :credit: ""
+    :description: ""
+- :name: ABE Social Science
+  :code: SOSC
+  :courses: 
+  - :name: Introduction to Social Sciences
+    :number: "060"
+    :subject: SOSC
+    :credit: ""
+    :description: ""
+- :name: Teaching ESL
+  :code: TESL
+  :courses: 
+  - :name: Curriculum and Instruction
+    :number: "301"
+    :subject: TESL
+    :credit: ""
+    :description: ""
+  - :name: Applied Linguistics for Teachers
+    :number: "302"
+    :subject: TESL
+    :credit: ""
+    :description: ""
+  - :name: Intercultural Communication Studies
+    :number: "303"
+    :subject: TESL
+    :credit: ""
+    :description: ""
+  - :name: TESL Techniques
+    :number: "304"
+    :subject: TESL
+    :credit: ""
+    :description: ""
+  - :name: TESL Practicum
+    :number: "305"
+    :subject: TESL
+    :credit: ""
+    :description: ""
+- :name: Theatre
+  :code: THTR
+  :courses: 
+  - :name: Introduction to Theatre
+    :number: "110"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Acting
+    :number: "111"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: Acting and Character Portrayal
+    :number: "211"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Technical Theatre 1
+    :number: "212"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: Production & Stage Management 1
+    :number: "215"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: "The Role: Interpretation and Characterization"
+    :number: "360"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: Voice for the Stage
+    :number: "380"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: Direction and Staging
+    :number: "400"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: The Theatre of British Columbia Before 1950
+    :number: "425"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: Styles of Acting
+    :number: "460"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Theatre 2
+    :number: "120"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Acting 2
+    :number: "121"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: Acting and Character Portrayal 2
+    :number: "221"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Technical Theatre 2
+    :number: "222"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: Production & Stage Management 2
+    :number: "225"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: The Theatre of British Columbia After 1950
+    :number: "426"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+  - :name: Directed Studies - Special Topics in Theatre Arts
+    :number: "490"
+    :subject: THTR
+    :credit: ""
+    :description: ""
+- :name: Tourism Management
+  :code: TMGT
+  :courses: 
+  - :name: The Tourism Industry
+    :number: "111"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Marketing and Customer Service
+    :number: "115"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Organizational Leadership in Tourism
+    :number: "116"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Hospitality Law
+    :number: "225"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Community and Cultural Issues in Tourism
+    :number: "301"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Land Use Managment and Tourism Tourism
+    :number: "304"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Research in Tourism
+    :number: "305"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Research in Tourism"
+    :number: 305S
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Tourism Product Development and Innovation
+    :number: "401"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Graduating Seminar
+    :number: "402"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Tourism Strategy
+    :number: "414"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Managing the Tourist Experience
+    :number: "418"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Tourism Enterprise Consulting Project
+    :number: "419"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Casino Operations Management
+    :number: "421"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Human Resources Management
+    :number: "114"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Field Trip Activity Fee
+    :number: "150"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Staging Special Events
+    :number: "207"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Entrepreneurship
+    :number: "259"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Environmental Issues in the Tourism Industry
+    :number: "261"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Tourism Policy and Planning
+    :number: "302"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: "Sem: Tourism Policy and Planning"
+    :number: 302S
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Resort Management
+    :number: "403"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Tourism and Sustainable Development
+    :number: "404"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Event Tourism
+    :number: "405"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Developing New Tourism Enterprises
+    :number: "412"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Tourist Behaviour
+    :number: "413"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Managing Small Tourism Enterprises
+    :number: "415"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+  - :name: Information Technology and Tourism
+    :number: "417"
+    :subject: TMGT
+    :credit: ""
+    :description: ""
+- :name: Visual Arts
+  :code: VISA
+  :courses: 
+  - :name: 2D Art Foundation 1
+    :number: "101"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: 3D Foundation
+    :number: "103"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: History of Art 1
+    :number: "111"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Drawing 1
+    :number: "121"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Visual Culture
+    :number: "150"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: A Survey of Modern Art 1
+    :number: "213"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Drawing 3
+    :number: "221"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Sculpture 1
+    :number: "231"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Introductory Ceramics 1
+    :number: "241"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: "Printmaking: Silkscreen 1 Studio"
+    :number: "251"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: "Printmaking: Etching & Relief 1"
+    :number: "253"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Painting 1
+    :number: "261"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Photography 1
+    :number: "271"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: "Gallery Studies: Exhibition Installation"
+    :number: "302"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: "Studio Media: Sculpture"
+    :number: "331"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Painting 3
+    :number: "361"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Photography 3
+    :number: "371"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: "Directed Studies: Studio"
+    :number: "491"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Graduating Seminar
+    :number: "499"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: 2D Art Foundation 2
+    :number: "102"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: History of Art 2
+    :number: "112"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Drawing 2
+    :number: "122"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: A Survey of Modern Art 2
+    :number: "214"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Drawing 4
+    :number: "222"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Sculpture 2
+    :number: "232"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Introductory Ceramics 2
+    :number: "242"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: "Printmaking: Silkscreen 2 Studio"
+    :number: "252"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: "Printmaking: Etching & Relief 2"
+    :number: "254"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Painting 2
+    :number: "262"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Introduction to Photography 2
+    :number: "272"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Critical Studies in Photographic Histories
+    :number: "313"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Painting 4
+    :number: "362"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: Photography 4
+    :number: "372"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+  - :name: "***Special Topics in Visual Arts"
+    :number: "383"
+    :subject: VISA
+    :credit: ""
+    :description: ""
+:info: 
+  :semesters: 
+  - - Fall
+    - 9/4
+    - 12/15
+  - - Winter
+    - 1/8
+    - 4/28
+  - - Summer
+    - 5/7
+    - 8/16
+  :name: Thompson Rivers
+  :city: kamloops
+  :nid: "16778490"
+  :region: british columbia
+  :country: canada

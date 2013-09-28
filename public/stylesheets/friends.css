@@ -1,0 +1,399 @@
+.friends #content {
+  position: relative;
+  padding: 0px; }
+
+.friends .tabs {
+  padding-top: 20px; }
+
+.friendlinkback {
+  border-bottom: none;
+  float: right;
+  display: inline;
+  margin: 5px 10px 0px 0px;
+  padding: 4px 0px 4px 0px;
+  text-align: right;
+}
+
+#filterandsearch {
+  background: #f7f7f7; 
+  padding: 5px 20px 4px;
+  border-bottom: 1px solid #ccc; }
+  
+  #filterandsearch table {
+    float: left;
+    display: inline;
+  }
+  
+  #searchwithin {
+    float: right;
+    display: inline;
+    text-align: right;
+    padding-top: 3px;
+    width: auto;
+  }
+
+  #filterandsearch #fq {
+    width: 165px; }
+  
+#gridview {
+  padding: 1px 0px 5px 5px;
+}
+
+#gridview a {
+  border: 1px solid #bbb;
+  display: block;
+  float: left;
+  margin-right: 4px;
+  margin-top: 4px;
+  padding: 0px;
+  width: 50px;
+  height: 50px;  
+  text-decoration: none;
+}
+
+#gridview a:hover {
+  border-color: #3B5998;
+  text-decoration: none; }
+
+#gridview a img {
+  height: 50px;
+  width: 50px;
+}
+
+#gridview:after, #friendtables:after {
+  display: block; 
+  
+  height: 0; 
+  clear: both; 
+  visibility: hidden;}
+
+/* Hides from IE-mac \*/
+* html #gridview,
+* html #friendtables { height: 1%; }
+
+#gridview, #friendtables { display: block; }
+/* End hide from IE-mac */
+
+#friendnav {
+  margin: 0px;
+  padding: 10px 0px 0px 0px;
+  border-bottom: solid 1px #3B5998; }
+
+* html #friendnav { height: 1%; margin: 0; padding: 10px 0px 0px; }
+
+#filterandpager {
+	padding: 7px 10px 0px;
+	background: #f7f7f7; }
+	
+	#filterandpager table {
+		margin-bottom: 7px; }
+	
+	#filterandpager #toppager {
+		margin: 18px 0px 0px;
+		float: right;
+		
+		width: 200px; }
+
+#filterlabel {
+	width: 35px;
+	float: left;
+	color: gray;
+	padding: 2px 5px;
+	font-weight: bold; }
+
+#filter {
+	float: left;
+	width: 450px; }
+
+	#filter a {
+		float: left;
+		clear: right;
+		display: block;
+		width: 160px;
+		padding: 2px 3px;
+		margin: 0px 2px 2px 0px;
+		color: black;
+		border: solid 1px #f7f7f7;
+		border-bottom: solid 2px #f7f7f7; }
+	#filter a:hover {
+		background: white;
+		border: solid 1px #D8DFEA;
+		border-bottom: solid 2px #D8DFEA;
+		text-decoration: none; }
+	#filter a.selected {
+		background: white;
+		border: solid 1px #D8DFEA;
+		border-bottom: solid 2px #3B5998; }
+
+#friendfilter {
+  margin: 0px;
+  padding: 7px 10px; }
+
+#friendfilter .select {
+  display: inline; }
+
+#friendoptions {
+  margin: 0px;
+  padding: 2px 3px 3px 42px;
+  border-top: solid 1px #3B5998;
+  background: #D8DFEA; }
+  
+  #friendoptions label {
+    margin-right: 5px; }
+
+#friendtables {
+  margin: 0px;
+  padding: 10px 10px 5px;
+  background: #f7f7f7; }
+  
+.friendtable {
+  margin: 0px;
+  padding: 9px;
+  margin-bottom: 5px;
+  background: white;
+  border: solid 1px #ccc; }
+
+.friendtable .image {
+  vertical-align: top;
+  text-align: left;
+  width: 110px; }
+
+.friendtable .info {
+  vertical-align: top;
+  width: 386px; }
+  
+  .friendtable .info table {
+    width: 380px; }
+    
+  .friendtable .dark a {
+    color: #555;
+  }
+  
+  .friendtable .info td {
+    vertical-align: top;
+    font-size: 11px;
+    line-height: 14px;
+    margin: 0px;
+    padding: 0px 0px 1px 0px; }
+
+  .friendtable .info .updates {
+    margin: -2px; margin: 0px;
+    padding: 0px 0px 1px 0px;
+    background: #fff8cc;
+    border-bottom: solid 1px #ffe222; }
+
+  .friendtable .info .label {
+    width: 70px;
+    color: gray; }
+
+  .friendtable .info .name {
+    color: #333;
+    
+    font-weight: bold;
+    font-size: 13px;
+    vertical-align: bottom;
+    line-height: 15px; }
+
+  .friendtable .info .name.label {
+    color: gray;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px; }
+
+  .friendtable .info .name a {
+    line-height: 15px; }
+
+  /* DARK PROFILE CLASSES */
+  .friendtable .imagecontainer {
+    width: 100px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+  }
+
+  .friendtable .imagecontainer .image {
+    width: 100px;
+  }
+
+  .friendtable .imagecontainer .imagecaption {
+    border-top: 1px solid #ccc;
+    width: 94px;
+    text-align: center;
+    font-weight: bold;
+    padding: 3px;
+  }
+ 
+  .friendtable .darkactions {
+    vertical-align: top;
+    width: 100px;
+    
+  }
+  
+  .friendtable .darkactions a, .friendtable .darkactions span {
+    display: block;
+    margin: 0;
+    color: #555;
+    padding: 2px 4px 0px 0px;
+    text-decoration: none;
+    border-bottom: 1px solid #D8DFEA;
+    
+  }
+
+  .friendtable .darkactions a:hover {
+    color: #eee;
+    background: #555;
+    text-decoration: none;
+  }
+  
+  .friendtable .darkactions span.inactive { 
+    padding: 0px 3px 1px 3px;
+    color: gray; 
+    
+  }
+
+  .darkcaption div {
+    border-top: 1px solid #ccc;
+    background-color: #f7f7f7;
+    width: 200px;
+    padding: 4px;
+    margin-top: 4px;
+  }
+  /* END DARK PROFILE CLASSES */
+  
+  .friendtable .classify {
+    width: 320px;    
+    
+    border: solid 1px hotpink;
+    background-color: pink; }
+
+  .friendtable .actions {
+    vertical-align: top;
+    width: 100px; }
+  
+  .friendtable .actions a, .friendtable .actions span {
+    display: block;
+    margin: 0px;
+    padding: 2px 4px;
+    text-decoration: none;
+    border-bottom: solid 1px #D8DFEA; }
+
+  .friendtable .actions a:hover {
+    color: white;
+    background: #3B5998;
+    text-decoration: none; }
+	
+  .friendtable .actions span.inactive { 
+    padding: 0px 3px 1px 3px;
+    color: gray; }
+  
+  .friendtable small {
+    padding-left: 3px;
+    color: gray; }
+
+/* Confirm Friends and Social Map Links */
+
+#pagebody.confirminvite #content {
+  padding: 0px; }
+
+.confirmcount {
+  text-align: left;
+  color: #3B5998;
+  font-weight: bold;
+  line-height: 21px;
+  font-size: 11px;
+  margin:10px 0 0 0;
+ }
+ 
+.confirmcount h4 { margin: -10px 0 0 0; }
+
+.confirmboxes {
+  padding: 10px 10px 5px;
+  margin:0 -2px -15px -12px;
+  background: #f7f7f7;
+  border-top: solid 1px #D8DFEA;
+  border-right: solid 1px #D8DFEA;
+}
+
+.confirm { 
+  padding: 5px;
+  margin: 0px 0px 5px;
+  background: white;
+  border: solid 1px #D8DFEA; }
+
+  .confirm .image {
+    width: 110px;
+    text-align: left; }
+  
+  .confirm td {
+    vertical-align: top; }
+
+#quail {
+  margin: 0px 0px 0px;
+  padding: 3px 10px;
+  border-top: solid 1px #D8DFEA; }
+
+#quailquote {
+  float: left;
+  text-align: left;
+  color: #3B5998;
+  margin-bottom:3px;}
+
+.friends .bottompager {
+    float: right;
+}
+        
+#nofriends {
+  font-size: 12px;
+  text-align: center;
+  margin: 0px 0px 5px;
+  padding: 50px 10px;
+  color: #999;
+  background: #fff;
+  border: solid 1px #ddd; }
+
+#nofriends_orientation {
+  font-size: 12px;
+  text-align: left;
+  margin: 0px 0px 10px 0px;
+  padding: 20px;
+  color: #333;
+  background: #fff;
+  border: solid 1px #ddd; 
+}
+
+#nofriends_orientation ul li {
+  list-style: none;
+  line-height: 18px;
+}
+
+#friend_filter_select {
+    width: 135px;
+}
+
+#friends_network_select {
+     width: 180px; 
+}
+
+.remove_friends #content {
+  padding: 20px 0px;; 
+  }
+
+
+/* Address Book ==================== */
+
+.address_book #tabs {
+  margin-bottom: 0px; }
+
+.address_book .actions { 
+  border-bottom: solid 1px #ccc;
+  background: #f7f7f7; }
+
+.letter_links {
+  list-style: none;
+  margin: 0px;
+  padding: 0px; }
+
+.letter_links li {
+  float: left; }
+
+  .letter_links li a {
+    text-align: center; }

@@ -1,0 +1,25 @@
+--- 
+:info: 
+  :name: Georgia State
+  :region: georgia
+  :country: united states
+  :city: atlanta
+  :semesters: 
+  - - Fall
+    - 8/20
+    - 12/20
+  - - Spring
+    - 1/5
+    - 5/7
+  - - Summer 3WK
+    - 5/12
+    - 6/5
+  - - Summer 6WK
+    - 6/9
+    - 7/24
+  - - Summer 7WK
+    - 6/9
+    - 8/5
+  :nid: "16777443"
+:courses: []
+

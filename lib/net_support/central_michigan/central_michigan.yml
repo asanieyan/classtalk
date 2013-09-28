@@ -1,0 +1,22 @@
+--- 
+:courses: []
+
+:info: 
+  :city: mount pleasant
+  :nid: "16777434"
+  :name: Central Michigan
+  :semesters: 
+  - - Fall
+    - 8/25
+    - 12/20
+  - - Spring
+    - 1/2
+    - 5/5
+  - - Summer I
+    - 5/10
+    - 6/20
+  - - Summer II
+    - 6/21
+    - 8/1
+  :region: michigan
+  :country: united states

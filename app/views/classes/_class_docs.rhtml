@@ -1,0 +1,17 @@
+<%content_for "main" do %>
+    <%=render_p 'library/documents',
+    :documents=>Document.find(:all,:order=>"created_on DESC",:limit=>10,
+    :conditions=>Document.of_course_sql(@selected_class.course,logged_in_user)),                
+    :commentable=>false,
+    :no_doc=>"Nothing has been posted at #{@selected_class.course.full_title}.<br><br>",
+    :showpic=>true,
+    :editable=>false%> 
+<%end%>
+<%content_for "side" do %>
+    <h2> Search <%=@selected_class.course.short_title%> Documents </h2>                            
+                <%=fb_search_form "/library/search",{:s=>"c#{@selected_class.course.id}"}%><br>
+                <%if @selected_class.course.status == :approved %>
+                    <%=fb_link_to "Post new Document","/library/create?c=#{@selected_class.course_id}"%>    
+                <%end%>
+
+<%end%>

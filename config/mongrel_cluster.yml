@@ -1,0 +1,16 @@
+--- 
+#DEVELOPMENT MACHINE
+#cwd: /root/workspace/schoolapp_trunk/
+#port: "8000"
+#environment: development
+#address: 127.0.0.1
+#pid_file: log/mongrel.pid
+#servers: 3
+#
+#SERVER MACHINE
+cwd: /var/www/classtalk/current/
+port: "8000"
+environment: production
+address: 192.168.1.55
+pid_file: /tmp/mongrel.pid
+servers: 5

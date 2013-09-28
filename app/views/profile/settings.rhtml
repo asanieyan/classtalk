@@ -1,0 +1,101 @@
+<%if false%>
+<br>
+<style>
+.notifications {
+    line-height:14px;
+    padding:10px 140px;
+}
+.notifications .submission {
+    clear:both;
+    margin:0pt 0pt 0pt -20px;
+    padding:8px 0pt 0pt;
+}
+.notifications .submission input {
+    display:block;
+    margin:0pt 0pt 12px 20px;
+}
+.notifications .submission small {
+    line-height:8px;
+}
+.notifications h4 {
+    border-bottom:1px solid #CCCCCC;
+    font-size:12px;
+    margin:0pt 0pt 10px;
+    padding:0pt 0pt 2px;
+}
+.notification_checkboxes {
+    padding:2px 0pt 2px 20px;
+}
+.notifications ul {
+    color:#000000;
+    float:left;
+    font-weight:normal;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    margin:0pt;
+    padding:0pt 15px 0pt 0pt;
+}
+.notifications ul li {
+    margin-bottom:1px;
+}
+.notifications label {
+    color:#000000;
+    font-weight:normal;
+    vertical-align:middle;
+}
+.notifications ul input {
+    margin-right:6px;
+    vertical-align:top;
+}    
+</style>
+<%=fbml_tabs do |tabs|
+        tabs.add "Notifications","",:check=>"params[:t].nil?"
+        tabs.add "Back",{:action=>"index"},{:check=>"false",:align=>"right"}
+   end
+%>
+<div style='padding:20px'>
+    <div class="notifications">
+        <h4>Classtalk Notifications</h4>
+        <p>Classtalk will notify you using facebook notification system whenever actions are taken on Classtalk that involve you. You can control which email notifications you receive.</p>
+        <p>Notify me when someone...</p>
+        <form action="editaccount.php?notifications" method="post">
+            <div class="notification_checkboxes clearfix">
+                <ul>                    
+                    <%logged_in_user.notifications.each do |label,name|%>
+                        <%val = logged_in_user.get_setting(name,true).bool_val%>
+                        <%checked = val ? "checked='checked'" : "" %>
+                        <li>
+                            <input type="checkbox" value="1" name="<%=name%>" id="<%=name%>" <%=checked%> class="inputcheckbox"/>
+                            <label  for="<%=name%>"><%=label%></label>                        
+                        </li>
+                    <%end%>
+                    <li>
+    
+                     </li>
+                 </ul>
+                 <div class="submission">
+                    <input type="submit" value="Save Changes" name="save_notifications" id="save_notifications" class="inputsubmit" onclick="<%= <<-eof
+                       form = this.getForm();
+                       new Ajax.Updater('ret','#{ajax_url :action=>:save_settings}',Ajax.FBML,{
+                            parameters : form.serialize(),
+                            afterUpdate : function()  {
+                                setTimeout(function(){
+                                    $('ret').setTextValue('')
+                                },2000)
+                            }                            
+                       });
+                       return false;
+                    eof
+                    %>"
+                            
+                    
+                    /><span id='ret'></span>
+                 </div>
+             </div>
+         </form>
+    </div>
+
+</div>
+<% if false %>                <small>Even if you turn off all notifications, we may sometimes need to email you important notices about your account.</small><% end %>
+<%end%>

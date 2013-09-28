@@ -1,0 +1,83 @@
+
+
+<% t_count = owner.topics.count %>
+
+
+
+
+
+<% if t_count != 0 then %>
+
+<%=fb_css "discussions.css"%>
+
+<% fb_box "Discussion Board" do |label, actions|
+
+if t_count > 3 then
+  actions.add "See All", {:controller => 'discussion', :action => 'topics', :cn => owner.class, :cid => owner.id}
+  if logged_in_user.can_post?(owner) then
+    actions.add "Start New Topic", {:controller => 'discussion', :action => 'start_new_topic', :cn => owner.class, :cid => owner.id}
+  end
+else 
+  if logged_in_user.can_post?(owner) then
+    actions.add "Start New Topic", {:controller => 'discussion', :action => 'start_new_topic', :cn => owner.class, :cid => owner.id}
+  end
+end
+
+if t_count > 3 then
+  label << "Displaying 3 of "+fb_link_to("#{t_count} discussion topics.", {:controller => 'discussion', :action => 'topics', :cn => owner.class, :cid => owner.id})
+elsif t_count == 1 then
+  label << "Displaying the only discussion topic."
+else
+  label << "Displaying #{t_count} topics."
+end
+
+%>
+
+<div class="box clearfix discussions">
+<% topics.each do |topic| %>
+<% 
+  if topic.posts.count > 1 then
+    posts_word="posts"
+  else
+    posts_word="post"
+  end
+  if topic.people_count > 1 then
+    people_word="people"
+  else
+    people_word="person"
+  end
+%>
+<div class="board_topic clearfix">
+<div class="topic_info" style='overflow:hidden'>
+    <h3 class="topic_title datawrap">
+        <%= fb_link_to(topic.name, {:controller => 'discussion', :action => 'topic', :id => topic.id, :cn => owner.class, :cid => owner.id}) %>
+    </h3>
+<div class="more_info clearfix"><div style="float: left;"><span style="color: #333"><%= "#{topic.posts.count} #{posts_word} by #{topic.people_count} #{people_word}" %></span> 
+<%= topic.latest_post.created_on.strftime("Updated on %b %d, %Y at ") %><%= fbml_time topic.latest_post.created_on %>
+
+</div></div>
+</div>
+</div>
+<% end %>
+
+
+</div>
+<% end %>
+
+<% else %>
+<%=fb_css "group.css"%>
+<div class="header">
+<h2>Discussion Board</h2>
+</div>
+<div class="profile" style="padding-left:0px;padding-right:0px;">
+<div class="fallback">
+  There are no discussions. 
+  <% if logged_in_user.can_post?(owner) then %>
+    <%= fb_link_to "Start the first topic", :controller => 'discussion', :action => 'start_new_topic', :cn => owner.class, :cid => owner.id%>.
+  <% else %>
+    Join this class to start one!
+  <% end %>
+</div>
+</div>
+
+<% end %>

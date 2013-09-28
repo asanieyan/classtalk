@@ -1,0 +1,31 @@
+# NOTE: YOU NEED TO USE &#58; for colons becuase bare colons will fuck up the file
+title: Help_Home_Page
+description: 
+   <div><strong>Welcome to Oycas</strong></div>
+   <br>
+   If you have a question that cannot be solved by this help, please email us at <%= mail_to_us%>.
+subsections:
+  -
+    stitle: Registering
+    sdescription: The first step in joining Oycas is registering. You can register by clicking the "register" link on the login page. This
+      takes you to another page where you will enter a valid school email address from a supported school (you can see a list of supported
+      schools by clicking the link to the right of this box), your full name, a desired password, and your school status. When you submit 
+      this information, a validation email will be sent to you. By clicking on the link in the email, your account will be activated.
+    qa:
+      -
+        question: I am a Staff/Faculty member and I tried registering, but I can't. Why?
+        answer: Currently Staff and Faculty members are not supported by our system. We are currently working
+          on giving you your own functionality.
+  -
+    stitle: Logging in
+    sdescription: To log into the system, you simply enter the email address that you signed up with, and the password
+      you selected.
+    qa:
+      -
+        question: I have forgotten my password. How do I find out what it is?
+        answer: Oycas does not provide a facility to find out what your forgotten password was for security reasons. You can, however
+          click on the "forgot your password?" link, and you will be taken to a page where you can enter the email address and an email
+          will be sent to you that allows you to reset your password.
+---
+#title: Registration_and_Login
+#description: This Section describes the Registration and Login processes required for joining and accessing the site.

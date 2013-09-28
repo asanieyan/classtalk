@@ -1,0 +1,88 @@
+<%=fb_css "filters"%>
+<div id="filters" class='filters'>
+    <div class="sort_method">
+        <h2>Sort Method:</h2>
+        <%=select_tag "o_sel",
+            options_for_select([["Random","r"],["Alphabetical","a"]],params[:o]),
+            :onchange=>"$('o').setValue(this.getValue());$('people_filters').submit()"%>
+     </div>
+     <div class="filter_superset">
+     <form id="people_filters" name="people_filters" action="<%=fb_url_for({:k=>@selected_class.id})%>" method="GET" >       
+        <%=hidden_field_tag "o",""%>
+        <fieldset  id="filters_sx">
+            <%
+                filter_image = app_asset('/images/filterset_on.gif')
+                filter_off_image = app_asset('/images/filterset_off.gif')
+                style = "style='background: url(#{filter_image}) 4px 6px no-repeat'"
+                v = "checked='true'"
+            %>
+            <legend   id='filters_sx_legend' <%=style%> onclick="toggle_filterset('filters_sx'); return false;">Sex</legend>
+            <div class="filter_controls">
+                <span class="radio">
+                    <input type="radio" value="" name="sx" id="sx_a" <%=v if params[:sx].nil?%> class="inputradio"/>
+                    <label id="label_sx_a" for="sx_a" style="cursor: default;">All</label>
+                </span> 
+                <span class="radio">
+                    <input type="radio" value="0" name="sx" id="sx_m" <%=v if params[:sx] == "0"%> class="inputradio"/>
+                    <label id="label_sx_m" for="sx_m" style="cursor: default;">Male</label>
+                </span> 
+                <span class="radio">
+                    <input type="radio" value="1" name="sx" id="sx_f" <%=v if params[:sx] == "1"%> class="inputradio"/>
+                    <label id="label_sx_f" for="sx_f" style="cursor: default;">Female</label>
+                </span>
+            </div>
+        </fieldset>
+<%if false%>        
+        <fieldset id="filters_age">
+            <legend <%=style%> onclick="toggle_filterset('filters_age'); return false;">Age</legend>
+            <div class="filter_controls">
+                <select name="y1" id="y1" onchange="age_check();" class="age_1">
+                    <%=options_for_select((18..97).to_a,params[:y1].to_i)%>
+                </select> to 
+                <select name="y2" id="y2" onchange="age_check();" class="age_2">
+                  <%=options_for_select((18..97).to_a,params[:y2].to_i)%>
+                </select>
+                <div style="display: none; color: gray;" id="max_age_range_warning">
+                    <small>maximum range is 7 yrs</small>
+                </div>
+            </div>
+        </fieldset>
+<%end%>        
+        <fieldset id="filters_rl">
+        <legend   id='filters_rl_legend' <%=style%> onclick="toggle_filterset('filters_rl'); return false;">Relationship Status</legend>
+            <div class="filter_controls">
+                 <%=check_box_filters "rl"%> 
+            </div>
+       </fieldset> 
+       <fieldset id="filters_ii" >
+            <legend  id='filters_ii_legend' <%=style%>  onclick="toggle_filterset('filters_ii'); return false;">Interested In</legend>
+            <div class="filter_controls">
+               <%=check_box_filters "ii",:inline=>true%> 
+            </div>
+       </fieldset> 
+       <fieldset  id="filters_if" class="">
+            <legend id='filters_if_legend' <%=style%> onclick="toggle_filterset('filters_if'); return false;">Looking For</legend>
+            <div class="filter_controls">
+                <%=check_box_filters "if"%>           
+            </div>
+       </fieldset> 
+       <fieldset  id="filters_pl" class="">
+            <legend id='filters_pl_legend'  <%=style%> onclick="toggle_filterset('filters_pl'); return false;">Political Views</legend>
+            <div class="filter_controls">
+                <%=check_box_filters "pl"%>           
+            </div>
+       </fieldset>                    
+     </form>
+</div>
+    <div class="filter_buttons">
+        <input type="button" value="Update" name="update_button" id="update_button" onclick="$('people_filters').submit()" class="inputbutton"/>
+        <input type="button" value="Reset" name="reset_button" id="reset_button" onclick="document.setLocation('<%=fb_url_for({})%>')" class="inputbutton"/>
+    </div>
+    <%closefilters =  "[" + session['browse_filters'].to_a.map{|f_name,off| "'" + f_name + "'"}.join(",") + "]"        
+    %>
+    <%=javascript_tag <<-eof    
+       toggleFiltersSet(#{closefilters});
+       submitCleanForm('people_filters','#{fb_url_for({:k=>@selected_class.id})}')
+    eof
+    %>
+</div>

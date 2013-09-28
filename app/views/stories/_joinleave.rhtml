@@ -1,0 +1,13 @@
+<%headline do%>    
+    <%if join %>
+        
+        <%if logged_in_user.member_of_class?(klass)%>
+            You and <%=actioner(feed)%> are in same class at <%=link_to_class(klass)%> 
+        <%else%>
+            <%=actioner(feed)%> joined class <%=link_to_class(klass)%>
+        <%end%>
+    <%else%>
+        <%=actioner(feed)%> dropped the class <%=link_to_class(klass)%>
+    <%end%>
+    for <%=klass.semester.name%> at <%=fb_link_to_network klass.school.name,klass.school.id%>                        
+<%end%>

@@ -1,0 +1,273 @@
+/*-------------------------| Side Bar |-------------------------*/
+.sidebar {
+    background:#FFFFFF url(/images/components/sidebar_rightbg.gif) repeat-y scroll right top;
+    overflow:hidden;
+    padding-right:176px;
+}
+.sidebar.other_side {
+    background:#FFFFFF url(/images/components/sidebar_leftbg.gif) repeat-y scroll left top;
+    padding-left:176px;
+    padding-right:0pt;
+}
+.sidebar .content_frame {
+    float:left;
+    margin-right:-176px;
+    padding-right:176px;
+    width:100%;
+}
+.sidebar .content_frame.other_side {
+    border-right:medium none;
+    float:right;
+    margin-left:-176px;
+    margin-right:0pt;
+    padding-left:176px;
+}
+.sidebar .sidebar_frame {
+    float:left;
+    margin-right:-176px ;
+    width:176px;
+    
+}
+.sidebar .sidebar_frame.other_side {
+    float:right;
+    margin-left:-176px;
+    margin-right:0pt;
+}
+.sidebar .inner_content_frame {
+}
+.sidebar .sidebar_frame .panel {
+    padding:10px 10px 10px 11px;
+}
+.sidebar .sidebar_frame .panel_divider {
+    background:#DDDDDD none repeat scroll 0%;
+    border-color:#DDDDDD -moz-use-text-color rgb(255, 255, 255);
+    border-style:solid none;
+    border-width:1px medium;
+    height:0pt;
+    margin:0pt;
+    padding:0pt;
+}
+/*-------------------------| Core Activity Styles |-------------------------*/
+
+.pulseheader {
+  padding: 15px 20px 15px 20px;
+}
+
+.pulseheader h2 {
+  font-size: 13px;
+  color: #333;
+  line-height: 14px;
+}
+
+.pulseheader p {
+  color: #333;
+  margin: 2px 0 2px 0;
+}
+
+.pulseheader .bottom {
+  padding-top: 15px;
+}
+
+.pulseheader .networkname {
+  font-size: 11px;
+  color: #666;
+  font-weight: normal;
+}
+
+#pulseside {
+  padding: 10px;
+}
+
+#pulseside .ptype {
+  padding-bottom: 5px;
+}
+
+#pulseside .ptype h3 {
+  font-size: 11px;
+}
+
+#pulsecontent {
+  padding: 10px 10px 0 10px;
+}
+
+#nothinghere {
+  background: #f7f7f7;
+  padding: 60px 0 60px 0;
+  text-align: center;
+  font-size: 13px;
+  color: gray;
+}
+
+/*-------------------------| Groups Styles |-------------------------*/
+
+.infotable .label {
+  color: gray;
+}
+
+/*-------------------------| Events Styles |-------------------------*/
+
+#partylist {
+  padding: 10px;
+  margin: 0;
+}
+
+#partylist .partyrow {
+  margin-bottom: 5px;
+}
+
+#content {
+  padding: 0;
+}
+
+.tab_bar {
+  padding: 0px 10px 0px 10px;
+}
+
+/*-------------------------| Notes Styles |-------------------------*/
+
+.note_body .note_title_share {
+  font-size: 12px;
+  font-weight: bold;
+  padding-bottom: 2px;
+}
+
+.note_body .byline {
+  color: #444;
+  font-size: 10px;
+}
+
+.notes_content {
+  margin: 0;
+  background: #f7f7f7;
+  margin: 10px;
+}
+
+.notes_content .note_body {
+  width: 365px !important;
+}
+
+.note {
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.note .note_footer {
+  border-top: 1px solid #ddd;
+  clear: both;
+  font-size: 11px;
+  margin-top: 5px;
+  padding: 5px 2px 0 6px; 
+}
+
+.note .note_footer_left {
+  width: 270px;
+}
+
+.note .note_footer_right {
+  width: 60px;
+}
+
+
+.note .note_header {
+  background: none;
+  border-top: none;
+  padding: 0 0 5px 0;
+}
+
+/*-------------------------| Posts Styles |-------------------------*/
+
+.sharefeed_item {
+  padding: 5px 10px 0 3px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  background: #fff;
+}
+
+.sharefeed_item .title {
+  font-size: 12px;
+}
+
+.sharefeed_item .share_media {
+  padding: 0 0 0 4px;
+  margin: 0 0 0 25px;
+}
+
+.sharefeed_item .share_header {
+  border: none;
+  background-color: #fff;
+  margin: 0;
+}
+
+.sharefeed_item .has_extra {
+  padding-top: 5px;
+}
+
+.sharefeed_item .no_extra {
+  padding-top: 5px;
+}
+
+.sharefeed_item .share_icon_photo .has_extra {
+  padding: 0;
+}
+
+.sharefeed_item .share_icon_news .has_extra {
+  padding-top: 2px;
+}
+
+.sharefeed_item .share_footer {
+  margin: 10px 0 0 7px;
+  padding-left: 0px;
+  text-align: right;
+}
+
+#sidecolumn_minireader .item {
+  color: #333;
+  margin: 0 0 5px 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+/*-------------------------| Sidebar Styles |-------------------------*/
+
+.sidebar .content_frame {
+  background: #f7f7f7;
+}
+
+.sidebar .inner_content_frame {
+ padding: 0px; }
+
+.sidecontent {
+  background: #f7f7f7;
+  padding: 10px 0 10px 0;
+}
+
+.sidecontent h3 {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 0 3px 5px;
+  margin: 0 10px 10px 0;
+  background: #e7e7e7;
+}
+
+.sidecontent h4 {
+  font-size: 11px;
+  margin: 0;
+  padding: 0 10px 0 5px;
+  border: none;
+}
+
+.sidecontent p {
+  color: #333;
+  font-size: 9px;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 0 0 5px 5px;
+  margin-bottom: 5px;
+}
+
+.sidecontent .lightgray {
+  color: #666;
+}
+

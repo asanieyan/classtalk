@@ -1,0 +1,40 @@
+<%=fb_plugin_dashboad do |elements| 
+	elements[:actions].add "My Documents",:action=>"main",:uid=>logged_in_user.id
+	elements[:actions].add "Library",:action=>"main"
+	elements[:actions].add "Browse Documents",:action=>"browse"	
+	elements[:help].add "help","D"
+   end
+%>
+<%=fb_css '/stylesheets/ubersearch.css'%>
+<div class='ubersearch'>
+    <%select_option = case @search_context.class.to_s
+                when "User"
+                   content_tag(:option,fbml_name(@search_context.id,:firstnameonly=>true,:possessive=>true)  + " Documents" ,:value=>"uid#{@search_context.id}")
+                when "Course"
+                  content_tag(:option,@search_context.title_no_credit  ,:value=>"c#{@search_context.id}")                
+                else
+                    nil
+             end            
+    %>    
+    <div class="bar clearfix uber_bar">
+                <%fb_search_form("/library/search",{},{:value=>params[:q]}) do |search_tag|%>
+                    <label>Searching for document title</label> <%=search_tag%> <label>within</label> <%=library_search_select_box(select_option)%>                
+                <%end%>
+    
+    </div>
+    <div class='search_results'> 
+        <%if @result_documents.size > 0%>
+              <%=render_p 'documents_page',:no_side=>true,:documents=>@result_documents,:showpic=>true,:paginator=>@paginator,:page_option=>{:s=>params[:s],:q=>params[:q]},:summary=>"Displaying"%>
+        <%else%>
+             <div class='summary_bar' style='padding-bottom:6px' id='summary' >
+                Found no results.
+             </div>
+             <div class="column results">
+                <div class="fallback">
+                    I've got nothing for you. Try a <a href="<%=fb_url_for('/library/browse')%>">new search</a>.
+                </div>
+             </div>        
+        <%end%>
+    </div>
+
+</div>

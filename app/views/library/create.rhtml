@@ -1,0 +1,40 @@
+<div class='title_header'>	
+		<h2>Post a new Document</h2>
+		<h4><%=fb_link_to "Back to Document Library",:action=>"index"%></h4>	
+</div>
+<style>
+	.tab_bar {
+		margin-top:0;
+		padding-top:0;	
+	}
+</style>
+<div class='bar clearfix tab_bar'>	
+	<div id='tabs'>
+		<%unless @course %>
+    		<div class='activetab'>
+    				<%=fb_link_to "Step1: Select Course",{}%>
+    		</div>		
+    		<div class='disabled'>
+    				Step2: Post Document
+    		</div>		
+		<%else%>
+    		<div class='inactivetab'>
+    				<%=fb_link_to "Step1: Select Course",{}%>
+    		</div>		
+    		<div class='activetab'>
+    				<%=fb_link_to 'Step2: Post Document',{:c=>@course.id}%>
+    		</div>			
+		<%end%>
+
+	</div>	
+</div>
+<%unless @course%>
+    <%=fbml_iframe({:action=>"step1"},{:style=>"height:800px !important"})%>
+<%else%>
+    <%
+        #@TODO: is iframe better than a partial for creating the note section
+        #
+    %>
+    <%=render_p 'step2',:course=>@course%>
+<%end%>    
+<br>

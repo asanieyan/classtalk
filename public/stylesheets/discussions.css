@@ -1,0 +1,337 @@
+
+.discussions #content { padding: 0px }
+
+.discussions .tabs {
+  padding-top: 20px;
+}
+
+.discussions .tab_bar { padding: 15px 10px 0px 10px }
+
+.discussions_status, .discussions_error { padding: 10px 10px 0px 10px }
+
+.discussions .status, .discussions #error { margin: 0px }
+
+.discussions .footer_bar {
+  border-top: 0px;
+  clear: both; }
+
+.board .title_header h4 {
+  font-weight: normal;
+}
+
+.board.portal .title_header.shorten h2 {
+  padding-bottom: 1px;
+}
+
+
+
+
+.discussions .board_topic {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px; }
+
+.discussions .board_topic .topic_info {
+  float: left;
+  padding-right: 10px;
+  width: 340px; }
+
+.discussions .board_topic .last_post {
+  color: black;
+  float: left;
+  width: 200px; }
+
+.discussions .board_topic .more_info {
+  color: gray;
+  font-size: 9px;
+  padding-top: 1px; }
+
+.discussions .board_topic .topic_pager {
+  color: gray;
+  font-size: 9px;
+  padding-top: 1px; }
+
+.discussions .board_topic .topic_pager a { padding: 1px 0px }
+.discussions .board_topic .topic_pager a:hover {
+  background: #3b5998;
+  color: white;
+  text-decoration: none; }
+
+.discussions .board_topic .topic_title {
+  font-weight: bold;
+  font-size: 11px;
+}
+
+
+
+
+.board .fallback {
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  clear: both;
+  color: gray;
+  font-size: 12px;
+  margin: 10px;
+  padding: 100px 20px;
+  text-align: center;
+}
+.board .fallback strong {
+  color: #333;
+}
+
+
+.board .board_search {
+  float: right;
+  padding-right: 10px;
+}
+
+.board .board_search .inputsearch {
+  width: 160px;
+}
+
+.board .filter_bar {
+  background: #f7f7f7;
+  border-bottom: 1px solid #D8DFEA;
+  color: gray;
+  padding: 10px 10px 8px 10px;
+}
+
+
+.board .filter_bar label {
+  color: #333;
+  display: block;
+  float: left;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.board .filter_bar select {
+  font-weight: normal;
+  margin-left: 5px;
+  width: 140px;
+}
+.board .filter_bar input {
+  float: left;
+  margin-left: 25px;
+  width: 120px;
+}
+
+.board .filter_actions {
+  float: right;
+  padding: 4px 0;
+}
+
+.board .column_header {
+  background: #f7f7f7;
+  border-bottom: 1px solid #d8dfea;
+  border-top: 1px solid white;
+  color: #666;
+  font-size: 9px;
+  padding: 5px 20px;
+}
+
+.board .board_topics {
+	background: #f7f7f7;
+	padding: 3px 0px; 
+	padding: 10px;
+}
+
+.board .board_topic {
+	background: white;
+	border: 1px solid #ccc;
+	border-top-width: 0px;
+	margin: 5px 8px; 
+	margin: 0px;
+}
+
+.board .board_topics .deleted {
+  background: #f7f7f7;
+  color: #999;
+  font-size: 9px; 
+  font-size: 11px;
+  padding: 5px 0px 5px 77px;
+}
+
+.board .first { 
+    border-top: 1px solid #ccc; 
+}
+
+.board .footer_bar {
+	background: white;
+	border-top: 1px solid #d8dfea;
+}
+
+.board .topic_title a {
+  font-size: 13px;
+}
+
+.board .topic_info .topic_pager { color: #333 }
+.board .more_info { color: #333 }
+.board .more_info .timestamp { color: gray }
+.board .last_post { padding-top: 3px; }
+
+
+.topic .topic_bar {
+  background: #f7f7f7;
+  border-bottom: solid 1px #D8DFEA;
+  color: gray;
+  padding: 12px 10px 10px; 
+  }
+  
+  .topic .topic_bar h2 {
+    float: left;
+    font-size: 13px;
+    font-weight: bold;    
+    width: 420px; }
+  .topic .topic_bar h2 span {
+    color: #3B5998; }
+  .topic .topic_bar h2 a:hover {
+    text-decoration: none; }
+  .topic .topic_bar .topic_actions {
+    float: right;
+    padding: 1px 0px 0px;
+    text-align: right;
+    line-height: 16px;
+    width: 180px; }
+
+.topic .posts {
+  clear: both;
+  padding: 0px; }
+
+.topic .post {
+  border-bottom: solid 1px #D8DFEA;
+  padding: 9px 12px 10px 12px; }
+
+.topic .post_irr { display: none }
+
+.topic .deleted {
+  background: #f7f7f7;
+  color: #999;
+  font-size: 9px; font-size: 11px;
+  padding: 5px 0px 5px 77px;
+}
+
+.topic .irrelevant {
+  background: #f7f7f7;
+  padding: 5px 12px 5px 12px;
+}
+
+.topic .irrelevant .post_irr {
+  color: #999;
+  display: block;
+  font-size: 9px; font-size: 11px;
+  padding-left: 65px; }
+
+  .topic .irrelevant .post_irr span {
+    float: left;
+    width: 402px; }
+  .topic .irrelevant .post_irr .show_post {
+    float: right;
+    width: 116px; }
+
+
+.topic .irrelevant .post_data {
+  display: none;
+  padding-top: 15px;
+}
+
+.topic .post .info {
+  float: left;
+  font-size: 9px;
+  padding-top: 3px;
+  width: 62px; }
+
+  .topic .post .info img { margin-bottom: 3px }
+  .topic .post .info .post_index { color: gray }
+  .topic .post .info .post_index a { color: gray }
+  .topic .post .info .post_index a:hover { color: #3b5998; }
+  
+.topic .post .post_body {
+  float: left;
+  padding-top: 3px;
+  width: 400px;}
+
+.topic .post .post_header {
+  background: #f7f7f7;
+  border-bottom: 1px solid #d8dfea;
+  border-top: 1px solid #3b5998; 
+  color: #222;
+  font-size: 11px;  
+  padding: 2px 4px; }
+
+  .topic .post .post_header .post_author {
+    color: black; 
+    font-size: 11px; }    
+  .topic .post .post_header .post_author a {
+    font-weight: bold; }    
+  .topic .post .post_header .timestamp {
+    color: #666; 
+    display: block;
+    padding-top: 1px;
+    font-size: 9px; }    
+  
+.topic .post .post_message {
+  line-height: 14px;
+  padding: 10px 40px 4px 4px;
+  }
+
+  .topic .post .post_message br {
+    border-width: 0;
+    margin: 0px;
+    padding: 0px;
+    line-height: 0.5em; }
+
+.topic .post .actionspro {
+  float: right;
+  padding-top: 3px;
+  width: 120px; }
+
+.post_editor {
+  background: #f7f7f7;
+  border-bottom: 1px solid #d8dfea;
+  float: left; float: none;
+  padding: 20px 0px 20px 75px; }
+
+.post_editor label {
+  color: #666;
+  display: block;
+  font-weight: bold;
+  padding: 0px 0px 2px 0px;
+}
+
+.post_editor textarea {
+  height: 130px;
+  width: 390px; }
+
+.post_editor div {
+  color: #666;
+  padding: 5px 0px;
+}
+
+/*  ----------------------------|  EDIT TOPIC  |----------------------------  */
+
+.edittopic .discussions_error {
+  background: #f7f7f7;
+  margin: 0px;
+	padding: 0px; padding: 10px; }
+
+.edittopic .post_editor {
+  display: block;
+}
+.edittopic .post_editor .inputtext {
+  width: 390px;
+}
+
+.edittopic .panel {
+  background: #f7f7f7;
+  padding: 20px 0;
+}
+
+.edittopic .editor .textarea {
+  height: 200px;
+}
+
+.edittopic .delete_dialog {
+  background: #f7f7f7;
+  padding: 20px;
+}
+
+

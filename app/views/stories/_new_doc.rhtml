@@ -1,0 +1,19 @@
+<%doc = Document.find(:first,:conditions=>Document.of_course_sql(context,logged_in_user,"documents.id = #{doc_id}"))%>
+<%course = context%>
+
+<%headline do%>
+    <%if new_doc%>        
+        <%= actioner(feed,doc.anonymous) + " posted a new document to #{fb_link_to course.full_title,:controller=>'library',:action=>'main',:c=>course.id}" %> titled 
+        "<%=doc.title%>"
+    <%else%>
+        <%= actioner(feed,doc.anonymous) + " edited the document titled "%> 
+        <%=fb_link_to doc.title,:controller=>"library",:action=>"main",:d=>doc.id%> 
+        <span class='dark_gray'> (this document was posted to <%=link_to_class(klass)%>)</span>
+    <%end%>
+<%end%>
+<%body do%>    
+    <%=feed_quote(doc.comment) do |actions|
+            actions.add "See the document",:controller=>"library",:action=>"main",:d=>doc.id
+       end
+    %>
+<%end%>

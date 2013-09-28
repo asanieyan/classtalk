@@ -1,0 +1,19 @@
+--- 
+:info: 
+  :name: N. Illinois
+  :region: illinois
+  :country: united states
+  :city: dekalb
+  :semesters: 
+  - - Fall
+    - 8/27
+    - 12/20
+  - - Spring
+    - 1/5
+    - 5/9
+  - - Summer
+    - 6/10
+    - 8/15
+  :nid: "16777525"
+:courses: []
+

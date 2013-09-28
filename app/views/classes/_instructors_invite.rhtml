@@ -1,0 +1,29 @@
+<%fb_box search_result ? "Search Result" : "Browse Instructors" do |label,actions|
+    if !search_result
+        label << "Browsing intructors who are classtalk users"
+    else
+        label << "Found #{pluralize(users.size,'result')} for '#{params[:q]}'"
+        actions.add "back to browse",{:action=>'add_instructor',:k=>@selected_class.id},:id=>'back_to_browse'
+    end
+%>
+
+
+    <%fb_users_table do %>
+        <%users.each do |user| %>
+            <%= fb_user_table(user,:default_links=>false) do |e|
+                    if user.new_record? or !@selected_class.instructors.include?(user)
+                            e[:actions].add "Invite",app_url({:action=>:invite,:uid=>user.id})
+                      
+                    else 
+                         e[:labels] << content_tag(:div,fbml_name(user.id,:useyou=>false) + " is already teaching this class",:class=>"updates")                    
+                    end
+                    unless user.new_record?
+                        if user.classes.current_at(@selected_class.school).size > 0
+                            e[:labels].unshift ["#{@selected_class.school.current_semester.name} Classes",user.classes.current_at(@selected_class.school).map{|k| link_to_class(k)}.join(", ")]
+                        end
+                    end        
+                end
+            %>    
+        <%end%>
+    <%end%>    
+<%end%>

@@ -1,0 +1,30 @@
+<%=fb_css "dialog.css"%>
+<%=fb_css "wall.css"%>
+
+
+<div class="wallpost_dialog" style='padding:20px;'>
+<div id="content_shadow"><div class="clearfix" id="content">
+<table width="400" cellspacing="0" border="0" class="dialog">
+<tbody>
+<tr>
+<td class="dialog">
+
+<h4>Write on the Wall</h4>
+<form action="<%=fb_url_for :controller => 'wall', :action => 'wallpost', :cn => @owner.class, :cid => @owner.id %>" method="post" style="margin-left:10px; margin-right:10px;">
+
+<table cellspacing="0" border="0" class="formtable">
+<tbody>
+<tr class="tallrow">
+<td class="label">Comment:</td>
+<td><textarea rows="4" cols="43" class="textarea" name="text" id="text" /></td>
+</tr>
+</tbody>
+</table>
+
+<div class="buttons"><input type="submit" style="border-style: solid;  border-top-width: 1px;  border-left-width: 1px;  border-bottom-width: 1px;  border-right-width: 1px;  border-top-color: #D9DFEA;  border-left-color: #D9DFEA;  border-bottom-color: #0e1f5b;  border-right-color: #0e1f5b;  background-color: #3b5998;  color: #FFFFFF;  font-size: 11px;  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;   text-align: center;" value=" Post "/> or <%= fb_link_to "Cancel", @owner.back_url%></div>
+</form>
+
+</td></tr></tbody></table></div></div></div>
+
+
+

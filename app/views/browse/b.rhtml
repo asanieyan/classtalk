@@ -1,0 +1,43 @@
+<%=fb_css "friends.css"%>
+<%=fb_remote_css "/css/ubersearch.css"%>
+
+<div class="bar clearfix uber_bar">
+    <div class="summary">
+        Displaying members of  <%=link_to_class @selected_class%>
+    </div>    
+</div>
+
+<div class='ubersearch'>
+    <div class='bar clearfix summary_bar'>
+        <div class="summary">            
+            <ul class='tabs'>
+                <%if @friends_in_class.empty? or !params[:v] or params[:v]=="a"%>
+                    <li class='current'><%=fb_link_to "All " + pluralize(@class_users.size,"Member")%> </li>                    
+                    <%unless @friends_in_class.empty?%>
+                        <li class=''><%=fb_link_to "My Friends (#{@friends_in_class.size})",:v=>"f"%></li>
+                    <%end%>
+                <%else%>
+                    <li class=''><%=fb_link_to "All " + pluralize(@class_users.size,"Member")%> </li>
+                    <li class='current'><%=fb_link_to "My Friends (#{@friends_in_class.size})",:v=>"f"%></li>                
+                <%end%>
+            </ul>
+        </div>    
+        <%=fb_paginator @paginator%>    
+    </div>
+</div>
+<div>   
+    <%fb_users_table :search do %>
+        <%@page.each do |user| %>
+            <%= fb_result_table(user,:default_links=>true) do |e|
+                      if user.classes.current_at(@selected_class.school).size > 0
+                            e[:labels].unshift ["#{@selected_class.school.current_semester.name} Classes",user.classes.current_at(@selected_class.school).map{|k| link_to_class(k,:full_name=>false)}.join(", ")]
+                      end     
+                end
+            %>    
+        <%end%>
+    <%end%> 
+    
+
+</div>
+
+            

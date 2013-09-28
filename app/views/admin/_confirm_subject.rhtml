@@ -1,0 +1,39 @@
+ <div id='error_message'>
+ 
+ </div>
+<%=javascript_tag <<-eof
+    function checkExists(field,pid,ptype) {
+       field = document.getElementById(field);
+       field.addEventListener('blur',function(){
+            y = new Ajax();
+            y.responseType = Ajax.FBML;
+            y.ondone = function(response) {
+               document.getElementById('error_message').setInnerFBML(response)
+            };
+            y.post('#{ajax_url :action=>:subject_exists?}',{type : ptype , id : pid ,v : field.getValue()})
+        })            
+    
+    }
+eof
+%>  
+ <%fb_editor({},{:id=>"sform"}) do %>
+    <%if object.is_a?(Subject)%>
+            <%=fb_editor_text_field "scode",object['code'],:id=>"scode",:label=>"Code",:maxlength=>Subject.size_of('code')%>
+            <%=fb_editor_text_field  "sname",object['name'],:id=>"sname",:label=>"Name",:maxlength=>Subject.size_of('name')%> 
+            <%=javascript_tag "checkExists('scode',#{object.id},'Subject')"%>
+    <%else%>
+            <%=fb_editor_text_field "cnum",object['number'],:id=>"cnum",:label=>"Number",:maxlength=>Course.size_of('number')%>
+            <%=fb_editor_text_field  "cname",object['name'],:id=>"cname",:label=>"Name",:maxlength=>Course.size_of('name')%> 
+            <%=fb_editor_text_field  "cc",object['credit'],:id=>"cc",:label=>"Credit"%> 
+            <%=fb_editor_text_area  "cdesc",object['description'],:id=>"cdesc",:size=>"40x10",:label=>"Description"%>            
+            <%=javascript_tag "checkExists('cnum',#{object.id},'Course')"%>
+    <%end%>   
+        <%fb_editor_costum_tag do%>
+            <%=hidden_field_tag :t,object.class.to_s%>
+            <%=hidden_field_tag :id,object.id%>      
+            <%=hidden_field_tag :type,"confirm"%>               
+        <%end%>
+    
+<%end%>        
+<fb:editor action="?commit=yes" labelwidth="100" enctype="multipart/form-data">
+</fb:editor>

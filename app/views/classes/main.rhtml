@@ -1,0 +1,273 @@
+<%=fb_css "classes"%>
+<%=fb_plugin_dashboad do |elements| 
+	if @app_user
+    	elements[:actions].add "My Profile",:controller=>"profile",:action=>"index"
+    	elements[:actions].add "Register",:controller=>"registerar",:action=>"index"
+    	if @registered 
+    	    if @all_semesters.size > 0
+            	elements[:title] << "My Classes " + select_tag("sem",
+            	                    options_for_select(@all_semesters.map{|s|        	                               	                            	                    
+            	                       [s.school.name + " " + s.name,s.id]
+            	                    },@selected_semester.id),
+            	                    :onchange=>"document.setLocation('#{fb_url({:action=>'main'})}' + '?sem=' + $('sem').getValue())")
+            end
+    	else
+    	   elements[:actions].add "My Classes",:action=>"main"
+    	end
+    	elements[:help].add "Help",url_for_help
+    else
+        elements[:actions].add "Install Classtalk",ApplicationController::FACEBOOK_APP_INSTALL_URL
+    end
+   end
+%>
+
+<%if @registered %>
+    <%=fb_tabs do |tabs|
+    		logged_in_user.classes.at(@selected_semester).each do |klass|
+                 tabs.add klass.name,{:action=>'main',:k=>klass.id},:check=>"params[:k].to_i == #{klass.id}"
+    		end
+       end
+    %>
+<%end%> 
+<div class="nettop clearfix" >
+	<div class="topleft"><h4><%=@selected_class.full_title%></h4></div>
+    <div class="topright">
+<% if false %>        <%=fb_search_tag fb_url_for(:action=>"")%><% end %>
+    </div>	
+</div>	
+<div style="padding: 0 20px 0 20px;">
+    <div class="networkport clearfix">
+        <div class='map'>
+            <%fb_box "Class Info" do %>
+                <%=table_tag :col1=>{:class=>"label"},:table=>{:class=>"profileTable"} do |cols|
+                        cols << "Members:"
+                        cols << (@class_random_users.empty? ? 0 : fb_link_to(@class_random_users.size,:k=>@selected_class.id))
+                        if @app_user
+                            cols << "Friends"
+                            cols << (@friends_in_class.size == 0 ? 0 : fb_link_to(@friends_in_class.size,:controller=>"profile",:action=>"friends",:t=>"f",:k=>@selected_class.id))
+                        end
+                        if @selected_class.course.credit and @selected_class.course.credit > 0
+                            cols << "Credits:"
+                            cols << pluralize(@selected_class.course.credit,"Credit")
+                        end                        
+                        
+                        cols << "Semester:"
+                        cols.push @same_network ? begin fb_link_to(@selected_class.semester.name,"/registerar/register") +  
+                                                                 if  @selected_class.is_current?
+                                                                        "<div class='light_gray'>(current)</div>"
+                                                                 elsif @selected_class.is_coming_up?
+                                                                        "<div class='light_gray'>begins in #{distance_of_time_in_words(Time.now.utc,@selected_class.semester.start_date)}</div>" 
+                                                                 else
+                                                                        ""
+                                                                 end
+                                                end : @selected_class.semester.name + ( @selected_class.is_current? ? "<div class='light_gray'>(current)</div>" : "")
+                        cols << "Room:"
+                        room = content_tag(:div,render_p('room_tag',{:klass=>@selected_class,:changable=>@registered && @selected_class.is_editable?}),:id=>"room")
+                        
+                        cols.push(room)
+                        cols << "Time:"
+                        real_time = content_tag(:div,fbml_success(:text=>@selected_class.formated_schedule(false).join("<br>")),:id=>'realtime',:style=>"position:absolute;display:none;")
+                        cols.push content_tag(:div,truncate(@selected_class.formated_schedule(true).join(", "),60),:id=>"shorttime",:onmouseover=>"event.stopPropagation();$('realtime').show()",:onmouseout=>"event.stopPropagation();$('realtime').hide()") + real_time
+                                  
+                        
+  
+                   end
+                %>
+            <%end%>
+          
+                <%=fb_actions do |actions| 
+                        if @same_network and !@selected_class.closed                       
+                            if @can_join 
+                                if !@registered 
+                                    actions.add "Join This Class","/registerar/register_in_course?sem=#{@selected_class.semester_id}&k=#{@selected_class.id}&c=#{@selected_class.course_id}"
+                                else
+                                    actions.add "Leave This Class","/registerar/register_in_course?sem=#{@selected_class.semester_id}&remove=true&k=#{@selected_class.id}&c=#{@selected_class.course_id}",
+                                                :confirm=>["Are you sure ?","By pressing okay you will leave the class. To join again just click on the join action."]
+                                    actions.add "Invite Classmates",:controller=>"profile",:action=>"friends",:t=>"i",:k=>@selected_class.id
+                                end  
+                            end                                     
+                            actions.add "See Class Activities",:action=>"activities",:k=>@selected_class.id     
+                            actions.add "View Discussion Board",:controller=>"discussion",:action=>"topics",:cn=>@selected_class.class,:cid=>@selected_class.id
+                        end
+                       
+        
+                   end
+                %>
+           
+        </div>
+
+        <div class='geninfo'>
+            <%fb_box "People at this Class" do |label,actions| 
+                if @class_random_users.size > 6
+                    label <<  "Displaying 6 people of " + fb_link_to(@class_random_users.size.to_s + " people",:k=>@selected_class.id,:action=>"browse")
+				elsif @class_random_users.size > 1				
+                    label <<  "Displaying all #{@class_random_users.size} people"                 
+                elsif @class_random_users.size == 1
+                    label <<  "Displaying the only person" 	
+				end
+    		    actions.add "Browse",:k=>@selected_class.id,:action=>"browse" if @class_random_users.size > 0
+            %>
+                <%
+                    
+                %>
+                <%=table_tag :cols=>6,
+                             :table=>{:height=>"100%",:cellspacing=>"2",:class=>"people_table"},
+                             :row2=>{:valign=>"bottom"} do |cols|
+                    6.times do |user_index|
+                         col_content = (user =  @class_random_users[user_index]) ? fbml_profile_pic(user.is_a?(User) ? user.id : user["uid"] || user.id,:size=>"square") : "&nbsp;"                         
+                         #x = fbml_if_can_see(user.uid,"search",col_content)
+                         cols.add col_content,{:width=>"17%"}
+                    end
+                    6.times do |user_index|
+                         col_content = (user =  @class_random_users[user_index]) ? fbml_name(user["uid"] || user.id,:useyou => false) : "&nbsp;"
+                         cols.add col_content,{:style=>"vertical-align:bottom"}
+                    end
+
+                   end
+                %>
+
+            <%end%>
+        </div>
+    </div><br>
+    
+    <%if @same_network and !@selected_class.closed%>
+     <div class='two_column clearfix' style='background: url(http://www.facebook.com/images/narrowrightbg186.gif)  repeat-y right !important;'>
+        <div class='left'>
+            <%fb_box "Activities in #{@selected_class.course.subject.name} #{@selected_class.course.number}" do %>
+                <%fb_box_subhead  "Posted Documents",{:action_name=>"see all",:url=>{:action=>"activities",:k=>@selected_class.id}} do 
+                   
+                %>                    
+                    <div style='float:left;'>                        
+                        <%@random_docs.each do |doc|%>                           
+                                <div class="clearfix" style="margin-bottom:10px">                                    
+                                    <div style='float:left'>
+                                        <%if doc.anonymous%>
+                                            <%=fb_default_pic%>                                        
+                                        <%else%>
+                                            <%=fbml_profile_pic doc.user_id%>
+                                        <%end%>
+                                    </div>
+                                    <div style='float:left;padding-left:10px;'>
+                                            <strong><%=fb_link_to truncate(doc.title,40),"/library/main?d=#{doc.id}"%></strong>
+                                            <div class='dark_gray'><%=truncate(doc.comment,50)%></div>
+                                            <%if doc.links.size > 0%>                                                
+                                                    <div class='doc_attached_links' style='padding-left:20px;background-color: #f7f7f7;background-image: url(<%=url_for_app_asset("/images/link.gif")%>);background-repeat: no-repeat;background-attachment: scroll;'>
+                                                        <%=fb_link_to doc.links.first,"/library/get?d=#{doc.id}&l=0"%>
+                                                        <%if doc.links.size > 1%>
+                                                            , <%=fb_link_to "...","/library/main?d=#{doc.id}"%>
+                                                        <%end%>                                              
+                                                    </div> 
+                                            <%end%>
+                                            <%if doc.files.size > 0%>                                                
+                                                    <div class='doc_attached_links' style='padding-left:20px;background-color: #f7f7f7;background-image: url(<%=url_for_app_asset("/images/icon_paperclip.gif")%>);background-repeat: no-repeat;background-attachment: scroll;'>
+                                                        <%=link_to_app doc.files.first.name,"/library/get?d=#{doc.id}&f=#{doc.files.first.id}&#{to_query_string}",:target=>"_blank"%>
+                                                        <%if doc.links.size > 1%>
+                                                            , <%=fb_link_to "...","/library/main?d=#{doc.id}"%>
+                                                        <%end%>
+                                                    </div>                                               
+                                            <%end%>                                        
+                                    </div>  
+                                </div>                                            
+                        <%end%>
+                        <%if @random_docs.empty?%>
+                                <div class="fallback">
+									<span class='dark_gray'>
+	                                        No documents posted to <%=@selected_class.name%>. 
+	                                </span>
+	                                <%if @selected_class.course.status == :approved%>
+    	                                <%=fb_link_to 'Post one',{:controller=>"library",:action=>"create",:c=>@selected_class.course_id}%>
+	                                <%end%>
+								</div>
+                        <%end%>
+                    </div>
+                <%end%>
+            <%end%>  
+            <div>
+                <%= render :partial => 'discussion/discussion_summary', :locals => {:owner => @selected_class, :topics => @selected_class.topics.find(:all, :conditions => ["discussable_id = ?",@selected_class.id], :order => 'created_on DESC', :limit => 3)} %>
+            </div>
+
+            <div id="fb_classtalk_wall_div">
+                <%= render :partial => 'wall/wall_template', :locals => {:owner => @selected_class, :comments => @selected_class.comments} %>
+            </div>
+
+        </div>
+        <div class='right'>
+            
+            <%fb_box "Class Instructor" do |label,actions,id| %>
+                <%unless @selected_class.instructors.empty?%>
+                    <%=table_tag :table=>{:class=>"people_table",:cellspacing=>"2"},:cols=>2 do |cols| 
+                           @selected_class.instructors.in_groups_of(2,false).each do |teachers|
+                               teachers.each do |t|
+                                  cols.add fbml_profile_pic(t.id,:size=>"square") + "<br>" + fbml_name(t.id,:useyou=>false),{:width=>"17%"}
+                               end
+                           end
+                      end                            
+                    %>   
+                <%else%>
+                    <%=fb_box_fallback id,"No faculty member at #{@selected_class.school.name} has joined this class yet. "%>
+                <%end%>    
+            
+            <%end%>    
+            <%unless @class_random_users.empty?%>
+                <%fb_box "Class Statistics" do %>  
+                    <%
+                        topic_statistic = {}
+                        @class_random_users.each do |user|
+                             if  (user[@random_stat_topic] || "").gsub(/\s/,'').size == 0
+                                 category = "None Listed"
+                             else
+                                category = user[@random_stat_topic]
+                             end
+                             topic_statistic[category] ||= 0
+                             topic_statistic[category] += 1
+                        end                    
+                    %>
+                    <div class="stats_section">
+                        <h4><%=@random_stat_topic.gsub(/_/,' ').capitalize%></h4>
+                        <dl class="clearfix stats_percent">
+                            <%values = controller.class::ParamAttributeMap[param_attr = controller.class::FQLFields.index(@random_stat_topic)] || []%>                        
+                            <%topic_statistic.sort {|a,b| b[1] <=> a[1]}.each do |cat,num|%>
+                                <%index = values.index("'#{cat}'")%>
+                                <dt><%=number_to_percentage((num.to_f/@class_random_users.size.to_f)*100,{:precision => 0})%></dt>
+                                <dd>
+                                    <%if ((index and param_attr) rescue false)%>
+                                        <%if param_attr == "sx"
+                                              attr = param_attr
+                                          else
+                                              attr = "#{param_attr}[0]"
+                                          end      
+                                        
+                                        %>
+                                        <%=fb_link_to cat.capitalize,{:action=>"browse",:escape=>false,
+                                                :k=>@selected_class.id,attr=>index}%>        
+                                    <%else%>
+                                        <span><%=cat.capitalize%></span>                          
+                                    <%end%>
+                                </dd>  
+                            <%end%>        
+                        </dl>
+                    </div>
+                <%end%>
+            <%end%>
+        </div>
+     </div>     
+     <%else%>     
+            <div class="privatenetwork">                                                
+                <p>
+                    <%if @selected_class.closed%>
+                        This class has been closed by the admins.
+                    <%else%>
+                        This class's activity is hidden for privacy. 
+                        <%if @app_user%>
+                            To see this class activity you must first join the <%=link_to_school(@selected_class.school)%> network.
+                        <%else%>
+                            To use classtalk you must first <%=fb_link_to 'install',ApplicationController::FACEBOOK_APP_INSTALL_URL%> the application.
+                        <%end%>
+                     <%end%>
+                </p>
+            </div>
+     <%end%>
+</div>
+<div class='bottom'>
+<br>
+</div>

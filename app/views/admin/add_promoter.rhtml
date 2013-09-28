@@ -1,0 +1,34 @@
+<div style='padding:30px;width:500px;margin:0 auto;'>
+    <div class='org_dialog' >        
+        <div class='inside' style='padding:10px'>
+                <h1>Add a Promoter</h1>
+                <%fb_editor(fb_url :action=>"add_promoter") do%>
+                    <%=fb_editor_text_field "user_id","",:label=>"User Id",:onblur=><<-eof
+                       if (this.getValue().length == 0) {
+                            alert('Please enter a user id')
+                       }else {
+                            new Ajax.Request('#{ajax_url :action=>:add_promoter}',Ajax.JSON,{
+                                parameters : {promoter_id : $('user_id').getValue()},
+                                ondone : function(r) {
+                                    $('promoter').setInnerFBML(r.fbml_promoter)
+                                    $('code').setValue(r.code);
+                                }                            
+                            });
+                       }   
+                    eof
+                    %> 
+                    <%fb_editor_custom_tag "" do%>   
+                        <div id='promoter'>
+                        
+                        </div>
+                    <%end%>
+                    <%=fb_editor_text_field "code","",:label=>"Code"%>                        
+                    <%=fb_editor_buttons do |buttons,cancel|                    
+                       buttons.add "Add"
+                       cancel.add "Cancel",:action=>"index"
+                      end%>                            
+                <%end%>
+        
+        </div>
+    </div>
+</div>

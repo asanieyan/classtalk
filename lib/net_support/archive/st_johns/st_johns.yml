@@ -1,0 +1,1181 @@
+--- 
+:courses: 
+- :name: ASIAN STUDIES
+  :code: ASC
+  :courses: 
+  - :name: PROBLEMS IN EAST ASIAN HISTORY
+    :number: "136"
+    :subject: ASC
+    :credit: "3"
+    :description: ""
+  - :name: BANKING IN EAST ASIA
+    :number: "256"
+    :subject: ASC
+    :credit: "3"
+    :description: ""
+  - :name: INTRO TO SOURCE MAT.ON CHINA
+    :number: "300"
+    :subject: ASC
+    :credit: "3"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION
+    :number: "925"
+    :subject: ASC
+    :credit: "0"
+    :description: ""
+- :name: LIBERAL STUDIES
+  :code: MLS
+  :courses: 
+  - :name: INTEGRATING SEM IN HUMANITIES
+    :number: "200"
+    :subject: MLS
+    :credit: "3"
+    :description: ""
+  - :name: INDEPENDENT RESEARCH
+    :number: "204"
+    :subject: MLS
+    :credit: "3"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION
+    :number: "925"
+    :subject: MLS
+    :credit: "0"
+    :description: ""
+- :name: BIOLOGY
+  :code: BIO
+  :courses: 
+  - :name: "CORE A: BIOCHEMISTRY"
+    :number: "207"
+    :subject: BIO
+    :credit: "3"
+    :description: ""
+  - :name: "CORE B: MOLECULAR BIOLOGY"
+    :number: "208"
+    :subject: BIO
+    :credit: "3"
+    :description: ""
+  - :name: PRINC OF IMMUNOCHEM &IMMUNOBIO
+    :number: "250"
+    :subject: BIO
+    :credit: "3"
+    :description: ""
+  - :name: CYTOGENETICS
+    :number: "278"
+    :subject: BIO
+    :credit: "3"
+    :description: ""
+  - :name: SPEC. RES. BIO. SCI. I
+    :number: "352"
+    :subject: BIO
+    :credit: "3"
+    :description: ""
+  - :name: SPEC. RES. BIO. SCI.II
+    :number: "353"
+    :subject: BIO
+    :credit: "3"
+    :description: ""
+  - :name: RESEARCH ROTATION I
+    :number: "550"
+    :subject: BIO
+    :credit: "3"
+    :description: ""
+  - :name: RESEARCH ROTATION II
+    :number: "551"
+    :subject: BIO
+    :credit: "3"
+    :description: ""
+  - :name: DEPARTMENTAL SEMINAR
+    :number: "599"
+    :subject: BIO
+    :credit: "1"
+    :description: ""
+  - :name: DEPARTMENTAL SEMINAR
+    :number: 599A
+    :subject: BIO
+    :credit: "0"
+    :description: ""
+  - :name: CELLULAR SIGNAL TRANSDUCTION
+    :number: "711"
+    :subject: BIO
+    :credit: "3"
+    :description: ""
+  - :name: INTERNSHIP IN BIOTECHNOLOGY
+    :number: "910"
+    :subject: BIO
+    :credit: "3"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION (MS)
+    :number: "925"
+    :subject: BIO
+    :credit: "0"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION PHD
+    :number: "940"
+    :subject: BIO
+    :credit: "0"
+    :description: ""
+  - :name: DOCTORAL RESEARCH
+    :number: "950"
+    :subject: BIO
+    :credit: "3"
+    :description: ""
+- :name: LIBRARY INFORMATION SCIENCE
+  :code: LIS
+  :courses: 
+  - :name: FUND OF COMP FOR LIB & INF SCI
+    :number: "102"
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: ORGANIZATION OF INFO:INTRODUCT
+    :number: "203"
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: ORGANIZATION OF INFO LAB
+    :number: 203L
+    :subject: LIS
+    :credit: "0"
+    :description: ""
+  - :name: INTRO TO LIBRARY & INFO SCIENC
+    :number: "204"
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: INTRO TO INFO SOURCES & SERVIC
+    :number: "205"
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: COLL DEV & MGT OF KNOWLDGE RES
+    :number: "211"
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: INDEXING AND ABSTRACTING
+    :number: "228"
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: COLLEGE AND UNIVERSITY LIB
+    :number: "231"
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: ARCHIVES AND MANUSCRIPTS
+    :number: "249"
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: MEDICAL LIT & LIBRARIANSHIP
+    :number: "256"
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: SCHOOL MEDIA INTERN:ADOLESCENT
+    :number: 269A
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: INTERNSHIP
+    :number: 269B
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: SCHOOL MEDIA INTERN:CHILDHOOD
+    :number: 269C
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: COLLOQUIA
+    :number: "270"
+    :subject: LIS
+    :credit: "0"
+    :description: ""
+  - :name: SPECIAL RESEARCH I
+    :number: "901"
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: SPECIAL RESEARCH:COMPUTER PROG
+    :number: "902"
+    :subject: LIS
+    :credit: "3"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION
+    :number: "925"
+    :subject: LIS
+    :credit: "0"
+    :description: ""
+- :name: CHEMISTRY
+  :code: CHE
+  :courses: 
+  - :name: INSTR METHODS OF ANALYSIS
+    :number: "101"
+    :subject: CHE
+    :credit: "3"
+    :description: ""
+  - :name: INSTR METHODS OF ANALYSIS LAB
+    :number: 101L
+    :subject: CHE
+    :credit: "0"
+    :description: ""
+  - :name: ADVANCED ORGANIC CHEMISTRY
+    :number: "121"
+    :subject: CHE
+    :credit: "3"
+    :description: ""
+  - :name: BIOCHEMISTRY
+    :number: "207"
+    :subject: CHE
+    :credit: "3"
+    :description: ""
+  - :name: NATURAL PRODUCTS
+    :number: "236"
+    :subject: CHE
+    :credit: "3"
+    :description: ""
+  - :name: QUANTUM CHEMISTRY
+    :number: "249"
+    :subject: CHE
+    :credit: "3"
+    :description: ""
+  - :name: INDEPENDENT STUDY
+    :number: "260"
+    :subject: CHE
+    :credit: "3"
+    :description: ""
+  - :name: MASTER'S RESEARCH
+    :number: "900"
+    :subject: CHE
+    :credit: "3"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION
+    :number: "925"
+    :subject: CHE
+    :credit: "0"
+    :description: ""
+- :name: MATH
+  :code: MTH
+  :courses: 
+  - :name: DISCRETE MATHEMATICS
+    :number: "160"
+    :subject: MTH
+    :credit: "3"
+    :description: ""
+  - :name: THEORY OF FUNC OF COMP VARI II
+    :number: "208"
+    :subject: MTH
+    :credit: "3"
+    :description: ""
+  - :name: MODERN ALGEBRA II
+    :number: "212"
+    :subject: MTH
+    :credit: "3"
+    :description: ""
+  - :name: THEORY OF DIFF. EQUATIONS II
+    :number: "218"
+    :subject: MTH
+    :credit: "3"
+    :description: ""
+  - :name: THEORY OF FUNC OF REAL VARI II
+    :number: "308"
+    :subject: MTH
+    :credit: "3"
+    :description: ""
+  - :name: SEMINAR I
+    :number: "403"
+    :subject: MTH
+    :credit: "3"
+    :description: ""
+- :name: CHINESE
+  :code: CHI
+  :courses: 
+  - :name: READINGS IN CONTEMPORARY PROSE
+    :number: "111"
+    :subject: CHI
+    :credit: "3"
+    :description: ""
+  - :name: CHINESE FOR BUSINESS MANAGERS
+    :number: "211"
+    :subject: CHI
+    :credit: "3"
+    :description: ""
+- :name: PSYCHOLOGY
+  :code: PSY
+  :courses: 
+  - :name: PSYCHOLOGY LABORATORY I
+    :number: "604"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: PERCEPTION II
+    :number: "607"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: MULT DES & ANAL FOR PSY RES
+    :number: "614"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: MULTIVARIATE STATISTICS LAB
+    :number: 614L
+    :subject: PSY
+    :credit: "0"
+    :description: ""
+  - :name: DEVELOPMENTAL PSYCHOLOGY I
+    :number: "623"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: DEVELOPMENT PSYCHOLOGY II
+    :number: "624"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: CULT DIVERSITY IN PSY SERVICES
+    :number: "627"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: PSYCHOLOGY OF WOMEN
+    :number: "637"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: PHYSIOLOGICAL PSYCHOLOGY
+    :number: "648"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: HIST. & SYSTEMS OF PSYCHOLOGY
+    :number: "650"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: PSYCHOEDUCATIONAL ASSESS. II
+    :number: "662"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: PSYCHOEDUC ASSESS II-BILINGUAL
+    :number: 662B
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: BILINGUAL PSY ED ASSESS LAB II
+    :number: 662BL
+    :subject: PSY
+    :credit: "0"
+    :description: ""
+  - :name: PSYCHOEDUCATION ASSESS LAB II
+    :number: 662L
+    :subject: PSY
+    :credit: "0"
+    :description: ""
+  - :name: ASSESSMENT II-GENERAL
+    :number: "663"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: INTRO TO INTERVIEWING & COUNS.
+    :number: "666"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: ASSESSMENT LAB - GENERAL
+    :number: "670"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: CHILD-ADOLESCENT PERSONALITY I
+    :number: "671"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: RESEARCH COLLOQUIUM
+    :number: "695"
+    :subject: PSY
+    :credit: "0"
+    :description: ""
+  - :name: INDEPENDENT RESEARCH
+    :number: "696"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: CLINIC PRACTICUM II - GENERAL
+    :number: "699"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: CLINIC PRACTICUM IV - CHILD
+    :number: "702"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: PSYCHO-EDUCATIONL CONSULTATION
+    :number: "716"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: PSYCHOPATH ACROSS LIFE SPAN II
+    :number: "727"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: ASSESS&INTERV.PRACTICUM II-GEN
+    :number: "742"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: BEHAVIOR THRPY SCHL PSYCHOLOGY
+    :number: "749"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: BEHAVIOR THERAPY
+    :number: "750"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: BEHAVIOR MODIFIC. PRACTICUM
+    :number: "751"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: INTERNSHIP SEMINAR II
+    :number: "753"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: SCHOOL PSY SEM 4
+    :number: "755"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: MARITAL AND FAMILY THERAPY
+    :number: "760"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: PRACTICUM IN SCHOOL PSYCH II
+    :number: "762"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: PRACT IN SCH PSY II-BILINGUAL
+    :number: 762B
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: PSY INTERVENTION PRACTICUM 3
+    :number: "765"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: FORENSIC PSYCHOLOGY
+    :number: "839"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: ADV PHYSIO PSY:PSYCHOPHARMACOL
+    :number: "861"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: INDEPENDENT STUDY
+    :number: "862"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: MASTERS THESIS RESEARCH
+    :number: "900"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: CLINICAL PSYCH INTERNSHIP II
+    :number: "904"
+    :subject: PSY
+    :credit: "0"
+    :description: ""
+  - :name: SCHOOL PSY. DOCTORAL INTERN I
+    :number: "905"
+    :subject: PSY
+    :credit: "0"
+    :description: ""
+  - :name: SCHOOL PSYCHOLOGY INTERN II
+    :number: "906"
+    :subject: PSY
+    :credit: "0"
+    :description: ""
+  - :name: GENERAL EXP MAINTAINING MATRIC
+    :number: "925"
+    :subject: PSY
+    :credit: "0"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION PHD
+    :number: "940"
+    :subject: PSY
+    :credit: "0"
+    :description: ""
+  - :name: DOCTORAL RESEARCH
+    :number: "950"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: DOCTORAL RESEARCH-SCHOOL PSYCH
+    :number: "951"
+    :subject: PSY
+    :credit: "3"
+    :description: ""
+  - :name: DOCTORAL RESEARCH
+    :number: "952"
+    :subject: PSY
+    :credit: "2"
+    :description: ""
+  - :name: SCH. PSY. MAINTAINING MATRIC
+    :number: "960"
+    :subject: PSY
+    :credit: "0"
+    :description: ""
+  - :name: "CLIN. PRACTICUM : INDIVIDUAL"
+    :number: 999A
+    :subject: PSY
+    :credit: "0"
+    :description: ""
+- :name: CRIMINOLOGY
+  :code: CRM
+  :courses: 
+  - :name: CRIMINOLOGICAL THEORY
+    :number: "232"
+    :subject: CRM
+    :credit: "3"
+    :description: ""
+  - :name: WOMAN & CRIME
+    :number: "234"
+    :subject: CRM
+    :credit: "3"
+    :description: ""
+  - :name: GLOBAL CRIME
+    :number: "235"
+    :subject: CRM
+    :credit: "3"
+    :description: ""
+  - :name: PRINCIPLES OF FORENSIC SCIENCE
+    :number: "240"
+    :subject: CRM
+    :credit: "3"
+    :description: ""
+  - :name: "SOC RES: STRATEGIES, TACTICS"
+    :number: "300"
+    :subject: CRM
+    :credit: "3"
+    :description: ""
+  - :name: MASTERS THESIS RESEARCH
+    :number: "900"
+    :subject: CRM
+    :credit: "3"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION
+    :number: "925"
+    :subject: CRM
+    :credit: "0"
+    :description: ""
+- :name: SOCIOLOGY
+  :code: SOC
+  :courses: 
+  - :name: GLOBALIZATION:ORIGINS,MEAN&CON
+    :number: "130"
+    :subject: SOC
+    :credit: "3"
+    :description: ""
+  - :name: PERSONALITY, SOCIETY & CULTURE
+    :number: "147"
+    :subject: SOC
+    :credit: "3"
+    :description: ""
+  - :name: "SOCIOLOGICAL THEORY: CLASSICAL"
+    :number: "210"
+    :subject: SOC
+    :credit: "3"
+    :description: ""
+  - :name: GLOBAL POVERTY
+    :number: "234"
+    :subject: SOC
+    :credit: "3"
+    :description: ""
+  - :name: SOC RES STRATEGIES & TACTICS
+    :number: "300"
+    :subject: SOC
+    :credit: "3"
+    :description: ""
+  - :name: "READINGS IN SOC: SELEC. TOPICS"
+    :number: "420"
+    :subject: SOC
+    :credit: "3"
+    :description: ""
+  - :name: MASTER'S RESEARCH
+    :number: "900"
+    :subject: SOC
+    :credit: "3"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION
+    :number: "925"
+    :subject: SOC
+    :credit: "0"
+    :description: ""
+- :name: ENGLISH
+  :code: ENG
+  :courses: 
+  - :name: MODERN CRITICAL THEORIES
+    :number: "100"
+    :subject: ENG
+    :credit: "3"
+    :description: ""
+  - :name: COMP THEORY & TCHNG OF WRITE
+    :number: "120"
+    :subject: ENG
+    :credit: "3"
+    :description: ""
+  - :name: CHAUCER
+    :number: "230"
+    :subject: ENG
+    :credit: "3"
+    :description: ""
+  - :name: TOPICS IN EARLY MOD STUDIES
+    :number: "380"
+    :subject: ENG
+    :credit: "3"
+    :description: ""
+  - :name: COLLOQUIA
+    :number: "500"
+    :subject: ENG
+    :credit: "0"
+    :description: ""
+  - :name: TOPICS 19TH CENT BRIT LIT &CUL
+    :number: "590"
+    :subject: ENG
+    :credit: "3"
+    :description: ""
+  - :name: 19TH CENTURY PUBLIC CULTURE
+    :number: "600"
+    :subject: ENG
+    :credit: "3"
+    :description: ""
+  - :name: CARIBBEAN LIT, CULTURE &THEORY
+    :number: "761"
+    :subject: ENG
+    :credit: "3"
+    :description: ""
+  - :name: TPCS IN 20TH CENT BRT LIT CUL
+    :number: "775"
+    :subject: ENG
+    :credit: "3"
+    :description: ""
+  - :name: MASTER'S RESEARCH
+    :number: "900"
+    :subject: ENG
+    :credit: "3"
+    :description: ""
+  - :name: READINGS AND RESEARCH
+    :number: "901"
+    :subject: ENG
+    :credit: "3"
+    :description: ""
+  - :name: MAINTAINING MATRICUATION (MA)
+    :number: "925"
+    :subject: ENG
+    :credit: "0"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION (DA)
+    :number: "930"
+    :subject: ENG
+    :credit: "0"
+    :description: ""
+  - :name: DOCTORAL RESEARCH ESSAY (DA)
+    :number: "975"
+    :subject: ENG
+    :credit: "3"
+    :description: ""
+- :name: SPANISH
+  :code: SPA
+  :courses: 
+  - :name: WOMEN WRITERS FROM SPA-AMERICA
+    :number: "239"
+    :subject: SPA
+    :credit: "3"
+    :description: ""
+  - :name: SPA AMER NOVEL FROM LIZ TO MAR
+    :number: "249"
+    :subject: SPA
+    :credit: "3"
+    :description: ""
+  - :name: SPAIN IN N.AMERICA:EARLY WRITI
+    :number: "300"
+    :subject: SPA
+    :credit: "3"
+    :description: ""
+  - :name: VISUAL ARTS IN SPA LIT
+    :number: "310"
+    :subject: SPA
+    :credit: "3"
+    :description: ""
+  - :name: MASTER'S RESEARCH
+    :number: "900"
+    :subject: SPA
+    :credit: "3"
+    :description: ""
+  - :name: INDEPENDENT STUDY
+    :number: "901"
+    :subject: SPA
+    :credit: "3"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION
+    :number: "925"
+    :subject: SPA
+    :credit: "0"
+    :description: ""
+- :name: GOVERNMENT
+  :code: GOV
+  :courses: 
+  - :name: POLITICS OF THE MIDDLE EAST
+    :number: "131"
+    :subject: GOV
+    :credit: "3"
+    :description: ""
+  - :name: GLOBAL ENVIRONMENTAL POLITICS
+    :number: "156"
+    :subject: GOV
+    :credit: "3"
+    :description: ""
+  - :name: POL&ADMIN PROBLEMS-DEV NATIONS
+    :number: "189"
+    :subject: GOV
+    :credit: "3"
+    :description: ""
+  - :name: MODERN POLITICAL RESEARCH
+    :number: "205"
+    :subject: GOV
+    :credit: "3"
+    :description: ""
+  - :name: RESEARCH METH & QUANT ANALYSIS
+    :number: "215"
+    :subject: GOV
+    :credit: "3"
+    :description: ""
+  - :name: AMER POL THOUGHT SINCE 1800
+    :number: "221"
+    :subject: GOV
+    :credit: "3"
+    :description: ""
+  - :name: INTERNSHIP:PUBLIC ADMIN II
+    :number: "236"
+    :subject: GOV
+    :credit: "3"
+    :description: ""
+  - :name: STATE & LOCAL GOVER & ADMINIS
+    :number: "241"
+    :subject: GOV
+    :credit: "3"
+    :description: ""
+  - :name: INTER POLITICAL ECONOMY I
+    :number: "277"
+    :subject: GOV
+    :credit: "3"
+    :description: ""
+  - :name: PUB ADMIN OF EMERGING STATES
+    :number: "290"
+    :subject: GOV
+    :credit: "3"
+    :description: ""
+  - :name: INTERNA LAW:LAW OF WAR&NEUTRAL
+    :number: "344"
+    :subject: GOV
+    :credit: "3"
+    :description: ""
+  - :name: READING AND RESEARCH
+    :number: "357"
+    :subject: GOV
+    :credit: "3"
+    :description: ""
+  - :name: COLLOQUIA
+    :number: "420"
+    :subject: GOV
+    :credit: "0"
+    :description: ""
+  - :name: MASTER'S RESEARCH
+    :number: "900"
+    :subject: GOV
+    :credit: "3"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION
+    :number: "925"
+    :subject: GOV
+    :credit: "0"
+    :description: ""
+- :name: SPEECH
+  :code: SPE
+  :courses: 
+  - :name: INTRO TO SPEECH-LANGUAGE PATHL
+    :number: "106"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: INTRO TO RESEARCH METHODS
+    :number: "201"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: ACOUSTICS & PERCEPTION OF SPE
+    :number: "202"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: MODELS OF LANGUAGE BEHAVIOR
+    :number: "203"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: ADV ANATOMY & PHYSIO OF SPEECH
+    :number: "204"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: ORIG & ASSESS SPE LANG PROB II
+    :number: "211"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: HABIL & REHABIL PROCD HEAR IMP
+    :number: "214"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: VOICE DISORDERS
+    :number: "310"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: MOTOR SPEECH DISORDERS
+    :number: "312"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: ACQUIRED LANGUAGE DISORDERS
+    :number: "317"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: DEVELOP LANG DISORDERS
+    :number: "318"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: IND STUDY SPE - LANG PATHOLOGY
+    :number: "324"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: "DYSPHAGIA: THEORY & PRACTICE"
+    :number: "328"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: SPE-LANG PATH PRACT/ED SETTING
+    :number: "330"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: PEDIATRIC AUDIOLOGY
+    :number: "352"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: DYNAMICS HEAR AID FIT & DISPSG
+    :number: "358"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: BILINGUALISM ESL SPE-LAN PATH
+    :number: "381"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: SPE-LANG PATHOLOGY PRACTICUM
+    :number: 405A
+    :subject: SPE
+    :credit: "1"
+    :description: ""
+  - :name: SPE-LANG PATHOLOGY PRACTICUM
+    :number: 405B
+    :subject: SPE
+    :credit: "2"
+    :description: ""
+  - :name: PRACTICUM-LANG PATH IN EDU SET
+    :number: "407"
+    :subject: SPE
+    :credit: "2"
+    :description: ""
+  - :name: CLIN PRACT AUDIO SPE-LANG PATH
+    :number: "420"
+    :subject: SPE
+    :credit: "1"
+    :description: ""
+  - :name: CLIN PRACT DIAG AUDIOLOGY
+    :number: 425A
+    :subject: SPE
+    :credit: "1"
+    :description: ""
+  - :name: CLIN PRACT DIAG AUDIOLOGY
+    :number: 425B
+    :subject: SPE
+    :credit: "2"
+    :description: ""
+  - :name: CLIN PRAC AURAL REHABILITATION
+    :number: 430B
+    :subject: SPE
+    :credit: "2"
+    :description: ""
+  - :name: ADVNCD RSRCH MTHDS (MTHDS II)
+    :number: "440"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: INSTRUMENTATION & MICROCOMPTRS
+    :number: "450"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: SPECIAL RESEARCH IN AUDIOLOGY
+    :number: "451"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: SPE RES IN SPEECH LANG PATHLGY
+    :number: "452"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: MANUAL COMMUN/SIGN LANGUAGE
+    :number: "490"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: LEADERSHIP & SUP CLIN AUD PROG
+    :number: "740"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: MASTER'S RESEARCH
+    :number: "900"
+    :subject: SPE
+    :credit: "3"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION
+    :number: "925"
+    :subject: SPE
+    :credit: "0"
+    :description: ""
+  - :name: "MAINTAINING MATRICULATION: AUD"
+    :number: "930"
+    :subject: SPE
+    :credit: "0"
+    :description: ""
+- :name: HISTORY
+  :code: HIS
+  :courses: 
+  - :name: RISE & FALL OF MOD IMPERIALISM
+    :number: "133"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: PROBLEMS IN FAR EASTERN HIST.
+    :number: "136"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: MODERN HISTORICAL RESEARCH
+    :number: "401"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: THE AMERICAN REVOLUTION
+    :number: "464"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: TOPICAL SEMINAR:MUHAMMAD &BIO
+    :number: "520"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: COLLOQ:AMER IN THE GILDED AGE
+    :number: "637"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: TECHN & TRANSFM IN WEST EUROPE
+    :number: "718"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: MODERNIZATION SUBSAHARA AFRICA
+    :number: "724"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: SEM II INT IMPLIC OF MODERNIZA
+    :number: "750"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: REASONING & HISTORICAL INQUIRY
+    :number: "840"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: MASTER'S RESEARCH
+    :number: "900"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: READING & RESEARCH (MA)
+    :number: "901"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: TEACHING INTERNSHIP
+    :number: "905"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: TEACHING INTERNSHIP
+    :number: "906"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION (MA)
+    :number: "925"
+    :subject: HIS
+    :credit: "0"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION (DA)
+    :number: "930"
+    :subject: HIS
+    :credit: "0"
+    :description: ""
+  - :name: DEPARTMENTAL COLLOQUIA
+    :number: "970"
+    :subject: HIS
+    :credit: "0"
+    :description: ""
+  - :name: DOCTORAL RESEARCH ESSAY
+    :number: "975"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: DIRECTED READING & RESEARCH DA
+    :number: "990"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+  - :name: DIRECT READ & RESEARCH INT IMP
+    :number: "991"
+    :subject: HIS
+    :credit: "3"
+    :description: ""
+- :name: THEOLOGY
+  :code: THE
+  :courses: 
+  - :name: BIBLICAL HEBREW II
+    :number: "112"
+    :subject: THE
+    :credit: "3"
+    :description: ""
+  - :name: THE JOHANNINE LITERATURE
+    :number: "272"
+    :subject: THE
+    :credit: "3"
+    :description: ""
+  - :name: HIST OF CHRISTIAN DOCTRINE II
+    :number: "352"
+    :subject: THE
+    :credit: "3"
+    :description: ""
+  - :name: THEOLOGY IN THE MIDDLE AGES
+    :number: "357"
+    :subject: THE
+    :credit: "3"
+    :description: ""
+  - :name: THE MYSTERY OF GOD
+    :number: "401"
+    :subject: THE
+    :credit: "3"
+    :description: ""
+  - :name: CHRISTIAN HOPE & WORLD FUTURE
+    :number: "440"
+    :subject: THE
+    :credit: "3"
+    :description: ""
+  - :name: SPECIFIC MORAL PROBLEMS
+    :number: "526"
+    :subject: THE
+    :credit: "3"
+    :description: ""
+  - :name: MCKEEVER SEMINAR
+    :number: "599"
+    :subject: THE
+    :credit: "3"
+    :description: ""
+  - :name: MINISTRY TO TEENS AND ADULTS
+    :number: "703"
+    :subject: THE
+    :credit: "3"
+    :description: ""
+  - :name: LITUR. CELEB:THEORY & PRACTICE
+    :number: "823"
+    :subject: THE
+    :credit: "3"
+    :description: ""
+  - :name: MASTERS RESEARCH
+    :number: "900"
+    :subject: THE
+    :credit: "3"
+    :description: ""
+  - :name: INDEPENDENT RESEARCH
+    :number: "903"
+    :subject: THE
+    :credit: "3"
+    :description: ""
+  - :name: MAINTAINING MATRICULATION
+    :number: "925"
+    :subject: THE
+    :credit: "0"
+    :description: ""
+- :name: ART
+  :code: ART
+  :courses: []
+
+:info: 
+  :semesters: 
+  - - Fall
+    - 8/29
+    - 12/20
+  - - Spring
+    - 1/5
+    - 5/15
+  - - Summer I
+    - 6/1
+    - 7/5
+  - - Summer II
+    - 7/7
+    - 8/10
+  - - Post Session
+    - 8/11
+    - 8/21
+  :name: St. Johns
+  :city: queens
+  :nid: "16777493"
+  :region: new york
+  :country: united states

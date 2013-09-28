@@ -1,0 +1,67 @@
+/*Title: Tab Bar,Tabs Different Tab than the network tab
+  Used: Create New Document Stepts*/
+.tab_bar
+{
+	padding-top: 3px;
+	padding-right: 20px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #3b5998;
+}
+.step_tabs div
+{
+	display: inline;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.step_tabs .disabled
+{
+	color: #c0c0c0;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	text-decoration: none;
+}
+.step_tabs a 
+{
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+}
+.step_tabs .activetab a 
+{
+	color: white;
+	background-color: #3b5998;
+	background-image: none;
+	background-repeat: repeat;
+	background-attachment: scroll;
+}
+.step_tabs .activetab a:hover {	
+	text-decoration: none 
+}
+.step_tabs .inactivetab a:hover
+{
+    background-color: #d8dfea;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    text-decoration: none;
+}

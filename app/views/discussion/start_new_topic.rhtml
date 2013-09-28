@@ -1,0 +1,36 @@
+<div id="page_body" class="discussions board">
+<%=render_p 'header'%>
+
+<%=fbml_tabs do |tabs|
+  if @owner.topics.count > 0 then 
+    tabs.add "Discussion Board",:controller =>'discussion', :action=>'topics', :cn => @owner.class, :cid => @owner.id
+  end
+  tabs.add "Start New Topic",:controller =>'discussion', :action=>'start_new_topic', :cn => @owner.class, :cid => @owner.id
+end %>
+
+
+<%= flash[:server_message] %>
+
+<div id="editor" class="post_editor clearfix" style='display:block'>
+    <form method="post" action="<%= fb_url_for :controller => 'discussion', :action => 'start_new_topic' %>">
+        <div>
+          <label>Topic</label>
+          <input type="text" id="name" name="name" class="inputtext" value="<%=@topic.name%>" size='75' maxlength="<%=@topic.size_of('name')%>">
+        </div>
+    
+        <div>
+            <label>Your Post</label>
+            <textarea id='body' name='body' class='textarea'><%=@post.body%></textarea>
+        </div>
+        <div>
+            <label> Post Anonymously: <input type="checkbox" name="is_anonymous"> </label>
+        </div>
+        <div>
+            <input type="hidden" value="<%=@owner.class%>" name="cn">
+            <input type="hidden" value="<%=@owner.id%>" name="cid">
+            <input type="submit" value="Post new topic" name="submit_button" id="submit_button" style="border-style: solid;  border-top-width: 1px;  border-left-width: 1px;  border-bottom-width: 1px;  border-right-width: 1px;  border-top-color: #D9DFEA;  border-left-color: #D9DFEA;  border-bottom-color: #0e1f5b;  border-right-color: #0e1f5b;  background-color: #3b5998;  color: #FFFFFF;  font-size: 11px;  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;   text-align: center;"/> 
+            or <%= fb_link_to "Cancel", @owner.back_url%>.
+        </div>
+    </form>
+</div>
+</div>

@@ -1,0 +1,163 @@
+<%
+    sql_options = {
+        :select=>"COUNT(school_id) AS num,schools.closed,schools.name,schools.id",       
+        :group => "schools.id",
+        :joins=>"left join schools_users on school_id = schools.id"    
+    }
+
+%>
+<%
+    all_schools = School.find(:all,sql_options.merge(:order=>"name ASC"))
+    visited_today = User.find(:all,:conditions=>["access_time > ?",Time.now.utc.at_beginning_of_day])
+    most_visiting_schools = School.find(:all,sql_options.merge(:limit=>5,:order=>"num DESC",:conditions=>"user_id IN (#{ids_of visited_today})"))
+    most_visiting_schools = most_visiting_schools.select{|s| s['num'].to_i > 0}
+    most_active_users = User.find(:all,:order=>"access_time DESC",:limit=>10)
+
+%>
+
+<style>
+    h4 {      
+        padding-top:5px;
+        padding-bottom:5px;
+        color:#707070;        
+    }
+    .left {
+      width: 410px;
+      float: left;
+    }    
+    .right {
+      width: 185px;
+      float: right;
+    }
+
+</style>
+    <div class='left'>
+        <%fb_box "New Courses" do %>        
+                <div id='added_courses' class='wide' style='overflow:auto'>
+                    <%=render_p 'added_courses'%>        
+                </div>
+        <%end%>
+        <%fb_box "Statistics" do %>
+              <%fb_box_subhead "Overall" do%>
+                    <%
+                       
+                    %>
+                    <h4>
+                        There are <%=User.count("true")%>  students. <%=visited_today.size %> visited today.                    
+                    </h4>
+                    <h4> <%=most_active_users.size%> Most Active Users:</h4>                                      
+                           <% most_active_users.each do |user| %> 
+                                <%=fbml_profile_pic user.id%>
+                           <%end%>
+                    <h4>We are supporting <%=School.count("true")%> schools.</h4>
+              <%end%>
+              <br>
+              <%fb_box_subhead "Schools" do%>
+                  <%=select_tag "s",options_for_select([""] + all_schools.map{|s| ["#{s.name} (#{s.num})",s.id]}),
+                        :onchange=><<-eof
+                            x2 = new Ajax();
+                            x2.responseType=Ajax.FBML;
+                            x2.ondone = function(response) {
+                                document.getElementById('school_info').setInnerFBML(response);                                 
+                            };
+                            x2.post('#{ajax_url :action=>:get_school}',{ s : document.getElementById('s').getValue()});
+                        eof
+                  %>
+                  <%link_to_function "Toggle View","$('school_info').toggle()"%>
+                  <br><br>
+                  <div id='school_info'>
+                  
+                  </div>
+              <%end%>                  
+        <%end%> 
+
+    </div>
+    <div class='right'>
+        <%fb_box "Promoter" do |label,actions|
+            actions.add "Add New",{:action=>"add_promoter"}
+         %>
+            <%Promo.find(:all).each do |promo|%>
+                    <div id='p<%=promo.id%>'>
+                        <div style='float:right'>
+                            <%=link_to_function "X",<<-eof
+                                    x = new Ajax();
+                                    x.responseType=Ajax.RAW;
+                                    x.post("#{ajax_url :action=>:add_promoter,:del=>promo.user_id}");
+                                    $('p#{promo.id}').setTextValue("");
+                            eof
+                            %>
+                        </div>                    
+                        <%=promo.code%> - <%=link_to fbml_name(promo.user_id,:useyou=>false),fb_message_url(promo.user_id),:target=>"_blank"%> (<%=promo.counter%>)
+                    </div>
+            <%end%>        
+        <%end%>
+        <%fb_box "New Schools" do%>
+             <%School.find(:all,:conditions=>"sem_loaded = 0",:order=>"created_on DESC").each do |s|%>      
+                <%id = rand(1000)%>
+                <div id='<%=id%>'>
+                    <div style='float:right'>
+                        <small>
+                            <%=link_to_edit(s,:after_edit=>"$('#{id}').hide();")%>
+                        </small>                    
+                    </div>
+                    <div><%=link_to_school(s,{:target=>"_blank"})%> </div>
+                </div>
+             <%end%>        
+        <%end%>
+        <%fb_box "Requests" do%>
+            <%
+                reqs = School.find(:all,:from=>"requested_schools as rs",
+                                    :select=>"rs.name as name,rs.nid as id,count(*) as num_requests,schools.id as supported",
+                                    :joins=>"left join schools on rs.nid = schools.id",
+                                    :group=>"rs.nid",:order=>"supported ASC,num_requests DESC")
+            %>
+            
+            <%reqs.each_with_index do |req,i|%>
+            <div id='nid<%=req.id%>'style='margin-bottom:5px'>                         
+            <%if req['supported']%> 
+                <div style='float:right'>
+                    <%=link_to_function "X",<<-eof
+                            new Ajax.Updater('nid#{req.id}','#{ajax_url :action=>:delete_req_school,:nid=>req.id}',Ajax.RAW);                            
+                    eof
+                    %>
+                </div>
+            <%end%>
+            <%="#{i+1}."%> 
+ 
+                            <%=link_to_school(req,{:target=>"_blank"})%>           
+                            <small>
+                                <%if req['supported']%>                                    
+                                    (Supported)
+                                <%else%>
+                                    (<%=req.num_requests%>)      
+                                    
+                                <%end%>
+                            </small>
+                   
+            </div>
+            <%end%>
+                             
+        
+        <%end%>
+        <%fb_box "Your Activities" do%>
+            <%fake_schools = School.find(session['fake_schools'] || [])%>                       
+            <%
+                options = {}
+                options[:action_name] = "Reset"
+                options[:url] = ""
+                options[:html] = {:onclick=>"new Ajax.Updater('fake_schools','#{ajax_url :action=>:reset_fake_schools}',Ajax.RAW);return false;"}
+            %>                
+            
+            <%fb_box_subhead "My Schools",options do %>
+                <div id='fake_schools'>                       
+                       <%fake_schools.each do |school|%>
+                            <div>
+                                <%=link_to_school(school)%>
+                            </div>
+                        <%end%>        
+                </div>              
+            <%end%>                
+        <%end%>
+    </div>
+
+<br>

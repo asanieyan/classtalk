@@ -1,0 +1,19 @@
+--- 
+:courses: []
+
+:info: 
+  :city: cambridge
+  :nid: "16777217"
+  :name: Harvard
+  :semesters: 
+  - - Fall
+    - 9/10
+    - 12/25
+  - - Spring
+    - 1/1
+    - 5/28
+  - - Summer
+    - 6/22
+    - 8/20
+  :region: massachusetts
+  :country: united states

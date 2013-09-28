@@ -1,0 +1,61 @@
+<%=javascript_tag "TimeSaver.initialize()"%>
+<h2>	
+	<span><%=@course.full_title%></span>
+</h2>
+<div class="dialog_content" >
+	<div class='dialog_body'>
+		<div id='message'></div>
+		<div style='font-weight:bold'> 
+		    To register select the days then select a time
+		    <div style='font-weight:normal'>
+		       Only enter the class lecture timetable, not the labs or tutorial times.
+		    </div>
+		</div>				
+	    <% days=%w(Monday Tuesday Wednesday Thursday Friday Saturday Sunday)%>    
+	    <table class='top_v_align' style='font-size:8pt;' cellspacing=0 style=''>
+	        <tr>
+	            <td colspan=10 class='bold_light_gray'> 
+	                 Enter time in format hh:mm (ex. 12:30, 1:30)<br>
+	             </td>
+	        </tr>
+	        <tr>
+	            <% days.in_groups_of(2,false) do |two_days| %>                
+	             <td style=''>
+	                    <% two_days.each do |day| %>
+							<%=  check_box_tag("day[#{day}]","#{day}",false,:id=>day,:class=>"day") +  content_tag(:label,day,:for=>day,:style=>"font-weight:normal !important") %><br>
+	                    <% end%>
+	             </td>
+	           <% end%>			
+	            <td style='padding-left:20px;vertical-align:top'>                   
+	                    From: <br><br>To:            
+	            </td>
+	            <td style='vertical-align:top;with:150px'> 		              
+	                <%=text_field_tag "start[time]",nil,:maxlength=>5,:size=>5,:onblur=>'TimeSaver.validateTime(this,"ms",true)'%>
+	                <%=select_tag "ms",options_for_select(%w(am pm))%>
+	                <br><br>
+	                <%=text_field_tag "end[time]",nil,:maxlength=>5,:size=>5,:onblur=>'TimeSaver.validateTime(this,"me",false)'%>
+	                <%=select_tag "me",options_for_select(%w(am pm),'pm')%>
+	
+	               <br>               <br>
+	               <div style='text-align:right'>
+		                <%=link_to_function 'Add this time',"TimeSaver.saveNewTimeTableFor(#{@course.id});return false;" %>
+	               </div>
+	            </td>
+	        </tr>
+	    </table>   
+		<%=(form_remote_tag :success=>"setmerequest(request)",:url=>{:action=>'register_in_course'},:html=>{:id=>'new_timetable'})%>
+			<%=hidden_field_tag "c",@course.id%>
+        	<%=hidden_field_tag "sem",@semester.id%>			
+			<%=hidden_field_tag "nid",@course.school.id%>
+			<div id='timetable_info'>
+					
+			</div>
+			<%= submit_tag "remote_submit",:style=>"display:none",:id=>"remote_timetable_submit"%>
+		</form>
+		
+	</div>			
+	<div class="dialog_buttons">
+		<input id='register_button' class="inputsubmit" type="button" name="confirm" onclick="$('remote_timetable_submit').click();generic_dialog.get_dialog(this).show_message('Sucessful Registeration', '');" value="Register"/>
+		<input class="inputsubmit" type="button" value="Cancel" onclick="generic_dialog.get_dialog(this).hide();"/><br/>
+	</div>
+</div>

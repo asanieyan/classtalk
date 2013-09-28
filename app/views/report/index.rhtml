@@ -1,0 +1,38 @@
+<%=fb_css "dialog.css"%>
+<br>
+<div id='server_message'>
+
+</div>
+<table width="440" cellspacing="0" border="0" id="dialog">
+<tbody><tr><td class="dialog">
+<h4><%=@reported_object.report_title%></h4>
+<div style="margin: 10px;">You are about to report a violation of our <a href="http://sfu.facebook.com/terms.php">Terms of Use</a>. <strong>All reports are strictly confidential.</strong> Facebook will review this report and take action as necessary.<br/><br/>We will NOT remove groups just because you disagree with the statement being made.
+<%fb_form_tag({}) do%>
+<table cellspacing="0" border="0" class="formtable">
+<tbody><tr><td class="label">Reason:</td><td>
+<div id='v'></div>
+<%=select_subjects(@reported_object.report_subjects,flash[:rs])%>
+<%=
+   javascript_tag <<-eof
+      $('rs').observe('change',function(){
+        if ($('rs').getValue() >= 0) 
+            $('comment').setDisabled(false)
+        else
+            $('comment').setDisabled(true)                    
+      })
+   eof
+%>
+</td></tr>
+<tr class="tallrow"><td class="label">Additional<br/>Comments:<br/><small>(required)</small></td><td><textarea <%=flash[:rs].nil? ? "disabled='true'" : ""%> rows="4" cols="41" class="textarea" name="comment" id="comment" ><%=flash[:comment]%></textarea></td></tr>
+</tbody></table>    
+    <%=hidden_field_tag "t",params[:t]%>
+    <%=hidden_field_tag "id",params[:id]%>
+    <div class="buttons">
+        <%=fb_submit_tag "Report"%> or
+        <%=fb_link_to 'Cancel',@reported_object.url%>
+
+    </div>
+<%end%>
+</div></td></tr></tbody></table>
+<br>
+<br>

@@ -1,0 +1,44 @@
+#steve 
+24.80.201.71:
+ application_id: 2536880959
+ application_api_key: a8bec8b6ea07ff6abe3fbdee662f91b4
+ application_secret_key: b3798c2e539df44ae892e265ea3c3e3e
+ application_server: http://24.86.0.167:3000 #http://70.68.128.37:3000
+ application_asset_server: http://24.86.0.167:3000 #http://70.68.128.37:3000
+ application_name: classtalk
+ facebook_application_host: http://apps.facebook.com
+ application_url:  /classtest	
+
+#test servrer
+10.10.10.103:
+ application_id: 5316177587
+ application_api_key: d31505e34608d19c710e5712a9878f86
+ application_secret_key: a7d91c77a12f7a35a8410f55ec9cfe8c
+ application_server: http://24.86.0.167:3002 #http://70.68.128.37:3000
+ application_asset_server: http://24.86.0.167:3002 #http://70.68.128.37:3000
+ application_name: classtalk
+ facebook_application_host: http://apps.facebook.com
+ application_url:  /classlive	
+
+#arash
+10.10.10.102:
+ application_id: 2536880959
+ application_api_key: a8bec8b6ea07ff6abe3fbdee662f91b4
+ application_secret_key: b3798c2e539df44ae892e265ea3c3e3e
+ application_server: http://24.86.0.167:3000 #http://70.68.128.37:3000
+ application_asset_server: http://24.86.0.167:3000 #http://70.68.128.37:3000
+ application_name: classtalk
+ facebook_application_host: http://apps.facebook.com
+ application_url:  /classtest
+
+#dont ever touch this. this is for the production setting 
+192.168.1.55:
+ application_id: 2550000973
+ application_api_key: ae349a600dc304d2b864c8f3b85013a8
+ application_secret_key: 949dfad16b9c3945b2c1ca85ae3f568d
+ application_server: http://216.187.103.55 #http://70.68.128.37:3000
+ application_asset_server: http://216.187.103.55 #http://70.68.128.37:3000
+ application_name: classtalk
+ facebook_application_host: http://apps.facebook.com
+ application_url:  /classtalk
+ 

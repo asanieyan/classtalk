@@ -1,0 +1,26 @@
+
+<div style='padding:20px;' >
+
+<div id='courses'>
+
+    <div style='float:right'><%=fb_link_to 'register in more courses',{:controller=>"registerar",:action=>"register"},:target=>"_parent"%></div>
+    <h2>        
+        Post to one of my courses    
+    </h2>
+    <div id='currentcourses'>
+        <ol>
+            <%logged_in_user.classes.current_at(@user_supported_schools).each do |klass|%>
+                <%if klass.course.status == :approved%>
+                    <li><%=fb_link_to klass.full_title,{:action=>"create",:c=>klass.course.id},:target=>"_parent"%></li>
+                <%else%>
+                    <li><%=klass.full_title%> <span class='dark_gray'>(Course not approved yet)</span></li>
+                <%end%>
+            <%end%>
+        </ol>
+    </div>
+    <h2>Select a course</h2>
+     <div id='currentcourses'>
+        <%=render_p 'course_display/list_schools',:schools=>@user_supported_schools%>
+     </div>        
+</div>    
+</div>

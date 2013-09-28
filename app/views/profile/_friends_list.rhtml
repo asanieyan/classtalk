@@ -1,0 +1,26 @@
+<div class='summary_bar clearfix'>
+    <div class='summary'>
+        <h4>
+            <%=paginator_summary "friend",@paginator%> 
+            <%unless @klass%>
+                in classtalk.
+            <%else%>
+                in <%=@klass.school.name%> <%=@klass.semester.name%> <%=link_to_class(@klass,:full_name=>false)%> 
+            <%end%>    
+
+        </h4>        
+    </div>
+     <%=fb_paginator @paginator,{:t=>'f'}.update(({:k=>@klass.id} rescue {}))%>    
+</div>
+<%fb_users_table :friend  do %>
+    <%@friends.each do |friend|%>
+        <%=fb_user_table friend do |e|
+              if (classes = friend.classes.current_at(friend.schools)).size > 0
+                    e[:labels].unshift ["Current Classes",classes.map{|k| link_to_class(k,:full_name=>false)}.join(", ")]
+              else
+                    e[:labels].add content_tag(:div,fbml_name(friend.id,:linked=>false) + " is taking time off from school.",:class=>"updates")
+              end            
+           end
+        %>    
+    <%end%>
+<%end%>

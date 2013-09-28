@@ -1,0 +1,47 @@
+
+<div name='topofpage'>
+
+</div>
+<%schools.each do |school|%>
+    <%semesters = school.curr_next_semesters
+      semesters.each do |sem|
+      next if logged_in_user.classes.at(sem).empty?
+    %>
+        <h2> <%=school.name + " " + sem.name %>
+	       <span class='dark_gray' style='font-weight:normal'>
+    	       <%if sem.is_current?%>
+    	            (current)
+    	       <%else%>
+    	            (coming up)
+    	       <%end%>
+	       </span>   
+	    </h2>
+        <%unless logged_in_user.classes.at(sem).empty?%>
+        <table>
+            <%logged_in_user.classes.at(sem).each do |klass|%>
+            <tr>
+                <td style='width:472px;'>                    
+                    
+                    <a href='<%=url_for_klass(klass)%>' target="_parent"><%=klass.full_title%></a>                    
+                    <div class='dark_gray' style='padding-left:10px'>
+                        <%=klass.formated_schedule.join("<br>") %>
+                    </div>
+                </td>                   
+                <td>
+                    <%=fb_context_dialog('drop class',
+        				:drop_class=>remote_function(        				    
+        				    :url=>signed_url(:remove=>true,:sem=>sem.id,:k=>klass.id,:action=>"register_in_course",:c=>klass.course.id),
+                			:success=>"setmerequest(request)"),
+        				:title=>"Are you sure you want to drop #{klass.name}?"
+        				)	%>
+                </td>     
+            </tr>
+            <%end%>
+        </table>
+        <%else%>
+        	<div class='standard_message'><div class='status'>
+        	    Currently I am not member of any course.
+        	</div></div>        
+        <%end%>	     
+    <%end%>
+<%end%>

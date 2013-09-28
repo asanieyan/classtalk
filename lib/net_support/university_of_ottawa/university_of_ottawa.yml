@@ -1,0 +1,25 @@
+--- 
+:info: 
+  :name: University Of Ottawa
+  :region: ottawa
+  :country: canada
+  :city: ottawa
+  :semesters: 
+  - - Fall
+    - 9/1
+    - 12/20
+  - - Winter
+    - 1/5
+    - 5/1
+  - - Summer Full
+    - 7/1
+    - 8/20
+  - - Summer I
+    - 7/1
+    - 7/28
+  - - Summer II
+    - 7/25
+    - 8/20
+  :nid: "16778432"
+:courses: []
+

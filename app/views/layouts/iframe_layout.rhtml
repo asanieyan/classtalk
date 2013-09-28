@@ -1,0 +1,10 @@
+<html>
+	<head>				
+		<%=javascript_include_tag '/facebook_lib/js/base.js','prototype','application'%>			
+		<%=stylesheet_link_tag "base","iframe","elements",'/facebook_lib/css/base.css'%>
+		<%=yield(:imports)%>
+	</head>
+	<body>
+		<%=yield%>	
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<%fbml :version=>1.1 do %>
+  
+    <%    
+    @user_supported_schools.each do |school|
+        sems = (school.curr_next_semesters)
+    %>        
+        <%sems.each do |sem|%>        
+            <%next if logged_in_user.classes.at(sem).empty?%>
+            <h4 class="info_section">
+              <%=school.name%>    
+                <fb:visible-to-owner>
+                    <div class="edit">
+                        <%=fb_link_to '[ edit ]',{:controller=>"registerar",:action=>"register"},:onclick=>"(new Image()).src = '/ajax/ct.php?57e98468a51b99c2030fbb7064d0fad4&app_id=4140642534&action_type=3&post_form_id=cd1ef1c5e3f7663728c9b0ace96256c3';return true"%>
+                        <%=fb_link_to '[ refresh ]',{:controller=>"registerar",:action=>"refresh_fbml"},:onclick=>"(new Image()).src = '/ajax/ct.php?57e98468a51b99c2030fbb7064d0fad4&app_id=4140642534&action_type=3&post_form_id=cd1ef1c5e3f7663728c9b0ace96256c3';return true"%>
+                    </div>  
+                </fb:visible-to-owner>
+            </h4>
+            <div class="clearfix">
+              <div style="clear: both; width: 120px; color: gray; float: left; margin-top: 1px;">
+                <%=sem.name%>:
+              </div>         
+              <%logged_in_user.classes.at(sem).each do |klass|%>          
+              <div style="width: 260px; float: right; margin-top: 1px;">
+                 <%=fb_link_to klass.name,{:controller=>"classes",:action=>"main",:k=>klass.id},:onclick=>"(new Image()).src = '/ajax/ct.php?57e98468a51b99c2030fbb7064d0fad4&app_id=4140642534&action_type=3&post_form_id=cd1ef1c5e3f7663728c9b0ace96256c3';return true"%>                                  
+                 - <%=truncate(klass.course.name)%>
+              </div>   
+              <%end%>  
+      
+            </div>  
+        <%end%>
+    <%end%>    
+<%end%>

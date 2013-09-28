@@ -1,0 +1,22 @@
+--- 
+:info: 
+  :name: Northwestern
+  :region: illinois
+  :country: united states
+  :city: evanston
+  :semesters: 
+  - - Fall
+    - 9/15
+    - 12/20
+  - - Winter
+    - 1/5
+    - 3/25
+  - - Spring
+    - 3/30
+    - 6/15
+  - - Summer
+    - 6/23
+    - 8/30
+  :nid: "16777241"
+:courses: []
+

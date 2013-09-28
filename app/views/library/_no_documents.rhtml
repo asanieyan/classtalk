@@ -1,0 +1,20 @@
+
+<div class="no_notes">  
+<%  #gets rendered by the action main 
+    #renders the message when there is no document
+    #can be seen in recent document, my document and xxx's documents pages
+%>    
+<%unless no_doc%>    
+    <%if params[:uid].nil?%>         
+        There are no documents posted to your classes or by your friends.
+        you can <%=fb_link_to 'register',"/registerar/register"%> in more courses and post <%=fb_link_to 'your own documents',"/library/create" %>. 
+    <%elsif params[:uid].to_i == logged_in_user.id%>
+        You don't have any documents posted. post <%=fb_link_to 'some documents',"/library/create" %>.        
+    <%else%>
+        <%=fbml_name params[:uid].to_i %> doesn't have any documents posted yet.
+    <%end%>
+<%else%>
+    <%=no_doc%>
+
+<%end%>
+</div> 

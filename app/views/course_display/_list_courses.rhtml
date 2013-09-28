@@ -1,0 +1,11 @@
+<%selected_course ||= nil rescue false%>
+<%selected_course ||= 0%>
+  <form id='select_course'>
+	  <%=select_tag "c",
+	    options_for_select(courses.map{|c| [c.full_title,c.id]},selected_course),
+	    :onchange=>remote_function(
+				:url  => app_url({:action=>"describe_course",:caller=>caller}), 
+				:with => "'c='+$('c').value",
+				:success => "$('course_description_div').innerHTML = request.responseText"	
+		),:id=>"c",:size=>"10",:style=>"float:left;width:300px;font-size:8pt;" %>
+  </form>

@@ -1,0 +1,32 @@
+<script>
+    function setmerequest(request) {
+       split = request.responseText.indexOf('splitfromhere'); 
+       current = request.responseText.substring(0,split);
+       classes = request.responseText.substring(split+"splitfromhere".length,request.responseText.length);
+       $('current_courses').innerHTML = current;
+       $('classes_of_course').innerHTML = classes; 
+    }
+</script>
+<div style='padding:20px;' >
+	<div id='eval_script'></div>
+	<div id='courses' >			
+		<div id='current_courses'>
+			
+			<%=render_p 'current_courses',{:schools=>@user_supported_schools}%>
+		</div>
+		<h2>Add Courses</h2>
+        <%
+            subject = Subject.find(params[:s]) rescue nil
+            if subject && !@user_supported_schools.include_schools?(subject.school)
+                    subject = nil
+            end
+
+        
+        %>
+        <%=render_p 'course_display/list_schools',{:schools=>@user_supported_schools,
+                        :subject=>subject}%>
+	</div>
+</div>
+
+
+

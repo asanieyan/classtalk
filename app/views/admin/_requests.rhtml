@@ -1,0 +1,10 @@
+<%
+    reqs = School.find(:all,:from=>"requested_schools",:select=>"name,nid as id,count(*) as num_requests",:group=>"nid",:order=>"num_requests DESC")
+%>
+<ol>
+<%reqs.each do |req|%>
+        <li>         
+                <%=link_to_school(req)%> (<%=req.num_requests%>)               
+        </li>
+<%end%>
+</ol>

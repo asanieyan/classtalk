@@ -1,0 +1,33 @@
+--- 
+:courses: []
+
+:info: 
+  :city: norman
+  :nid: "16777313"
+  :name: Oklahoma
+  :paths: 
+  - - Fall
+    - Spring
+    - Summer 8WK
+  - - Fall
+    - Spring
+    - Summer I
+    - Summer II
+  :semesters: 
+  - - Fall
+    - 8/20
+    - 12/25
+  - - Spring
+    - 1/1
+    - 5/9
+  - - Summer 8WK
+    - 6/1
+    - 8/5
+  - - Summer I
+    - 6/1
+    - 7/1
+  - - Summer II
+    - 7/2
+    - 8/5
+  :region: oklahoma
+  :country: united states

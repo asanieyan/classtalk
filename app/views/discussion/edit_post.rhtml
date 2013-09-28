@@ -1,0 +1,37 @@
+<div id="page_body" class="discussions topic edittopic">
+<%=render_p 'header'%>
+
+<%= flash[:server_message] %>
+
+<%=fb_tabs do |tabs|
+  tabs.add(">>",{:controller =>'discussion', :action=>'reply_to_topic', :id => @topic.id, :cn => @owner.class, :cid => @owner.id}, {:selected => true})
+  tabs.add("Start New Topic", {:controller =>'discussion', :action=>'start_new_topic', :cn => @owner.class, :cid => @owner.id}, {:align => 'right'} )
+end %>
+
+
+<div class="bar clearfix topic_bar">
+<h2>Topic: <span><%=@topic.name%></span></h2>
+</div>
+
+
+
+<div class="post_editor clearfix" id="editor">
+<form action="<%= fb_url_for :controller => 'discussion', :action => 'edit_post' %>" method="post">
+<div>
+<label>Your reply</label><textarea class="textarea" name="body" id="body"><%=@post.body%></textarea></div>
+<div>
+<div>
+<label> Post Anonymously: <input type="checkbox" name="is_anonymous" <% if @post.is_anonymous then %> checked <% end %>> </label>
+</div>
+
+<input type="hidden" value="<%=@owner.class%>" name="cn">
+<input type="hidden" value="<%=@owner.id%>" name="cid">
+<input type="hidden" value="<%=@topic.id%>" name="id">
+<input type="hidden" value="<%=@post.id%>" name="pid">
+<input type="submit" id="submit_button" name="submit_button" value="Post your reply" style="border-style: solid;  border-top-width: 1px;  border-left-width: 1px;  border-bottom-width: 1px;  border-right-width: 1px;  border-top-color: #D9DFEA;  border-left-color: #D9DFEA;  border-bottom-color: #0e1f5b;  border-right-color: #0e1f5b;  background-color: #3b5998;  color: #FFFFFF;  font-size: 11px;  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;   text-align: center;"/> 
+or <%= fb_link_to "Cancel", :controller => 'discussion', :action => 'topic', :id => @topic.id, :cn => @owner.class, :cid => @owner.id%>
+</div></form>
+</div>
+
+
+</div>

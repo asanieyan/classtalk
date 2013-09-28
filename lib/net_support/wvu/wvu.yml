@@ -1,0 +1,29 @@
+--- 
+:courses: []
+
+:info: 
+  :city: morgantown
+  :nid: "16777475"
+  :name: WVU
+  :paths: 
+  - - Fall
+    - Spring
+    - Summer 6WK
+  - - Fall
+    - Spring
+    - Summer 12WK
+  :semesters: 
+  - - Fall
+    - 8/20
+    - 12/25
+  - - Spring
+    - 1/1
+    - 5/15
+  - - Summer 6WK
+    - 5/19
+    - 7/3
+  - - Summer 12WK
+    - 5/19
+    - 8/12
+  :region: west virginia
+  :country: united states

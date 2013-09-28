@@ -1,0 +1,44 @@
+<style>
+    .faqindex {
+      padding: 20px;
+    }
+    
+    h4 {
+      font-size: 13px;
+      padding-bottom: 2px;
+      border-bottom: solid 1px #d8dfea;
+      color:#3B5998;
+    }
+    .hidden_details {
+      background: #fafafa;
+      margin: 3px 0px 10px 0px;
+      border: 1px solid #d8dfea;
+      padding: 5px 10px; 
+    }
+</style>
+
+
+
+    <%params[:backurl] ||= "/profile"%>
+    <a href="<%= fb_url_for "" + params[:backurl] %>">Return to Previous Section</a><br><br>
+
+    <h4><%= @my_data["title"] %></h4><br>
+
+    <div style="padding: 5px 0px;">
+    
+    
+    
+        <% @my_data["QA"].each do |qa_pair| %>
+            
+            <div class='dark_gray' style="font-weight:bold;padding: 0px 0px 5px;"><%= qa_pair[0] %></div>
+            <div class="hidden_details" ><%= qa_pair[1] %></div>
+        
+        
+        
+        <% end %>
+    
+    
+    </div>
+
+
+

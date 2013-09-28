@@ -1,0 +1,16 @@
+<br>
+<%=fb_plugin_dashboad do |e|
+        e[:title] << "Classtalk Adminstrator"
+        e[:actions].add "Back",{:controller=>"profile"}
+   end
+%>
+<%=fbml_tabs do |tab|
+    tab.add "Networks",{:t=>'n'},:check=>"params[:t].nil? || params[:t] == 'n'",:partial=>"networks"
+    tab.add "Reports",{:t=>'r'},:check=>"params[:t] == 'r'",:partial=>['reports',{:reports=>Report.find(:all,:conditions=>"resolved = false")}]
+    tab.add "Send Message",{:t=>'m'},:check=>"params[:t] == 'm'",:partial=>"send_message"    
+   end
+%>
+<div style='padding:20px;padding-bottom:100px;'>
+    <%=@selected_tab_content%>
+
+</div>

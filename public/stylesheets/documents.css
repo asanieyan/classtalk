@@ -1,0 +1,786 @@
+/*Title:main column tags 
+  two column solution for plugins first page 
+  used mostly in the first page of plugin
+  right now first page of library and registerar
+****************************************************************************************************/
+.side_column .module {
+    padding-left:5px;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-bottom:5px;
+}
+
+.side_column .module h2 {
+    margin-bottom:5px;
+}
+
+#no_content 
+{
+    color: #666666;
+    font-size: 12px;
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    text-align: center;
+}
+.plugin_content {
+   
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+
+}
+#content {
+  padding: 0px; }
+
+#notes_content {
+  background: #f7f7f7 url(/images/notes_background.gif) repeat-y 0px 0px; }
+
+.summary_bar {
+  border-bottom-color: #ddd; 
+  background: white; }
+
+.pagerpro a {
+  text-transform: none; }
+
+.column {
+  float: left; }
+
+.notes .status {
+  margin: 0px 20px; }
+
+.notes .status p {}
+
+.notes_error {
+  padding: 10px 10px 0px 10px; }
+
+.notes_error #error {
+  margin: 0px; }
+
+.footer_bar {
+  background: white;
+  clear: both; }
+
+#notes_settings ul {
+  color: black;
+  margin: 0px 0px 6px 4px; }
+
+.quail, .quail a {
+  color: white; }
+
+.notes .tabs {
+  margin: 12px 0px 0px; }
+
+/*  ---------------------------|  MAIN COLUMN  |----------------------------  */
+
+.main_column
+{  
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    position: relative;
+    width: 471px;
+}
+.full_text {}
+
+
+/*  BASE NOTE STYLES  */
+
+.note {
+  padding: 10px 10px 35px 20px; }
+
+.note .profile_thumb {
+  float: left;
+  padding: 0px 10px 0px 0px;
+  width: 50px; }
+
+.note .note_body {
+  float: left;
+  width: 365px; }
+
+.note .note_header {
+  background: #f7f7f7;
+  border-bottom: solid 1px #D8DFEA;
+  border-top: solid 1px #3B5998;
+  padding: 4px 6px 5px 6px; }
+
+.note .note_title_share {}
+
+.note .note_title {
+  color: #333;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 15px;
+  float: left;
+  margin: 0px;
+  padding: 0px 0px 1px 0px;
+  width: 280px; }  
+
+.note .share_and_hide {
+  float: right;
+}
+
+.note .byline {
+  clear: both;
+  color: #333;
+  padding: 0px 0px 0px 0px; }
+
+.note .byline span {
+  color: #666; }
+
+.note .mobile_note {
+  border-top: 1px solid #ccc;
+  clear: both;
+  color: #333;
+  font-size: 9px;
+  margin: 5px 0px 0px 0px;
+  padding: 5px 0px 0px 1px;
+  width: 210px; }
+
+  .note .mobile_note img {
+    display: block;
+    float: left; }
+
+.note .imported_note {
+  background: url(/images/icons/blogmini.gif) no-repeat 0px 3px;
+  border-top: 1px solid #ccc;
+  clear: both;
+  color: #333;
+  font-size: 9px;
+  margin: 5px 0px 0px 0px;
+  padding: 5px 0px 0px 19px;
+  width: 210px; }
+
+  .note .imported_note img {
+    display: block;
+    float: left; }
+
+.note_content {
+  clear: both;
+  margin-left: 6px;
+  padding: 10px 0px 0px 0px;
+   }
+
+.note .tagged {
+  clear: both;
+  color: #333;
+  float: left;
+  padding: 4px 6px 4px 6px; }
+
+.note .tagged span {
+  color: black; }
+
+.note .tagged .user_name {}
+
+.note .note_footer {
+  border-top: 1px solid #ddd;
+  clear: both;
+  font-size: 9px;
+  margin-top: 10px;
+  padding: 5px 2px 5px 6px; }
+
+.note .note_footer_left {
+  color: #666;
+  float: left;
+  width: 170px; }
+
+.note .note_footer_right {
+  color: #333;
+  float: right;
+  text-align: right;
+  width: 170px; }
+
+
+/*  WIDE NOTE - No profile pic  */
+
+.wide_note {
+  padding: 10px 10px 25px 20px; }
+
+.wide_note .note_body {
+  width: 425px; }
+
+.wide_note .note_title {
+  width: 325px; }
+
+.wide_note .note_footer {
+  font-size: 11px; }
+
+.wide_note .note_footer_left {
+  width: 200px; }
+
+.wide_note .note_footer_right {
+  color: gray;
+  width: 215px; }
+
+/*  ------------------------|  NOTES INTRODUCTION  |------------------------  */
+
+#notes_introduction {
+  padding: 20px 20px 25px 20px; }
+
+#notes_welcome {
+  padding: 0px 20px 15px 10px; }
+
+#notes_welcome h2 {
+  color: #3b5998;
+  font-size: 11px;
+  font-weight: bold;
+  margin: 0px; }
+
+#notes_welcome .lede {}
+
+#notes_welcome .lede h2 {
+  font-size: 13px;
+  margin: 0px;
+  padding: 0px 0px 0px 0px; }
+
+#notes_welcome .lede p {
+  margin: 0px;
+  padding: 2px 0px 15px 0px; }
+
+#notes_welcome #intro_columns {
+  clear: both; }
+
+#notes_welcome .intro_column {
+  float: left;
+  padding: 5px 15px 10px 0px;
+  width: 108px; }
+
+#notes_welcome .center_column {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  padding-left: 12px;
+  padding-right: 12px; }
+
+#notes_welcome .right_column {
+  padding-left: 12px;
+  padding-right: 0px; }
+
+
+#notes_welcome .intro_column h2 {}
+
+#notes_welcome .intro_column p {
+  line-height: 14px;
+  margin: 0px;
+  padding: 2px 0px 0px 0px; }
+
+
+/*  IMPORT SUGGESTIONS  */
+
+#import_suggestions {
+  border: 10px solid #d8dfea;
+  clear: both;
+  margin: 0px 0px 10px 0px; }
+
+#import_suggestions_border {
+  border: 1px solid #3b5998;
+  padding: 10px; }
+
+#import_suggestions h2 {
+  border-bottom: 1px solid #d8dfea;
+  color: #3b5998;
+  font-size: 11px;
+  padding: 4px 0px; }
+
+#import_suggestions label {
+  display: block;
+  float: left;
+  padding: 4px 10px 0px 0px;
+  text-align: right;
+  width: 50px; }
+
+#import_suggestions #suggestions {
+  float: left; }
+
+#import_suggestions #blog_select {
+  margin: 0px;
+  width: 270px; }
+
+#import_suggestions ul {
+  color: #3b5998;
+  list-style: square;
+  margin: 0px;
+  padding: 0px 30px 5px 30px; }
+
+#import_suggestions li {
+  padding-bottom: 5px; }
+
+#import_suggestions li span {
+  color: #111;
+  display: block;
+  font-size: 9px; }
+
+#import_suggestions #buttons {
+  clear: both;
+  padding: 10px 0px 10px 60px; }
+
+#import_suggestions dl {
+  padding: 0px 0px; }
+  
+#import_suggestions dd {
+  font-size: 9px;
+  margin: 0px;
+  padding: 0px 0px 10px 0px; }
+
+#mobile_notes_introduction { 
+  background: #fff;
+  border: 1px solid #ccc;
+  float: right;
+  margin-top: 4px;
+  padding: 8px 4px;
+  width: 160px; }
+
+#mobile_notes_announcement {
+  background: #fff;
+  border: 1px solid #ccc;
+  clear: both;
+  margin: 0px 0px 8px 8px;
+  padding: 8px 4px;
+  width: 148px; }
+
+#mobile_notes_announcement a {
+  float: left; }
+
+#mobile_notes_introduction a {
+  float: left; }
+
+#mobile_notes_announcement .message {
+  float: right;
+  width: 94px; }
+
+#mobile_notes_introduction .message {
+  float: right;
+  width: 100px; }
+
+#mobile_notes_announcement .message a {
+  float: none; }
+
+#mobile_notes_introduction .message a {
+  float: none; }
+
+
+/*  -----------------------------|  NO NOTES  |-----------------------------  */
+
+.no_notes {
+  color: #666;
+  font-size: 12px;
+  padding: 40px 20px 0px 40px;
+  text-align: center; }
+
+/*  ------------------------|  TITLE ONLY STYLES  |-------------------------  */
+
+
+table {
+  width: 100%; }
+
+th {
+  color: #666; }
+
+th, td {
+  text-align: left; }
+
+.date_column {
+  padding: 0px 5px; }
+
+.title_only .note_title {
+  border-bottom: 1px solid #d8dfea;
+  padding: 4px; }
+
+
+/*  ---------------------------|  SIDE COLUMN  |----------------------------  */
+
+
+.side_column {
+  padding: 0px 0px 10px 0px;
+  width: 175px; }
+
+.side_column h2 {
+  font-size: 11px; }
+
+
+/*  BASE SET STYLES  */
+
+.set {
+  
+  padding: 0px; }
+
+.set h2 {
+  
+  color: #666; color: #333;
+  font-weight: bold;
+  padding: 8px 8px 4px 10px; }
+
+.set h2 .set_label {
+  display: block;
+  float: left; }
+
+.set h2 a {
+  display: block; 
+  float: right;
+  font-size: 11px;
+  font-weight: normal;
+  padding-top: 0px; }
+
+.set .set_filters {
+  padding: 0px 0px 6px 6px; }
+
+.set .rss_sidebar {
+  padding: 10px 0px 6px 6px; }
+
+.set ul {
+  display: block; 
+  list-style-type: none; 
+  margin: 0px;
+  padding: 0px; }
+
+.set li {
+  display: block;
+  margin: 0px; }
+
+.set dl {
+  margin: 0px;
+  padding: 2px 6px 0px 4px; }
+
+.set dt {
+  margin: 0px;
+  padding: 2px 0px 0px 0px; }
+
+.set dt a {
+  font-weight: bold; }
+
+.set dd {
+  font-size: 11px;
+  margin: 1px 0px 5px 0px;
+  padding: 0px; }
+
+.set .see_all {
+  padding: 0px 4px; 
+  text-align: right; }
+
+.set .archive_selectors {
+  padding-bottom: 2px }
+
+.set .no_notes {
+  color: gray;
+  display: block;
+  padding: 0px 0px 4px 4px; }
+
+.set .see_all_notes {
+  color: #666;
+  padding: 2px 4px 4px 4px; }
+
+/*  SET DIVIDER  */
+
+.set_divider {
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #fff; }
+  
+  .set_divider hr { display: none; }
+
+/*  CREATE NOTE  */
+
+#create_note {
+  border-top: 0px;
+  border-bottom: 1px solid white; }
+
+#create_note .set_filters {
+  border-bottom: 1px solid #ccc;
+  padding: 12px 0px 11px 0px;
+  text-align: center; }
+
+#create_note input {
+  margin: 0px; 
+  width: 120px; }
+
+#create_note a {
+  background: white;
+  border: 1px solid #d8dfea;
+  display: block;
+  margin: 0px 4px;
+  padding: 5px;
+  text-align: center;
+  width: auto; }
+
+#create_note a:hover {
+  border-color: #6d84b4;
+  text-decoration: none; }
+
+
+/*  ACTION BUTTONS  */
+
+#action_buttons {
+  border-top: 0px;
+  border-bottom: 1px solid #ccc; 
+  padding: 8px 0px 3px 0px;
+  text-align: center; }
+
+#action_buttons input {
+  display: block; 
+  margin: 5px auto;
+  width: 120px; }
+
+#edit_button,
+#preview_button,
+#delete_button,
+#cancel_button {
+  border-style: solid;
+  border-width: 1px;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-bottom-color: #848484;
+  border-right-color: #848484;
+  background-color: #f0f0f0;
+  color: #111;
+  font-size: 11px;
+  padding: 1px;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif; }
+
+
+/*  VIEWER  */
+
+#viewer {
+  border-top: 0px; }
+
+#viewer h2 {
+  border-top: 0px; }
+
+#viewer .set_filters {
+  padding: 2px 0px 6px 0px; }
+
+
+#viewer li a {
+  display: block;
+  padding: 4px 0px 5px 10px;
+  width: auto; }
+
+#viewer li.active {
+  margin: 0px -1px; }
+
+#viewer li.active a {
+  background: #3b5998 url(/images/sidecolumn_arrow.gif) no-repeat 0px center;
+  border-right: 1px solid #5e7197;
+  color: white;
+  font-weight: bold; }
+
+#viewer li.active a:hover {
+  background-color: #3b5998;
+  text-decoration: none; }
+
+
+
+/*  NOTE LENGTH  */
+
+#note_length .set_filters {
+  padding: 0px 0px 8px 10px; }
+
+#note_length input { margin-left: 0px; }
+
+#note_length label {
+  color: black; 
+  font-weight: normal;
+  padding-right: 5px; }
+
+
+
+/*  NOTES ABOUT  */
+
+#notes_about dt a {
+  font-weight: bold; }
+
+#notes_about .note_author {
+  margin: 0px;
+  padding: 0px; }
+
+#notes_about .note_timestamp {
+  color: #333;
+  font-size: 9px; }
+
+#notes_about .set_filters dl dt {
+  overflow:hidden; }
+
+
+/*  RECENT FRIENDS NOTES  */
+
+#notes_friends .note_author {
+  margin: 0px;
+  padding: 0px; }
+
+#notes_friends .note_timestamp {
+  color: #333;
+  font-size: 9px; }
+
+
+/*  NOTES TAGGED BY  */
+
+#notes_tagged_by dt a {
+  font-weight: bold; }
+
+#notes_tagged_by dd {
+  color: #666; }
+
+/*  RECENTLY TAGGED FRIENDS  */
+
+#recently_tagged_friends dt a {
+  font-weight: bold; }
+
+#recently_tagged_friends .note_author {
+  color: #666;
+  margin: 0px;
+  padding: 0px; }
+
+#recently_tagged_friends .note_timestamp {
+  color: #333;
+  font-size: 9px; }
+
+
+/*  NOTES SETTINGS  */
+
+#notes_settings {}
+
+#notes_settings ul,
+#import_info ul {
+  color: black;
+  list-style: none;
+  padding: 0px 8px 6px 0px; }
+
+#notes_settings li,
+#import_info li {
+  color: #333; 
+  clear: both;
+  margin: 0px;
+  padding: 2px 0px; }
+
+#notes_settings li a,
+#import_info li a {
+  display: inline;
+  padding: 0px; }
+
+#notes_settings .edit_settings {
+  display: block;
+  float: left;
+  padding: 0px 0px 4px 0px;
+  text-align: left; }
+
+#import_info {
+  border-top:none;
+}
+
+/*  TAG THIS NOTE  */
+
+#tag_this_note {
+  border-bottom: 1px solid #ccc; 
+  border-top: 0px; }
+
+#tag_this_note .set_filters {
+  padding: 0px 10px 10px 10px; }
+
+#tag_this_note label {
+  display: block; 
+  font-weight: normal;
+  padding: 2px 0px 4px 0px; }
+
+#tag_this_note #label_recommend {
+  color: black;
+  padding: 6px 0px 2px 0px; }
+
+#tag_this_note .inputtext {
+  margin: 0px;
+  width: 150px; }
+
+#tag_this_note .recommendation {
+  padding: 3px 0px; }
+
+#tag_this_note .recommendation input {
+  margin: 0px 2px; } 
+
+#tag_this_note .recommendation label {
+  color: black;
+  display: inline;
+  font-weight: normal;
+  padding: 0px 0px 0px 2px; }
+
+#tag_this_note #tag_all {
+  border-top: 1px solid #ccc;
+  margin: 5px 60px 0px 0px;
+  padding-top: 6px; }
+
+
+
+/*  IN THIS NOTE  */
+
+#in_this_note {
+  border-top: 0px; }
+
+#in_this_note .set_filters {
+  padding: 0px 10px 5px 10px; }
+
+#in_this_note .tagged_user {
+  clear: both;
+  padding: 5px 0px; }
+
+#in_this_note .tagged_user_pic {
+  float: left;
+  width: 50px; }
+
+#in_this_note .tagged_user_info {
+  float: right;
+  text-align: left;
+  width: 100px; }
+
+#in_this_note .tagged_user_name {
+  font-weight: bold;
+}
+
+#in_this_note .tagged_user_network {
+  padding-bottom: 6px; }
+
+#in_this_note .tagged_user_notes {
+  color: #333;
+  font-size: 9px;}
+
+#in_this_note .tagged_user_remove {
+  font-size: 9px;}
+
+#in_this_note .no_tags {
+  color: gray; 
+  padding: 0px 0px 4px 0px; }
+
+
+/*  NOTES FEED  */
+
+#notes_feed .set_filters {
+  padding: 0px 10px 0px 12px; }
+
+#notes_feed .learn_more {
+  font-size: 9px;
+  padding: 0px 0px 2px 20px; }
+
+/*  --------------------------|  NOTES PREVIEW  |---------------------------  */
+
+.notes_preview .status p {}
+
+.notes_preview .status span {
+  font-weight: normal; }
+
+.notes_preview .status .inputbutton {
+  margin: 0px 0px 0px 5px; }
+
+.import_column {
+  padding-bottom:400px;
+}
+
+/*  ---------------------------|  DELETE NOTE  |----------------------------  */
+
+.delete_note #content {
+  padding: 20px 100px;
+}
+
+.delete_note wbr {
+  display:block;
+}
+
+/*  Wrote you this. I hope you got it safe.  ---------------------------------  */
+
+

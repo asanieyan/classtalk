@@ -1,0 +1,18 @@
+--- 
+:courses: []
+
+:info: 
+  :region: alberta
+  :nid: "16778421"
+  :country: canada
+  :name: University of Alberta
+  :city: edmonton
+  :semesters: 
+  - - Fall
+    - 9/1
+  - - Winter
+    - 1/1
+  - - Spring
+    - 5/1
+  - - Summer
+    - 7/1

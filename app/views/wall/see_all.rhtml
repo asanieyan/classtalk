@@ -1,0 +1,5 @@
+<div id="my_test_div">
+
+  <%= render :partial => 'wall/wall_comments', :locals => {:owner => @owner, :paginator => @paginator, :comments => @comments, :total_comments => @c.length} %>
+
+</div>

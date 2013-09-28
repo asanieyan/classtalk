@@ -1,0 +1,181 @@
+/* wall default */
+
+.wall #content_shadow #content {
+  padding: 0px; }
+   
+.wallpost_dialog #content {
+  padding: 20px 0px;
+}
+
+.wallpost {
+  padding: 0px;
+  margin: 0px;
+  float: left;
+  margin-bottom: 15px;
+}
+
+.wallpost td {
+  padding: 0px;
+  vertical-align: top; }
+
+.wallpost td.wallimage {
+  width: 55px;
+  text-align: left; }
+  
+  .wallpost td.wallimage img {
+    width: 50px;
+    margin-right: 5px; }
+
+.wallpost td.wallinfo {
+  width: 100%;
+  border-top: solid 1px #3B5998; }
+
+.wallpost .wallinfo .wallheader {
+  padding: 3px 5px 3px;
+  background: #f7f7f7;
+  border-bottom: solid 1px #D8DFEA; }
+
+.wallpost .wallactions {
+  padding: 3px 5px;
+  border-bottom: solid 1px #D8DFEA;
+  border-top: none;
+  clear: right;
+}
+
+.wallpost .wallinfo .wallheader a.profile_link {
+  font-weight: bold;
+}
+
+.wallpost .wallinfo .wallactions a:hover {
+  text-decoration: underline; }
+
+.wallpost .wallinfo .walltext {
+  padding: 5px 5px; }
+
+.wallpost .wallphoto img {
+  width: 50px;
+  margin: 0px 0px 0px 5px; }
+
+#wall {
+  padding: 10px;
+  background: #f7f7f7; }
+
+#wall .status {
+  margin: 0px 0px 5px 0px;
+}
+
+#wall #error {
+  margin: 0px 0px 5px 0px;
+}
+
+#wallpage {
+  padding: 20px;
+  border: solid 1px #ccc;
+  background: white; }
+  
+  #wallpage .nav {
+    padding-bottom: 20px; }
+
+  #wallpage .pager a:hover { 
+    text-decoration: none; }
+
+.wall #inline_wall_post {
+    padding: 0px 0 8px 0;
+}
+
+.wall #inline_wall_post textarea {
+    height: 50px;
+    width: 618px;
+}
+
+/* these are shared */
+#inline_wall_post .actions {
+    padding: 2px 0 0 0;
+}
+
+#inline_wall_post .wall_contextual_extra {
+  float:right;
+  margin-top:3px;
+  margin-right:5px;
+}
+
+#inline_wall_post .buttons{
+    float: left;
+    clear:both;
+}
+
+#inline_wall_post .buttons input {
+      float: left;
+      width: 70px;
+      height:21px;
+      padding-top:1px;
+      padding-bottom:2px;}
+
+#inline_wall_post .contextual_extra {
+    border: 1px solid black;
+    padding-left: 4px;
+    margin-top: 0px;
+    vertical-align: middle;
+}
+
+#inline_wall_post dd {
+  float: left;
+  margin: 0px 0px 10px 8px;
+}
+
+#inline_wall_post dd.share_stage {
+  width: 355px;
+}
+
+.wallpro_dialog table.pop_content {
+  width: 280px;
+}
+
+
+#wall_captcha {
+  margin: 0;
+  padding-bottom: 8px;
+}
+
+#wall_captcha #captcha fieldset {
+  width: auto;
+  text-align: left;
+}
+
+#wall_captcha #captcha {
+  text-align: left;
+}
+
+#wall_captcha #captcha fieldset {
+  text-align: left;
+  min-width: 0; /* Force hasLayout onto IE 6 */
+  margin-left: 2px;
+}
+
+#wall_status {
+  margin: 0px 0px 10px 0px;
+  padding: 10px;
+  border: solid 1px #ffe222;
+  background: #fffbe2; }
+
+#wall_status h2 {
+  color: black;
+  font-size: 11px;
+  margin: 0px; }
+
+#wall_status p {
+  margin: 4px 0px 0px; }
+
+#wall_status a {
+  text-decoration: none; }
+
+.see_all_posts {
+  display: block;
+  text-align: right;
+}
+
+#wall_edit_dialog_form {
+  padding: 5px 0px 5px 0px;  
+}
+
+

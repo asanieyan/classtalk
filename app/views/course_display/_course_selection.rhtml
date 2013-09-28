@@ -1,0 +1,46 @@
+<%subject rescue begin subject = nil end
+%>
+<script>
+    F = {
+        update : function() {
+            $('div59').innerHTML = 'or select a course using the select box below'        
+        }    
+    }
+</script>
+<h5>Type the name of a course at <%=school.name%> <%=inline_progress_bar :id=>"pg1"%> </h5>			
+<div><%=text_field_tag "cn","",:size=>64,:class=>"inputtext ",:autocomplete=>"off"%></div>
+<div id='cn_auto_complete' class='typeahead_list'>
+    
+</div>
+<%add_function = "ShowFbAjaxDialog('#{app_url 'caller'=>caller,:nid=>school.id,:action=>'add_new_course'}')"%>
+<br>
+<h5>
+    <div style='float:right'>
+        <%=link_to_function "Can't find a course, Add it now!",add_function%>
+    </div>
+    <div id='div59'>
+        or select a course using the select box below <%=inline_progress_bar :id=>"pg2"%>
+   </div>
+
+</h5>
+<div id='typeahead_select'>
+
+    <%if school.courses.size > 0%>
+       
+        <%=render_p 'course_display/list_subjects',{'caller'=>caller,'subjects'=>school.subjects,'subject'=>subject}%>
+    
+    <%else%>
+        
+        <h1 class='dark_gray' style='margin-top:30px;border:1px solid #C0C0C0;padding:20px;'>
+            Wow! you beat us to it. Why don't you
+            <%=link_to_function 'add your courses',add_function%> to the <%=school.name%> course calendar. 
+        </h1>
+    
+    <%end%>
+</div>
+<script>			
+	
+	new CourseCompleter('cn','cn_auto_complete','<%=controller.controller_name%>',{caller:'<%=caller%>',parameters:"<%=to_query_string(:nid=>school.id)%>"});
+	$('cn').focus();
+	
+</script>	

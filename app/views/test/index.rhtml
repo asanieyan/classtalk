@@ -1,0 +1,13 @@
+<%=fb_media_header do |e|
+    e[:title] << "Testing Platform"
+    e[:actions].add "Help","D"
+  end
+%>
+<div style='padding:20px'>
+
+<%User.find(:all,:conditions=>"id <> #{logged_in_user.id}")[0..7].each do |u|%>
+      <%fbml_if_can_see u.id do%>
+          <%=fbml_profile_pic u.id%> <%=fb_link_to fbml_name(u.id,:linked=>false),:uid=>u.id,:action=>"take_on"%>  <br>
+      <%end%>
+<%end%>
+</div>

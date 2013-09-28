@@ -1,0 +1,19 @@
+--- 
+:courses: []
+
+:info: 
+  :city: lawrence
+  :nid: "16777385"
+  :name: Kansas
+  :semesters: 
+  - - Fall
+    - 8/16
+    - 12/25
+  - - Spring
+    - 1/1
+    - 5/19
+  - - Summer
+    - 6/2
+    - 8/1
+  :region: kansas
+  :country: united states

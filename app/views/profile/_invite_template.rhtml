@@ -1,0 +1,26 @@
+<%if params[:k]
+    @klass = logged_in_user.classes.find(params[:k]) rescue false
+
+end%>
+<%if @klass
+    msg = fbml_name(logged_in_user.id,:useyou=>false) + 
+          " has invited you to join your class network #{link_to_class @klass,:full_name=>false}. Check it out." 
+          fbml_request_choice "Confirm",{:action=>"index"}
+    title = "Invite Your Friends to #{@klass.name}"
+else
+    msg = fbml_name(logged_in_user.id,:useyou=>false) + 
+          " has invited you to join your real class network at #{fb_link_to 'classtalk',:action=>'index'}. Check it out." 
+          fbml_request_choice "Confirm",{:action=>"index"}
+    title = "Grow Your Class Network. Invite Your Friends Now"
+end
+%>
+<div style='padding:5px'>
+    <%fbml_request_form({:action=>"invite_friends"},{:type=>"invite",
+                                                     :method=>"GET",
+                                                     :content=>msg
+                                                    })do %>
+        <%=fbml_friend_selector :max=>20,:actiontext=>title,
+        :showborder=>true,:rows=>5%>
+    
+    <%end%>
+</div>

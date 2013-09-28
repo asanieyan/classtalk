@@ -1,0 +1,22 @@
+<%fbml :version=>1.1 do %>
+	<%fb_remote_css "/networks/css/networks.css"%>
+	<%=fb_css '/stylesheets/base.css'%>
+	<%=fb_js 'fbprototype','fbapplication'%>
+
+    <%=javascript_tag <<-eof
+            Ajax.Server = '#{ApplicationController::APP_SERVER}'           
+            AppID = '#{ApplicationController::APP_ID.sub(/app/,'')}';            
+            AppAssets =  '#{ApplicationController::APP_ASSET_SERVER}';
+            MessageDisplayer.server = '#{ajax_url(:action=>'render_msg')}'                 
+    eof
+    %>
+    <%if false%>
+        <div id='test' style='margin-left:650px;width:120px;position:absolute;'>
+            <%fb_box "Our Sponsors" do %>
+               
+            <%end%>
+        </div>
+    <%end%>
+	<%=yield%>
+
+<%end%>

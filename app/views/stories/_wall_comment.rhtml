@@ -1,0 +1,14 @@
+<%headline do %>
+   <%=actioner(feed)%> wrote a comment on the class <%=link_to_class(context,:full_name=>false)%> wall.
+
+    
+<%end%>
+<%body do%>        
+      
+        <%=feed_quote(comment.body)%>
+    
+    <div style='margin-top:3px;float:right'>
+        <%=fbml_profile_pic feed.user_id%>
+    </div>
+
+<%end%>

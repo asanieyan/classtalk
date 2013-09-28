@@ -1,0 +1,112 @@
+#!/bin/bash
+#this script restores the system...
+
+
+#Constants and such
+CURRENT_WEEK_NUMBER=`date +%U`
+ADIR=/application_backup
+FROOT=/var/www/classtalk/current/user_data
+
+DAR_FULL_FILENAME=file_backup_0
+DAR_EXTENTION=.1.dar
+
+
+#sort array function :: $1 = the array to sort
+sort_array ()
+{
+  local my_array
+  my_array=( `echo "$1"` )
+  
+  echo "${my_array[@]}"
+}
+
+
+
+
+
+
+#get array of dirs in ADIR
+counter=0
+for dir in $ADIR/*
+do
+  dir_array[$counter]=${dir/$ADIR\//}
+  counter=`expr $counter + 1`
+done
+
+
+
+
+
+
+
+
+
+#run through the list of directories, starting with the first one...
+for ((x=`expr $counter - 1`; x >= 0; x--))
+do
+  #check for existance of 0-file to continue processing
+  if [ -f $ADIR/${dir_array[$x]}/$DAR_FULL_FILENAME$DAR_EXTENTION ]; then
+    #run full backup restore
+    echo "running restore of full backup file"
+    
+    file_counter=0
+    for file in $ADIR/${dir_array[$x]}/*
+    do
+
+	  #create a list of all differential numbers available
+      if [ `expr match "${file/$ADIR\/${dir_array[$x]}\/}" "\(file_backup\)"` ]; then
+        temp_a=${file/".1.dar"}
+        temp=${temp_a/$ADIR\/${dir_array[$x]}\/file_backup_}
+        if [ $temp -ne 0 ]; then
+		  file_array[$file_counter]=$temp
+          file_counter=`expr $file_counter + 1`
+        fi
+      fi
+    done
+
+
+    #sort out the list of available differential numbers
+    if [ -n "${file_array[2]}" ]; then
+      file_list_to_sort=`echo ${file_array[@]}`
+      file_array=( `sort_array "$file_list_to_sort"` )
+    fi
+    
+    #run dar command for 0-file
+    dar -x $ADIR/${dir_array[$x]}/file_backup_0 -w -R $FROOT
+    
+    
+    #run all dar differential backups
+    y=0
+    while [ $y -lt $file_counter ]; do
+      dar -x $ADIR/${dir_array[$x]}/file_backup_${file_array[$y]} -w -R $FROOT
+      y=`expr $y + 1`  
+    done
+    
+    #run install of latest database backup
+    #
+    
+    DB_FILENAME="database_backup_${file_array[`expr $file_counter - 1`]}"
+    $DB_FILENAME
+    
+    DB_NAME="classtalk_development"
+    
+    USR="root"
+    PWD="123"
+    
+	/usr/local/mysql/bin/mysqladmin -f -u $USR -p$PWD drop $DB_NAME
+	/usr/local/mysql/bin/mysqladmin -u $USR -p$PWD create $DB_NAME
+	/usr/local/mysql/bin/mysql -u $USR -p$PWD $DB_NAME < $ADIR/${dir_array[$x]}/$DB_FILENAME
+    
+    break
+  fi
+done
+
+
+
+
+
+
+
+
+
+

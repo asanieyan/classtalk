@@ -1,0 +1,67 @@
+<div id="page_body" class="discussions topic edittopic">
+<%=render_p 'header'%>
+
+<%= flash[:server_message] %>
+
+<%=fb_tabs do |tabs|
+  tabs.add(">>",{:controller =>'discussion', :action=>'reply_to_topic', :id => @topic.id, :cn => @owner.class, :cid => @owner.id}, {:selected => true})
+  tabs.add("Start New Topic", {:controller =>'discussion', :action=>'start_new_topic', :cn => @owner.class, :cid => @owner.id}, {:align => 'right'} )
+end %>
+
+
+<div class="bar clearfix topic_bar">
+<h2>Topic: <span><%=@topic.name%></span></h2>
+</div>
+
+<div id="post6724" class="post clearfix">
+<div class="post_data clearfix" id="post_data6724">
+<div class="info">
+<div>
+<% if @post.is_anonymous then %>
+<fb:profile-pic uid="-1" />
+<% else %>
+<fb:profile-pic uid="<%=@post.user_id%>"/>
+<% end %>
+</div>
+<div class="post_index"></div>
+</div>
+<div class="post_body">
+<div class="post_header">
+<span class="post_author">
+        <% if @post.is_anonymous then %>
+            <% if @post.user_id == @logged_in_user.id then %>
+            You anonymously
+            <% else %>
+            <fb:name linked="false" uid="-1" ifcantsee="Someone"/>
+            <% end %>
+        <% else %>
+        <fb:name linked="false" uid="<%=@post.user_id%>"/>
+        <% end %>
+
+</span> wrote <span class="timestamp"><%= fbml_time @post.created_on,:pre=>true %></span></div>
+<div class="post_message" style='overflow:hidden'><%=@post.body%></div>
+</div>
+</div>
+</div>
+
+
+<div class="post_editor clearfix" id="editor">
+<form action="<%= fb_url_for :controller => 'discussion', :action => 'reply_to_post' %>" method="post">
+<div>
+<label>Your reply</label><textarea class="textarea" name="body" id="body"/></div>
+<div>
+<div>
+<label> Post Anonymously: <input type="checkbox" name="is_anonymous"> </label>
+</div>
+
+<input type="hidden" value="<%=@owner.class%>" name="cn">
+<input type="hidden" value="<%=@owner.id%>" name="cid">
+<input type="hidden" value="<%=@topic.id%>" name="id">
+<input type="hidden" value="<%=@post.id%>" name="pid">
+<input type="submit" id="submit_button" name="submit_button" value="Post your reply" style="border-style: solid;  border-top-width: 1px;  border-left-width: 1px;  border-bottom-width: 1px;  border-right-width: 1px;  border-top-color: #D9DFEA;  border-left-color: #D9DFEA;  border-bottom-color: #0e1f5b;  border-right-color: #0e1f5b;  background-color: #3b5998;  color: #FFFFFF;  font-size: 11px;  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;   text-align: center;"/> 
+or <%= fb_link_to "Cancel", :controller => 'discussion', :action => 'topic', :id => @topic.id, :cn => @owner.class, :cid => @owner.id%>
+</div></form>
+</div>
+
+
+</div>

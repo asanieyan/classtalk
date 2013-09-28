@@ -1,0 +1,19 @@
+--- 
+:courses: []
+
+:info: 
+  :region: quebec
+  :name: Universite du Quebec a Montreal
+  :country: canada
+  :semesters: 
+  - - Automne
+    - 8/25
+    - 12/20
+  - - Hiver
+    - 1/4
+    - 5/12
+  - - Summer
+    - 5/13
+    - 8/20
+  :city: montreal
+  :nid: "16778437"

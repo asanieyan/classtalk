@@ -1,0 +1,79 @@
+<%=fb_css 'step_tab'%>
+<div class='title_header'>	
+		<h2>Posting a new Document</h2>
+		<h4>
+		      <div style='float:right'>
+    		      <%=fb_link_to "Help",url_for_help%>		      
+		      </div>
+            
+		      <%=fb_link_to "Library",:action=>"main"%><%=fb_pipe%>
+		      <%=fb_link_to "My Documents",:action=>"main",:uid=>logged_in_user.id%><%=fb_pipe%>
+		      <%=fb_link_to "My Classes",:controller=>"classes",:action=>'main'%>		      
+		</h4>	
+</div>
+<style>
+	.tab_bar {
+		margin-top:0;
+		padding-top:0;	
+	}
+</style>
+<div class='bar clearfix tab_bar'>	
+	<div class='step_tabs'>
+		<%if not @course %>
+    		<div class='activetab'>
+    				<%=fb_link_to "Step1: Select Course",{:action=>"create"}%>
+    		</div>		
+    		<div class='disabled'>
+    				Step2: Document Info
+    		</div>		
+    		<div class='disabled'>
+    				Step3: Set Permission
+    		</div>	
+		<%elsif params[:set_permission] == "true" and not @document.new_record?%>
+    		<div class='inactivetab'>
+    				<%=fb_link_to "Step1: Select Course",{:action=>"create"}%>
+    		</div>		
+    		<div class='inactivetab'>
+    				<%=fb_link_to 'Step2: Document Info',{:c=>@course.id,:d=>@document.id}%>
+    		</div>		
+    		<div class='activetab'>
+    				<%=fb_link_to "Step3: Set Permission",{:c=>@course.id,:d=>@document.id,:set_permission=>true}%>
+    		</div> 		
+		
+		<%else%>
+    		<div class='inactivetab'>
+    				<%=fb_link_to "Step1: Select Course",{:action=>"create"}%>
+    		</div>		
+    		<div class='activetab'>
+    				<%=fb_link_to 'Step2: Document Info',{:c=>@course.id}%>
+    		</div>	
+            <%if @document.new_record? %>
+        		<div class='disabled'>
+        				Step3: Set Permission
+        		</div>
+    		<%else%>
+        		<div class='inactivetab'>
+        				<%=fb_link_to "Step3: Set Permission",{:c=>@course.id,:d=>@document.id,:set_permission=>true}%>
+        		</div>    		
+    		<%end%>
+		
+		<%end%>
+
+	</div>	
+</div>
+
+<%if not @course and @user_supported_schools.size > 0%>
+    <%=fbml_iframe({:action=>"step1"},{:smartsize=>false,:style=>"width:100%;height:800px !important"})%>
+<%elsif params[:set_permission] == "true" and not @document.new_record?%>
+   <%=render_p 'step3',:document=>@document%>
+<%elsif @course && (@user_supported_schools.size > 0 or !@document.new_record?)%>
+    <%
+        #@TODO: is iframe better than a partial for creating the note section
+        #
+    %>
+    <%=render_p 'step2',:course=>@course%>
+<%else%>
+    <%=fbml_success "You are not member of any college or university currently supported by classtalk"%>
+<%end%>    
+
+<br>

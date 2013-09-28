@@ -1,0 +1,25 @@
+--- 
+:info: 
+  :name: FIU
+  :region: florida
+  :country: united states
+  :city: miami
+  :semesters: 
+  - - Fall
+    - 8/25
+    - 12/20
+  - - Spring
+    - 1/5
+    - 5/1
+  - - Summer A
+    - 5/5
+    - 6/24
+  - - Summer B
+    - 6/25
+    - 8/14
+  - - Summer C
+    - 5/5
+    - 8/14
+  :nid: "16777404"
+:courses: []
+

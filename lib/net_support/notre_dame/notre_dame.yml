@@ -1,0 +1,19 @@
+--- 
+:info: 
+  :name: Notre Dame
+  :region: indiana
+  :country: united states
+  :city: notre dame
+  :semesters: 
+  - - Fall
+    - 8/25
+    - 12/25
+  - - Spring
+    - 1/5
+    - 5/10
+  - - Summer
+    - 6/15
+    - 8/5
+  :nid: "16777273"
+:courses: []
+

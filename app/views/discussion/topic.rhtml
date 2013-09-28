@@ -1,0 +1,160 @@
+<%=fb_css "topic.css"%>
+
+
+    <script>
+        function confirmbutton_topic() { new Dialog(Dialog.POP_DIALOG).showChoice('Delete Topic?','Are you sure you want to delete the topic and all associated posts?').onconfirm = function(){document.setLocation(this.getHref())}.bind(this);return false;}
+        function confirmbutton_first_post() { new Dialog(Dialog.POP_DIALOG).showChoice('Delete Post?','By deleting this post you will delete the entire topic. Are you sure you want to do this?').onconfirm = function(){document.setLocation(this.getHref())}.bind(this);return false;}
+        function confirmbutton_post() { new Dialog(Dialog.POP_DIALOG).showChoice('Delete Post?','Are you sure you want to delete it?').onconfirm = function(){document.setLocation(this.getHref())}.bind(this);return false;}
+    </script>
+
+
+<div id="page_body" class="pagebody discussions topic">
+
+<%=render_p 'header'%>
+
+<br>
+
+<%=fb_tabs do |tabs|
+  tabs.add("Discussion Board", :controller =>'discussion', :action=>'topics', :cn => @owner.class, :cid => @owner.id )
+  tabs.add("Topic View", {:controller =>'discussion', :action=>'topic', :id => @topic.id, :cn => @owner.class, :cid => @owner.id}, {:selected => true} )
+
+  if logged_in_user.can_post?(@owner) then
+    tabs.add("Start New Topic", {:controller =>'discussion', :action=>'start_new_topic', :cn => @owner.class, :cid => @owner.id}, {:align => 'right'} )
+  end
+end %>
+
+
+<div class="bar clearfix topic_bar" >
+  <h2>Topic: 
+      <span style='overflow:hidden'>
+          <%= fb_link_to @topic.name, :controller => 'discussion', :action => 'topic', :id => @topic.id, :cn => @owner.class, :cid => @owner.id %>
+      </span>
+  </h2>
+  <div class="topic_actions">
+    <% if logged_in_user.can_post?(@owner) then %>
+
+        <% if logged_in_user.id == @topic.user_id || logged_in_user.is_admin? then %>
+        <%#= fb_link_to "Delete Topic", {:controller => 'discussion', :action => 'delete_topic', :id => @topic.id, :cn => @owner.class, :cid => @owner.id}, :confirm=>["Delete Topic?","Are you sure you want to delete the topic and all associated posts?"] %>
+        <script> 
+        document.getElementById('delete_topic').addEventListener("click",confirmbutton_topic,null);
+        </script>
+        <a href="<%= fb_url_for :controller => 'discussion', :action => 'delete_topic', :id => @topic.id, :cn => @owner.class, :cid => @owner.id %>" id="delete_topic">Delete Topic</a>
+        <span class="pipe">|</span>
+        <% end %>
+        <%= fb_link_to "Reply to Topic", {:controller => 'discussion', :action => 'reply_to_topic', :id => @topic.id, :cn => @owner.class, :cid => @owner.id} %>
+
+    <% end %>
+  </div>
+</div>
+
+
+<div class="bar clearfix summary_bar">
+  <div class="summary">
+  <% if @topic.posts.length > 1 then %>
+  Displaying all <%=@topic.posts.length%> posts.
+  <% else %>
+  Displaying the only post.
+  <% end %>
+  </div>
+</div>
+
+<% count = 1 %>
+<% @topic.posts.each do |post| %>
+
+<div class="post clearfix">
+<div class="post_data clearfix" id="post_data6634">
+<div class="info">
+<div>
+<% if post.is_anonymous then %>
+<fb:profile-pic uid="-1"/>
+<% else %>
+<fb:profile-pic uid="<%=post.user_id%>"/>
+<% end %>
+</div>
+<div class="post_index">Post #<%=count%></div>
+</div>
+<div class="post_body">
+  <div class="post_header">
+    <% if post.reply_id == nil then %>
+    <span class="post_author">
+        <% if post.is_anonymous then %>
+            <% if post.user_id == logged_in_user.id then %>
+            <fb:name linked="false" uid="<%=post.user_id%>"/> (as anonymous)
+            <% else %>
+            <fb:name linked="false" uid="-1" ifcantsee="Somebody"/>
+            <% end %>
+        <% else %>
+        <fb:name linked="false" uid="<%=post.user_id%>"/>
+        <% end %>
+    </span> wrote 
+    <% else %>
+    <span class="post_author">
+        <% if post.is_anonymous then %>
+            <% if post.user_id == logged_in_user.id then %>
+            <fb:name linked="false" uid="<%=post.user_id%>"/> (as anonymous)
+            <% else %>
+            <fb:name linked="false" uid="-1" ifcantsee="Somebody"/>
+            <% end %>
+        <% else %>
+        <fb:name linked="false" uid="<%=post.user_id%>"/>
+        <% end %>
+    </span> replied to
+        <% if @topic.posts.find(post.reply_id).is_anonymous then %>
+            <% if @topic.posts.find(post.reply_id).user_id == logged_in_user.id then %>
+            <fb:name linked="false" uid="<%=@topic.posts.find(post.reply_id).user_id%>" possessive="true"/> (as anonymous) post
+            <% else %>
+            <fb:name linked="false" uid="-1" ifcantsee="Somebody's"/> post 
+            <% end %>
+        <% else %>
+        <fb:name linked="false" uid="<%=@topic.posts.find(post.reply_id).user_id%>" possessive="true"/> post 
+        <% end %>
+    <% end %>
+    
+    <span class="timestamp"><%= fbml_time post.created_on ,:pre=>true%></span>
+  </div>
+  <div class="post_message" style='overflow:hidden'>
+    <%=post.body%>
+  </div>
+</div>
+<ul class="actionspro">
+
+  <% if logged_in_user.can_post?(@owner) then %>
+  <li><%= fb_link_to "Reply to Post", :controller => 'discussion', :action => 'reply_to_post', :id => @topic.id, :pid => post.id, :cn => @owner.class, :cid => @owner.id %></li>
+  <% end %>
+
+  <% if logged_in_user.can_post?(@owner) then %>
+
+  <% if logged_in_user.id == post.user_id || logged_in_user.is_admin? then %>
+
+      <% if post.is_first_post == true then %>
+      <li><%#= fb_link_to "Delete Post", {:controller => 'discussion', :action => 'delete_post', :id => @topic.id, :pid => post.id, :cn => @owner.class, :cid => @owner.id},:confirm=>["Delete Post?","By deleting this post you will delete the entire topic. Are you sure you want to do this?"] %>
+        <script> 
+        document.getElementById('delete_first_post').addEventListener("click",confirmbutton_first_post,null);
+        </script>
+        <a href="<%= fb_url_for :controller => 'discussion', :action => 'delete_post', :id => @topic.id, :pid => post.id, :cn => @owner.class, :cid => @owner.id %>" id="delete_first_post">Delete Post</a>
+      </li>
+      <% else %>
+      <li><%#= fb_link_to "Delete Post", {:controller => 'discussion', :action => 'delete_post', :id => @topic.id, :pid => post.id, :cn => @owner.class, :cid => @owner.id},:confirm=>["Delete Post?","Are you sure you want to delete this post?"] %>
+        <script> 
+        document.getElementById('delete_post<%=post.id%>').addEventListener("click",confirmbutton_post,null);
+        </script>
+        <a href="<%= fb_url_for :controller => 'discussion', :action => 'delete_post', :id => @topic.id, :pid => post.id, :cn => @owner.class, :cid => @owner.id %>" id="delete_post<%=post.id%>">Delete Post</a>
+      </li>
+      <% end %>
+      <li><%= fb_link_to "Edit Post", {:controller => 'discussion', :action => 'edit_post', :id => @topic.id, :pid => post.id, :cn => @owner.class, :cid => @owner.id}%></li>
+            
+  <%else%>
+      <li><%= link_to_report post %></li>
+  <% end %>
+
+
+  <% end %>
+</ul>
+</div>
+</div>
+<% count += 1 %>
+<% end %>
+
+
+
+</div>

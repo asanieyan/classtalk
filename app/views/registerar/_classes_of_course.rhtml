@@ -1,0 +1,90 @@
+<%  create_more = logged_in_user.classes.created_at(semester).size <= School::MaxNumberOfCreation%>
+<%  logged_in_user.classes.at(semester,:reload=>true)
+	classes_of_course_user_is_taking = logged_in_user.classes_of(course,semester)
+	is_student = !(is_instructor = logged_in_user.role_at(course.school).primary.is? Role::Instructor)
+	do_more_class = (logged_in_user.classes.at(semester).size < School::MaxNumberOfCourses)
+ 
+%>
+<%=javascript_tag "$ClassesOfCourse = '#{course.id}'"%>
+<%@create = capture do %>
+
+    <%=link_to 'create new class',"#",
+    		:onclick=>"ShowFbAjaxDialog('#{signed_url(:action=>"select_time",:sem=>semester.id,:c=>course.id)}');return false"%>
+<%end%>
+<%if course.status == :pending%>
+    <br>
+    <div class="standard_message no_paddding" style="padding:0 !important">
+        <div class="status no_margin" style="margin:0 !important">
+            <h2>This course is pending approval of the classtalk admins. </h2>            
+            <div> 
+                You can register in this course and do everthing with a normal class. However if our admins decides 
+                that this course is not a real course all of classes of this course will be closed. 
+            </div>
+        </div>
+    </div>
+    <br>
+<%end%>
+<div id='courses'>
+	<%if create_more and do_more_class and (is_instructor or classes_of_course_user_is_taking.empty?) %>
+		<div class='right'><%=link_to_function 'create new class',
+						"ShowFbAjaxDialog('#{signed_url(:action=>"select_time",:sem=>semester.id,:c=>course.id)}')"%></div>
+	<%end%>
+	<h2><%=course.short_title + " " + semester.name%>  Classes
+	       <span class='dark_gray' style='font-weight:normal'>
+    	       <%if semester.is_current?%>
+    	            (current)
+    	       <%else%>
+    	            (coming up)
+    	       <%end%>
+	       </span>
+	
+	</h2>	
+	
+	<%if !course.classes.at(semester).empty?%>
+	<%
+
+		reg_proc = Proc.new {|name,klass,switch|  link_to_remote(name,			
+			:url=>signed_url(:action=>"register_in_course",:switch=>switch,:c=>course.id,:sem=>klass.semester.id,:k=>klass.id),
+			:success=>"setmerequest(request)"
+			 )}
+	%>
+	<%=table_tag :cols=>3,:table=>{:class=>"top_v_align",:id=>"currentcourses"} do |col|
+#		p 'user classes of course'
+#		p classes_of_course_user_is_taking		
+		course.classes.at(semester).each do |klass|
+				html = "<div class='dark_gray' style='padding-left:10px'>" + klass.formated_schedule.join("<br>") + "</div>"							
+				col.add klass.name + html,:width=>"300px"				
+#				p 'a class of course'
+#				p klass
+#				p (classes_of_course_user_is_taking || []).include?(klass)
+				col2 = if do_more_class and classes_of_course_user_is_taking.empty? 
+							reg_proc.call(get_label(logged_in_user.role_at(course.school).primary,:register_class),klass)
+						elsif not classes_of_course_user_is_taking.include?(klass)
+							reg_proc.call('switch to this class',klass,true)
+						else
+							get_label(klass.role_of(logged_in_user),:in_class)
+						end						
+
+				col3 = if is_instructor and do_more_class and (!classes_of_course_user_is_taking.include?(klass) rescue false)
+					   	   reg_proc.call("teach this class",klass)
+					   else
+							"&nbsp;&nbsp;&nbsp;"
+					   end
+			   col.add(content_tag(:div,col2,:style=>""))
+			   col.add(content_tag(:div,col3,:style=>""))	
+		end
+	  end
+	%>
+    	<%if !do_more_class%>
+    		<div class='standard_message'><div class='status bold_weight'><%="At any given semester you can only be in the maximum of #{School::MaxNumberOfCourses} courses." %></div></div>		
+    	<%end%>
+	<%else%>
+        <%if !do_more_class%>
+    		<div class='standard_message'><div class='status bold_weight'><%="At any given semester you can only be in the maximum of #{School::MaxNumberOfCourses} courses per school." %></div></div>		
+    	<%else%>	       
+    		<div class='standard_message'><div class='status'>No Classes has been created yet. <%=@create if create_more%> </div></div>
+    	<%end%>	
+	<%end%>
+</div>
+
+

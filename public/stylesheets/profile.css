@@ -1,0 +1,188 @@
+.userprofile {
+    background:transparent url(../images/narrowleftbg.gif) repeat-y scroll 20px 0px;
+    
+    margin:0px;
+    padding:0px;
+}
+.profilenarrowcolumn {
+    float:left;
+    margin:19px 10px 0px 0px;
+    padding:0px 0px 0px 20px;
+    width:200px;
+}
+.profilepagewidecolumn {
+    float:left;
+    margin:0px;
+    padding:0px;
+    width:396px;
+}
+
+.friendTable {
+    margin:5px 5px 15px;
+}
+.friendTable td {
+    font-size:11px;
+    text-align:center;
+    font-size:11px;
+    margin:0px;
+    padding:1px 0px;
+    text-align:center;
+    width:62px;    
+}
+/*----------------- Feed CSS -----------------*/
+
+.no_stories {
+  margin:10px 0 0;
+  padding:10px 30px;
+  font-size:13px;
+  color:#777;
+  text-align:left;
+}
+
+
+.feed_item {
+  position:relative;
+}
+
+.feed_item .feed_icon {
+  float:left;
+  
+  width:16px;
+  text-align:left;
+}
+
+.feed_date_header {
+  margin:10px 0 5px;
+  padding:2px 0;
+  border-bottom:1px solid #ccc;
+  color: #888;
+  font-size:9px;
+  font-weight:bold; 
+}
+
+.feed_story_wrapper {
+  float:right;
+  width:396px;
+  padding-bottom:10px; 
+}
+
+.newsfeed_header 
+{
+    margin-top: 0pt;
+    margin-right: 0pt;
+    margin-bottom: 10px;
+    margin-left: 0pt;
+    padding-top: 0pt;
+    padding-right: 0pt;
+    padding-bottom: 2px;
+    padding-left: 0pt;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #d8dfea;
+}
+.home_main_item {
+    background:#FFFFFF none repeat scroll 0%;
+    
+    margin:0pt;
+    padding:20px;
+    padding-left:0;
+    padding-right:0;
+    position:relative;
+    z-index:1;
+}
+
+.feed_item .header_container
+{
+    margin-bottom: 5px;
+}
+
+.one_liner_cluster {
+ 
+}
+.bumper {
+    background:#D8DFEA none repeat scroll 0%;
+    border:medium none;
+    color:#D8DFEA;
+    height:1px;
+    margin:10px 0px 10px 23px;
+    overflow:hidden;
+}
+
+.one_liner {
+  position:relative; 
+  margin:0;
+  padding:0;
+}
+
+.one_liner .feed_story_wrapper {
+  border-top:0;
+  border-bottom:0;
+  margin:0;
+  padding:0 0 2px 0;
+}
+
+.one_liner .feed_icon {
+  text-align:right;
+}
+
+.one_liner h2 {
+  border:0;
+  margin:0;
+  font-size:11px;
+  font-weight:normal;
+}
+
+.one_liner h2 a {
+  font-weight:normal;
+  color:#3B5998;
+}
+
+.one_liner .header_container {
+  border-top:0;
+  border-bottom:0;  
+  background:transparent;
+}
+.one_liner h2 {
+  overflow:hidden;
+  width:auto;
+}
+.feed_item .feed_story_body {
+  line-height: 14px;
+  padding-right:5px;
+}
+
+.feed_item .header_container h2 {
+    color:#333333;
+    float:left;
+    font-size:11px;
+}
+
+.feed_item .quote {
+    float: left;
+    width: 285px;
+    overflow:hidden;
+    margin-top: 3px;
+    margin-right: 5px;
+    margin-left: 0px;
+    padding-left: 23px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+.feed_item .quote span.em {
+    color:#666666;
+    font-size:11px;
+    font-style:normal;
+    padding:2px 23px 2px 0px;
+    text-align:left;
+}
+a.x_to_hide {   
+    
+    border:medium none;
+    margin-left:3px;
+    padding:1px 5px 2px;
+    width:3px;
+}
+a.x_to_hide:hover {
+    background:#3B5998 url(/images/x_to_hide_hover.gif) no-repeat scroll center;
+}

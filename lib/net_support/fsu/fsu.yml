@@ -1,0 +1,41 @@
+--- 
+:courses: []
+
+:info: 
+  :city: tallahassee
+  :nid: "16777269"
+  :name: FSU
+  :paths: 
+  - - Fall
+    - Spring
+    - Summer A
+  - - Fall
+    - Spring
+    - Summer B
+  - - Fall
+    - Spring
+    - Summer C
+  - - Fall
+    - Spring
+    - Summer D
+  :semesters: 
+  - - Fall
+    - 8/20
+    - 12/25
+  - - Spring
+    - 1/1
+    - 5/1
+  - - Summer A
+    - 5/9
+    - 8/5
+  - - Summer B
+    - 5/9
+    - 6/18
+  - - Summer C
+    - 6/24
+    - 8/5
+  - - Summer D
+    - 6/18
+    - 8/13
+  :region: florida
+  :country: united_states

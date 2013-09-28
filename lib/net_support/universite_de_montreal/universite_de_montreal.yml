@@ -1,0 +1,19 @@
+--- 
+:courses: []
+
+:info: 
+  :region: quebec
+  :name: Universite de Montreal
+  :country: canada
+  :semesters: 
+  - - Automne
+    - 8/25
+    - 12/20
+  - - Hiver
+    - 1/4
+    - 5/10
+  - - Ete
+    - 5/15
+    - 8/20
+  :city: montreal
+  :nid: "16778430"

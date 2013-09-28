@@ -1,0 +1,30 @@
+<%
+     if params[:c_num].size > 0
+       users = User.find_by_sql(["SElECT users.id,count(klasses_users.id) as num from users left join klasses_users on users.id=klasses_users.user_id  group by users.id having num = ?;",params[:c_num].to_i])              
+       @uids = users.map(&:id)
+     elsif params[:req_nid].size > 0
+       @uids = RequestedSchool.find(:all,:conditions=>["nid = ?", params[:req_nid]]).map(&:user_id)
+     else
+       @uids = params[:uids].to_s.split(" ").uniq
+     end
+
+%>
+<table>
+<%require 'uri'%>
+<%@uids.in_groups_of(3,false) do |uids|%>
+  <tr>
+  <%uids.each do |uid|%>
+    <td style='width:200px'>
+         <div style='float:left;margin-right:5px'>                  
+             <%=link_to(fbml_profile_pic(uid,:size=>"q",:linked=>false),fb_profile_url(uid),:target=>"_blank")%>
+         </div>
+         <%=link_to fbml_name(uid),
+            fb_message_url(uid,params[:subject],URI::encode(params[:body])),
+            :target=>"_blank",:id=>'#{uid}'
+          %>
+          
+    </td>
+  <%end%>
+  </tr>
+<%end%>
+</table>   
